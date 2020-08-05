@@ -1,0 +1,491 @@
+@media (min-width: 992px){
+    .typo-line{
+        padding-left: 140px;
+        margin-bottom: 40px;
+        position: relative;
+    }
+
+    .typo-line .category{
+        transform: translateY(-50%);
+        top: 50%;
+        left: 0px;
+        position: absolute;
+    }
+}
+
+.all-icons [class*="pe-"]{
+    font-size: 40px;
+}
+.all-icons input{
+    border: 0;
+}
+.all-icons .font-icon-detail{
+    text-align: center;
+    padding: 45px 0px 30px;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    margin: 15px 0;
+}
+.all-icons .font-icon-detail input{
+    margin: 25px auto 0;
+    width: 100%;
+    text-align: center;
+    display: block;
+    color: #aaa;
+    font-size: 13px;
+}
+
+#map{
+    position:relative;
+    width:100%;
+    height: calc(100% - 60px);
+}
+
+.places-buttons .btn{
+    margin-bottom: 30px
+}
+.sidebar .nav > li.active-pro{
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+}
+.sidebar .nav > li.active-pro a{
+    background: rgba(255, 255, 255, 0.14);
+    opacity: 1;
+    color: #FFFFFF;
+}
+
+.table-upgrade td:nth-child(2),
+.table-upgrade td:nth-child(3){
+    text-align: center;
+}
+
+@media all and (max-width: 991px)  {
+    .sidebar .nav > li.active-pro{
+        position: initial;
+    }
+}
+
+/* cambio color focus de input */
+.form-control:focus {
+  border-color: #3F729B;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(96, 125, 139, 0.7);
+}
+
+/* Invisible*/
+.invisible {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* CONFIGURACION */
+
+.material-switch > input[type="checkbox"] {
+    display: none;   
+}
+
+.material-switch > label {
+    cursor: pointer;
+    height: 0px;
+    position: relative; 
+    width: 40px;  
+}
+
+.material-switch > label::before {
+    background: rgb(0, 0, 0);
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    content: '';
+    height: 16px;
+    margin-top: -8px;
+    position:absolute;
+    opacity: 0.3;
+    transition: all 0.4s ease-in-out;
+    width: 40px;
+}
+.material-switch > label::after {
+    background: rgb(255, 255, 255);
+    border-radius: 16px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    content: '';
+    height: 24px;
+    left: -4px;
+    margin-top: -8px;
+    position: absolute;
+    top: -4px;
+    transition: all 0.3s ease-in-out;
+    width: 24px;
+}
+.material-switch > input[type="checkbox"]:checked + label::before {
+    background: inherit;
+    opacity: 0.5;
+}
+.material-switch > input[type="checkbox"]:checked + label::after {
+    background: inherit;
+    left: 20px;
+}
+
+.config-box {
+  background: #eee;
+}
+
+#form_config_pagos .form-control {
+  background-color: #eee;
+}
+
+#form_config_pagos .descuento-efectivo label {
+  color: blue;
+}
+
+/* FIN CONFIGURACION*/
+
+/* LOGIN */
+
+.bg-login {
+    background:#ccc;
+}
+
+.contenedor-login {
+  width: 300px;
+  height: 350px;
+  background: rgba(255,255,255,.99);
+  border-radius: 6px;
+  padding: 0.5em;
+  padding:1em;
+  z-index: 3;
+}
+
+.contenedor-login input {
+  margin: auto;
+}
+
+.contenedor-login .form-control {
+  margin: 0;
+}
+
+.contenedor-login img {
+  width: 70%;
+  display: block;
+  margin: auto;
+  border-radius: 6px;
+}
+
+/*Estilos del input select2*/
+.select2 {
+  width: 100% !important;
+  
+}
+.select2-container .select2-selection--single {
+  height: 40px;
+  border: 1px solid #E3E3E3;
+}
+.select2-container .select2-selection--single .select2-selection__rendered {
+  padding: 8px 12px;
+  height: 40px;
+}
+#tabla_compras thead{
+  background: #222;
+}
+/* tabla del inventario */
+#tabla_productos thead,
+#tabla_ventas thead,
+#tabla_ingresos thead,
+#tabla_pacientes thead{
+  background: linear-gradient(to right, #262f3e 0%, #131b6a 100%);
+}
+#tabla_productos thead .sorting,
+#tabla_productos thead .sorting_asc,
+#tabla_productos thead .sorting_desc,
+#tabla_pacientes thead .sorting,
+#tabla_pacientes thead .sorting_asc,
+#tabla_pacientes thead .sorting_desc,
+#tabla_compras thead,
+#tabla_ventas thead,
+#tabla_ingresos thead,
+#tabla_ingresos thead .sorting,
+#tabla_ingresos thead .sorting_asc,
+#tabla_ingresos thead .sorting_desc{
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.1em;
+  cursor: pointer;
+  padding-bottom: .75em;
+}
+#tabla_productos_filter label,
+#tabla_productos_length label,
+#tabla_ingresos_filter label,
+#tabla_ingresos_length label,
+#tabla_pacientes_filter label,
+#tabla_pacientes_length label{
+  display: block;
+  font-weight: bold;
+  color: #212121;
+}
+#tabla_productos_filter label input[type=search],
+#tabla_productos_length select,
+#tabla_pacientes_filter label input[type=search],
+#tabla_pacientes_length select{
+  height: 45px;
+  font-size: 1.3em;
+}
+.table-striped>tbody>tr:nth-of-type(odd){background-color:#dee2e6}
+
+.sin_stock {
+  background: #ef9a9a!important;
+}
+.stock_minimo {
+  background: #fff171!important;
+}
+/* Tabla compras */ 
+
+#tabla_compras th, #tabla_ventas th{
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.1em;
+  cursor: pointer;
+  padding-bottom: .75em;
+}
+
+.mostrar_pacientes {
+  padding: 1em;
+}
+
+.mostrar_pacientes a {
+  cursor: pointer;
+  font-weight: bold;
+  color: #131b6a;
+  text-transform: uppercase;
+}
+.borrarCompra,
+.borrarVenta{
+  cursor: pointer;
+}
+
+/* MODAL SUCCESS Y DANGER */
+
+.modal-success,
+.modal-danger{
+  background: #fff;
+  color: #616161;
+  webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+  box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+  z-index: 1000 !important;
+  max-width: 350px;
+  margin: 0 auto;
+}
+.modal-success h5,
+.modal-danger h5 {
+  font-weight: bold;
+  display: block;
+  color: #fff;
+  padding: .5em;
+  width:100%;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    border: 0;
+}
+
+.modal-success h5 {
+  background: #00c851;
+}
+
+.modal-danger h5 {
+  background: #ff3547;
+}
+.modal-success p,
+.modal-danger p {
+  color: #616161;
+}
+
+.modal-success i {
+  color: #00c851;
+}
+
+.alert-success{
+  background: #00c851;
+}
+.modal-danger i {
+  color: #ff3547;
+}
+.modal-info .modal-header {
+    background-color: #4285f4;
+    color: #fff;
+}
+
+/* MENSAJE DE DISABLED AL QUERER EDITAR STOCK */
+
+.disabled-stock {
+  position: relative;
+  display: inline-block;
+}
+
+.disabled-stock .tooltiptext {
+  visibility: hidden;
+  background-color: #FF4A55;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.disabled-stock:hover .tooltiptext {
+  visibility: visible;
+}
+
+/* Tamaños de iconos */
+.fa-1-5x {
+  font-size: 1.2em;
+}
+/* Width */
+.w-100 { width: 100%; min-width: 100%}
+.w-50 { width: 50%; min-width: 50%}
+
+@media (min-width: 1200px) {
+    .pull-right-lg {
+        float: right;
+    }
+}
+
+/* REPORTES */
+
+.separador {
+  width: 300px;
+  height: 2px;
+  background: #222;
+}
+.input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child>.btn, .input-group-btn:first-child>.btn-group>.btn, .input-group-btn:first-child>.dropdown-toggle, .input-group-btn:last-child>.btn-group:not(:last-child)>.btn, .input-group-btn:last-child>.btn:not(:last-child):not(.dropdown-toggle) {
+  border-top-right-radius: 4px; 
+  border-bottom-right-radius: 4px;
+}
+.border-2p {
+  border: 2px solid #fff;
+}
+.white-text2 {
+  color: #fff !important;
+}
+.light-grey-text{
+  color: #eceff1;
+}
+.grey-text{
+  color: #cfd8dc !important;
+}
+.btn-primary-dark{
+  background-color: #424a58;
+  color: #fff;
+}
+
+.btn-primary-dark:hover{
+  background-color: #424a58;
+  color: #cfd8dc;
+  border-color: #cfd8dc
+}
+.alert-grey {
+  background: rgba(62, 69, 81, 0.7)   ;
+}
+
+.blue-gradient{
+  background: linear-gradient(90deg, #48a0c1, #303f9f) !important;
+}
+
+.aqua-gradient {
+  background: linear-gradient(40deg,  #36bd91, #2096ff) !important;
+}
+.cool-blue {
+    background: linear-gradient(to right, #06beb6, #48b1bf); 
+
+}
+
+.peach-gradient{
+  background: linear-gradient(40deg, #ffd86f, #fc6262) !important;
+}
+.grey-background {
+  background: #fafafa;
+}
+.btn-white {
+  background: #fff;
+}
+
+/* Cambio de padding  de tablas */
+
+.table > tbody > tr > td {
+  padding: 5px;
+}
+
+/* SWICH DE DOLAR A PESOS */
+
+.onoffswitch {
+    position: relative; width: 90px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+
+.onoffswitch-checkbox {
+    display: none;
+}
+
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border-radius: 20px;
+}
+
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    -moz-transition: margin 0.3s ease-in 0s; -webkit-transition: margin 0.3s ease-in 0s;
+    -o-transition: margin 0.3s ease-in 0s; transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+.onoffswitch-inner:before {
+    content: "Si";
+    padding-left: 10px;
+    background-color: #533ce1; color: #FFFFFF;
+}
+
+.onoffswitch-inner:after {
+    content: "No";
+    padding-right: 10px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+
+.onoffswitch-switch {
+    display: block; width: 18px; margin: 6px;
+    background: #FFFFFF;
+    border: 2px solid #999999; border-radius: 20px;
+    position: absolute; top: 0; bottom: 0; right: 56px;
+    -moz-transition: all 0.3s ease-in 0s; -webkit-transition: all 0.3s ease-in 0s;
+    -o-transition: all 0.3s ease-in 0s; transition: all 0.3s ease-in 0s; 
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+
+
+/* FORM INTERNO AL CREAR ORDEN */
+
+.form-interno{
+  width: 49.5%; 
+  border: 2px solid rgba(0,0,0, .1); 
+  border-radius: 4px;
+}
+/*@media screen and(min-width: 875px){
+  .form-interno{
+    width: 100%;
+  }
+}*/
