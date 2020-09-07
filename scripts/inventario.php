@@ -26,7 +26,6 @@ $(document).ready(function()
     });
         
     $(document).ready(function () {
-        var valor_dolar = <?php echo $valor_dolar ?>;
       $('#tabla_productos').DataTable({
         "processing": true,
         "serverSide": true,
@@ -45,16 +44,16 @@ $(document).ready(function()
         $('td:eq(6)', nRow).html('<a href="editar_producto.php?id=' + aData[6] + '">' +
             '<i class="fa fa-pencil text-center"></i>' + '</a>');
 
-        if (costo_usd != 0) {
-            // Si el costo en dólares no está vacío significa que el precio del producto está en dólares, entonces paso el costo a Pesos
-            costo_pesos = costo_usd * valor_dolar; 
-             // Muestro el valor final del producto en pesos
-            $('td:eq(2)', nRow).html('<span>$' + Math.round(costo_pesos + (costo_pesos * ganancia)) + '</span>');
-        } else{
-            // Si el costo en dólares está vacío o es 0 entonces ponemos el valor fijo del producto en pesos
-            precio_fijo = aData[9];
-            $('td:eq(2)', nRow).html('<span>$' + Math.round(precio_fijo) + '</span>');
-        }
+        // if (costo_usd != 0) {
+        //     // Si el costo en dólares no está vacío significa que el precio del producto está en dólares, entonces paso el costo a Pesos
+        //     costo_pesos = costo_usd * valor_dolar; 
+        //      // Muestro el valor final del producto en pesos
+        //     $('td:eq(2)', nRow).html('<span>$' + Math.round(costo_pesos + (costo_pesos * ganancia)) + '</span>');
+        // } else{
+        //     // Si el costo en dólares está vacío o es 0 entonces ponemos el valor fijo del producto en pesos
+        //     precio_fijo = aData[9];
+        //     $('td:eq(2)', nRow).html('<span>$' + Math.round(precio_fijo) + '</span>');
+        // }
         
 
         
@@ -145,56 +144,6 @@ $(document).ready(function()
             });
         });
 
-        // Multiplicacion del dolar en vivo
-        if (true) {}
-        function precioFinal() {
-            var costo_usd = $('#costo_usd').val();
-            var ganancia = $('#ganancia').val();
-            var precio = (costo_usd * ganancia);
-            var total = 0;
-
-            if (costo_usd = 0) {
-
-            }
-            else {
-                $(".multiplicacion").each(function () {
-                var valor = $(this).val();
-                valor = valor.replace(',', '.');
-                total = parseFloat(valor);
-                });
-               
-                var valor2 =  $(".multiplicacion2").val();
-                valor2 = valor2.replace(',', '.');
-                valor2 = (valor2 /100) + 1;
-
-                total2 = parseFloat(valor2);
-
-                totalFinal = total * total2 * <?php echo $valor_dolar ?>;
-                total_fixed = totalFinal.toFixed(2);
-                total_fixed = parseFloat(total_fixed + 0);
-               $('#precio').val(total_fixed);
-            }
-        }
-
-        $('#ganancia').on('keyup',function(){
-          precioFinal();
-        });
-        $('#costo_usd').on('keyup',function(){
-          precioFinal();
-        });
-
-        // FIN SUMA
-
-        // Muestro los valores en dólares si está activo el switch
-
-         $('#switch').on('click', function(){
-            if ($('#switch').is(':checked')) {
-               $('.row_dolares').removeClass('hidden'); 
-            } else {
-                $('.row_dolares').addClass('hidden'); 
-            }
-            
-          });
 
         // Agregando categorías por ajax desde el modal de agregar producto
 

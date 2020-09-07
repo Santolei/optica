@@ -19,11 +19,11 @@
           <div class="row">
             <div class="form-group col-md-6">
               <label for="nombre">Nombre:</label>
-              <input maxlength="100" class="form-control" type="text" name="nombre" id="nombre" autocomplete="off" required>
+              <input maxlength="100" class="form-control" type="text" name="nombre" id="add_nombre" autocomplete="off" required>
             </div>
             <div class="form-group col-md-6">
               <label for="dni">DNI:</label>
-              <input maxlength="100" class="form-control" type="text" name="dni" id="dni" autocomplete="off">
+              <input maxlength="100" class="form-control" type="text" name="dni" id="add_dni" autocomplete="off">
             </div>
             
           </div>
@@ -35,7 +35,7 @@
             </div>
             <div class="form-group col-md-6">
               <label for="obra_social">Obra Social:</label>
-              <input maxlength="100" class="form-control" type="text" name="obra_social" id="obra_social" autocomplete="off">
+              <input maxlength="100" class="form-control" type="text" name="add_obra_social" id="add_obra_social" autocomplete="off">
             </div>
           </div>
           </div>

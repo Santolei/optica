@@ -36,6 +36,7 @@
                                         <div class="row">
                                             <div class="form-group col-md-6">
                                                 <label for="nombre">Nombre:</label>
+                                                <input type="hidden" name="id_paciente" id="id_paciente">
                                                 <input maxlength="100" class="form-control" type="text" name="nombre" id="nombre" autocomplete="off" required>
                                             </div>
                                 
@@ -72,7 +73,7 @@
                                 
                                             <div class="form-group col-md-6">
                                                 <label for="fecha_receta">Fecha de receta:</label>
-                                                <input maxlength="100" class="form-control" type="date" name="fecha_receta" id="fecha_receta" autocomplete="off" required>
+                                                <input maxlength="100" class="form-control" type="text" name="fecha_receta" id="fecha_receta" autocomplete="off" required>
                                             </div>
                                         </div>
                                 
@@ -90,6 +91,36 @@
                                     </div>
 
                                     <!-- Fin datos receta  -->
+
+                                    <!-- Datos cristales -->
+
+                                    <div class="col-md-6 grey-background form-interno mt-4">
+                                        <h5><strong>Datos cristales</strong></h5>
+
+                                        <div class="row">
+                                            <div class="form-group col-sm-12 col-md-6">
+                                                <label for="tipo_lente">Tipo de lente:</label>
+                                                <input maxlength="100" class="form-control" type="text" name="tipo_lente" id="tipo_lente" required>
+                                            </div>
+                                
+                                            <div class="form-group col-md-6">
+                                                <label for="material">Material:</label>
+                                                <input maxlength="100" class="form-control" type="text" name="material" id="material" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="form-group col-sm-12 col-md-6">
+                                                <label for="producto">Producto:</label>
+                                                <input maxlength="100" class="form-control" type="text" name="producto" id="producto" required>
+                                            </div>
+                                
+                                            <div class="form-group col-md-6">
+                                                <label for="tratamiento">Tratamiento:</label>
+                                                <input maxlength="100" class="form-control" type="text" name="tratamiento" id="tratamiento" required>
+                                            </div>
+                                        </div>
+                                    </div>
                                     
                                 </div>
                             </div>
@@ -107,6 +138,8 @@
 
 <?php include 'views/footer.php' ?>
 <?php include 'modals/modal_new_order.php' ?>
+<?php include 'modals/modal_new_order2.php' ?>
+<?php include 'modals/modal_new_order3.php' ?>
 <?php include 'modals/modal_add_paciente_ajax.php' ?>
 
 <!-- Scripts Ordenes -->

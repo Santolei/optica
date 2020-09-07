@@ -43,36 +43,50 @@
                     </a>
                 </li>
 
-                <li class="<?php if (isset($active_pacientes)){echo $active_pacientes;}?>">
-                    <a href="pacientes">
-                        <i class="pe-7s-user-female"></i>
-                        <p>Pacientes</p>
+                
+
+                <li class="dropdown 
+                <?php if ((isset($active_pacientes) or isset($active_patologias) or isset($active_tratamientos))): ?>
+                    active
+                <?php endif ?>
+                " >
+                    <a role="button" data-toggle="collapse" href="#dd" aria-expanded="false">
+                        <i class="pe-7s-ribbon"></i>
+                        <p>Bases de datos <span class="caret"></span></p>
                     </a>
+                    <ul id="dd" style="list-style: none;" class="
+                        <?php if (isset($active_pacientes) or isset($active_patologias) or isset($active_tratamientos)): ?>
+                            collapse in
+                        <?php else: ?>
+                            collapse 
+                        <?php endif ?>
+                    ">
+                        <li class="<?php if (isset($active_pacientes)){echo $active_pacientes;}?>">
+                            <a href="pacientes">
+                                <i class="pe-7s-user-female"></i>
+                                <p>Pacientes</p>
+                            </a>
+                        </li>
+
+                        <li class="<?php if (isset($active_patologias)){echo $active_patologias;}?>">
+                            <a href="patologias">
+                                <i class="pe-7s-ribbon"></i>
+                                <p>Patologías</p>
+                            </a>
+                        </li>
+
+                        <li class="<?php if (isset($active_tratamientos)){echo $active_tratamientos;}?>">
+                            <a href="tratamientos">
+                                <i class="pe-7s-note2"></i>
+                                <p>tratamientos</p>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
-                
-                <!-- Muestro esta parte del menu al administrador  -->
-                <!-- <?php if ($usuario_logueado['rol'] != 1): ?>
-                <?php else: ?>
-                    <li class="<?php if (isset($active_caja)){echo $active_caja;}?>">
-                        <a href="caja">
-                            <i class="pe-7s-cash"></i>
-                            <p>Caja</p>
-                        </a>
-                    </li>
-                <?php endif ?> -->
 
-                <!-- Muestro esta parte del menu al administrador  -->
-                <!-- <?php if ($usuario_logueado['rol'] != 1): ?>
-                <?php else: ?>
-                    <li class="<?php if (isset($active_compras)){echo $active_compras;}?>">
-                        <a href="compras">
-                            <i class="pe-7s-shopbag"></i>
-                            <p>Compras</p>
-                        </a>
-                    </li>    
-                <?php endif ?> -->
 
                 
+
 
                 <!-- Muestro esta parte del menu al administrador  -->
                 <?php if ($usuario_logueado['rol'] != 1): ?>

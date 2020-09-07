@@ -6,10 +6,9 @@ require '../config/conexion.php';
 // --- Variables traidas del formulario de ingreso de paciente --- // 
 
 $nombre = $_POST['nombre'];
-$celular = $_POST['celular'];
-$telefono = $_POST['telefono'];
+$tel_cel = $_POST['tel_cel'];
 $dni = $_POST['dni'];
-$obra_social = $_POST['obra_social'];
+$obra_social = $_POST['add_obra_social'];
 
 // --------------------------------- //
 // --------------------------------- //

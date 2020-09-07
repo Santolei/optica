@@ -3,7 +3,7 @@
 		$host = 'localhost';
 		$user = 'root';
 		$password = '';
-		$database = 'neo_stock';
+		$database = 'optica';
 
 	   try {
         // open the connection to the database - $host, $user, $password, $database should already be set
