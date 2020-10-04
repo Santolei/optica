@@ -46,13 +46,16 @@
 
             </div>
             <div class="form-group col-md-6">
-              <label for="marca">Marca:</label>
+              <label for="marca">Material:</label>
               <br>
               <div class="d-flex align-items-center">
-                <select class="form-control select2" name="marca" id="marca" selected="Seleccionar Marca" required>
-                  <option value="">Seleccionar marca</option>
+                <select class="form-control select2" name="material" id="material" selected="Seleccionar Material" required>
+                  <option value="Mineral">Mineral</option>
+                  <option value="Organico">Orgánico</option>
+                  <option value="Policarbonato">Policarbonato</option>
+                  <option value="Otros">Otros</option>
                 </select>
-                <a class="text-success m-4" data-toggle="modal" data-target="#modal_add_marca_ajax"><i class="fa fa-2x fa-plus"></i></a>
+                <a class="text-success m-4" style="visibility: hidden;" data-toggle="modal" data-target="#modal_add_marca_ajax"><i class="fa fa-2x fa-plus"></i></a>
               </div>
             </div>
           </div>

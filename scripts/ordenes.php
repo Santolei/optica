@@ -6,7 +6,7 @@
     });
 
     // Agrego los option de las vendedores y de los pacientes
-    $("#vendedor").load('consultas/pacientes_ajax.php');
+    $("#vendedor").load('consultas/vendedores_ajax.php');
     $("#add_patologia").load('consultas/patologias_ajax.php');
 
     // Agregando paciente por ajax desde el modal de agregar Orden
@@ -79,13 +79,14 @@
     });
 
     // Select 2 para agregar buscador a los input select
-    $('#add_tipo_lente').select2({
+    // $('#add_tipo_lente').select2({
+    //     dropdownParent: $('#modal_new_order3')
+    // });
+    
+    $('#add_tratamiento').select2({
         dropdownParent: $('#modal_new_order3')
     });
     $('#add_producto').select2({
-        dropdownParent: $('#modal_new_order3')
-    });
-    $('#add_tratamiento').select2({
         dropdownParent: $('#modal_new_order3')
     });
 
@@ -101,11 +102,13 @@
         var fecha_receta = day + "-" + month + "-" + year;
         nombre_doctor = $('#nombre_doctor').val();
         patologia = $('#add_patologia').val();
-        graduacion = $('#add_graduacion').val();
+        graduacion_od = $('#add_graduacion_od').val();
+        graduacion_oi = $('#add_graduacion_oi').val();
         $('input[name="doctor"]').val(nombre_doctor);
         $('input[name="fecha_receta"]').val(fecha_receta);
         $('input[name="patologia"]').val(patologia);
-        $('input[name="graduacion"]').val(graduacion);
+        $('input[name="graduacion_od"]').val(graduacion_od);
+        $('input[name="graduacion_oi"]').val(graduacion_oi);
 
         $('#modal_new_order2').modal('hide');
         $('#modal_new_order3').modal('show');
@@ -113,8 +116,132 @@
 
     // Avanzo al tercer modal 
 
-
     $("#add_tratamiento").load('consultas/tratamientos_ajax.php');
+
+    // Función para mostrar y ocultar datos de los cristales dependiendo
+    // si es monofocal, bifocal o multifocal
+
+    function tipoLente(){
+        if ($('#add_tipo_lente').val() === "Monofocal") {
+            $('#monofocal').fadeIn("slow", "linear").removeClass('hidden');
+            $('#bifocal').addClass('hidden').fadeOut("slow", "linear");
+            $('#multifocal').addClass('hidden').fadeOut("slow", "linear");
+
+            $('#add_monofocal').fadeIn("slow", "linear").removeClass('hidden');
+            $('#add_bifocal').addClass('hidden').fadeOut("slow", "linear");
+            $('#add_multifocal').addClass('hidden').fadeOut("slow", "linear");
+        }
+        else if ($('#add_tipo_lente').val() === "Bifocal") {
+            $('#monofocal').addClass('hidden').fadeOut("slow", "linear");
+            $('#bifocal').fadeIn("slow", "linear").removeClass('hidden');
+            $('#multifocal').addClass('hidden').fadeOut("slow", "linear");
+
+            $('#add_monofocal').addClass('hidden').fadeOut("slow", "linear");
+            $('#add_bifocal').fadeIn("slow", "linear").removeClass('hidden');
+            $('#add_multifocal').addClass('hidden').fadeOut("slow", "linear");
+        }
+        else if ($('#add_tipo_lente').val() === "Multifocal") {
+            $('#monofocal').addClass('hidden').fadeOut("slow", "linear");
+            $('#bifocal').addClass('hidden').fadeOut("slow", "linear");
+            $('#multifocal').fadeIn("slow", "linear").removeClass('hidden');
+
+            $('#add_monofocal').addClass('hidden').fadeOut("slow", "linear");
+            $('#add_bifocal').addClass('hidden').fadeOut("slow", "linear");
+            $('#add_multifocal').fadeIn("slow", "linear").removeClass('hidden');
+        }
+    }
+
+    $('#add_tipo_lente').on('change',function(){
+        tipoLente();
+    });
+
+    // Funcion para copiar adición derecha a izquierda
+  
+    function copiarAdicionBifocal() {
+            var adicion1 = $('#bifocal_adicion_der');
+            var adicion2 = $('#bifocal_adicion_izq');
+            adicion2.val(adicion1.val());
+        }
+    $('#bifocal_adicion_der').on('change', copiarAdicionBifocal);
+
+    function copiarAdicionMultifocal() {
+            var adicion1 = $('#multifocal_adicion_der');
+            var adicion2 = $('#multifocal_adicion_izq');
+            adicion2.val(adicion1.val());
+        }
+    $('#multifocal_adicion_der').on('change', copiarAdicionMultifocal);
+
+    // Cargo los productos dependiendo del material 
+
+    function checkMaterial(){
+       var material = $('#add_material').val();
+       // $("#add_producto").select2("open");
+       if (material === 'Mineral') {
+            $("#add_producto").load('consultas/productos_minerales.php');  
+
+       }else if(material === 'Organico'){
+            $("#add_producto").load('consultas/productos_organicos.php');
+       }else if(material === 'Policarbonato'){
+            $("#add_producto").load('consultas/productos_policarbonato.php');
+       }else if(material === 'Otros'){
+            $("#add_producto").load('consultas/productos_otros.php');
+       }
+
+    }
+
+    $('#add_material').on('change', checkMaterial);
+
+    // Guardo tercer form
+
+    $('#datos_cristales').on('click', function(){
+        // Selecciono datos del tercer modal
+
+        tipo_lente = $('#add_tipo_lente').val();
+
+        add_monofocal_lejos_der = $('#add_monofocal_lejos_der').val();
+        add_monofocal_lejos_izq = $('#add_monofocal_lejos_izq').val();
+        add_monofocal_media_der = $('#add_monofocal_media_der').val();
+        add_monofocal_media_izq = $('#add_monofocal_media_izq').val();
+        add_monofocal_cerca_der = $('#add_monofocal_cerca_der').val();
+        add_monofocal_cerca_izq = $('#add_monofocal_cerca_izq').val();
+        add_bifocal_lejos_der = $('#add_bifocal_lejos_der').val();
+        add_bifocal_lejos_izq = $('#add_bifocal_lejos_izq').val();
+        add_bifocal_adicion_der = $('#add_bifocal_adicion_der').val();
+        add_bifocal_adicion_izq = $('#add_bifocal_adicion_izq').val();
+        add_multifocal_lejos_der = $('#add_multifocal_lejos_der').val();
+        add_multifocal_lejos_izq = $('#add_multifocal_lejos_izq').val();
+        add_multifocal_adicion_der = $('#add_multifocal_adicion_der').val();
+        add_multifocal_adicion_izq = $('#add_multifocal_adicion_izq').val();
+
+        material = $('#add_material').val();
+        producto = $('#add_producto').val();
+        tratamiento = $('#add_tratamiento').val();
+
+        $('input[name="tipo_lente"]').val(tipo_lente);
+        $('input[name="material"]').val(material);
+        $('input[name="producto"]').val(producto);
+        $('input[name="tratamiento"]').val(tratamiento);
+
+        $('input[name="monofocal_lejos_der"]').val(add_monofocal_lejos_der); 
+        $('input[name="monofocal_lejos_izq"]').val(add_monofocal_lejos_izq);
+        $('input[name="monofocal_media_der"]').val(add_monofocal_media_der); 
+        $('input[name="monofocal_media_izq"]').val(add_monofocal_media_izq); 
+        $('input[name="monofocal_cerca_der"]').val(add_monofocal_cerca_der); 
+        $('input[name="monofocal_cerca_izq"]').val(add_monofocal_cerca_izq); 
+        $('input[name="bifocal_lejos_der"]').val(add_bifocal_lejos_der);
+        $('input[name="bifocal_lejos_izq"]').val(add_bifocal_lejos_izq); 
+        $('input[name="bifocal_adicion_der"]').val(add_bifocal_adicion_der); 
+        $('input[name="bifocal_adicion_izq"]').val(add_bifocal_adicion_izq); 
+        $('input[name="multifocal_lejos_der"]').val(add_multifocal_lejos_der);
+        $('input[name="multifocal_lejos_izq"]').val(add_multifocal_lejos_izq);
+        $('input[name="multifocal_adicion_der"]').val(add_multifocal_adicion_der); 
+        $('input[name="multifocal_adicion_izq"]').val(add_multifocal_adicion_izq);
+        
+        $('#modal_new_order3').modal('hide');
+        $('#modal_new_order4').modal('show');
+    });
+
+
 
 
 </script>

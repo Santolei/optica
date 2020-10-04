@@ -12,13 +12,7 @@ $id_producto = $_POST['id_producto'];
 $codigo = $_POST['codigo'];
 $nombre = $_POST['nombre'];
 $categoria = $_POST['categoria'];
-$marca = $_POST['marca'];
-$stock = $_POST['stock'];
-$stock_minimo = $_POST['stock_minimo'];
-$valor_dolar = $_POST['valor_dolar'];
-$costo_usd = $_POST['costo_usd'];
-$ganancia = $_POST['ganancia'];
-$precio = $_POST['precio'];
+$material = $_POST['material'];
 // --------------------------------- //
 // --------------------------------- //
 // Inserto el nuevo producto en la BD
@@ -32,12 +26,7 @@ if (!$con) {
 			codigo = '$codigo',
 			nombre = '$nombre',
 			categoria = '$categoria',
-			marca = '$marca',
-			stock = '$stock',
-			stock_minimo = '$stock_minimo',
-			costo_usd = '$costo_usd',
-			ganancia = '$ganancia',
-			precio = '$precio'
+			material = '$material'
 		WHERE id_producto = '$id_producto'
 		");
 

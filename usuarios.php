@@ -9,10 +9,11 @@ $active_usuarios="active";
 
 // --------------------------------- //
 // --------------------------------- //
-// Voy a traer los datos de roles y usuarios
+// Voy a traer los datos de roles, usuarios y vendedores
 
 require_once 'consultas/roles.php';
 require_once 'consultas/usuarios.php';
+require_once 'consultas/vendedores.php';
 
 // --------------------------------- //
 // --------------------------------- //

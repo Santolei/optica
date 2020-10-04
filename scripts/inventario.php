@@ -33,15 +33,8 @@ $(document).ready(function()
         autoFill: true,
         "ajax": "consultas/productosjson.php",
         "fnRowCallback": function( nRow, aData, iDisplayIndex ) {
-        stock = aData[5];
-        // Este es el costo en dólares
-        costo_usd = aData[7]; 
-        // Ganancia 
-        ganancia = aData[8];
-        ganancia = ganancia/100;
-
         // Genero el boton de editar producto
-        $('td:eq(6)', nRow).html('<a href="editar_producto.php?id=' + aData[6] + '">' +
+        $('td:eq(4)', nRow).html('<a href="editar_producto.php?id=' + aData[4] + '">' +
             '<i class="fa fa-pencil text-center"></i>' + '</a>');
 
         // if (costo_usd != 0) {

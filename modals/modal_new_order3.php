@@ -17,32 +17,154 @@
         <form method="POST">
           <!-- row -->
           <div class="row">
-            <div class="form-group col-sm-12 col-md-6">
+            <div class="form-group col-sm-12 col-md-4">
                 <label for="add_tipo_lente">Tipo de lente:</label>
                 <div class="d-flex align-items-center">
-                  <select class="form-control select2" name="add_tipo_lente" id="add_tipo_lente" selected="Seleccionar tipo de lente" required>
+                  <select class="form-control" name="add_tipo_lente" id="add_tipo_lente" selected="Seleccionar tipo de lente" required>
                     <option value="">Seleccionar Tipo</option>
                     <option value="Monofocal">Monofocal</option>
                     <option value="Bifocal">Bifocal</option>
                     <option value="Multifocal">Multifocal</option>
                   </select>
                 </div>
+
             </div>
 
-            <div class="form-group col-md-6">
+            <!-- // ---------------------------- -->
+            <!-- // MONOFOCAL ------------------ -->
+            <div class="col-md-8 hidden" id="add_monofocal">
+              <!-- Lejos -->
+              <div class="d-flex align-items-center">
+                <div class="form-group col-md-2 mb-0">
+                  <h5><strong>Lejos:</strong></h5>
+                </div>
+                <div class="form-group col-md-5 d-flex align-items-center mb-0">
+                  <label for="add_monofocal_lejos_der" class="mb-0"><span class="mr-2">OD</span></label>
+                  <input class="form-control" type="text" name="add_monofocal_lejos_der" id="add_monofocal_lejos_der">
+                </div>
+                <div class="form-group col-md-5 d-flex align-items-center mb-0">
+                  <label for="add_monofocal_lejos_izq" class="mb-0"><span class="mr-2">OI</span></label>
+                  <input class="form-control" type="text" name="add_monofocal_lejos_izq" id="add_monofocal_lejos_izq">
+                </div>
+              </div>
+              <!-- Media -->
+              <div class="d-flex align-items-center">
+                <div class="form-group col-md-2 mb-0">
+                  <h5 style="margin-left: -38px"><strong>Intermedia:</strong></h5>
+                </div>
+                <div class="form-group col-md-5 d-flex align-items-center mb-0">
+                  <label for="add_monofocal_media_der" class="mb-0"><span class="mr-2">OD</span></label>
+                  <input class="form-control" type="text" name="add_monofocal_media_der" id="add_monofocal_media_der">
+                </div>
+                <div class="form-group col-md-5 d-flex align-items-center mb-0">
+                  <label for="add_monofocal_media_izq" class="mb-0"><span class="mr-2">OI</span></label>
+                  <input class="form-control" type="text" name="add_monofocal_media_izq" id="add_monofocal_media_izq">
+                </div>
+                
+              </div>
+              <!-- Cerca -->
+              <div class="d-flex align-items-center">
+                <div class="form-group col-md-2 mb-0">
+                  <h5><strong>Cerca:</strong></h5>
+                </div>
+                <div class="form-group col-md-5 d-flex align-items-center mb-0">
+                  <label for="add_monofocal_cerca_der" class="mb-0"><span class="mr-2">OD</span></label>
+                  <input class="form-control" type="text" name="add_monofocal_cerca_der" id="add_monofocal_cerca_der">
+                </div>
+                <div class="form-group col-md-5 d-flex align-items-center mb-0">
+                  <label for="add_monofocal_cerca_izq" class="mb-0"><span class="mr-2">OI</span></label>
+                  <input class="form-control" type="text" name="add_monofocal_cerca_izq" id="add_monofocal_cerca_izq">
+                </div>
+              </div>
+            </div>
+
+            <!-- // ---------------------------- -->
+            <!-- // BIFOCAL ------------------ -->
+            <div class="col-md-8 hidden" id="add_bifocal">
+              <!-- Lejos -->
+              <div class="d-flex align-items-center">
+                <div class="form-group col-md-2">
+                  <h5><strong>Lejos:</strong></h5>
+                </div>
+                <div class="form-group col-md-5 d-flex align-items-center">
+                  <label for="add_bifocal_lejos_der" class="mb-0"><span class="mr-2">OD</span></label>
+                  <input class="form-control" type="text" name="add_bifocal_lejos_der" id="add_bifocal_lejos_der">
+                </div>
+                <div class="form-group col-md-5 d-flex align-items-center">
+                  <label for="add_bifocal_lejos_izq" class="mb-0"><span class="mr-2">OI</span></label>
+                  <input class="form-control" type="text" name="add_bifocal_lejos_izq" id="add_bifocal_lejos_izq">
+                </div>
+              </div>
+              <!-- Adicion -->
+              <div class="d-flex align-items-center">
+                <div class="form-group col-md-2">
+                  <h5 style="margin-left: -10px"><strong>Adición:</strong></h5>
+                </div>
+                <div class="form-group col-md-5 d-flex align-items-center">
+                  <label for="add_bifocal_adicion_der" class="mb-0"><span class="mr-2">OD</span></label>
+                  <input class="form-control" type="text" name="add_bifocal_adicion_der" id="add_bifocal_adicion_der">
+                </div>
+                <div class="form-group col-md-5 d-flex align-items-center">
+                  <label for="add_bifocal_adicion_izq" class="mb-0"><span class="mr-2">OI</span></label>
+                  <input class="form-control adicion-izq" type="text" name="add_bifocal_adicion_izq" id="add_bifocal_adicion_izq">
+                </div>
+              </div>
+            </div>
+
+            <!-- // ---------------------------- -->
+            <!-- // MULTIFOCAL ----------------- -->
+            <div class="col-md-8 hidden" id="add_multifocal">
+              <!-- Lejos -->
+              <div class="d-flex align-items-center">
+                <div class="form-group col-md-2">
+                  <h5><strong>Lejos:</strong></h5>
+                </div>
+                <div class="form-group col-md-5 d-flex align-items-center">
+                  <label for="add_multifocal_lejos_der" class="mb-0"><span class="mr-2">OD</span></label>
+                  <input class="form-control" type="text" name="add_multifocal_lejos_der" id="add_multifocal_lejos_der">
+                </div>
+                <div class="form-group col-md-5 d-flex align-items-center">
+                  <label for="add_multifocal_lejos_izq" class="mb-0"><span class="mr-2">OI</span></label>
+                  <input class="form-control" type="text" name="add_multifocal_lejos_izq" id="add_multifocal_lejos_izq">
+                </div>
+              </div>
+              <!-- Adicion -->
+              <div class="d-flex align-items-center">
+                <div class="form-group col-md-2">
+                  <h5 style="margin-left: -10px"><strong>Adición:</strong></h5>
+                </div>
+                <div class="form-group col-md-5 d-flex align-items-center">
+                  <label for="add_multifocal_adicion_der" class="mb-0"><span class="mr-2">OD</span></label>
+                  <input class="form-control" type="text" name="add_multifocal_adicion_der" id="add_multifocal_adicion_der">
+                </div>
+                <div class="form-group col-md-5 d-flex align-items-center">
+                  <label for="add_multifocal_adicion_izq" class="mb-0"><span class="mr-2">OI</span></label>
+                  <input class="form-control" type="text" name="add_multifocal_adicion_izq" id="add_multifocal_adicion_izq">
+                </div>
+              </div>
+            </div>
+
+        </div>
+
+        <!-- Material -->
+
+        <div class="row">
+          <div class="form-group col-md-6">
                 <label for="add_material">Material:</label>
                 <div class="d-flex align-items-center">
                   <select class="form-control" name="add_material" id="add_material" selected="Seleccionar tipo de lente" required>
                     <option value="">Seleccionar Material</option>
                     <option value="Mineral">Mineral</option>
-                    <option value="Organico">Organico</option>
+                    <option value="Organico">Orgánico</option>
                     <option value="Policarbonato">Policarbonato</option>
                     <option value="Otros">Otros</option>
                   </select>
                 </div>
             </div>
         </div>
-        <!-- row -->
+
+        <!-- Producto -->
+
         <div class="row">
           <div class="form-group col-md-6">
             <label for="add_producto">Producto</label>

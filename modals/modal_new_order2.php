@@ -38,9 +38,13 @@
             </div>
           </div>
 
-          <div class="form-group col-sm-12 col-md-6">
-              <label for="add_graduacion">Graduación OD-OI:</label>
-              <input maxlength="100" class="form-control" type="number" id="add_graduacion" step="any" autocomplete="off" required>
+          <div class="form-group col-sm-12 col-md-3">
+              <label for="add_graduacion_od">Graduación OD:</label>
+              <input maxlength="100" class="form-control" type="number" id="add_graduacion_od" step="any" autocomplete="off" required>
+          </div>
+          <div class="form-group col-sm-12 col-md-3">
+              <label for="add_graduacion_oi">Graduación OI:</label>
+              <input maxlength="100" class="form-control" type="number" id="add_graduacion_oi" step="any" autocomplete="off" required>
           </div>
         </div>
         

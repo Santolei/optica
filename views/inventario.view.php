@@ -27,10 +27,8 @@
                                         <thead class="tabla-thead white-text">
                                             <th>Código</th>
                                             <th>Nombre</th>
-                                            <th>Precio</th>
                                             <th>Categoría</th>
-                                            <th>Marca</th>
-                                            <th>Stock</th>
+                                            <th>Material</th>
                                             <th>Editar</th>
                                         </thead>
                                         <tbody></tbody>

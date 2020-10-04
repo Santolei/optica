@@ -32,29 +32,30 @@
                                     <!-- Datos Paciente  -->
 
                                     <div class="col-md-6 grey-background pull-left form-interno">
-                                        <h5><strong>Datos Paciente:</strong></h5>
+                                        <div class="d-flex justify-content-between align-items-center"><h5><strong>Datos Paciente:</strong></h5> <a href="#" class=" boton-editar-orden btn btn-primary d-flex justify-content-center align-items-center" data-toggle="modal" data-target="#modal_new_order">Editar <i class="fa fa-pencil"></i></a>
+                                        </div>
                                         <div class="row">
                                             <div class="form-group col-md-6">
                                                 <label for="nombre">Nombre:</label>
                                                 <input type="hidden" name="id_paciente" id="id_paciente">
-                                                <input maxlength="100" class="form-control" type="text" name="nombre" id="nombre" autocomplete="off" required>
+                                                <input maxlength="100" class="form-control" type="text" name="nombre" id="nombre" autocomplete="off" required disabled>
                                             </div>
                                 
                                             <div class="form-group col-md-6">
                                                 <label for="telefono">Teléfono/Celular:</label>
-                                                <input maxlength="100" class="form-control" type="text" name="telefono" id="telefono" autocomplete="off" required>
+                                                <input maxlength="100" class="form-control" type="text" name="telefono" id="telefono" autocomplete="off" required disabled>
                                             </div>
                                         </div>
                                 
                                         <div class="row">
                                             <div class="form-group col-md-6">
                                                 <label for="dni">DNI:</label>
-                                                <input maxlength="100" class="form-control" type="text" name="dni" id="dni" autocomplete="off" required>
+                                                <input maxlength="100" class="form-control" type="text" name="dni" id="dni" autocomplete="off" required disabled>
                                             </div>
                                 
                                             <div class="form-group col-md-6">
                                                 <label for="obra_social">Obra Social:</label>
-                                                <input maxlength="100" class="form-control" type="text" name="obra_social" id="obra_social" autocomplete="off" required>
+                                                <input maxlength="100" class="form-control" type="text" name="obra_social" id="obra_social" autocomplete="off" required disabled>
                                             </div>
                                         </div>
                                     </div>
@@ -64,28 +65,33 @@
                                     <!-- Datos receta  -->
 
                                     <div class="col-md-6 grey-background pull-right form-interno">
-                                        <h5><strong>Datos Receta:</strong></h5>
+                                        <div class="d-flex justify-content-between align-items-center"><h5><strong>Datos Receta:</strong></h5> <a href="#" class=" boton-editar-orden btn btn-primary d-flex justify-content-center align-items-center" data-toggle="modal" data-target="#modal_new_order2">Editar <i class="fa fa-pencil"></i></a>
+                                        </div>
                                         <div class="row">
                                             <div class="form-group col-sm-12 col-md-6">
                                                 <label for="doctor">Doctor:</label>
-                                                <input maxlength="100" class="form-control" type="text" name="doctor" id="doctor" required>
+                                                <input maxlength="100" class="form-control" type="text" name="doctor" id="doctor" required disabled>
                                             </div>
                                 
                                             <div class="form-group col-md-6">
                                                 <label for="fecha_receta">Fecha de receta:</label>
-                                                <input maxlength="100" class="form-control" type="text" name="fecha_receta" id="fecha_receta" autocomplete="off" required>
+                                                <input maxlength="100" class="form-control" type="text" name="fecha_receta" id="fecha_receta" autocomplete="off" required disabled>
                                             </div>
                                         </div>
                                 
                                         <div class="row">
                                             <div class="form-group col-md-6">
                                                 <label for="patologia">Patología:</label>
-                                                <input maxlength="100" class="form-control" type="text" name="patologia" id="patologia" autocomplete="off" required>
+                                                <input maxlength="100" class="form-control" type="text" name="patologia" id="patologia" autocomplete="off" required disabled>
                                             </div>
                                 
-                                            <div class="form-group col-sm-12 col-md-6">
-                                                <label for="graduacion">Graduación OD-OI:</label>
-                                                <input maxlength="100" class="form-control" type="number" name="graduacion" id="graduacion" autocomplete="off" required>
+                                            <div class="form-group col-sm-12 col-md-3">
+                                                <label for="graduacion">Graduación OD:</label>
+                                                <input maxlength="100" class="form-control" type="number" name="graduacion_od" id="graduacion_od" autocomplete="off" required disabled>
+                                            </div>
+                                            <div class="form-group col-sm-12 col-md-3">
+                                                <label for="graduacion">Graduación OI:</label>
+                                                <input maxlength="100" class="form-control" type="number" name="graduacion_oi" id="graduacion_oi" autocomplete="off" required disabled>
                                             </div>
                                         </div>
                                     </div>
@@ -95,31 +101,152 @@
                                     <!-- Datos cristales -->
 
                                     <div class="col-md-6 grey-background form-interno mt-4">
-                                        <h5><strong>Datos cristales</strong></h5>
+                                        <div class="d-flex justify-content-between align-items-center"><h5><strong>Datos Cristales:</strong></h5> <a href="#" class=" boton-editar-orden btn btn-primary d-flex justify-content-center align-items-center" data-toggle="modal" data-target="#modal_new_order3"><i class="fa fa-pencil"></i>Editar </a>
+                                        </div>
 
                                         <div class="row">
                                             <div class="form-group col-sm-12 col-md-6">
                                                 <label for="tipo_lente">Tipo de lente:</label>
-                                                <input maxlength="100" class="form-control" type="text" name="tipo_lente" id="tipo_lente" required>
+                                                <input maxlength="100" class="form-control" type="text" name="tipo_lente" id="tipo_lente" required disabled>
                                             </div>
                                 
                                             <div class="form-group col-md-6">
                                                 <label for="material">Material:</label>
-                                                <input maxlength="100" class="form-control" type="text" name="material" id="material" required>
+                                                <input maxlength="100" class="form-control" type="text" name="material" id="material" required disabled>
                                             </div>
                                         </div>
 
                                         <div class="row">
                                             <div class="form-group col-sm-12 col-md-6">
                                                 <label for="producto">Producto:</label>
-                                                <input maxlength="100" class="form-control" type="text" name="producto" id="producto" required>
+                                                <input maxlength="100" class="form-control" type="text" name="producto" id="producto" required disabled>
                                             </div>
                                 
                                             <div class="form-group col-md-6">
                                                 <label for="tratamiento">Tratamiento:</label>
-                                                <input maxlength="100" class="form-control" type="text" name="tratamiento" id="tratamiento" required>
+                                                <input maxlength="100" class="form-control" type="text" name="tratamiento" id="tratamiento" required disabled>
                                             </div>
                                         </div>
+
+                                        <!-- PROBANDO PROBANDO -->
+
+                                        <!-- // ---------------------------- -->
+                                        <!-- // MONOFOCAL ------------------ -->
+                                        <div class="row">
+                                            
+                                            <div class="col-md-12 pl-0 pr-0 hidden" id="monofocal">
+                                              <!-- Lejos -->
+                                              <div class="d-flex align-items-center">
+                                                <div class="form-group col-md-2 mb-0">
+                                                  <h5><strong>Lejos:</strong></h5>
+                                                </div>
+                                                <div class="form-group col-md-5 d-flex align-items-center mb-0">
+                                                  <label for="monofocal_lejos_der" class="mb-0"><span class="mr-2">OD</span></label>
+                                                  <input class="form-control" type="text" name="monofocal_lejos_der" id="monofocal_lejos_der" disabled>
+                                                </div>
+                                                <div class="form-group col-md-5 d-flex align-items-center mb-0">
+                                                  <label for="monofocal_lejos_izq" class="mb-0"><span class="mr-2">OI</span></label>
+                                                  <input class="form-control" type="text" name="monofocal_lejos_izq" id="monofocal_lejos_izq" disabled>
+                                                </div>
+                                              </div>
+                                              <!-- Media -->
+                                              <div class="d-flex align-items-center">
+                                                <div class="form-group col-md-2 mb-0">
+                                                  <h5 style="margin-left: 0px"><strong>Intermedia:</strong></h5>
+                                                </div>
+                                                <div class="form-group col-md-5 d-flex align-items-center mb-0">
+                                                  <label for="monofocal_media_der" class="mb-0"><span class="mr-2">OD</span></label>
+                                                  <input class="form-control" type="text" name="monofocal_media_der" id="monofocal_media_der" disabled>
+                                                </div>
+                                                <div class="form-group col-md-5 d-flex align-items-center mb-0">
+                                                  <label for="monofocal_media_izq" class="mb-0"><span class="mr-2">OI</span></label>
+                                                  <input class="form-control" type="text" name="monofocal_media_izq" id="monofocal_media_izq" disabled>
+                                                </div>
+                                                
+                                              </div>
+                                              <!-- Cerca -->
+                                              <div class="d-flex align-items-center">
+                                                <div class="form-group col-md-2 mb-0">
+                                                  <h5><strong>Cerca:</strong></h5>
+                                                </div>
+                                                <div class="form-group col-md-5 d-flex align-items-center mb-0">
+                                                  <label for="monofocal_cerca_der" class="mb-0"><span class="mr-2">OD</span></label>
+                                                  <input class="form-control" type="text" name="monofocal_cerca_der" id="monofocal_cerca_der" disabled>
+                                                </div>
+                                                <div class="form-group col-md-5 d-flex align-items-center mb-0">
+                                                  <label for="monofocal_cerca_izq" class="mb-0"><span class="mr-2">OI</span></label>
+                                                  <input class="form-control" type="text" name="monofocal_cerca_izq" id="monofocal_cerca_izq" disabled>
+                                                </div>
+                                              </div>
+                                            </div>
+
+                                            <!-- // ---------------------------- -->
+                                            <!-- // BIFOCAL ------------------ -->
+                                            <div class="col-md-12 pl-0 pr-0 hidden" id="bifocal">
+                                              <!-- Lejos -->
+                                              <div class="d-flex align-items-center">
+                                                <div class="form-group col-md-2">
+                                                  <h5><strong>Lejos:</strong></h5>
+                                                </div>
+                                                <div class="form-group col-md-5 d-flex align-items-center">
+                                                  <label for="bifocal_lejos_der" class="mb-0"><span class="mr-2">OD</span></label>
+                                                  <input class="form-control" type="text" name="bifocal_lejos_der" id="bifocal_lejos_der" disabled>
+                                                </div>
+                                                <div class="form-group col-md-5 d-flex align-items-center">
+                                                  <label for="bifocal_lejos_izq" class="mb-0"><span class="mr-2">OI</span></label>
+                                                  <input class="form-control" type="text" name="bifocal_lejos_izq" id="bifocal_lejos_izq" disabled>
+                                                </div>
+                                              </div>
+                                              <!-- Adicion -->
+                                              <div class="d-flex align-items-center">
+                                                <div class="form-group col-md-2">
+                                                  <h5><strong>Adición:</strong></h5>
+                                                </div>
+                                                <div class="form-group col-md-5 d-flex align-items-center">
+                                                  <label for="bifocal_adicion_der" class="mb-0"><span class="mr-2">OD</span></label>
+                                                  <input class="form-control" type="text" name="bifocal_adicion_der" id="bifocal_adicion_der" disabled>
+                                                </div>
+                                                <div class="form-group col-md-5 d-flex align-items-center">
+                                                  <label for="bifocal_adicion_izq" class="mb-0"><span class="mr-2">OI</span></label>
+                                                  <input class="form-control adicion-izq" type="text" name="bifocal_adicion_izq" id="bifocal_adicion_izq" disabled>
+                                                </div>
+                                              </div>
+                                            </div>
+
+                                            <!-- // ---------------------------- -->
+                                            <!-- // MULTIFOCAL ----------------- -->
+                                            <div class="col-md-12 pl-0 pr-0 hidden" id="multifocal">
+                                              <!-- Lejos -->
+                                              <div class="d-flex align-items-center">
+                                                <div class="form-group col-md-2">
+                                                  <h5><strong>Lejos:</strong></h5>
+                                                </div>
+                                                <div class="form-group col-md-5 d-flex align-items-center">
+                                                  <label for="multifocal_lejos_der" class="mb-0"><span class="mr-2">OD</span></label>
+                                                  <input class="form-control" type="text" name="multifocal_lejos_der" id="multifocal_lejos_der" disabled>
+                                                </div>
+                                                <div class="form-group col-md-5 d-flex align-items-center">
+                                                  <label for="multifocal_lejos_izq" class="mb-0"><span class="mr-2">OI</span></label>
+                                                  <input class="form-control" type="text" name="multifocal_lejos_izq" id="multifocal_lejos_izq" disabled>
+                                                </div>
+                                              </div>
+                                              <!-- Adicion -->
+                                              <div class="d-flex align-items-center">
+                                                <div class="form-group col-md-2">
+                                                  <h5><strong>Adición:</strong></h5>
+                                                </div>
+                                                <div class="form-group col-md-5 d-flex align-items-center">
+                                                  <label for="multifocal_adicion_der" class="mb-0"><span class="mr-2">OD</span></label>
+                                                  <input class="form-control" type="text" name="multifocal_adicion_der" id="multifocal_adicion_der" disabled>
+                                                </div>
+                                                <div class="form-group col-md-5 d-flex align-items-center">
+                                                  <label for="multifocal_adicion_izq" class="mb-0"><span class="mr-2">OI</span></label>
+                                                  <input class="form-control" type="text" name="multifocal_adicion_izq" id="multifocal_adicion_izq" disabled>
+                                                </div>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <!-- PROBANDO PROBANDO -->
                                     </div>
                                     
                                 </div>

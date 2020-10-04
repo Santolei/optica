@@ -7,13 +7,7 @@ require '../config/conexion.php';
 $codigo = $_POST['codigo'];
 $nombre = $_POST['nombre'];
 $categoria = $_POST['categoria'];
-$marca = $_POST['marca'];
-$stock = $_POST['stock'];
-$stock_minimo = $_POST['stock_minimo'];
-$costo_usd = $_POST['costo_usd'];
-$ganancia = $_POST['ganancia'];
-$precio = $_POST['precio'];
-
+$material = $_POST['material'];
 // --------------------------------- //
 // --------------------------------- //
 // Inserto el nuevo producto en la BD
@@ -22,9 +16,9 @@ if (!$con) {
 	echo 'Fallo la conexion';
 } else {
 	$statement = $con->prepare('
-		INSERT INTO productos (codigo, nombre, categoria, marca, stock, stock_minimo, costo_usd, ganancia, precio
+		INSERT INTO productos (codigo, nombre, categoria, material
 		) 
-		VALUES(:codigo, :nombre, :categoria, :marca, :stock, :stock_minimo, :costo_usd, :ganancia, :precio 
+		VALUES(:codigo, :nombre, :categoria, :material 
 		)
 		');
 
@@ -32,13 +26,7 @@ if (!$con) {
 		':codigo' => $codigo,
 		':nombre' => $nombre,
 		':categoria' => $categoria,
-		':marca' => $marca,
-		':stock' => $stock,
-		':stock_minimo' => $stock_minimo,
-		':costo_usd' => $costo_usd,
-		':ganancia' => $ganancia,
-		':precio' => $precio
-
+		':material' => $material
 	));
 
 	// --------------------------------- //

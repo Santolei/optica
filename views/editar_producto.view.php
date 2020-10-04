@@ -50,74 +50,17 @@
                                       </select>
                                     </div>
                                     <div class="form-group col-md-6">
-                                      <label for="marca">Marca:</label>
+                                      <label for="material">Material:</label>
                                       <br>
-                                      <select class="form-control select2" name="marca" id="marca" selected="Seleccionar Marca" required>
-                                        <option value="<?php echo $producto['marca']; ?>"><?php echo $producto['marca']; ?></option>
-                                        <?php foreach ($lista_marcas as $marca): ?>
-                                          <option value="<?php echo $marca['nombre'] ?>"><?php echo $marca['nombre'] ?></option>
-                                        <?php endforeach ?>
+                                      <select class="form-control select2" name="material" id="material" selected="Seleccionar Material" required>
+                                        <option value="<?php echo $producto['material']; ?>"><?php echo $producto['material']; ?></option>
+                                          <option value="Mineral">Mineral</option>
+                                          <option value="Organico">Orgánico</option>
+                                          <option value="Policarbonato">Policarbonato</option>
+                                          <option value="Otros">Otros</option>
                                       </select>
                                     </div>
                                   </div>
-                                  <!-- row -->
-                                  <div class="row">
-                                    <div class="form-group col-md-6 disabled-stock">
-                                      <label for="stock">Stock:</label>
-                                      <input class="form-control " type="number" name="stock" id="stock" autocomplete="off"  value="<?php echo $producto['stock']; ?>">
-                                      <!-- <span class="tooltiptext">Solo se puede agregar stock desde la sección Compras</span> -->
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                      <label for="stock_minimo">Alerta Stock mínimo:</label>
-                                      <input class="form-control" type="number" name="stock_minimo" id="stock_minimo" value="<?php echo $producto['stock_minimo']; ?>" autocomplete="off">
-                                    </div>
-                                  </div>
-                                  <hr>
-                                  <div class="row">
-                                    <div class="form-group col-md-12">
-                                      <label>¿Precio en dólares?</label>
-                                      <div class="onoffswitch">
-                                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="switch"
-                                        <?php if ($producto['costo_usd'] > 0): ?>
-                                          <?php echo 'checked'; ?>
-                                        <?php endif ?>
-                                      >
-                                      <label class="onoffswitch-label" for="switch">
-                                          <span class="onoffswitch-inner"></span>
-                                          <span class="onoffswitch-switch"></span>
-                                      </label>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <!-- row -->
-                                  <div class="row">
-                                    <div class="form-group col-md-4 row_dolares 
-                                      <?php if ($producto['costo_usd'] == 0): ?>
-                                          <?php echo 'hidden'; ?>
-                                        <?php endif ?>
-                                    ">
-                                      <label for="costo_usd">Costo USD:</label>
-                                      <input class="form-control multiplicacion" type="number" name="costo_usd" id="costo_usd" autocomplete="off" step="any" value="<?php echo $producto['costo_usd']; ?>">
-                                      <input type="hidden" name="valor_dolar" value="<?php echo $valor_dolar ?>">
-                                    </div>
-                                    <!-- <div class="form-group col-md-4">
-                                      <label for="costo">Costo:</label>
-                                      <input class="form-control" type="number" name="costo" id="costo" autocomplete="off">
-                                    </div> -->
-                                    <div class="form-group col-md-4 row_dolares 
-                                      <?php if ($producto['costo_usd'] == 0): ?>
-                                          <?php echo 'hidden'; ?>
-                                        <?php endif ?>
-                                    ">
-                                      <label for="ganancia">Ganancia (%):</label>
-                                      <input class="form-control multiplicacion2" type="number" name="ganancia" id="ganancia" autocomplete="off" value="<?php echo $producto['ganancia']; ?>">
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                      <label for="precio">Precio Cliente:</label>
-                                      <input class="form-control" name="precio" id="precio" autocomplete="off" value="<?php echo $valor_final; ?>">
-                                    </div>
-                                  </div>
-                                  
                                   
                                       <!--Footer-->
                                     <div class="modal-footer justify-content-center">

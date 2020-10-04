@@ -33,15 +33,9 @@ $primaryKey = 'id_producto';
 $columns = array(
     array( 'db' => 'codigo', 'dt' => 0 ),
     array( 'db' => 'nombre', 'dt' => 1 ),
-    array( 'db' => 'precio', 'dt' => 2 ),
-    array( 'db' => 'categoria', 'dt' => 3 ),
-    array( 'db' => 'marca', 'dt' => 4 ),
-    array( 'db' => 'stock', 'dt' => 5 ),
-    array( 'db' => 'editar', 'dt' => 6 ),
-    array( 'db' => 'costo_usd', 'dt' => 7 ),
-    array( 'db' => 'ganancia', 'dt' => 8 ),
-    array( 'db' => 'precio', 'dt' => 9 ),
-    array( 'db' => 'stock_minimo', 'dt' => 10 ),
+    array( 'db' => 'categoria', 'dt' => 2 ),
+    array( 'db' => 'material', 'dt' => 3 ),
+    array( 'db' => 'editar', 'dt' => 4 )
 );
  
 

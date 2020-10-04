@@ -38,6 +38,40 @@
 						required: "Seleccione un rol"
 					}
 				}
+			});
+
+			//  Validación vendedor
+
+			$( "#form-add-vendedor" ).validate( {
+				rules: {
+					nombre_vendedor: {
+						required: true,
+						minlength: 5
+					},
+					password_vendedor: {
+						required: true,
+						minlength: 5
+					},
+					password2_vendedor: {
+						required: true,
+						equalTo: "#password_vendedor"
+					}
+				},
+				messages: {
+					nombre_vendedor: {
+						required: "Por favor ingrese un nombre de usuario",
+						minlength: "Tu usuario debe tener al menos 5 caracteres"
+					},
+					password_vendedor: {
+						required: "Por favor, ingrese una contraseña",
+						minlength: "Tu contraseña debe tener al menos 5 caracteres"
+					},
+					password2_vendedor: {
+						required: "Por favor, ingrese una contraseña",
+						minlength: "Tu contraseña debe tener al menos 5 caracteres",
+						equalTo: "Las contraseñas deben ser iguales"
+					}
+				}
 			} );
 		} );   
 </script>

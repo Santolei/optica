@@ -489,3 +489,12 @@
     width: 100%;
   }
 }*/
+
+.boton-editar-orden{
+  background: #3F729B;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: .9em;
+  padding: .25em .5em;
+  border: none;
+}
