@@ -25,7 +25,7 @@
 
                 <div class="row">
                     <div class="content">
-                        <form action="consultas/new_order.php">
+                        <form action="consultas/new_order.php" id="new_order">
                             <div class="container-fluid">
                                 <div class="row">
 
@@ -127,8 +127,6 @@
                                                 <input maxlength="100" class="form-control" type="text" name="tratamiento" id="tratamiento" required disabled>
                                             </div>
                                         </div>
-
-                                        <!-- PROBANDO PROBANDO -->
 
                                         <!-- // ---------------------------- -->
                                         <!-- // MONOFOCAL ------------------ -->
@@ -246,11 +244,54 @@
                                               </div>
                                             </div>
                                         </div>
-                                        <!-- PROBANDO PROBANDO -->
+                                    </div>
+                                    
+                                    <!-- Datos de Armazon -->
+
+                                    <div class="col-md-6 grey-background form-interno pull-right mt-4">
+                                        <div class="d-flex justify-content-between align-items-center"><h5><strong>Datos de armazón:</strong></h5> <a href="#" class=" boton-editar-orden btn btn-primary d-flex justify-content-center align-items-center" data-toggle="modal" data-target="#modal_new_order4"><i class="fa fa-pencil"></i>Editar </a>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="form-group col-sm-12 col-md-6">
+                                                <label for="marca_armazon">Marca:</label>
+                                                <input maxlength="100" class="form-control" type="text" name="marca_armazon" id="marca_armazon"  disabled>
+                                            </div>
+                                
+                                            <div class="form-group col-md-6">
+                                                <label for="material_armazon">Material:</label>
+                                                <input maxlength="100" class="form-control" type="text" name="material_armazon" id="material_armazon" disabled>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="form-group col-sm-12 col-md-6">
+                                                <label for="tipo_armazon">Tipo de armazón:</label>
+                                                <input maxlength="100" class="form-control" type="text" name="tipo_armazon" id="tipo_armazon"  disabled>
+                                            </div>
+                                
+                                            <div class="form-group col-sm-12 col-md-3">
+                                                <label for="distancia">Dist. interpupilar:</label>
+                                                <input maxlength="100" class="form-control" type="text" name="distancia" id="distancia"  disabled>
+                                            </div>
+                                            <div class="form-group col-sm-12 col-md-3">
+                                                <label for="altura">Altura:</label>
+                                                <input maxlength="100" class="form-control" type="text" name="altura" id="altura"  disabled>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="mt-4 col-12 d-flex justify-content-center">
+                                            <!-- <input value="Guardar" type="submit" class="btn btn-primary btn-2x" id="#btn-submit"> -->
+                                            <a href="#" class="btn btn-primary btn-2x" id="btn-submit">Guardar</a>
+                                        </div>
                                     </div>
                                     
                                 </div>
                             </div>
+
                         </form>
                         <div class="output_message"></div>
                         <div class="footer">
@@ -264,10 +305,14 @@
         </div>
 
 <?php include 'views/footer.php' ?>
+
+<!-- Modales -->
 <?php include 'modals/modal_new_order.php' ?>
 <?php include 'modals/modal_new_order2.php' ?>
 <?php include 'modals/modal_new_order3.php' ?>
+<?php include 'modals/modal_new_order4.php' ?>
 <?php include 'modals/modal_add_paciente_ajax.php' ?>
+<?php include 'modals/modal_post_orden.php' ?>
 
 <!-- Scripts Ordenes -->
 <?php include 'scripts/ordenes.php' ?>

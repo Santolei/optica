@@ -40,11 +40,11 @@
                 </div>
                 <div class="form-group col-md-5 d-flex align-items-center mb-0">
                   <label for="add_monofocal_lejos_der" class="mb-0"><span class="mr-2">OD</span></label>
-                  <input class="form-control" type="text" name="add_monofocal_lejos_der" id="add_monofocal_lejos_der">
+                  <input class="form-control" type="text" name="add_monofocal_lejos_der" id="add_monofocal_lejos_der" autocomplete="off">
                 </div>
                 <div class="form-group col-md-5 d-flex align-items-center mb-0">
                   <label for="add_monofocal_lejos_izq" class="mb-0"><span class="mr-2">OI</span></label>
-                  <input class="form-control" type="text" name="add_monofocal_lejos_izq" id="add_monofocal_lejos_izq">
+                  <input class="form-control" type="text" name="add_monofocal_lejos_izq" id="add_monofocal_lejos_izq" autocomplete="off">
                 </div>
               </div>
               <!-- Media -->
@@ -54,11 +54,11 @@
                 </div>
                 <div class="form-group col-md-5 d-flex align-items-center mb-0">
                   <label for="add_monofocal_media_der" class="mb-0"><span class="mr-2">OD</span></label>
-                  <input class="form-control" type="text" name="add_monofocal_media_der" id="add_monofocal_media_der">
+                  <input class="form-control" type="text" name="add_monofocal_media_der" id="add_monofocal_media_der" autocomplete="off">
                 </div>
                 <div class="form-group col-md-5 d-flex align-items-center mb-0">
                   <label for="add_monofocal_media_izq" class="mb-0"><span class="mr-2">OI</span></label>
-                  <input class="form-control" type="text" name="add_monofocal_media_izq" id="add_monofocal_media_izq">
+                  <input class="form-control" type="text" name="add_monofocal_media_izq" id="add_monofocal_media_izq" autocomplete="off">
                 </div>
                 
               </div>
@@ -69,11 +69,11 @@
                 </div>
                 <div class="form-group col-md-5 d-flex align-items-center mb-0">
                   <label for="add_monofocal_cerca_der" class="mb-0"><span class="mr-2">OD</span></label>
-                  <input class="form-control" type="text" name="add_monofocal_cerca_der" id="add_monofocal_cerca_der">
+                  <input class="form-control" type="text" name="add_monofocal_cerca_der" id="add_monofocal_cerca_der" autocomplete="off">
                 </div>
                 <div class="form-group col-md-5 d-flex align-items-center mb-0">
                   <label for="add_monofocal_cerca_izq" class="mb-0"><span class="mr-2">OI</span></label>
-                  <input class="form-control" type="text" name="add_monofocal_cerca_izq" id="add_monofocal_cerca_izq">
+                  <input class="form-control" type="text" name="add_monofocal_cerca_izq" id="add_monofocal_cerca_izq" autocomplete="off">
                 </div>
               </div>
             </div>
@@ -88,11 +88,11 @@
                 </div>
                 <div class="form-group col-md-5 d-flex align-items-center">
                   <label for="add_bifocal_lejos_der" class="mb-0"><span class="mr-2">OD</span></label>
-                  <input class="form-control" type="text" name="add_bifocal_lejos_der" id="add_bifocal_lejos_der">
+                  <input class="form-control" type="text" name="add_bifocal_lejos_der" id="add_bifocal_lejos_der" autocomplete="off">
                 </div>
                 <div class="form-group col-md-5 d-flex align-items-center">
                   <label for="add_bifocal_lejos_izq" class="mb-0"><span class="mr-2">OI</span></label>
-                  <input class="form-control" type="text" name="add_bifocal_lejos_izq" id="add_bifocal_lejos_izq">
+                  <input class="form-control" type="text" name="add_bifocal_lejos_izq" id="add_bifocal_lejos_izq" autocomplete="off">
                 </div>
               </div>
               <!-- Adicion -->
@@ -102,11 +102,11 @@
                 </div>
                 <div class="form-group col-md-5 d-flex align-items-center">
                   <label for="add_bifocal_adicion_der" class="mb-0"><span class="mr-2">OD</span></label>
-                  <input class="form-control" type="text" name="add_bifocal_adicion_der" id="add_bifocal_adicion_der">
+                  <input class="form-control" type="text" name="add_bifocal_adicion_der" id="add_bifocal_adicion_der" autocomplete="off">
                 </div>
                 <div class="form-group col-md-5 d-flex align-items-center">
                   <label for="add_bifocal_adicion_izq" class="mb-0"><span class="mr-2">OI</span></label>
-                  <input class="form-control adicion-izq" type="text" name="add_bifocal_adicion_izq" id="add_bifocal_adicion_izq">
+                  <input class="form-control adicion-izq" type="text" name="add_bifocal_adicion_izq" id="add_bifocal_adicion_izq" autocomplete="off">
                 </div>
               </div>
             </div>
@@ -121,11 +121,11 @@
                 </div>
                 <div class="form-group col-md-5 d-flex align-items-center">
                   <label for="add_multifocal_lejos_der" class="mb-0"><span class="mr-2">OD</span></label>
-                  <input class="form-control" type="text" name="add_multifocal_lejos_der" id="add_multifocal_lejos_der">
+                  <input class="form-control" type="text" name="add_multifocal_lejos_der" id="add_multifocal_lejos_der" autocomplete="off">
                 </div>
                 <div class="form-group col-md-5 d-flex align-items-center">
                   <label for="add_multifocal_lejos_izq" class="mb-0"><span class="mr-2">OI</span></label>
-                  <input class="form-control" type="text" name="add_multifocal_lejos_izq" id="add_multifocal_lejos_izq">
+                  <input class="form-control" type="text" name="add_multifocal_lejos_izq" id="add_multifocal_lejos_izq" autocomplete="off">
                 </div>
               </div>
               <!-- Adicion -->
@@ -135,11 +135,11 @@
                 </div>
                 <div class="form-group col-md-5 d-flex align-items-center">
                   <label for="add_multifocal_adicion_der" class="mb-0"><span class="mr-2">OD</span></label>
-                  <input class="form-control" type="text" name="add_multifocal_adicion_der" id="add_multifocal_adicion_der">
+                  <input class="form-control" type="text" name="add_multifocal_adicion_der" id="add_multifocal_adicion_der" autocomplete="off">
                 </div>
                 <div class="form-group col-md-5 d-flex align-items-center">
                   <label for="add_multifocal_adicion_izq" class="mb-0"><span class="mr-2">OI</span></label>
-                  <input class="form-control" type="text" name="add_multifocal_adicion_izq" id="add_multifocal_adicion_izq">
+                  <input class="form-control" type="text" name="add_multifocal_adicion_izq" id="add_multifocal_adicion_izq" autocomplete="off">
                 </div>
               </div>
             </div>

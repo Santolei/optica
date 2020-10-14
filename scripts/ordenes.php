@@ -96,7 +96,7 @@
         // FECHA ELEGIDA
 
         var date = new Date($('#add_fecha_receta').val());
-        day = date.getDate();
+        day = date.getDate() + 1;
         month = date.getMonth() + 1;
         year = date.getFullYear();
         var fecha_receta = day + "-" + month + "-" + year;
@@ -241,6 +241,27 @@
         $('#modal_new_order4').modal('show');
     });
 
+    $('#datos_armazon').on('click', function(){
+        marca = $('#add_marca').val();
+        material_armazon = $('#add_material_armazon').val();
+        tipo_armazon = $('#add_tipo_armazon').val();
+        distancia = $('#add_distancia_interpupilar').val();
+        altura = $('#add_altura').val();
+
+        $('input[name="marca_armazon"]').val(marca);
+        $('input[name="material_armazon"]').val(material_armazon);
+        $('input[name="tipo_armazon"]').val(tipo_armazon);
+        $('input[name="distancia"]').val(distancia);
+        $('input[name="altura"]').val(altura);
+
+        $('#modal_new_order4').modal('hide');
+    });
+
+    $('#btn-submit').on('click', function(){
+        $("#new_order")[0].reset();
+        $('#modalPostOrden').modal('show');
+    });
+    
 
 
 
