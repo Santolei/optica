@@ -255,11 +255,43 @@
         $('input[name="altura"]').val(altura);
 
         $('#modal_new_order4').modal('hide');
+        $('#modal_new_order5').modal('show');
     });
 
-    $('#btn-submit').on('click', function(){
-        $("#new_order")[0].reset();
-        $('#modalPostOrden').modal('show');
+    $('#form-total-senia').on('submit',function(){
+        total = $('#add_total').val();
+        senia = $('#add_senia').val();
+        saldo = $('#add_saldo').val();
+
+        $('input[name="total"]').val(total);
+        $('input[name="senia"]').val(senia);
+        $('input[name="saldo"]').val(saldo);
+        $('#modal_new_order5').modal('hide');
+        // Prevents default submission of the form after clicking on the submit button. 
+        return false;  
+
+
+    });
+
+    $('#new_order').on('submit', function(){
+        var form = $('#new_order');
+        $.ajax({
+            url: form.attr('action'),
+            method: form.attr('method'),
+            contentType: 'application/x-www-form-urlencoded',
+            data: form.serialize(),
+            success: function(data){
+                // Paso el Id del la venta al href del modal post venta para imprimir comprobante
+                var comprobante = "comprobante.php?id_orden=" + data;
+                $('#btn_imprimir_2').attr("href", comprobante);
+                // Muestro el modal post Orden
+                $('#modalPostOrden').modal('show');
+                // Reseteo el formulario de la orden
+                $("#new_order")[0].reset();
+            }
+        });
+        // Prevents default submission of the form after clicking on the submit button. 
+        // return false; 
     });
     
 
