@@ -274,7 +274,7 @@
     });
 
     $('#new_order').on('submit', function(){
-        var form = $('#new_order');
+        var form = $(this);
         $.ajax({
             url: form.attr('action'),
             method: form.attr('method'),
@@ -284,6 +284,7 @@
                 // Paso el Id del la venta al href del modal post venta para imprimir comprobante
                 var comprobante = "comprobante.php?id_orden=" + data;
                 $('#btn_imprimir_2').attr("href", comprobante);
+                console.log(data);
                 // Muestro el modal post Orden
                 $('#modalPostOrden').modal('show');
                 // Reseteo el formulario de la orden
@@ -291,8 +292,10 @@
             }
         });
         // Prevents default submission of the form after clicking on the submit button. 
-        // return false; 
+        return false; 
     });
+
+    
     
 
 
