@@ -8,7 +8,7 @@ $titulo = "Ingresar"
 	<div class="d-flex justify-content-center align-items-center">
 		<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" name="login" class="contenedor-login">
 		
-			<h2 class="text-center">NEO-STOCK</h2>
+			<h2 class="text-center mb-4"><img src="assets/img/Logo2.png" alt=""></h2>
 			<div class="form-group">
 				<input type="text" name="usuario" class="form-control" placeholder="Usuario" required>
 			</div>

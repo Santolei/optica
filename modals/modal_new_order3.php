@@ -33,47 +33,183 @@
             <!-- // ---------------------------- -->
             <!-- // MONOFOCAL ------------------ -->
             <div class="col-md-8 hidden" id="add_monofocal">
+              <!-- // ---------------------------- -->
+              <!-- Contenedor de los checckbox con los que vamos a
+                   Ocultar o mostrar las distintas graduaciones -->
+              <!-- // ---------------------------- -->
+              <div class="d-flex justify-content-end align-items-center">
+                <div class="checkbox mt-0">
+                  <input type="checkbox" id="checkbox_lejos" name="checkbox_lejos" value="0">
+                  <label for="checkbox_lejos" class="checkbox-label">Lejos</label>
+                </div>
+                <div class="checkbox mt-0 ml-2 mr-2">
+                  <input type="checkbox" id="checkbox_intermedia" name="checkbox_intermedia" value="0">
+                  <label for="checkbox_intermedia" class="checkbox-label">Intermedia</label>
+                </div>
+                <div class="checkbox mt-0">
+                  <input type="checkbox" id="checkbox_cerca" name="checkbox_cerca" value="0">
+                  <label for="checkbox_cerca" class="checkbox-label">Cerca</label>
+                </div>
+              </div>
+
               <!-- Lejos -->
-              <div class="d-flex align-items-center">
+              <div class="justify-content-center hidden mb-3" id="lejos">
                 <div class="form-group col-md-2 mb-0">
                   <h5><strong>Lejos:</strong></h5>
                 </div>
-                <div class="form-group col-md-5 d-flex align-items-center mb-0">
-                  <label for="add_monofocal_lejos_der" class="mb-0"><span class="mr-2">OD</span></label>
-                  <input class="form-control" type="text" name="add_monofocal_lejos_der" id="add_monofocal_lejos_der" autocomplete="off">
-                </div>
-                <div class="form-group col-md-5 d-flex align-items-center mb-0">
-                  <label for="add_monofocal_lejos_izq" class="mb-0"><span class="mr-2">OI</span></label>
-                  <input class="form-control" type="text" name="add_monofocal_lejos_izq" id="add_monofocal_lejos_izq" autocomplete="off">
+                <div class="d-flex flex-column">
+                  <!-- OJO DERECHO -->
+                  <div class="form-group d-flex align-items-end mb-2">
+                    <label class=""><span class="mr-2 mb-4 pb-4">OD</span></label>
+                    <!-- ESF -->
+                    <div class="text-center mr-3">
+                      <label for="add_monofocal_lejos_der_esf">ESF</label>
+                      <input class="form-control" type="text" name="add_monofocal_lejos_der_esf" id="add_monofocal_lejos_der_esf">
+                    </div>
+                    <!-- CIL -->
+                    <div class="text-center mr-3">
+                      <label for="add_monofocal_lejos_der_cil">CIL</label>
+                      <input class="form-control" type="text" name="add_monofocal_lejos_der_cil" id="add_monofocal_lejos_der_cil">
+                    </div>
+                    <!-- EJE -->
+                    <div class="text-center mr-3">
+                      <label for="add_monofocal_lejos_der_eje">EJE</label>
+                      <input class="form-control" type="text" name="add_monofocal_lejos_der_eje" id="add_monofocal_lejos_der_eje">
+                    </div>
+                    <!-- ADICION -->
+                    <div class="text-center">
+                      <label for="add_monofocal_lejos_der_add">ADD</label>
+                      <input class="form-control" type="text" name="add_monofocal_lejos_der_add" id="add_monofocal_lejos_der_add">
+                    </div>
+                  </div>
+
+                  <!-- OJO IZQUIERDO -->
+                  <div class="form-group d-flex align-items-end mb-0">
+                    <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
+                    <!-- ESF -->
+                    <div class="text-center mr-3">
+                      <input class="form-control" type="text" name="add_monofocal_lejos_izq_esf" id="add_monofocal_lejos_izq_esf">
+                    </div>
+                    <!-- CIL -->
+                    <div class="text-center mr-3">
+                      <input class="form-control" type="text" name="add_monofocal_lejos_izq_cil" id="add_monofocal_lejos_izq_cil">
+                    </div>
+                    <!-- EJE -->
+                    <div class="text-center mr-3">
+                      <input class="form-control" type="text" name="add_monofocal_lejos_izq_eje" id="add_monofocal_lejos_izq_eje">
+                    </div>
+                    <!-- ADICION -->
+                    <div class="text-center">
+                      <input class="form-control" type="text" name="add_monofocal_lejos_izq_add" id="add_monofocal_lejos_izq_add">
+                    </div>
+                  </div>
                 </div>
               </div>
-              <!-- Media -->
-              <div class="d-flex align-items-center">
+              <!-- Intermedia -->
+              <div class="justify-content-center hidden mb-3" id="intermedia">
+                <hr>
                 <div class="form-group col-md-2 mb-0">
                   <h5 style="margin-left: -38px"><strong>Intermedia:</strong></h5>
                 </div>
-                <div class="form-group col-md-5 d-flex align-items-center mb-0">
-                  <label for="add_monofocal_media_der" class="mb-0"><span class="mr-2">OD</span></label>
-                  <input class="form-control" type="text" name="add_monofocal_media_der" id="add_monofocal_media_der" autocomplete="off">
+                <div class="d-flex flex-column">
+                  <!-- OJO DERECHO -->
+                  <div class="form-group d-flex align-items-end mb-2">
+                    <label class=""><span class="mr-2 mb-4 pb-4">OD</span></label>
+                    <!-- ESF -->
+                    <div class="text-center mr-3">
+                      <label for="add_monofocal_intermedia_der_esf">ESF</label>
+                      <input class="form-control" type="text" name="add_monofocal_intermedia_der_esf" id="add_monofocal_intermedia_der_esf">
+                    </div>
+                    <!-- CIL -->
+                    <div class="text-center mr-3">
+                      <label for="add_monofocal_intermedia_der_cil">CIL</label>
+                      <input class="form-control" type="text" name="add_monofocal_intermedia_der_cil" id="add_monofocal_intermedia_der_cil">
+                    </div>
+                    <!-- EJE -->
+                    <div class="text-center mr-3">
+                      <label for="add_monofocal_intermedia_der_eje">EJE</label>
+                      <input class="form-control" type="text" name="add_monofocal_intermedia_der_eje" id="add_monofocal_intermedia_der_eje">
+                    </div>
+                    <!-- ADICION -->
+                    <div class="text-center">
+                      <label for="add_monofocal_intermedia_der_add">ADD</label>
+                      <input class="form-control" type="text" name="add_monofocal_intermedia_der_add" id="add_monofocal_intermedia_der_add">
+                    </div>
+                  </div>
+
+                  <!-- OJO IZQUIERDO -->
+                  <div class="form-group d-flex align-items-end mb-0">
+                    <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
+                    <!-- ESF -->
+                    <div class="text-center mr-3">
+                      <input class="form-control" type="text" name="add_monofocal_intermedia_izq_esf" id="add_monofocal_intermedia_izq_esf">
+                    </div>
+                    <!-- CIL -->
+                    <div class="text-center mr-3">
+                      <input class="form-control" type="text" name="add_monofocal_intermedia_izq_cil" id="add_monofocal_intermedia_izq_cil">
+                    </div>
+                    <!-- EJE -->
+                    <div class="text-center mr-3">
+                      <input class="form-control" type="text" name="add_monofocal_intermedia_izq_eje" id="add_monofocal_intermedia_izq_eje">
+                    </div>
+                    <!-- ADICION -->
+                    <div class="text-center">
+                      <input class="form-control" type="text" name="add_monofocal_intermedia_izq_add" id="add_monofocal_intermedia_izq_add">
+                    </div>
+                  </div>
                 </div>
-                <div class="form-group col-md-5 d-flex align-items-center mb-0">
-                  <label for="add_monofocal_media_izq" class="mb-0"><span class="mr-2">OI</span></label>
-                  <input class="form-control" type="text" name="add_monofocal_media_izq" id="add_monofocal_media_izq" autocomplete="off">
-                </div>
-                
               </div>
               <!-- Cerca -->
-              <div class="d-flex align-items-center">
+              <div class="justify-content-center hidden" id="cerca">
                 <div class="form-group col-md-2 mb-0">
                   <h5><strong>Cerca:</strong></h5>
                 </div>
-                <div class="form-group col-md-5 d-flex align-items-center mb-0">
-                  <label for="add_monofocal_cerca_der" class="mb-0"><span class="mr-2">OD</span></label>
-                  <input class="form-control" type="text" name="add_monofocal_cerca_der" id="add_monofocal_cerca_der" autocomplete="off">
-                </div>
-                <div class="form-group col-md-5 d-flex align-items-center mb-0">
-                  <label for="add_monofocal_cerca_izq" class="mb-0"><span class="mr-2">OI</span></label>
-                  <input class="form-control" type="text" name="add_monofocal_cerca_izq" id="add_monofocal_cerca_izq" autocomplete="off">
+                <div class="d-flex flex-column">
+                  <!-- OJO DERECHO -->
+                  <div class="form-group d-flex align-items-end mb-2">
+                    <label class=""><span class="mr-2 mb-4 pb-4">OD</span></label>
+                    <!-- ESF -->
+                    <div class="text-center mr-3">
+                      <label for="add_monofocal_cerca_der_esf">ESF</label>
+                      <input class="form-control" type="text" name="add_monofocal_cerca_der_esf" id="add_monofocal_cerca_der_esf">
+                    </div>
+                    <!-- CIL -->
+                    <div class="text-center mr-3">
+                      <label for="add_monofocal_cerca_der_cil">CIL</label>
+                      <input class="form-control" type="text" name="add_monofocal_cerca_der_cil" id="add_monofocal_cerca_der_cil">
+                    </div>
+                    <!-- EJE -->
+                    <div class="text-center mr-3">
+                      <label for="add_monofocal_cerca_der_eje">EJE</label>
+                      <input class="form-control" type="text" name="add_monofocal_cerca_der_eje" id="add_monofocal_cerca_der_eje">
+                    </div>
+                    <!-- ADICION -->
+                    <div class="text-center">
+                      <label for="add_monofocal_cerca_der_add">ADD</label>
+                      <input class="form-control" type="text" name="add_monofocal_cerca_der_add" id="add_monofocal_cerca_der_add">
+                    </div>
+                  </div>
+
+                  <!-- OJO IZQUIERDO -->
+                  <div class="form-group d-flex align-items-end mb-0">
+                    <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
+                    <!-- ESF -->
+                    <div class="text-center mr-3">
+                      <input class="form-control" type="text" name="add_monofocal_cerca_izq_esf" id="add_monofocal_cerca_izq_esf">
+                    </div>
+                    <!-- CIL -->
+                    <div class="text-center mr-3">
+                      <input class="form-control" type="text" name="add_monofocal_cerca_izq_cil" id="add_monofocal_cerca_izq_cil">
+                    </div>
+                    <!-- EJE -->
+                    <div class="text-center mr-3">
+                      <input class="form-control" type="text" name="add_monofocal_cerca_izq_eje" id="add_monofocal_cerca_izq_eje">
+                    </div>
+                    <!-- ADICION -->
+                    <div class="text-center">
+                      <input class="form-control" type="text" name="add_monofocal_cerca_izq_add" id="add_monofocal_cerca_izq_add">
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -81,67 +217,105 @@
             <!-- // ---------------------------- -->
             <!-- // BIFOCAL ------------------ -->
             <div class="col-md-8 hidden" id="add_bifocal">
-              <!-- Lejos -->
-              <div class="d-flex align-items-center">
-                <div class="form-group col-md-2">
-                  <h5><strong>Lejos:</strong></h5>
+              <div class="d-flex flex-column">
+                  <!-- OJO DERECHO -->
+                  <div class="form-group d-flex align-items-end mb-2">
+                    <label class=""><span class="mr-2 mb-4 pb-4">OD</span></label>
+                    <!-- ESF -->
+                    <div class="text-center mr-3">
+                      <label for="add_bifocal_der_esf">ESF</label>
+                      <input class="form-control" type="text" name="add_bifocal_der_esf" id="add_bifocal_der_esf">
+                    </div>
+                    <!-- CIL -->
+                    <div class="text-center mr-3">
+                      <label for="add_bifocal_der_cil">CIL</label>
+                      <input class="form-control" type="text" name="add_bifocal_der_cil" id="add_bifocal_der_cil">
+                    </div>
+                    <!-- EJE -->
+                    <div class="text-center mr-3">
+                      <label for="add_bifocal_der_eje">EJE</label>
+                      <input class="form-control" type="text" name="add_bifocal_der_eje" id="add_bifocal_der_eje">
+                    </div>
+                    <!-- ADICION -->
+                    <div class="text-center">
+                      <label for="add_bifocal_der_add">ADD</label>
+                      <input class="form-control" type="text" name="add_bifocal_der_add" id="add_bifocal_der_add">
+                    </div>
+                  </div>
+
+                  <!-- OJO IZQUIERDO -->
+                  <div class="form-group d-flex align-items-end mb-0">
+                    <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
+                    <!-- ESF -->
+                    <div class="text-center mr-3">
+                      <input class="form-control" type="text" name="add_bifocal_izq_esf" id="add_bifocal_izq_esf">
+                    </div>
+                    <!-- CIL -->
+                    <div class="text-center mr-3">
+                      <input class="form-control" type="text" name="add_bifocal_izq_cil" id="add_bifocal_izq_cil">
+                    </div>
+                    <!-- EJE -->
+                    <div class="text-center mr-3">
+                      <input class="form-control" type="text" name="add_bifocal_izq_eje" id="add_bifocal_izq_eje">
+                    </div>
+                    <!-- ADICION -->
+                    <div class="text-center">
+                      <input class="form-control" type="text" name="add_bifocal_izq_add" id="add_bifocal_izq_add">
+                    </div>
+                  </div>
                 </div>
-                <div class="form-group col-md-5 d-flex align-items-center">
-                  <label for="add_bifocal_lejos_der" class="mb-0"><span class="mr-2">OD</span></label>
-                  <input class="form-control" type="text" name="add_bifocal_lejos_der" id="add_bifocal_lejos_der" autocomplete="off">
-                </div>
-                <div class="form-group col-md-5 d-flex align-items-center">
-                  <label for="add_bifocal_lejos_izq" class="mb-0"><span class="mr-2">OI</span></label>
-                  <input class="form-control" type="text" name="add_bifocal_lejos_izq" id="add_bifocal_lejos_izq" autocomplete="off">
-                </div>
-              </div>
-              <!-- Adicion -->
-              <div class="d-flex align-items-center">
-                <div class="form-group col-md-2">
-                  <h5 style="margin-left: -10px"><strong>Adición:</strong></h5>
-                </div>
-                <div class="form-group col-md-5 d-flex align-items-center">
-                  <label for="add_bifocal_adicion_der" class="mb-0"><span class="mr-2">OD</span></label>
-                  <input class="form-control" type="text" name="add_bifocal_adicion_der" id="add_bifocal_adicion_der" autocomplete="off">
-                </div>
-                <div class="form-group col-md-5 d-flex align-items-center">
-                  <label for="add_bifocal_adicion_izq" class="mb-0"><span class="mr-2">OI</span></label>
-                  <input class="form-control adicion-izq" type="text" name="add_bifocal_adicion_izq" id="add_bifocal_adicion_izq" autocomplete="off">
-                </div>
-              </div>
             </div>
 
             <!-- // ---------------------------- -->
             <!-- // MULTIFOCAL ----------------- -->
             <div class="col-md-8 hidden" id="add_multifocal">
-              <!-- Lejos -->
-              <div class="d-flex align-items-center">
-                <div class="form-group col-md-2">
-                  <h5><strong>Lejos:</strong></h5>
+              <div class="d-flex flex-column">
+                  <!-- OJO DERECHO -->
+                  <div class="form-group d-flex align-items-end mb-2">
+                    <label class=""><span class="mr-2 mb-4 pb-4">OD</span></label>
+                    <!-- ESF -->
+                    <div class="text-center mr-3">
+                      <label for="add_multifocal_der_esf">ESF</label>
+                      <input class="form-control" type="text" name="add_multifocal_der_esf" id="add_multifocal_der_esf">
+                    </div>
+                    <!-- CIL -->
+                    <div class="text-center mr-3">
+                      <label for="add_multifocal_der_cil">CIL</label>
+                      <input class="form-control" type="text" name="add_multifocal_der_cil" id="add_multifocal_der_cil">
+                    </div>
+                    <!-- EJE -->
+                    <div class="text-center mr-3">
+                      <label for="add_multifocal_der_eje">EJE</label>
+                      <input class="form-control" type="text" name="add_multifocal_der_eje" id="add_multifocal_der_eje">
+                    </div>
+                    <!-- ADICION -->
+                    <div class="text-center">
+                      <label for="add_multifocal_der_add">ADD</label>
+                      <input class="form-control" type="text" name="add_multifocal_der_add" id="add_multifocal_der_add">
+                    </div>
+                  </div>
+
+                  <!-- OJO IZQUIERDO -->
+                  <div class="form-group d-flex align-items-end mb-0">
+                    <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
+                    <!-- ESF -->
+                    <div class="text-center mr-3">
+                      <input class="form-control" type="text" name="add_multifocal_izq_esf" id="add_multifocal_izq_esf">
+                    </div>
+                    <!-- CIL -->
+                    <div class="text-center mr-3">
+                      <input class="form-control" type="text" name="add_multifocal_izq_cil" id="add_multifocal_izq_cil">
+                    </div>
+                    <!-- EJE -->
+                    <div class="text-center mr-3">
+                      <input class="form-control" type="text" name="add_multifocal_izq_eje" id="add_multifocal_izq_eje">
+                    </div>
+                    <!-- ADICION -->
+                    <div class="text-center">
+                      <input class="form-control" type="text" name="add_multifocal_izq_add" id="add_multifocal_izq_add">
+                    </div>
+                  </div>
                 </div>
-                <div class="form-group col-md-5 d-flex align-items-center">
-                  <label for="add_multifocal_lejos_der" class="mb-0"><span class="mr-2">OD</span></label>
-                  <input class="form-control" type="text" name="add_multifocal_lejos_der" id="add_multifocal_lejos_der" autocomplete="off">
-                </div>
-                <div class="form-group col-md-5 d-flex align-items-center">
-                  <label for="add_multifocal_lejos_izq" class="mb-0"><span class="mr-2">OI</span></label>
-                  <input class="form-control" type="text" name="add_multifocal_lejos_izq" id="add_multifocal_lejos_izq" autocomplete="off">
-                </div>
-              </div>
-              <!-- Adicion -->
-              <div class="d-flex align-items-center">
-                <div class="form-group col-md-2">
-                  <h5 style="margin-left: -10px"><strong>Adición:</strong></h5>
-                </div>
-                <div class="form-group col-md-5 d-flex align-items-center">
-                  <label for="add_multifocal_adicion_der" class="mb-0"><span class="mr-2">OD</span></label>
-                  <input class="form-control" type="text" name="add_multifocal_adicion_der" id="add_multifocal_adicion_der" autocomplete="off">
-                </div>
-                <div class="form-group col-md-5 d-flex align-items-center">
-                  <label for="add_multifocal_adicion_izq" class="mb-0"><span class="mr-2">OI</span></label>
-                  <input class="form-control" type="text" name="add_multifocal_adicion_izq" id="add_multifocal_adicion_izq" autocomplete="off">
-                </div>
-              </div>
             </div>
 
         </div>

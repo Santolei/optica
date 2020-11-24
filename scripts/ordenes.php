@@ -9,6 +9,22 @@
     $("#vendedor").load('consultas/vendedores_ajax.php');
     $("#add_patologia").load('consultas/patologias_ajax.php');
 
+    // Funcion para chequear que el vendedor haya sido seleccionado
+
+    function checkVendedor(){
+        if ($('#vendedor').val() != 0) {
+            $('#datos_paciente').removeClass('btn-outline-info').addClass('btn-success');
+            $("#datos_paciente").attr("disabled", false);
+            $("#buscar_paciente").attr("readonly", false);
+        }
+    }
+
+    $('#vendedor').on('change', function(){
+         if ($('#vendedor').val() != 0) {
+            $("#buscar_paciente").attr("readonly", false);
+        } 
+    });
+
     // Agregando paciente por ajax desde el modal de agregar Orden
 
         $('#add_paciente_form').on('submit',function(){
@@ -50,6 +66,7 @@
     // Al clickear el nombre del paciente voy a colocar los datos en el form
 
     $( '#mostrar' ).on( 'click', 'a', function () {
+        checkVendedor();
         id_paciente = $(this).attr('data-id');
         nombre = $(this).attr('data-nombre');
         tel_cel = $(this).attr('data-tel_cel');
@@ -66,9 +83,9 @@
         $('input[name="obra_social"]').val(obra_social);
 
         $('#mostrar').html("<div class='m-0 animated slower delay-2s fadeOut'>Paciente agregado</div>");
-        $('#datos_paciente').removeClass('btn-outline-info').addClass('btn-success');
-        $("#datos_paciente").attr("disabled", false);
+        
     });
+    
 
     // Avanzo al segundo modal luego de que el usuario clickee el boton de continuar
 
@@ -130,6 +147,10 @@
             $('#add_monofocal').fadeIn("slow", "linear").removeClass('hidden');
             $('#add_bifocal').addClass('hidden').fadeOut("slow", "linear");
             $('#add_multifocal').addClass('hidden').fadeOut("slow", "linear");
+
+            $("#add_monofocal :input").val('');
+            $("#add_bifocal :input").val('NULL');
+            $("#add_multifocal :input").val('NULL');
         }
         else if ($('#add_tipo_lente').val() === "Bifocal") {
             $('#monofocal').addClass('hidden').fadeOut("slow", "linear");
@@ -139,6 +160,10 @@
             $('#add_monofocal').addClass('hidden').fadeOut("slow", "linear");
             $('#add_bifocal').fadeIn("slow", "linear").removeClass('hidden');
             $('#add_multifocal').addClass('hidden').fadeOut("slow", "linear");
+
+            $("#add_bifocal :input").val('');
+            $("#add_monofocal :input").val('NULL');
+            $("#add_multifocal :input").val('NULL');
         }
         else if ($('#add_tipo_lente').val() === "Multifocal") {
             $('#monofocal').addClass('hidden').fadeOut("slow", "linear");
@@ -148,6 +173,10 @@
             $('#add_monofocal').addClass('hidden').fadeOut("slow", "linear");
             $('#add_bifocal').addClass('hidden').fadeOut("slow", "linear");
             $('#add_multifocal').fadeIn("slow", "linear").removeClass('hidden');
+
+            $("#add_multifocal :input").val('');
+            $("#add_bifocal :input").val('NULL');
+            $("#add_monofocal :input").val('NULL');
         }
     }
 
@@ -155,6 +184,50 @@
         tipoLente();
     });
 
+    // Muestro u oculto dependiendo de los checkbox 
+    // de lejos cerca o intermedia " SOLO PARA MONOFOCAL "
+
+    $('#checkbox_lejos').on('change',function(){
+        if($('#checkbox_lejos').is(":checked")){
+            $('#checkbox_lejos').val(1);
+            $('#lejos').fadeIn("slow", "linear").addClass('d-flex').removeClass('hidden');
+            $('.monofocal_lejos').fadeIn("slow", "linear").addClass('d-flex').removeClass('hidden');
+        }  
+        else {
+           $('#lejos').removeClass('d-flex').addClass('hidden').fadeOut("slow", "linear");
+           $('.monofocal_lejos').removeClass('d-flex').addClass('hidden').fadeOut("slow", "linear");
+           $('#checkbox_lejos').val(0);
+        }
+    });
+
+    $('#checkbox_intermedia').on('change',function(){
+        if($('#checkbox_intermedia').is(":checked")){
+            $('#intermedia').fadeIn("slow", "linear").addClass('d-flex').removeClass('hidden');
+            $('.monofocal_intermedia').fadeIn("slow", "linear").addClass('d-flex').removeClass('hidden');
+            $('#checkbox_intermedia').val(1);
+        }  
+        else {
+           $('#intermedia').removeClass('d-flex').addClass('hidden').fadeOut("slow", "linear");
+           $('.monofocal_intermedia').removeClass('d-flex').addClass('hidden').fadeOut("slow", "linear");
+           $('#checkbox_intermedia').val(0);
+        }
+    });
+
+    $('#checkbox_cerca').on('change',function(){
+        if($('#checkbox_cerca').is(":checked")){
+            $('#checkbox_cerca').val(1);
+            $('#cerca').fadeIn("slow", "linear").addClass('d-flex').removeClass('hidden');
+            $('.monofocal_cerca').fadeIn("slow", "linear").addClass('d-flex').removeClass('hidden');
+        }  
+        else {
+           $('#cerca').removeClass('d-flex').addClass('hidden').fadeOut("slow", "linear");
+           $('.monofocal_cerca').removeClass('d-flex').addClass('hidden').fadeOut("slow", "linear");
+           $('#checkbox_cerca').val(0);
+        }
+    });
+
+   
+            
     // Funcion para copiar adición derecha a izquierda
   
     function copiarAdicionBifocal() {
@@ -198,20 +271,66 @@
 
         tipo_lente = $('#add_tipo_lente').val();
 
-        add_monofocal_lejos_der = $('#add_monofocal_lejos_der').val();
-        add_monofocal_lejos_izq = $('#add_monofocal_lejos_izq').val();
-        add_monofocal_media_der = $('#add_monofocal_media_der').val();
-        add_monofocal_media_izq = $('#add_monofocal_media_izq').val();
-        add_monofocal_cerca_der = $('#add_monofocal_cerca_der').val();
-        add_monofocal_cerca_izq = $('#add_monofocal_cerca_izq').val();
-        add_bifocal_lejos_der = $('#add_bifocal_lejos_der').val();
-        add_bifocal_lejos_izq = $('#add_bifocal_lejos_izq').val();
-        add_bifocal_adicion_der = $('#add_bifocal_adicion_der').val();
-        add_bifocal_adicion_izq = $('#add_bifocal_adicion_izq').val();
-        add_multifocal_lejos_der = $('#add_multifocal_lejos_der').val();
-        add_multifocal_lejos_izq = $('#add_multifocal_lejos_izq').val();
-        add_multifocal_adicion_der = $('#add_multifocal_adicion_der').val();
-        add_multifocal_adicion_izq = $('#add_multifocal_adicion_izq').val();
+        // MONOFOCAL LEJOS ---------------------------------------------------
+        // Ojo derecho
+        add_monofocal_lejos_der_esf = $('#add_monofocal_lejos_der_esf').val();
+        add_monofocal_lejos_der_cil = $('#add_monofocal_lejos_der_cil').val();
+        add_monofocal_lejos_der_eje = $('#add_monofocal_lejos_der_eje').val();
+        add_monofocal_lejos_der_add = $('#add_monofocal_lejos_der_add').val();
+        // Ojo izquierdo
+        add_monofocal_lejos_izq_esf = $('#add_monofocal_lejos_izq_esf').val();
+        add_monofocal_lejos_izq_cil = $('#add_monofocal_lejos_izq_cil').val();
+        add_monofocal_lejos_izq_eje = $('#add_monofocal_lejos_izq_eje').val();
+        add_monofocal_lejos_izq_add = $('#add_monofocal_lejos_izq_add').val();
+
+        // MONOFOCAL INTERMEDIA ----------------------------------------------
+        // Ojo derecho
+        add_monofocal_intermedia_der_esf = $('#add_monofocal_intermedia_der_esf').val();
+        add_monofocal_intermedia_der_cil = $('#add_monofocal_intermedia_der_cil').val();
+        add_monofocal_intermedia_der_eje = $('#add_monofocal_intermedia_der_eje').val();
+        add_monofocal_intermedia_der_add = $('#add_monofocal_intermedia_der_add').val();
+        // Ojo izquierdo
+        add_monofocal_intermedia_izq_esf = $('#add_monofocal_intermedia_izq_esf').val();
+        add_monofocal_intermedia_izq_cil = $('#add_monofocal_intermedia_izq_cil').val();
+        add_monofocal_intermedia_izq_eje = $('#add_monofocal_intermedia_izq_eje').val();
+        add_monofocal_intermedia_izq_add = $('#add_monofocal_intermedia_izq_add').val();
+
+        // MONOFOCAL CERCA ---------------------------------------------------
+        // Ojo derecho
+        add_monofocal_cerca_der_esf = $('#add_monofocal_cerca_der_esf').val();
+        add_monofocal_cerca_der_cil = $('#add_monofocal_cerca_der_cil').val();
+        add_monofocal_cerca_der_eje = $('#add_monofocal_cerca_der_eje').val();
+        add_monofocal_cerca_der_add = $('#add_monofocal_cerca_der_add').val();
+        // Ojo izquierdo
+        add_monofocal_cerca_izq_esf = $('#add_monofocal_cerca_izq_esf').val();
+        add_monofocal_cerca_izq_cil = $('#add_monofocal_cerca_izq_cil').val();
+        add_monofocal_cerca_izq_eje = $('#add_monofocal_cerca_izq_eje').val();
+        add_monofocal_cerca_izq_add = $('#add_monofocal_cerca_izq_add').val();
+
+        // BIFOCAL -----------------------------------------------------------
+        // Ojo derecho
+        add_bifocal_der_esf = $('#add_bifocal_der_esf').val();
+        add_bifocal_der_cil = $('#add_bifocal_der_cil').val();
+        add_bifocal_der_eje = $('#add_bifocal_der_eje').val();
+        add_bifocal_der_add = $('#add_bifocal_der_add').val();
+        // Ojo izquierdo
+        add_bifocal_izq_esf = $('#add_bifocal_izq_esf').val();
+        add_bifocal_izq_cil = $('#add_bifocal_izq_cil').val();
+        add_bifocal_izq_eje = $('#add_bifocal_izq_eje').val();
+        add_bifocal_izq_add = $('#add_bifocal_izq_add').val();
+
+        // MULTIFOCAL -----------------------------------------------------------
+        // Ojo derecho
+        add_multifocal_der_esf = $('#add_multifocal_der_esf').val();
+        add_multifocal_der_cil = $('#add_multifocal_der_cil').val();
+        add_multifocal_der_eje = $('#add_multifocal_der_eje').val();
+        add_multifocal_der_add = $('#add_multifocal_der_add').val();
+        // Ojo izquierdo
+        add_multifocal_izq_esf = $('#add_multifocal_izq_esf').val();
+        add_multifocal_izq_cil = $('#add_multifocal_izq_cil').val();
+        add_multifocal_izq_eje = $('#add_multifocal_izq_eje').val();
+        add_multifocal_izq_add = $('#add_multifocal_izq_add').val();
+
 
         material = $('#add_material').val();
         producto = $('#add_producto').val();
@@ -222,20 +341,67 @@
         $('input[name="producto"]').val(producto);
         $('input[name="tratamiento"]').val(tratamiento);
 
-        $('input[name="monofocal_lejos_der"]').val(add_monofocal_lejos_der); 
-        $('input[name="monofocal_lejos_izq"]').val(add_monofocal_lejos_izq);
-        $('input[name="monofocal_media_der"]').val(add_monofocal_media_der); 
-        $('input[name="monofocal_media_izq"]').val(add_monofocal_media_izq); 
-        $('input[name="monofocal_cerca_der"]').val(add_monofocal_cerca_der); 
-        $('input[name="monofocal_cerca_izq"]').val(add_monofocal_cerca_izq); 
-        $('input[name="bifocal_lejos_der"]').val(add_bifocal_lejos_der);
-        $('input[name="bifocal_lejos_izq"]').val(add_bifocal_lejos_izq); 
-        $('input[name="bifocal_adicion_der"]').val(add_bifocal_adicion_der); 
-        $('input[name="bifocal_adicion_izq"]').val(add_bifocal_adicion_izq); 
-        $('input[name="multifocal_lejos_der"]').val(add_multifocal_lejos_der);
-        $('input[name="multifocal_lejos_izq"]').val(add_multifocal_lejos_izq);
-        $('input[name="multifocal_adicion_der"]').val(add_multifocal_adicion_der); 
-        $('input[name="multifocal_adicion_izq"]').val(add_multifocal_adicion_izq);
+        // COPIANDO DATOS DE LENTES ------------------------------------------------------------
+
+        // MONOFOCAL LEJOS ---------------------------------------------------
+        // Ojo derecho
+        $('input[name="monofocal_lejos_der_esf"]').val(add_monofocal_lejos_der_esf); 
+        $('input[name="monofocal_lejos_der_cil"]').val(add_monofocal_lejos_der_cil);
+        $('input[name="monofocal_lejos_der_eje"]').val(add_monofocal_lejos_der_eje);
+        $('input[name="monofocal_lejos_der_add"]').val(add_monofocal_lejos_der_add);
+        // Ojo izquierdo
+        $('input[name="monofocal_lejos_izq_esf"]').val(add_monofocal_lejos_izq_esf); 
+        $('input[name="monofocal_lejos_izq_cil"]').val(add_monofocal_lejos_izq_cil);
+        $('input[name="monofocal_lejos_izq_eje"]').val(add_monofocal_lejos_izq_eje);
+        $('input[name="monofocal_lejos_izq_add"]').val(add_monofocal_lejos_izq_add);
+
+        // MONOFOCAL INTERMEDIA ----------------------------------------------
+        // Ojo derecho
+        $('input[name="monofocal_intermedia_der_esf"]').val(add_monofocal_intermedia_der_esf); 
+        $('input[name="monofocal_intermedia_der_cil"]').val(add_monofocal_intermedia_der_cil);
+        $('input[name="monofocal_intermedia_der_eje"]').val(add_monofocal_intermedia_der_eje);
+        $('input[name="monofocal_intermedia_der_add"]').val(add_monofocal_intermedia_der_add);
+        // Ojo izquierdo
+        $('input[name="monofocal_intermedia_izq_esf"]').val(add_monofocal_intermedia_izq_esf); 
+        $('input[name="monofocal_intermedia_izq_cil"]').val(add_monofocal_intermedia_izq_cil);
+        $('input[name="monofocal_intermedia_izq_eje"]').val(add_monofocal_intermedia_izq_eje);
+        $('input[name="monofocal_intermedia_izq_add"]').val(add_monofocal_intermedia_izq_add);
+
+        // MONOFOCAL CERCA ---------------------------------------------------
+        // Ojo derecho
+        $('input[name="monofocal_cerca_der_esf"]').val(add_monofocal_cerca_der_esf); 
+        $('input[name="monofocal_cerca_der_cil"]').val(add_monofocal_cerca_der_cil);
+        $('input[name="monofocal_cerca_der_eje"]').val(add_monofocal_cerca_der_eje);
+        $('input[name="monofocal_cerca_der_add"]').val(add_monofocal_cerca_der_add);
+        // Ojo izquierdo
+        $('input[name="monofocal_cerca_izq_esf"]').val(add_monofocal_cerca_izq_esf); 
+        $('input[name="monofocal_cerca_izq_cil"]').val(add_monofocal_cerca_izq_cil);
+        $('input[name="monofocal_cerca_izq_eje"]').val(add_monofocal_cerca_izq_eje);
+        $('input[name="monofocal_cerca_izq_add"]').val(add_monofocal_cerca_izq_add);
+
+        // BIFOCAL -----------------------------------------------------------
+        // Ojo derecho
+        $('input[name="bifocal_der_esf"]').val(add_bifocal_der_esf); 
+        $('input[name="bifocal_der_cil"]').val(add_bifocal_der_cil);
+        $('input[name="bifocal_der_eje"]').val(add_bifocal_der_eje);
+        $('input[name="bifocal_der_add"]').val(add_bifocal_der_add);
+        // Ojo izquierdo
+        $('input[name="bifocal_izq_esf"]').val(add_bifocal_izq_esf); 
+        $('input[name="bifocal_izq_cil"]').val(add_bifocal_izq_cil);
+        $('input[name="bifocal_izq_eje"]').val(add_bifocal_izq_eje);
+        $('input[name="bifocal_izq_add"]').val(add_bifocal_izq_add);
+
+        // MULTIFOCAL --------------------------------------------------------
+        // Ojo derecho
+        $('input[name="multifocal_der_esf"]').val(add_multifocal_der_esf); 
+        $('input[name="multifocal_der_cil"]').val(add_multifocal_der_cil);
+        $('input[name="multifocal_der_eje"]').val(add_multifocal_der_eje);
+        $('input[name="multifocal_der_add"]').val(add_multifocal_der_add);
+        // Ojo izquierdo
+        $('input[name="multifocal_izq_esf"]').val(add_multifocal_izq_esf); 
+        $('input[name="multifocal_izq_cil"]').val(add_multifocal_izq_cil);
+        $('input[name="multifocal_izq_eje"]').val(add_multifocal_izq_eje);
+        $('input[name="multifocal_izq_add"]').val(add_multifocal_izq_add);
         
         $('#modal_new_order3').modal('hide');
         $('#modal_new_order4').modal('show');
@@ -273,9 +439,40 @@
 
     });
 
+    $('#signupform').submit(function() {
+    var errors = 0;
+    $("#signupform :input").map(function(){
+         if( !$(this).val() ) {
+              $(this).parents('td').addClass('warning');
+              errors++;
+        } else if ($(this).val()) {
+              $(this).parents('td').removeClass('warning');
+        }   
+    });
+    if(errors > 0){
+        $('#errorwarn').text("All fields are required");
+        return false;
+    }
+    // do the ajax..    
+});
+
     $('#new_order').on('submit', function(){
         var form = $(this);
-        $.ajax({
+        var errors = 0;
+        $("#new_order :input").map(function(){
+        if( !$(this).val() ) {
+            $(this).parents('td').addClass('warning');
+                errors++;
+        } else if ($(this).val()) {
+            $(this).parents('td').removeClass('warning');
+            }   
+        });
+
+        if(errors > 0){
+            $('#modal_error').modal('show');
+            return false;
+        } else {
+            $.ajax({
             url: form.attr('action'),
             method: form.attr('method'),
             contentType: 'application/x-www-form-urlencoded',
@@ -291,6 +488,8 @@
                 $("#new_order")[0].reset();
             }
         });
+        }
+        
         // Prevents default submission of the form after clicking on the submit button. 
         return false; 
     });

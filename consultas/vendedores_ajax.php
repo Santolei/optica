@@ -9,7 +9,7 @@ $query = $con->prepare ('
 $list = $query->fetchAll();
 echo '<option class="d-none" value="0">'.'Seleccionar vendedor'.'</option>'; 
 foreach ($list as $fila) {
-	echo '<option value="'.$fila['id_paciente'].'">'. $fila['nombre']  . '</option>'; 
+	echo '<option value="'.$fila['id_vendedor'].'">'. $fila['nombre']  . '</option>'; 
 }
 
 

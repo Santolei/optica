@@ -54,20 +54,11 @@ if (!$con) {
 	$tratamiento = $_POST['tratamiento'];
 
 	// Graduaciones
-	$monofocal_lejos_der = $_POST['monofocal_lejos_der'];
-	$monofocal_lejos_izq = $_POST['monofocal_lejos_izq'];
-	$monofocal_media_der = $_POST['monofocal_media_der'];
-	$monofocal_media_izq = $_POST['monofocal_media_izq'];
-	$monofocal_cerca_der = $_POST['monofocal_cerca_der'];
-	$monofocal_cerca_izq = $_POST['monofocal_cerca_izq'];
-	$bifocal_lejos_der = $_POST['bifocal_lejos_der'];
-	$bifocal_lejos_izq = $_POST['bifocal_lejos_izq'];
-	$bifocal_adicion_der = $_POST['bifocal_adicion_der'];
-	$bifocal_adicion_izq = $_POST['bifocal_adicion_izq'];
-	$multifocal_lejos_der = $_POST['multifocal_lejos_der'];
-	$multifocal_lejos_izq = $_POST['multifocal_lejos_izq'];
-	$multifocal_adicion_der = $_POST['multifocal_adicion_der'];
-	$multifocal_adicion_izq = $_POST['multifocal_adicion_izq'];
+	// Checks
+
+	$checkbox_lejos = $_POST['checkbox_lejos'];
+	$checkbox_intermedia = $_POST['checkbox_intermedia'];
+	$checkbox_cerca = $_POST['checkbox_cerca'];
 
 	// Datos de armazón
 	$marca_armazon = $_POST['marca_armazon'];
@@ -87,6 +78,44 @@ if (!$con) {
 	// Mono,bi o multifocal.
 
 	if ($tipo_lente === "Monofocal") {
+
+		// MONOFOCAL LEJOS ---------------------------------------------------
+	    // Ojo derecho
+	    $monofocal_lejos_der_esf = $_POST['monofocal_lejos_der_esf'];
+	    $monofocal_lejos_der_cil = $_POST['monofocal_lejos_der_cil'];
+	    $monofocal_lejos_der_eje = $_POST['monofocal_lejos_der_eje'];
+	    $monofocal_lejos_der_add = $_POST['monofocal_lejos_der_add'];
+		// Ojo izquierdo
+		$monofocal_lejos_izq_esf = $_POST['monofocal_lejos_izq_esf'];
+	    $monofocal_lejos_izq_cil = $_POST['monofocal_lejos_izq_cil'];
+	    $monofocal_lejos_izq_eje = $_POST['monofocal_lejos_izq_eje'];
+	    $monofocal_lejos_izq_add = $_POST['monofocal_lejos_izq_add'];
+
+	    // MONOFOCAL INTERMEDIA ----------------------------------------------
+	    // Ojo derecho
+	    $monofocal_intermedia_der_esf = $_POST['monofocal_intermedia_der_esf'];
+	    $monofocal_intermedia_der_cil = $_POST['monofocal_intermedia_der_cil'];
+	    $monofocal_intermedia_der_eje = $_POST['monofocal_intermedia_der_eje'];
+	    $monofocal_intermedia_der_add = $_POST['monofocal_intermedia_der_add'];
+		// Ojo izquierdo
+		$monofocal_intermedia_izq_esf = $_POST['monofocal_intermedia_izq_esf'];
+	    $monofocal_intermedia_izq_cil = $_POST['monofocal_intermedia_izq_cil'];
+	    $monofocal_intermedia_izq_eje = $_POST['monofocal_intermedia_izq_eje'];
+	    $monofocal_intermedia_izq_add = $_POST['monofocal_intermedia_izq_add'];
+
+	    // MONOFOCAL CERCA ---------------------------------------------------
+	    // Ojo derecho
+	    $monofocal_cerca_der_esf = $_POST['monofocal_cerca_der_esf'];
+	    $monofocal_cerca_der_cil = $_POST['monofocal_cerca_der_cil'];
+	    $monofocal_cerca_der_eje = $_POST['monofocal_cerca_der_eje'];
+	    $monofocal_cerca_der_add = $_POST['monofocal_cerca_der_add'];
+		// Ojo izquierdo
+		$monofocal_cerca_izq_esf = $_POST['monofocal_cerca_izq_esf'];
+	    $monofocal_cerca_izq_cil = $_POST['monofocal_cerca_izq_cil'];
+	    $monofocal_cerca_izq_eje = $_POST['monofocal_cerca_izq_eje'];
+	    $monofocal_cerca_izq_add = $_POST['monofocal_cerca_izq_add'];
+
+
 		$statement = $con->prepare('
 			INSERT INTO ordenes (id_paciente, nombre, telefono, dni, obra_social, doctor, fecha_receta, patologia, graduacion_od, graduacion_oi, tipo_lente, material, producto, tratamiento, marca_armazon, material_armazon, tipo_armazon, dist_interpupilar, altura, total, senia, saldo, monofocal_lejos_der, monofocal_lejos_izq, monofocal_media_der, monofocal_media_izq, monofocal_cerca_der, monofocal_cerca_izq
 			) 
@@ -127,6 +156,19 @@ if (!$con) {
 	}
 
 	else if ($tipo_lente === "Bifocal") {
+
+		// BIFOCAL -----------------------------------------------------------
+	    // Ojo derecho
+	    $bifocal_der_esf = $_POST['bifocal_der_esf'];
+	    $bifocal_der_cil = $_POST['bifocal_der_cil'];
+	    $bifocal_der_eje = $_POST['bifocal_der_eje'];
+	    $bifocal_der_add = $_POST['bifocal_der_add'];
+		// Ojo izquierdo
+		$bifocal_izq_esf = $_POST['bifocal_izq_esf'];
+	    $bifocal_izq_cil = $_POST['bifocal_izq_cil'];
+	    $bifocal_izq_eje = $_POST['bifocal_izq_eje'];
+	    $bifocal_izq_add = $_POST['bifocal_izq_add'];
+
 		$statement2 = $con->prepare('
 			INSERT INTO ordenes (id_paciente, nombre, telefono, dni, obra_social, doctor, fecha_receta, patologia, graduacion_od, graduacion_oi, tipo_lente, material, producto, tratamiento, marca_armazon, material_armazon, tipo_armazon, dist_interpupilar, altura, total, senia, saldo, bifocal_lejos_der, bifocal_lejos_izq, bifocal_adicion_der, bifocal_adicion_izq
 			) 
@@ -165,6 +207,19 @@ if (!$con) {
 	}
 
 	else if ($tipo_lente === "Multifocal") {
+
+		// MULTIFOCAL --------------------------------------------------------
+	    // Ojo derecho
+	    $multifocal_der_esf = $_POST['multifocal_der_esf'];
+	    $multifocal_der_cil = $_POST['multifocal_der_cil'];
+	    $multifocal_der_eje = $_POST['multifocal_der_eje'];
+	    $multifocal_der_add = $_POST['multifocal_der_add'];
+		// Ojo izquierdo
+		$multifocal_izq_esf = $_POST['multifocal_izq_esf'];
+	    $multifocal_izq_cil = $_POST['multifocal_izq_cil'];
+	    $multifocal_izq_eje = $_POST['multifocal_izq_eje'];
+	    $multifocal_izq_add = $_POST['multifocal_izq_add'];
+
 		$statement3 = $con->prepare('
 			INSERT INTO ordenes (id_paciente, nombre, telefono, dni, obra_social, doctor, fecha_receta, patologia, graduacion_od, graduacion_oi, tipo_lente, material, producto, tratamiento, marca_armazon, material_armazon, tipo_armazon, dist_interpupilar, altura, total, senia, saldo, multifocal_lejos_der, multifocal_lejos_izq, multifocal_adicion_der, multifocal_adicion_izq
 			) 

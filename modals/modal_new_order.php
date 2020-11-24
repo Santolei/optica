@@ -22,7 +22,7 @@
               <br>
               <div class="d-flex align-items-center">
                 <select class="form-control" name="vendedor" id="vendedor" selected="Seleccionar Vendedor" required>
-                  <option value="">Seleccionar Vendedor</option>
+                  <option value="NULL">Seleccionar Vendedor</option>
                 </select>
               </div>
             </div>
@@ -32,7 +32,7 @@
             <div class="form-group col-md-12">
               <label for="paciente">Seleccionar paciente</label>
               <div class="d-flex align-items-center">
-                <input type="text" class="form-control grey lighten-4 mt-2" name="buscar" autocomplete="off" autofocus onkeyup="buscar_ajax(this.value);" placeholder="Buscar por nombre de paciente o DNI">
+                <input type="text" class="form-control grey lighten-4 mt-2" name="buscar" autocomplete="off" autofocus onkeyup="buscar_ajax(this.value);" placeholder="Buscar por nombre de paciente o DNI" id="buscar_paciente" readonly="true">
                 <a class="text-success m-4" data-toggle="modal" data-target="#modal_add_paciente_ajax"><i class="fa fa-2x fa-plus"></i></a>
               </div>
               

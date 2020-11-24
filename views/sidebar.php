@@ -16,7 +16,7 @@
     	<div class="sidebar-wrapper">
             <div class="logo">
                 <a href="index" class="simple-text">
-                    Optica El poeta
+                    <img src="assets/img/Logo2blanco.png" alt="" class="w-100">
                 </a>
             </div>
 
