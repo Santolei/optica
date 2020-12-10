@@ -17,24 +17,50 @@
         <form id="form-total-senia">
           <!-- row -->
           <div class="row">
-            <div class="form-group col-sm-12 col-md-6">
-                <label for="add_total">Total:</label>
-                <input maxlength="100" class="form-control" type="number" autocomplete="off" id="add_total" required>
+            <div class="col-sm-12 col-md-6">
+              <div class="form-group">
+                  <label for="add_cristales_precio">Cristales:</label>
+                  <input maxlength="100" class="form-control monto" type="number" autocomplete="off" id="add_cristales_precio" required>
+              </div>
+              <div class="form-group">
+                  <label for="add_armazon_precio">Armazón:</label>
+                  <input maxlength="100" class="form-control monto" type="text" autocomplete="off" id="add_armazon_precio" required>
+              </div>
+              <div class="form-group">
+                  <label for="add_otros_precio">Otros:</label>
+                  <input maxlength="100" class="form-control monto" type="text" autocomplete="off" id="add_otros_precio">
+              </div>
             </div>
 
-            <div class="form-group col-md-6">
-                <label for="add_senia">Seña:</label>
-                <input maxlength="100" class="form-control" type="text" autocomplete="off" id="add_senia" required>
+            <div class="col-sm-12 col-md-6">
+              <div class="form-group">
+                  <label for="add_total">Total:</label>
+                  <input maxlength="100" class="form-control" type="number" autocomplete="off" id="add_total" required>
+              </div>
+              <div class="form-group">
+                  <label for="add_senia">Seña:</label>
+                  <input maxlength="100" class="form-control" type="text" autocomplete="off" id="add_senia" required>
+              </div>
+              <div class="form-group">
+                  <label for="add_saldo">Saldo:</label>
+                  <input maxlength="100" class="form-control" type="text" autocomplete="off" id="add_saldo" required>
+              </div>
             </div>
           </div>
-
-          <!-- row -->
-          <div class="row">
-            <div class="form-group col-sm-12 col-md-6">
-                <label for="add_saldo">Saldo:</label>
-                <input maxlength="100" class="form-control" type="text" autocomplete="off" id="add_saldo" required>
+          <div class="row"> 
+            <div class="col-sm-12">  
+                <div class="form-group">  
+                  <label for="add_metodo_pago">Método de pago</label>
+                  <select name="add_metodo_pago" class="form-control" id="add_metodo_pago">
+                    <option value="Efectivo">Efectivo</option>
+                    <option value="Tarj Debito">Tarj Débito</option>
+                    <option value="Tarj Credito">Tarj Crédito</option>
+                    <option value="Obra social">Obra Social</option>
+                  </select>
+              </div>
             </div>
-          </div>
+                
+          </div>  
 
           <div class="modal-footer justify-content-center">
           <button class="btn info-color-dark" type="submit" id="total_saldo">Guardar <i class="fa fa-arrow-right"></i></button>

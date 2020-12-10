@@ -131,6 +131,20 @@
                                         <!-- // ---------------------------- -->
                                         <!-- // MONOFOCAL ------------------ -->
                                         <div class="row">
+                                          <div class="d-flex justify-content-end align-items-center invisible">
+                                            <div class="checkbox mt-0">
+                                              <input type="checkbox" id="checkbox_lejos" name="checkbox_lejos" value="0">
+                                              <label for="checkbox_lejos" class="checkbox-label">Lejos</label>
+                                            </div>
+                                            <div class="checkbox mt-0 ml-2 mr-2">
+                                              <input type="checkbox" id="checkbox_intermedia" name="checkbox_intermedia" value="0">
+                                              <label for="checkbox_intermedia" class="checkbox-label">Intermedia</label>
+                                            </div>
+                                            <div class="checkbox mt-0">
+                                              <input type="checkbox" id="checkbox_cerca" name="checkbox_cerca" value="0">
+                                              <label for="checkbox_cerca" class="checkbox-label">Cerca</label>
+                                            </div>
+                                          </div>
                                             
                                             <div class=" pl-0 pr-0 hidden" id="monofocal">
                                               <!-- Lejos -->
@@ -455,6 +469,22 @@
                                     </div>
                                     <div class="col-md-6 grey-background form-interno pull-right mt-4">
                                         <div class="d-flex justify-content-between align-items-center"><h5><strong>Total, seña y saldo:</strong></h5> <a href="#" class=" boton-editar-orden btn btn-primary d-flex justify-content-center align-items-center" data-toggle="modal" data-target="#modal_new_order5"><i class="fa fa-pencil"></i>Editar </a>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-sm-12 col-md-4">
+                                                <label for="cristales_precio">Cristales:</label>
+                                                <input maxlength="100" class="form-control" type="number" autocomplete="off" id="cristales_precio" name="cristales_precio" readonly="readonly">
+                                            </div>
+
+                                            <div class="form-group col-sm-12 col-md-4">
+                                                <label for="armazon_precio">Armazón:</label>
+                                                <input maxlength="100" class="form-control" type="text" autocomplete="off" id="armazon_precio" name="armazon_precio" readonly="readonly">
+                                            </div>
+
+                                            <div class="form-group col-sm-12 col-md-4">
+                                                <label for="otros_precio">Otros:</label>
+                                                <input maxlength="100" class="form-control" type="text" autocomplete="off" id="otros_precio" name="otros_precio" readonly="readonly">
+                                            </div>
                                         </div>
                                         <div class="row">
                                             <div class="form-group col-sm-12 col-md-4">

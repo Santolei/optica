@@ -39,16 +39,16 @@
               <!-- // ---------------------------- -->
               <div class="d-flex justify-content-end align-items-center">
                 <div class="checkbox mt-0">
-                  <input type="checkbox" id="checkbox_lejos" name="checkbox_lejos" value="0">
-                  <label for="checkbox_lejos" class="checkbox-label">Lejos</label>
+                  <input type="checkbox" id="add_checkbox_lejos" name="add_checkbox_lejos" value="0">
+                  <label for="add_checkbox_lejos" class="checkbox-label">Lejos</label>
                 </div>
                 <div class="checkbox mt-0 ml-2 mr-2">
-                  <input type="checkbox" id="checkbox_intermedia" name="checkbox_intermedia" value="0">
-                  <label for="checkbox_intermedia" class="checkbox-label">Intermedia</label>
+                  <input type="checkbox" id="add_checkbox_intermedia" name="add_checkbox_intermedia" value="0">
+                  <label for="add_checkbox_intermedia" class="checkbox-label">Intermedia</label>
                 </div>
                 <div class="checkbox mt-0">
-                  <input type="checkbox" id="checkbox_cerca" name="checkbox_cerca" value="0">
-                  <label for="checkbox_cerca" class="checkbox-label">Cerca</label>
+                  <input type="checkbox" id="add_checkbox_cerca" name="add_checkbox_cerca" value="0">
+                  <label for="add_checkbox_cerca" class="checkbox-label">Cerca</label>
                 </div>
               </div>
 

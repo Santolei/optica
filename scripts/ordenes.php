@@ -149,8 +149,6 @@
             $('#add_multifocal').addClass('hidden').fadeOut("slow", "linear");
 
             $("#add_monofocal :input").val('');
-            $("#add_bifocal :input").val('NULL');
-            $("#add_multifocal :input").val('NULL');
         }
         else if ($('#add_tipo_lente').val() === "Bifocal") {
             $('#monofocal').addClass('hidden').fadeOut("slow", "linear");
@@ -162,8 +160,6 @@
             $('#add_multifocal').addClass('hidden').fadeOut("slow", "linear");
 
             $("#add_bifocal :input").val('');
-            $("#add_monofocal :input").val('NULL');
-            $("#add_multifocal :input").val('NULL');
         }
         else if ($('#add_tipo_lente').val() === "Multifocal") {
             $('#monofocal').addClass('hidden').fadeOut("slow", "linear");
@@ -175,8 +171,6 @@
             $('#add_multifocal').fadeIn("slow", "linear").removeClass('hidden');
 
             $("#add_multifocal :input").val('');
-            $("#add_bifocal :input").val('NULL');
-            $("#add_monofocal :input").val('NULL');
         }
     }
 
@@ -187,42 +181,42 @@
     // Muestro u oculto dependiendo de los checkbox 
     // de lejos cerca o intermedia " SOLO PARA MONOFOCAL "
 
-    $('#checkbox_lejos').on('change',function(){
-        if($('#checkbox_lejos').is(":checked")){
-            $('#checkbox_lejos').val(1);
+    $('#add_checkbox_lejos').on('change',function(){
+        if($('#add_checkbox_lejos').is(":checked")){
+            $('#checkbox_lejos').val(1).prop( "checked", true );
             $('#lejos').fadeIn("slow", "linear").addClass('d-flex').removeClass('hidden');
             $('.monofocal_lejos').fadeIn("slow", "linear").addClass('d-flex').removeClass('hidden');
         }  
         else {
            $('#lejos').removeClass('d-flex').addClass('hidden').fadeOut("slow", "linear");
            $('.monofocal_lejos').removeClass('d-flex').addClass('hidden').fadeOut("slow", "linear");
-           $('#checkbox_lejos').val(0);
+           $('#checkbox_lejos').val(0).prop( "checked", false );
         }
     });
 
-    $('#checkbox_intermedia').on('change',function(){
-        if($('#checkbox_intermedia').is(":checked")){
+    $('#add_checkbox_intermedia').on('change',function(){
+        if($('#add_checkbox_intermedia').is(":checked")){
             $('#intermedia').fadeIn("slow", "linear").addClass('d-flex').removeClass('hidden');
             $('.monofocal_intermedia').fadeIn("slow", "linear").addClass('d-flex').removeClass('hidden');
-            $('#checkbox_intermedia').val(1);
+            $('#checkbox_intermedia').val(1).prop( "checked", true );
         }  
         else {
            $('#intermedia').removeClass('d-flex').addClass('hidden').fadeOut("slow", "linear");
            $('.monofocal_intermedia').removeClass('d-flex').addClass('hidden').fadeOut("slow", "linear");
-           $('#checkbox_intermedia').val(0);
+           $('#checkbox_intermedia').val(0).prop( "checked", false );
         }
     });
 
-    $('#checkbox_cerca').on('change',function(){
-        if($('#checkbox_cerca').is(":checked")){
-            $('#checkbox_cerca').val(1);
+    $('#add_checkbox_cerca').on('change',function(){
+        if($('#add_checkbox_cerca').is(":checked")){
+            $('#checkbox_cerca').val(1).prop( "checked", true );
             $('#cerca').fadeIn("slow", "linear").addClass('d-flex').removeClass('hidden');
             $('.monofocal_cerca').fadeIn("slow", "linear").addClass('d-flex').removeClass('hidden');
         }  
         else {
            $('#cerca').removeClass('d-flex').addClass('hidden').fadeOut("slow", "linear");
            $('.monofocal_cerca').removeClass('d-flex').addClass('hidden').fadeOut("slow", "linear");
-           $('#checkbox_cerca').val(0);
+           $('#checkbox_cerca').val(0).prop( "checked", false );
         }
     });
 
@@ -270,6 +264,10 @@
         // Selecciono datos del tercer modal
 
         tipo_lente = $('#add_tipo_lente').val();
+
+        // Checkbox 
+
+        add_checkbox_lejos = $('#add_checkbox_lejos').val();
 
         // MONOFOCAL LEJOS ---------------------------------------------------
         // Ojo derecho
@@ -340,6 +338,8 @@
         $('input[name="material"]').val(material);
         $('input[name="producto"]').val(producto);
         $('input[name="tratamiento"]').val(tratamiento);
+
+        // CHECKBOX 
 
         // COPIANDO DATOS DE LENTES ------------------------------------------------------------
 
@@ -425,10 +425,16 @@
     });
 
     $('#form-total-senia').on('submit',function(){
+        cristales_precio = $('#add_cristales_precio').val();
+        armazon_precio = $('#add_armazon_precio').val();
+        otros_precio = $('#add_otros_precio').val();
         total = $('#add_total').val();
         senia = $('#add_senia').val();
         saldo = $('#add_saldo').val();
 
+        $('input[name="cristales_precio"]').val(cristales_precio);
+        $('input[name="armazon_precio"]').val(armazon_precio);
+        $('input[name="otros_precio"]').val(otros_precio);
         $('input[name="total"]').val(total);
         $('input[name="senia"]').val(senia);
         $('input[name="saldo"]').val(saldo);
@@ -439,40 +445,58 @@
 
     });
 
-    $('#signupform').submit(function() {
-    var errors = 0;
-    $("#signupform :input").map(function(){
-         if( !$(this).val() ) {
-              $(this).parents('td').addClass('warning');
-              errors++;
-        } else if ($(this).val()) {
-              $(this).parents('td').removeClass('warning');
-        }   
-    });
-    if(errors > 0){
-        $('#errorwarn').text("All fields are required");
-        return false;
+    // Función para sumar el total de la orden
+
+    function sumar() {
+      var total = 0;
+      $(".monto").each(function() {
+        if (isNaN(parseFloat($(this).val()))) {
+          total += 0;
+        } else {
+          total += parseFloat($(this).val());
+        }
+      });
+      $('#add_total').val(total);
     }
-    // do the ajax..    
-});
+    
+    $('#add_cristales_precio').on('keyup',sumar);
+    $('#add_armazon_precio').on('keyup',sumar);
+    $('#add_otros_precio').on('keyup',sumar);
+    
+    // Función para restar la seña y mostrar el saldo
+
+    function restar(){
+        var total = $('#add_total').val();
+        total = parseFloat(total);
+        var senia = $('#add_senia').val();
+        senia = parseFloat(senia);
+        var saldo = total - senia;
+        saldo = parseFloat(saldo);
+       $('#add_saldo').val(saldo);
+    }
+    $('#add_total').on('keyup',restar);
+    $('#add_senia').on('keyup',restar);
+
+//     $('#signupform').submit(function() {
+//     var errors = 0;
+//     $("#signupform :input").map(function(){
+//          if( !$(this).val() ) {
+//               $(this).parents('td').addClass('warning');
+//               errors++;
+//         } else if ($(this).val()) {
+//               $(this).parents('td').removeClass('warning');
+//         }   
+//     });
+//     if(errors > 0){
+//         $('#errorwarn').text("All fields are required");
+//         return false;
+//     }
+//     // do the ajax..    
+// });
 
     $('#new_order').on('submit', function(){
-        var form = $(this);
-        var errors = 0;
-        $("#new_order :input").map(function(){
-        if( !$(this).val() ) {
-            $(this).parents('td').addClass('warning');
-                errors++;
-        } else if ($(this).val()) {
-            $(this).parents('td').removeClass('warning');
-            }   
-        });
-
-        if(errors > 0){
-            $('#modal_error').modal('show');
-            return false;
-        } else {
-            $.ajax({
+        form = $(this);
+        $.ajax({
             url: form.attr('action'),
             method: form.attr('method'),
             contentType: 'application/x-www-form-urlencoded',
@@ -488,7 +512,6 @@
                 $("#new_order")[0].reset();
             }
         });
-        }
         
         // Prevents default submission of the form after clicking on the submit button. 
         return false; 
