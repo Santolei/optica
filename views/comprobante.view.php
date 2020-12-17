@@ -27,61 +27,19 @@
             </div>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-12">
-                        <div class="card p-2 pt-0" style="width: 60%;">
-                            <h5 class="mb-2 mt-0">Datos cristales:</h5>
-                            <div class="container-datos d-flex justify-content-between">
-                                <div class="dato mr-4">
-                                    <h6><u>Tipo de lente:</u> </h6> <?php echo $tipo_lente ?>
-                                </div>
-                                <div class="dato mr-4">
-                                    <h6><u>Material:</u> </h6> <?php echo $material ?>
-                                </div>
-                            </div>
-
-                            <div class="container-datos d-flex">
-                                <div class="dato mr-4">
-                                    <h6><u>Cristales:</u> </h6> <?php echo $producto ?>
-                                </div>
-                            </div>
-                            <div class="dato">
-                                <h6><u>Armazón:</u> </h6> <?php echo $armazon ?>
-                            </div>
-
-                            <!-- SI ES MONOFOCAL MOSTRAMOS LO DATOS  -->
-                            <?php if ($tipo_lente === 'Monofocal'): ?>
-                                <div class="dato d-flex">
-
-                                    <div class="mr-4">
-                                        <h6><u>LEJOS:</u> </h6> 
-                                        <strong>OD:</strong><?php echo $multifocal_lejos_der ?> <strong>OI:</strong> <?php echo $multifocal_lejos_izq ?>
-                                    </div>
-                                    
-                                    <div>
-                                        <h6><u>ADICION:</u> </h6> <strong>OD:</strong> <?php echo $multifocal_adicion_der ?> <strong>OI:</strong> <?php echo $multifocal_adicion_izq ?>
-                                    </div>
-                                    
-                                </div>
-                            <?php endif ?>
-
-                            <!-- SI ES MULTIFOCAL MOSTRAMOS LO DATOS  -->
-                            <?php if ($tipo_lente === 'Multifocal'): ?>
-                                <div class="dato d-flex">
-
-                                    <div class="mr-4">
-                                        <h6><u>LEJOS:</u> </h6> 
-                                        <strong>OD:</strong><?php echo $multifocal_lejos_der ?> <strong>OI:</strong> <?php echo $multifocal_lejos_izq ?>
-                                    </div>
-                                    
-                                    <div>
-                                        <h6><u>ADICION:</u> </h6> <strong>OD:</strong> <?php echo $multifocal_adicion_der ?> <strong>OI:</strong> <?php echo $multifocal_adicion_izq ?>
-                                    </div>
-                                    
-                                </div>
-                            <?php endif ?>
-                            
-                        </div>
+                    <!-- Comprobante local 1 -->
+                    <div class="col-xs-3 ticket-local-1">
+                        <div class="col-12"><p><strong>Fecha de entrega:</strong></p></div>
+                        <div class="col-12"><p><strong>Sucursal:</strong></p></div>
+                        
                     </div>
+                    <!-- Comprobante local 2 -->
+                    <div class="col-xs-3 ticket-local-2">
+                        <div class="col-12"><p><strong>Fecha de entrega:</strong></p></div>
+                        <div class="col-12"><p><strong>Sucursal:</strong></p></div>
+                    </div>
+                    <!-- Comprobante cliente -->
+                    <div class="col-xs-6 ticket-cliente"></div>
                 </div>
                 
             </div>
