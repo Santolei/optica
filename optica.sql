@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-10-2020 a las 20:34:30
+-- Tiempo de generación: 19-12-2020 a las 02:41:24
 -- Versión del servidor: 10.1.21-MariaDB
 -- Versión de PHP: 5.6.30
 
@@ -147,12 +147,101 @@ CREATE TABLE `ordenes` (
   `material` varchar(100) NOT NULL DEFAULT '',
   `producto` varchar(100) NOT NULL DEFAULT '',
   `tratamiento` varchar(100) NOT NULL DEFAULT '',
-  `marca` varchar(100) NOT NULL DEFAULT '',
+  `checkbox_lejos` float NOT NULL DEFAULT '0',
+  `checkbox_intermedia` float NOT NULL DEFAULT '0',
+  `checkbox_cerca` float NOT NULL DEFAULT '0',
+  `marca_armazon` varchar(100) NOT NULL DEFAULT '',
   `material_armazon` varchar(100) NOT NULL DEFAULT '',
   `tipo_armazon` varchar(100) NOT NULL DEFAULT '',
   `dist_interpupilar` varchar(100) NOT NULL DEFAULT '',
-  `altura` varchar(100) NOT NULL DEFAULT ''
+  `altura` varchar(100) NOT NULL DEFAULT '',
+  `total` float NOT NULL DEFAULT '0',
+  `senia` float NOT NULL DEFAULT '0',
+  `saldo` float NOT NULL DEFAULT '0',
+  `monofocal_lejos_der_esf` varchar(50) DEFAULT NULL,
+  `monofocal_lejos_der_cil` varchar(50) DEFAULT NULL,
+  `monofocal_lejos_der_eje` varchar(50) DEFAULT NULL,
+  `monofocal_lejos_der_add` varchar(50) DEFAULT NULL,
+  `monofocal_lejos_izq_esf` varchar(50) DEFAULT NULL,
+  `monofocal_lejos_izq_cil` varchar(50) DEFAULT NULL,
+  `monofocal_lejos_izq_eje` varchar(50) DEFAULT NULL,
+  `monofocal_lejos_izq_add` varchar(50) DEFAULT NULL,
+  `monofocal_intermedia_der_esf` varchar(50) DEFAULT NULL,
+  `monofocal_intermedia_der_cil` varchar(50) DEFAULT NULL,
+  `monofocal_intermedia_der_eje` varchar(50) DEFAULT NULL,
+  `monofocal_intermedia_der_add` varchar(50) DEFAULT NULL,
+  `monofocal_intermedia_izq_esf` varchar(50) DEFAULT NULL,
+  `monofocal_intermedia_izq_cil` varchar(50) DEFAULT NULL,
+  `monofocal_intermedia_izq_eje` varchar(50) DEFAULT NULL,
+  `monofocal_intermedia_izq_add` varchar(50) DEFAULT NULL,
+  `monofocal_cerca_der_esf` varchar(50) DEFAULT NULL,
+  `monofocal_cerca_der_cil` varchar(50) DEFAULT NULL,
+  `monofocal_cerca_der_eje` varchar(50) DEFAULT NULL,
+  `monofocal_cerca_der_add` varchar(50) DEFAULT NULL,
+  `monofocal_cerca_izq_esf` varchar(50) DEFAULT NULL,
+  `monofocal_cerca_izq_cil` varchar(50) DEFAULT NULL,
+  `monofocal_cerca_izq_eje` varchar(50) DEFAULT NULL,
+  `monofocal_cerca_izq_add` varchar(50) DEFAULT NULL,
+  `bifocal_der_esf` varchar(50) DEFAULT NULL,
+  `bifocal_der_cil` varchar(50) DEFAULT NULL,
+  `bifocal_der_eje` varchar(50) DEFAULT NULL,
+  `bifocal_der_add` varchar(50) DEFAULT NULL,
+  `bifocal_izq_esf` varchar(50) DEFAULT NULL,
+  `bifocal_izq_cil` varchar(50) DEFAULT NULL,
+  `bifocal_izq_eje` varchar(50) DEFAULT NULL,
+  `bifocal_izq_add` varchar(50) DEFAULT NULL,
+  `multifocal_der_esf` varchar(50) DEFAULT NULL,
+  `multifocal_der_cil` varchar(50) DEFAULT NULL,
+  `multifocal_der_eje` varchar(50) DEFAULT NULL,
+  `multifocal_der_add` varchar(50) DEFAULT NULL,
+  `multifocal_izq_esf` varchar(50) DEFAULT NULL,
+  `multifocal_izq_cil` varchar(50) DEFAULT NULL,
+  `multifocal_izq_eje` varchar(50) DEFAULT NULL,
+  `multifocal_izq_add` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `ordenes`
+--
+
+INSERT INTO `ordenes` (`id`, `id_paciente`, `fecha`, `nombre`, `telefono`, `dni`, `obra_social`, `doctor`, `fecha_receta`, `patologia`, `graduacion_od`, `graduacion_oi`, `tipo_lente`, `material`, `producto`, `tratamiento`, `checkbox_lejos`, `checkbox_intermedia`, `checkbox_cerca`, `marca_armazon`, `material_armazon`, `tipo_armazon`, `dist_interpupilar`, `altura`, `total`, `senia`, `saldo`, `monofocal_lejos_der_esf`, `monofocal_lejos_der_cil`, `monofocal_lejos_der_eje`, `monofocal_lejos_der_add`, `monofocal_lejos_izq_esf`, `monofocal_lejos_izq_cil`, `monofocal_lejos_izq_eje`, `monofocal_lejos_izq_add`, `monofocal_intermedia_der_esf`, `monofocal_intermedia_der_cil`, `monofocal_intermedia_der_eje`, `monofocal_intermedia_der_add`, `monofocal_intermedia_izq_esf`, `monofocal_intermedia_izq_cil`, `monofocal_intermedia_izq_eje`, `monofocal_intermedia_izq_add`, `monofocal_cerca_der_esf`, `monofocal_cerca_der_cil`, `monofocal_cerca_der_eje`, `monofocal_cerca_der_add`, `monofocal_cerca_izq_esf`, `monofocal_cerca_izq_cil`, `monofocal_cerca_izq_eje`, `monofocal_cerca_izq_add`, `bifocal_der_esf`, `bifocal_der_cil`, `bifocal_der_eje`, `bifocal_der_add`, `bifocal_izq_esf`, `bifocal_izq_cil`, `bifocal_izq_eje`, `bifocal_izq_add`, `multifocal_der_esf`, `multifocal_der_cil`, `multifocal_der_eje`, `multifocal_der_add`, `multifocal_izq_esf`, `multifocal_izq_cil`, `multifocal_izq_eje`, `multifocal_izq_add`) VALUES
+(13, 3, '2020-10-27 18:02:15', 'Juancito Perez', '123123123', '4545254', 'Sancor', 'asdasdasd', '29-9-2020', 'Astigmatismo', '2', '2', 'Multifocal', 'Organico', 'Producto 2', 'Tratamiento 2', 0, 0, 0, 'asdasd', 'asdasd', 'asdasd', '2', '3', 123, 123, 123, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', '1', '1', '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(14, 8, '2020-10-28 15:05:42', 'Jose Luis Pereyra', '123123123', '20345333', 'Prueba obra', 'asdasdasd', '6-10-2020', 'Miopia', '1', '1', 'Bifocal', 'Organico', 'Producto 2', 'Tratamiento 2', 0, 0, 0, 'asdasdasd', 'asdasd', 'asdasdasd', '2', '2', 1000, 145, 134, NULL, NULL, NULL, NULL, NULL, NULL, '1', '2', '1', '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(15, 8, '2020-10-28 15:09:10', 'Jose Luis Pereyra', '123123123', '20345333', 'Prueba obra', 'asdasdasd', '12-2-2020', 'Miopia', '2', '2', 'Multifocal', 'Policarbonato', 'Producto', 'Tratamiento 1', 0, 0, 0, 'casda', 'asdasd', '123123', '123', '12', 123, 123, 123, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', '2', '2', '2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(16, 7, '2020-10-28 15:11:34', 'Cacaroto', '2366451554', '323212312', 'Osde', 'qasdasdasd', '9-10-2020', 'Astigmatismo', '2', '2', 'Monofocal', 'Organico', 'Producto 2', 'Tratamiento 2', 0, 0, 0, '1asdasd', 'asdasda', 'sdasd', '22', '22', 1231, 23, 123, '2', '2', '1', '1', '1', '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(17, 9, '2020-10-28 15:17:21', 'Santiago Tolosa 2', '266475487', '33225544', 'Sancor', '12asdasd', '22-10-2020', 'Miopia', '2', '2', 'Monofocal', 'Organico', 'Producto 2', 'Tratamiento 1', 0, 0, 0, 'asdasdas', 'asdasd', 'asdasd', '22', '22', 123, 123, 12, '12', '12', '2', '2', '12', '12', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(18, 1, '2020-10-30 15:05:32', 'Santiago Tolosa', '2664713206 /476453', '34304468', 'Sancor Salud', 'asdasdasd', '5-10-2020', 'Astigmatismo', '12', '2', 'Multifocal', 'Organico', 'Producto 2', 'Tratamiento 2', 0, 0, 0, '1', '1', '1', '1', '1', 123, 123, 12, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', '1', '1', '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(19, 7, '2020-10-30 15:09:57', 'Cacaroto', '2366451554', '323212312', 'Osde', '1', '19-10-2020', 'Miopia', '1', '1', 'Multifocal', 'Mineral', 'Producto 3', 'Tratamiento 3', 0, 0, 0, '1', '1', '1', '1', '1', 1, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', '1', '1', '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(20, 1, '2020-11-02 19:10:14', 'Santiago Tolosa', '2664713206 /476453', '34304468', 'Sancor Salud', 'asdasd', '9-11-2020', 'Astigmatismo', '-1', '1', 'Monofocal', 'Policarbonato', 'Producto', 'Tratamiento 2', 0, 0, 0, '2asd', 'asd', 'asd', '2', '2', 222, 222, 22, '1', '2', '2', '2', '2', '2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(21, 1, '2020-11-02 19:13:32', 'Santiago Tolosa', '2664713206 /476453', '34304468', 'Sancor Salud', 'asdasdsa', '17-11-2020', 'Astigmatismo', '1', '1', 'Bifocal', 'Organico', 'Producto 2', 'Tratamiento 2', 0, 0, 0, 'asdasd', 'asdasd', 'asdasd', '1', '1', 123, 123, 12, NULL, NULL, NULL, NULL, NULL, NULL, '1', '1', '1', '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(22, 8, '2020-11-02 19:14:56', 'Jose Luis Pereyra', '123123123', '20345333', 'Prueba obra', 'asdasdad', '10-11-2020', 'Astigmatismo', '1', '1', 'Monofocal', 'Mineral', 'Producto 3', 'Tratamiento 1', 0, 0, 0, '123', '22', '2', '11', '11', 1, 1, 1, '1', '2', '2', '2', '2', '2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(23, 1, '2020-11-02 20:17:56', 'Santiago Tolosa', '2664713206 /476453', '34304468', 'Sancor Salud', 'asdasdasd', '11-11-2020', '0', '3', '3', 'Bifocal', 'Organico', 'Producto 2', 'Tratamiento 2', 0, 0, 0, 'asdasd', 'asdasd', 'asdasd', '2', '2', 123, 12, 12, NULL, NULL, NULL, NULL, NULL, NULL, '1', '1', '1', '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(24, 3, '2020-11-05 19:25:20', 'Juancito Perez', '123123123', '4545254', 'Sancor', 'Juan Alvarez Pinto', '11-11-2020', 'Astigmatismo', '1', '1', 'Multifocal', 'Policarbonato', 'Prueba de producto con nombre largo', 'Tratamiento 2', 0, 0, 0, 'Puma lentes ortopedicos', 'Policarbotano tubanato', 'Madera corrugada', '1', '1', 123, 123, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', '1', '1', '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(25, 1, '2020-11-09 22:38:07', 'Santiago Tolosa', '2664713206 /476453', '34304468', 'Sancor Salud', 'asdasdasd', '3-11-2020', 'Astigmatismo', '1', '1', 'Monofocal', 'Otros', 'Producto 4', 'Tratamiento 1', 0, 0, 0, 'asdasd', 'asdasd', 'asdasd', '112', '12', 123, 123, 12, '1', '1', '1', '1', '1', '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(26, 7, '2020-11-24 23:51:17', 'Cacaroto', '2366451554', '323212312', 'Osde', 'asdasdasd', 'NaN-NaN-NaN', '0', '1', '1', 'Monofocal', 'Organico', 'Producto 2', 'Tratamiento 1', 1, 1, 1, '123', '12', '12', '12', '12', 123, 123, 123, '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(27, 1, '2020-11-24 23:57:25', 'Santiago Tolosa', '2664713206 /476453', '34304468', 'Sancor Salud', 'asdasdasd', '10-11-2020', 'Astigmatismo', '1', '1', 'Monofocal', 'Mineral', 'Producto 3', 'Tratamiento 2', 1, 0, 0, '123123', '123123', '123123', '12', '12', 123123, 12312, 121231, '1', '1', '1', '1', '1', '1', '1', '1', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(28, 7, '2020-11-25 00:01:04', 'Cacaroto', '2366451554', '323212312', 'Osde', '12asdasd', '11-11-2020', 'Astigmatismo', '1', '1', 'Monofocal', 'Organico', 'Producto 2', 'Tratamiento 1', 1, 0, 0, '1', '1', '1', '1', '1', 1, 1, 1, '1', '1', '1', '1', '1', '1', '1', '1', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(29, 7, '2020-11-25 00:07:13', 'Cacaroto', '2366451554', '323212312', 'Osde', 'asdasdasd', '2-11-2020', 'Miopia', '1', '1', 'Monofocal', 'Mineral', 'Producto 3', 'Tratamiento 1', 1, 0, 0, '1', '1', '1', '1', '1', 1, 1, 1, '1', '1', '1', '1', '1', '1', '1', '1', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(30, 7, '2020-11-25 00:07:19', 'Cacaroto', '2366451554', '323212312', 'Osde', 'asdasdasd', '2-11-2020', 'Miopia', '1', '1', 'Monofocal', 'Mineral', 'Producto 3', 'Tratamiento 1', 1, 0, 0, '1', '1', '1', '1', '1', 1, 1, 1, '1', '1', '1', '1', '1', '1', '1', '1', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(31, 7, '2020-11-25 00:07:23', 'Cacaroto', '2366451554', '323212312', 'Osde', 'asdasdasd', '2-11-2020', 'Miopia', '1', '1', 'Monofocal', 'Mineral', 'Producto 3', 'Tratamiento 1', 1, 0, 0, '1', '1', '1', '1', '1', 1, 1, 1, '1', '1', '1', '1', '1', '1', '1', '1', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(32, 7, '2020-11-25 00:10:12', 'Cacaroto', '2366451554', '323212312', 'Osde', 'asdasdasd', '3-11-2020', 'Astigmatismo', '1', '1', 'Monofocal', 'Mineral', 'Producto 3', 'Tratamiento 2', 1, 0, 0, '1', '1', '11', '', '1', 12312, 3123, 333, '1', '1', '1', '11', '1', '11', '1', '1', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(33, 8, '2020-11-25 00:16:53', 'Jose Luis Pereyra', '123123123', '20345333', 'Prueba obra', 'asdasdasd', '3-11-2020', 'Astigmatismo', '1', '1', 'Bifocal', 'Mineral', 'Producto 3', 'Tratamiento 1', 0, 0, 0, 'asdasdasd', 'asdasd', 'asdasd', '1', '1', 123, 123, 123, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', '2', '2', '1', '1', '1', '1', '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(34, 8, '2020-11-25 00:16:57', 'Jose Luis Pereyra', '123123123', '20345333', 'Prueba obra', 'asdasdasd', '3-11-2020', 'Astigmatismo', '1', '1', 'Bifocal', 'Mineral', 'Producto 3', 'Tratamiento 1', 0, 0, 0, 'asdasdasd', 'asdasd', 'asdasd', '1', '1', 123, 123, 123, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', '2', '2', '1', '1', '1', '1', '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(35, 1, '2020-11-25 01:07:58', 'Santiago Tolosa', '2664713206 /476453', '34304468', 'Sancor Salud', 'ghfjfj', '18-11-2020', 'Astigmatismo', '1', '1', 'Monofocal', 'Organico', 'Producto 2', 'Tratamiento 1', 1, 1, 1, 'ggcgc', 'hvhvh', 'hgcvhch', '1', '1', 1321320, 3321, 3321, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(36, 1, '2020-11-25 01:07:58', 'Santiago Tolosa', '2664713206 /476453', '34304468', 'Sancor Salud', 'ghfjfj', '18-11-2020', 'Astigmatismo', '1', '1', 'Monofocal', 'Organico', 'Producto 2', 'Tratamiento 1', 1, 1, 1, 'ggcgc', 'hvhvh', 'hgcvhch', '1', '1', 1321320, 3321, 3321, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(37, 9, '2020-11-29 14:54:14', 'Santiago Tolosa 2', '266475487', '33225544', 'Sancor', 'asdasdasd', '10-11-2020', 'Astigmatismo', '1', '1', 'Bifocal', 'Policarbonato', 'Prueba de producto con nombre largo', 'Tratamiento 1', 0, 0, 0, 'asdasd', 'asdasd', 'asdasd', '1', '1', 123, 123, 22, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2', '2', '2', '2', '2', '2', '2', '2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(38, 9, '2020-11-29 14:54:14', 'Santiago Tolosa 2', '266475487', '33225544', 'Sancor', 'asdasdasd', '10-11-2020', 'Astigmatismo', '1', '1', 'Bifocal', 'Policarbonato', 'Prueba de producto con nombre largo', 'Tratamiento 1', 0, 0, 0, 'asdasd', 'asdasd', 'asdasd', '1', '1', 123, 123, 22, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2', '2', '2', '2', '2', '2', '2', '2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(39, 8, '2020-11-29 14:56:00', 'Jose Luis Pereyra', '123123123', '20345333', 'Prueba obra', 'asdasdasd', '16-11-2020', 'Astigmatismo', '1', '1', 'Bifocal', 'Policarbonato', 'Producto', 'Tratamiento 2', 0, 0, 0, 'asdasdasdd', 'asdasdsad', 'asdasdds', '2', '2', 123, 123, 123, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2', '2', '2', '2', '3', '3', '3', '3', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(40, 4, '2020-11-29 15:33:21', 'Carloncho Tiza', '244658746', '34304456', 'Sancor', 'asdasdasd', '11-11-2020', 'Astigmatismo', '2', '2', 'Monofocal', 'Organico', 'Producto 2', 'Tratamiento 2', 1, 0, 1, 'asdasda', 'asdad', 'asdas', '2', '2', 123, 123, 23, '1', '1', '1', '1', '2', '2', '2', '2', '', '', '', '', '', '', '', '', '3', '1', '1', '2', '2', '3', '13', '3', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(41, 4, '2020-11-29 15:33:21', 'Carloncho Tiza', '244658746', '34304456', 'Sancor', 'asdasdasd', '11-11-2020', 'Astigmatismo', '2', '2', 'Monofocal', 'Organico', 'Producto 2', 'Tratamiento 2', 1, 0, 1, 'asdasda', 'asdad', 'asdas', '2', '2', 123, 123, 23, '1', '1', '1', '1', '2', '2', '2', '2', '', '', '', '', '', '', '', '', '3', '1', '1', '2', '2', '3', '13', '3', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(42, 9, '2020-11-29 15:35:59', 'Santiago Tolosa 2', '266475487', '33225544', 'Sancor', 'asdasdasd', '3-11-2020', 'Astigmatismo', '2', '2', 'Monofocal', 'Policarbonato', 'Producto', 'Tratamiento 2', 0, 1, 0, 'asdasdad', 'asdasd', 'asdads', '2', '2', 123, 123, 23, '', '', '', '', '', '', '', '', '2', '2', '2', '2', '2', '2', '2', '2', '', '', '', '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(43, 7, '2020-12-02 20:11:01', 'Cacaroto', '2366451554', '323212312', 'Osde', 'asdasdasd', '10-12-2020', 'Astigmatismo', '1', '1', 'Monofocal', 'Policarbonato', 'Producto', 'Tratamiento 2', 1, 1, 1, 'asdasdasd', 'asdasd', 'asdasd', '1', '1', 123123, 1232, 122, '1', '2', '1', '1', '2', '2', '2', '2', '1', '2', '1', '1', '2', '1', '2', '1', '2', '1', '1', '1', '2', '2', '2', '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(44, 8, '2020-12-02 20:19:19', 'Jose Luis Pereyra', '123123123', '20345333', 'Prueba obra', 'asdasdasd', '2-12-2020', 'Astigmatismo', '2', '2', 'Bifocal', 'Organico', 'Producto 2', 'Tratamiento 2', 0, 0, 0, 'asdasdad', 'asdasdad', 'asdasd', '2', '2', 123, 123, 123, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', '1', '2', '1', '1', '1', '1', '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(45, 1, '2020-12-02 20:36:27', 'Santiago Tolosa', '2664713206 /476453', '34304468', 'Sancor Salud', 'asasds', '3-12-2020', 'Astigmatismo', '2', '2', 'Bifocal', 'Organico', 'Producto 2', 'Tratamiento 1', 0, 0, 0, '12', '2', '2', '2', '2', 22, 222, 22, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2', '2', '2', '2', '2', '2', '2', '2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(46, 1, '2020-12-02 20:36:27', 'Santiago Tolosa', '2664713206 /476453', '34304468', 'Sancor Salud', 'asasds', '3-12-2020', 'Astigmatismo', '2', '2', 'Bifocal', 'Organico', 'Producto 2', 'Tratamiento 1', 0, 0, 0, '12', '2', '2', '2', '2', 22, 222, 22, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2', '2', '2', '2', '2', '2', '2', '2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(47, 7, '2020-12-02 20:52:50', 'Cacaroto', '2366451554', '323212312', 'Osde', 'asdasdasd', '22-12-2020', 'Astigmatismo', '2', '2', 'Multifocal', 'Policarbonato', 'Prueba de producto con nombre largo', 'Tratamiento 3', 0, 0, 0, 'asdasd', 'asdasd', 'asdasd', '2', '2', 22, 22, 22, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', '1', '1', '1', '1', '1', '1', '1'),
+(48, 7, '2020-12-02 20:53:16', 'Cacaroto', '2366451554', '323212312', 'Osde', 'asdasdasd', '22-12-2020', 'Astigmatismo', '2', '2', 'Multifocal', 'Policarbonato', 'Prueba de producto con nombre largo', 'Tratamiento 3', 0, 0, 0, 'asdasd', 'asdasd', 'asdasd', '2', '2', 22, 22, 22, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', '1', '1', '1', '1', '1', '1', '1'),
+(49, 4, '2020-12-02 20:54:18', 'Carloncho Tiza', '244658746', '34304456', 'Sancor', 'asdasdasd', '23-12-2020', 'Astigmatismo', '2', '2', 'Multifocal', 'Policarbonato', 'Prueba de producto con nombre largo', 'Tratamiento 2', 0, 0, 0, 'asdasd', 'asdasd', 'asdasd', '2', '2', 123, 123, 123, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', '1', '1', '1', '1', '1', '1', '1');
 
 -- --------------------------------------------------------
 
@@ -227,7 +316,8 @@ INSERT INTO `productos` (`id_producto`, `codigo`, `nombre`, `categoria`, `materi
 (5, 3, 'Producto 3', 'Lentes de contacto', 'Mineral', '5', '5', 1, '2020-09-20 21:39:55'),
 (6, 4, 'Producto 4', 'Anteojos', 'Otros', '6', '6', 1, '2020-09-20 21:54:11'),
 (7, 5, 'Prueba producto', 'Anteojos', 'Mineral', '7', '7', 1, '2020-09-20 22:12:27'),
-(8, 6, 'prueba producto2', 'Anteojos', 'Mineral', '8', '8', 1, '2020-09-20 22:12:40');
+(8, 6, 'prueba producto2', 'Anteojos', 'Mineral', '8', '8', 1, '2020-09-20 22:12:40'),
+(9, 7, 'Prueba de producto con nombre largo', 'Lentes de contacto', 'Policarbonato', '9', '9', 1, '2020-11-05 16:24:19');
 
 -- --------------------------------------------------------
 
@@ -442,7 +532,7 @@ ALTER TABLE `marcas`
 -- AUTO_INCREMENT de la tabla `ordenes`
 --
 ALTER TABLE `ordenes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 --
 -- AUTO_INCREMENT de la tabla `pacientes`
 --
@@ -457,7 +547,7 @@ ALTER TABLE `patologias`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT de la tabla `roles`
 --
