@@ -31,15 +31,23 @@
                     <div class="col-xs-3 ticket-local-1">
                         <div class="col-12"><p><strong>Fecha de entrega:</strong></p></div>
                         <div class="col-12"><p><strong>Sucursal:</strong></p></div>
-                        
+                        <div class="col-12"><p><strong>Trabajo:</strong></p></div>
+                        <div class="col-12"><p><strong>N° de trabajo:</strong></p></div>
+                        <div class="col-12"><p><strong>Paciente:</strong> <?php echo $nombre; ?></p></div>
+                        <div class="col-12"><p><strong>Tel:</strong> <?php echo $telefono; ?></p></div>
                     </div>
                     <!-- Comprobante local 2 -->
                     <div class="col-xs-3 ticket-local-2">
                         <div class="col-12"><p><strong>Fecha de entrega:</strong></p></div>
                         <div class="col-12"><p><strong>Sucursal:</strong></p></div>
+                        <div class="col-12"><p><strong>Trabajo:</strong></p></div>
+                        <div class="col-12"><p><strong>N° de trabajo:</strong></p></div>
                     </div>
                     <!-- Comprobante cliente -->
-                    <div class="col-xs-6 ticket-cliente"></div>
+                    <div class="col-xs-6 ticket-cliente d-flex">
+                        <div class="col-10 mr-2"><p><strong>Cliente:</strong> <?php echo $nombre; ?></p></div>
+                        <div class="col-2"><p><strong>Entrega:</strong></p></div>
+                    </div>
                 </div>
                 
             </div>
