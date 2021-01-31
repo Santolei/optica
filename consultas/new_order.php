@@ -79,6 +79,11 @@ if (!$con) {
 	$distancia = $_POST['distancia'];
 	$altura = $_POST['altura'];
 
+	// Precio de cristales, armazón y otros
+
+	$cristales_precio = $_POST['cristales_precio'];
+	$armazon_precio = $_POST['armazon_precio'];
+	$otros_precio = $_POST['otros_precio'];
 	// Total seña y saldo
 	$total = $_POST['total'];
 	$senia = $_POST['senia'];
@@ -129,10 +134,10 @@ if (!$con) {
 
 
 		$statement = $con->prepare('
-			INSERT INTO ordenes (id_paciente, nombre, telefono, dni, obra_social, doctor, fecha_receta, patologia, graduacion_od, graduacion_oi, tipo_lente, material, producto, tratamiento, checkbox_lejos, checkbox_intermedia, checkbox_cerca, marca_armazon, material_armazon, tipo_armazon, dist_interpupilar, altura, total, senia, saldo, monofocal_lejos_der_esf, monofocal_lejos_der_cil, monofocal_lejos_der_eje, monofocal_lejos_der_add, monofocal_lejos_izq_esf, monofocal_lejos_izq_cil, monofocal_lejos_izq_eje, monofocal_lejos_izq_add, monofocal_intermedia_der_esf, monofocal_intermedia_der_cil, monofocal_intermedia_der_eje, monofocal_intermedia_der_add, monofocal_intermedia_izq_esf, monofocal_intermedia_izq_cil, monofocal_intermedia_izq_eje, monofocal_intermedia_izq_add, monofocal_cerca_der_esf,
+			INSERT INTO ordenes (id_paciente, nombre, telefono, dni, obra_social, doctor, fecha_receta, patologia, graduacion_od, graduacion_oi, tipo_lente, material, producto, tratamiento, checkbox_lejos, checkbox_intermedia, checkbox_cerca, marca_armazon, material_armazon, tipo_armazon, dist_interpupilar, altura, cristales_precio, armazon_precio, otros_precio, total, senia, saldo, monofocal_lejos_der_esf, monofocal_lejos_der_cil, monofocal_lejos_der_eje, monofocal_lejos_der_add, monofocal_lejos_izq_esf, monofocal_lejos_izq_cil, monofocal_lejos_izq_eje, monofocal_lejos_izq_add, monofocal_intermedia_der_esf, monofocal_intermedia_der_cil, monofocal_intermedia_der_eje, monofocal_intermedia_der_add, monofocal_intermedia_izq_esf, monofocal_intermedia_izq_cil, monofocal_intermedia_izq_eje, monofocal_intermedia_izq_add, monofocal_cerca_der_esf,
 				monofocal_cerca_der_cil, monofocal_cerca_der_eje, monofocal_cerca_der_add, monofocal_cerca_izq_esf, monofocal_cerca_izq_cil, monofocal_cerca_izq_eje, monofocal_cerca_izq_add
 			) 
-			VALUES(:id_paciente, :nombre, :telefono, :dni, :obra_social, :doctor, :fecha_receta, :patologia, :graduacion_od, :graduacion_oi, :tipo_lente, :material, :producto, :tratamiento, :checkbox_lejos, :checkbox_intermedia, :checkbox_cerca, :marca_armazon, :material_armazon, :tipo_armazon, :dist_interpupilar, :altura, :total, :senia, :saldo, :monofocal_lejos_der_esf, :monofocal_lejos_der_cil, :monofocal_lejos_der_eje, :monofocal_lejos_der_add, :monofocal_lejos_izq_esf, :monofocal_lejos_izq_cil, :monofocal_lejos_izq_eje, :monofocal_lejos_izq_add, :monofocal_intermedia_der_esf, :monofocal_intermedia_der_cil, :monofocal_intermedia_der_eje, :monofocal_intermedia_der_add, :monofocal_intermedia_izq_esf, :monofocal_intermedia_izq_cil, :monofocal_intermedia_izq_eje, :monofocal_intermedia_izq_add, :monofocal_cerca_der_esf,
+			VALUES(:id_paciente, :nombre, :telefono, :dni, :obra_social, :doctor, :fecha_receta, :patologia, :graduacion_od, :graduacion_oi, :tipo_lente, :material, :producto, :tratamiento, :checkbox_lejos, :checkbox_intermedia, :checkbox_cerca, :marca_armazon, :material_armazon, :tipo_armazon, :dist_interpupilar, :altura, :cristales_precio, :armazon_precio, :otros_precio, :total, :senia, :saldo, :monofocal_lejos_der_esf, :monofocal_lejos_der_cil, :monofocal_lejos_der_eje, :monofocal_lejos_der_add, :monofocal_lejos_izq_esf, :monofocal_lejos_izq_cil, :monofocal_lejos_izq_eje, :monofocal_lejos_izq_add, :monofocal_intermedia_der_esf, :monofocal_intermedia_der_cil, :monofocal_intermedia_der_eje, :monofocal_intermedia_der_add, :monofocal_intermedia_izq_esf, :monofocal_intermedia_izq_cil, :monofocal_intermedia_izq_eje, :monofocal_intermedia_izq_add, :monofocal_cerca_der_esf,
 				:monofocal_cerca_der_cil, :monofocal_cerca_der_eje, :monofocal_cerca_der_add, :monofocal_cerca_izq_esf, :monofocal_cerca_izq_cil, :monofocal_cerca_izq_eje, :monofocal_cerca_izq_add
 			)
 		');
@@ -160,6 +165,9 @@ if (!$con) {
 			':tipo_armazon' => $tipo_armazon,
 			':dist_interpupilar' => $distancia,
 			':altura' => $altura,
+			':cristales_precio' => $cristales_precio,
+			':armazon_precio' => $armazon_precio,
+			':otros_precio' => $otros_precio,
 			':total' => $total,
 			':senia' => $senia,
 			':saldo' => $saldo,
@@ -205,9 +213,9 @@ if (!$con) {
 	    $bifocal_izq_add = $_POST['bifocal_izq_add'];
 
 		$statement2 = $con->prepare('
-			INSERT INTO ordenes (id_paciente, nombre, telefono, dni, obra_social, doctor, fecha_receta, patologia, graduacion_od, graduacion_oi, tipo_lente, material, producto, tratamiento, marca_armazon, material_armazon, tipo_armazon, dist_interpupilar, altura, total, senia, saldo, bifocal_der_esf, bifocal_der_cil, bifocal_der_eje, bifocal_der_add, bifocal_izq_esf, bifocal_izq_cil, bifocal_izq_eje, bifocal_izq_add
+			INSERT INTO ordenes (id_paciente, nombre, telefono, dni, obra_social, doctor, fecha_receta, patologia, graduacion_od, graduacion_oi, tipo_lente, material, producto, tratamiento, marca_armazon, material_armazon, tipo_armazon, dist_interpupilar, altura, cristales_precio, armazon_precio, otros_precio, total, senia, saldo, bifocal_der_esf, bifocal_der_cil, bifocal_der_eje, bifocal_der_add, bifocal_izq_esf, bifocal_izq_cil, bifocal_izq_eje, bifocal_izq_add
 			) 
-			VALUES(:id_paciente, :nombre, :telefono, :dni, :obra_social, :doctor, :fecha_receta, :patologia, :graduacion_od, :graduacion_oi, :tipo_lente, :material, :producto, :tratamiento, :marca_armazon, :material_armazon, :tipo_armazon, :dist_interpupilar, :altura, :total, :senia, :saldo, :bifocal_der_esf, :bifocal_der_cil, :bifocal_der_eje, :bifocal_der_add, :bifocal_izq_esf, :bifocal_izq_cil, :bifocal_izq_eje, :bifocal_izq_add
+			VALUES(:id_paciente, :nombre, :telefono, :dni, :obra_social, :doctor, :fecha_receta, :patologia, :graduacion_od, :graduacion_oi, :tipo_lente, :material, :producto, :tratamiento, :marca_armazon, :material_armazon, :tipo_armazon, :dist_interpupilar, :altura, :cristales_precio, :armazon_precio, :otros_precio, :total, :senia, :saldo, :bifocal_der_esf, :bifocal_der_cil, :bifocal_der_eje, :bifocal_der_add, :bifocal_izq_esf, :bifocal_izq_cil, :bifocal_izq_eje, :bifocal_izq_add
 			)
 		');
 
@@ -231,6 +239,9 @@ if (!$con) {
 			':tipo_armazon' => $tipo_armazon,
 			':dist_interpupilar' => $distancia,
 			':altura' => $altura,
+			':cristales_precio' => $cristales_precio,
+			':armazon_precio' => $armazon_precio,
+			':otros_precio' => $otros_precio,
 			':total' => $total,
 			':senia' => $senia,
 			':saldo' => $saldo,
@@ -260,9 +271,9 @@ if (!$con) {
 	    $multifocal_izq_add = $_POST['multifocal_izq_add'];
 
 		$statement3 = $con->prepare('
-			INSERT INTO ordenes (id_paciente, nombre, telefono, dni, obra_social, doctor, fecha_receta, patologia, graduacion_od, graduacion_oi, tipo_lente, material, producto, tratamiento, marca_armazon, material_armazon, tipo_armazon, dist_interpupilar, altura, total, senia, saldo, multifocal_der_esf, multifocal_der_cil, multifocal_der_eje, multifocal_der_add, multifocal_izq_esf, multifocal_izq_cil, multifocal_izq_eje, multifocal_izq_add 
+			INSERT INTO ordenes (id_paciente, nombre, telefono, dni, obra_social, doctor, fecha_receta, patologia, graduacion_od, graduacion_oi, tipo_lente, material, producto, tratamiento, marca_armazon, material_armazon, tipo_armazon, dist_interpupilar, altura, cristales_precio, armazon_precio, otros_precio, total, senia, saldo, multifocal_der_esf, multifocal_der_cil, multifocal_der_eje, multifocal_der_add, multifocal_izq_esf, multifocal_izq_cil, multifocal_izq_eje, multifocal_izq_add 
 			) 
-			VALUES(:id_paciente, :nombre, :telefono, :dni, :obra_social, :doctor, :fecha_receta, :patologia, :graduacion_od, :graduacion_oi, :tipo_lente, :material, :producto, :tratamiento, :marca_armazon, :material_armazon, :tipo_armazon, :dist_interpupilar, :altura, :total, :senia, :saldo, :multifocal_der_esf, :multifocal_der_cil, :multifocal_der_eje, :multifocal_der_add, :multifocal_izq_esf, :multifocal_izq_cil, :multifocal_izq_eje, :multifocal_izq_add 
+			VALUES(:id_paciente, :nombre, :telefono, :dni, :obra_social, :doctor, :fecha_receta, :patologia, :graduacion_od, :graduacion_oi, :tipo_lente, :material, :producto, :tratamiento, :marca_armazon, :material_armazon, :tipo_armazon, :dist_interpupilar, :altura, :cristales_precio, :armazon_precio, :otros_precio, :total, :senia, :saldo, :multifocal_der_esf, :multifocal_der_cil, :multifocal_der_eje, :multifocal_der_add, :multifocal_izq_esf, :multifocal_izq_cil, :multifocal_izq_eje, :multifocal_izq_add 
 			)
 		');
 
@@ -286,6 +297,9 @@ if (!$con) {
 			':tipo_armazon' => $tipo_armazon,
 			':dist_interpupilar' => $distancia,
 			':altura' => $altura,
+			':cristales_precio' => $cristales_precio,
+			':armazon_precio' => $armazon_precio,
+			':otros_precio' => $otros_precio,
 			':total' => $total,
 			':senia' => $senia,
 			':saldo' => $saldo,

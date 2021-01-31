@@ -22,6 +22,10 @@
 		$material = $ultima_orden[0]['material'];
 		$producto = $ultima_orden[0]['producto'];
 		$armazon = $ultima_orden[0]['marca_armazon'];
+		$cristales_precio = $ultima_orden[0]['cristales_precio'];
+		$armazon_precio = $ultima_orden[0]['armazon_precio'];
+		$otros_precio = $ultima_orden[0]['otros_precio'];
+
 
 		// Graduaciones
 
