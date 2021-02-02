@@ -76,6 +76,64 @@
                         <div class="mr-2"><p><strong>Cliente:</strong> <?php echo $nombre; ?></p></div>
                         <div class=""><p><strong>Entrega:</strong></p></div>
                         <div class=""><p><strong>N° de trabajo:</strong></p></div>
+                        <div class=""><p><strong>Local:</strong> </p></div>
+                        <div class=""><p><strong>Artículo:</strong>  </p></div>
+
+                       <!-- datos del lente, aca hay que poner un if por cada tipo de lente -->
+                       
+                       <div class="d-flex flex-column">
+                          <!-- OJO DERECHO -->
+                          <div class="form-group d-flex align-items-end mb-2">
+                            <label class=""><span class="mr-2 mb-4 pb-4">OD</span></label>
+                            <!-- ESF -->
+                            <div class="text-center mr-3">
+                              <label for="monofocal_lejos_der_esf">ESF</label>
+                              <input class="form-control" type="text" id="monofocal_lejos_der_esf">
+                            </div>
+                            <!-- CIL -->
+                            <div class="text-center mr-3">
+                              <label for="monofocal_lejos_der_cil">CIL</label>
+                              <input class="form-control" type="text" id="monofocal_lejos_der_cil">
+                            </div>
+                            <!-- EJE -->
+                            <div class="text-center mr-3">
+                              <label for="monofocal_lejos_der_eje">EJE</label>
+                              <input class="form-control" type="text" id="monofocal_lejos_der_eje">
+                            </div>
+                            <!-- ADICION -->
+                            <div class="text-center">
+                              <label for="monofocal_lejos_der_add">ADD</label>
+                              <input class="form-control" type="text" id="monofocal_lejos_der_add">
+                            </div>
+                          </div>
+
+                          <!-- OJO IZQUIERDO -->
+                          <div class="form-group d-flex align-items-end mb-0">
+                            <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
+                            <!-- ESF -->
+                            <div class="text-center mr-3">
+                              <input class="form-control" type="text" id="monofocal_lejos_izq_esf">
+                            </div>
+                            <!-- CIL -->
+                            <div class="text-center mr-3">
+                              <input class="form-control" type="text" id="monofocal_lejos_izq_cil">
+                            </div>
+                            <!-- EJE -->
+                            <div class="text-center mr-3">
+                              <input class="form-control" type="text" id="monofocal_lejos_izq_eje">
+                            </div>
+                            <!-- ADICION -->
+                            <div class="text-center">
+                              <input class="form-control" type="text" id="monofocal_lejos_izq_add">
+                            </div>
+                          </div>
+                        </div> 
+
+
+                        <div class="mt-4"><p><strong>Tratamientos:</strong>  </p></div>
+                        <div class=""><p><strong>Armazón:</strong>  </p></div>
+                        <div class=""><p><strong>Observaciones:</strong>  </p></div>
+
                     </div>
                 </div>
                 
