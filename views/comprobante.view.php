@@ -75,9 +75,9 @@
                     <div class="col-xs-5 ticket-local-2">
                         <div class="mr-2"><p><strong>Cliente:</strong> <?php echo $nombre; ?></p></div>
                         <div class=""><p><strong>Entrega:</strong></p></div>
-                        <div class=""><p><strong>N° de trabajo:</strong></p></div>
+                        <div class=""><p><strong>N° de trabajo:</strong> <?php echo $id_orden; ?></p></div>
                         <div class=""><p><strong>Local:</strong> </p></div>
-                        <div class=""><p><strong>Artículo:</strong>  </p></div>
+                        <div class=""><p><strong>Artículo:</strong> <?php echo $producto; ?> </p></div>
 
                        <!-- datos del lente, aca hay que poner un if por cada tipo de lente -->
                        
@@ -129,10 +129,9 @@
                           </div>
                         </div> 
 
-
-                        <div class="mt-4"><p><strong>Tratamientos:</strong>  </p></div>
-                        <div class=""><p><strong>Armazón:</strong>  </p></div>
-                        <div class=""><p><strong>Observaciones:</strong>  </p></div>
+                        <div class="mt-4"><p><strong>Tratamientos:</strong> <?php echo $tratamiento; ?> </p></div>
+                        <div class=""><p><strong>Armazón:</strong> <?php echo ($armazon . " - " . $tipo_armazon . " - " . $material_armazon)  ?> </p></div>
+                        <div class=""><p><strong>Observaciones:</strong> <?php echo $observaciones; ?> </p></div>
 
                     </div>
                 </div>

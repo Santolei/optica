@@ -413,12 +413,14 @@
         tipo_armazon = $('#add_tipo_armazon').val();
         distancia = $('#add_distancia_interpupilar').val();
         altura = $('#add_altura').val();
+        observaciones = $('#add_observaciones').val();
 
         $('input[name="marca_armazon"]').val(marca);
         $('input[name="material_armazon"]').val(material_armazon);
         $('input[name="tipo_armazon"]').val(tipo_armazon);
         $('input[name="distancia"]').val(distancia);
         $('input[name="altura"]').val(altura);
+        $('textarea#observaciones').html(observaciones);
 
         $('#modal_new_order4').modal('hide');
         $('#modal_new_order5').modal('show');

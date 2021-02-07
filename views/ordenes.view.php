@@ -467,6 +467,17 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="col-md-6 grey-background form-interno pull-left mt-4">
+                                        <div class="d-flex justify-content-between align-items-center"><h5><strong>Observaciones:</strong></h5> <a href="#" class=" boton-editar-orden btn btn-primary d-flex justify-content-center align-items-center" data-toggle="modal" data-target="#modal_new_order4"><i class="fa fa-pencil"></i>Editar </a>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-sm-12 col-md-4" style="width: 100% !important">
+                                                <textarea maxlength="200" rows="6" style="min-width: 100% !important" class="form-control" autocomplete="off" name="observaciones" id="observaciones" readonly="readonly"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <div class="col-md-6 grey-background form-interno pull-right mt-4">
                                         <div class="d-flex justify-content-between align-items-center"><h5><strong>Total, seña y saldo:</strong></h5> <a href="#" class=" boton-editar-orden btn btn-primary d-flex justify-content-center align-items-center" data-toggle="modal" data-target="#modal_new_order5"><i class="fa fa-pencil"></i>Editar </a>
                                         </div>

@@ -44,6 +44,12 @@
                 <input maxlength="100" class="form-control" type="text" autocomplete="off" id="add_altura">
             </div>
           </div>
+          <div class="row">
+            <div class="form-group col-sm-12">
+                <label for="add_observaciones">Observaciones:</label>
+                <textarea maxlength="200" rows="5" class="form-control" autocomplete="off" id="add_observaciones"></textarea>
+            </div>
+          </div>
         </form>
           <!--Footer-->
         <div class="modal-footer justify-content-center">
