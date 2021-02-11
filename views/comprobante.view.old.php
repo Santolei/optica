@@ -7,10 +7,11 @@
     <?php include 'views/navbar.php' ?>
 
         <div class="content printable" style="padding-top: 15px;">
-            <div class="header-comprobante d-flex justify-content-between align-items-center pb-4">
+            <!-- <div class="header-comprobante d-flex justify-content-between align-items-center pb-4">
                 <div class="info-comprobante">
-                    <p><strong>Paciente:</strong> <?php echo $nombre; ?></p> 
-                    <p><strong>N° de trabajo:</strong> <?php echo $id_orden; ?></p>
+                    <p><strong>Nombre y apellido:</strong> <?php echo $nombre; ?></p> 
+                    <p><strong>Tel:</strong> <?php echo $telefono; ?></p>
+                    <p><strong>Dr:</strong> <?php echo $doctor; ?></p>
                     
                 </div>
                 <div class="info-comprobante">
@@ -21,44 +22,39 @@
                         <p>Tel: (02656) 475710 / 475728</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="container-fluid">
-                <!-- Comprobante Cliente 1 -->
-                <div class="row mt-4">
-                    <div class="col-sm-4 pl-0"><p><strong>Fecha de entrega:</strong> 15/02/2020</p></div>
-                    <div class="col-sm-4"><p><strong>Sucursal:</strong> <?php echo $sucursal; ?></p></div>
-                    <div class="col-sm-4"><p><strong>Trabajo:</strong> <?php echo $trabajo; ?></p></div>
-                </div>
                 <div class="row">
-                    
-                    <div class="col-sm-6 ticket-cliente-1 ml-0 mr-0 pl-0 pr-2">
+                    <!-- Comprobante Cliente 1 -->
+                    <div class="col-xs-4 ticket-cliente-1 ml-0 mr-0 pl-0 pr-2">
+                        <div class="col-12"><p><strong>Fecha de entrega:</strong></p></div>
+                        <div class="col-12"><p><strong>Sucursal:</strong></p></div>
+                        <div class="col-12"><p><strong>Trabajo:</strong></p></div>
+                        <div class="col-12"><p><strong>N° de trabajo:</strong></p></div>
                         <!-- Linea con input text -->
-                        <div class="mb-2 d-flex align-items-center justify-content-between"><p class="m-0 p-0 mr-2"><strong>Cristales:</strong></p><input type="text" value="<?php echo '$' . $cristales_precio; ?>" class="form-control text-center" style="width:80px"> </div>
+                        <div class="mb-2 d-flex align-items-center justify-content-between"><p class="m-0 p-0 mr-2"><strong>Paciente:</strong></p><input type="text" value="<?php echo $nombre; ?>" class="form-control text-center" style="width:170px"> </div>
                         <!-- Linea con input text -->
-                        <div class="mb-2 d-flex align-items-center justify-content-between"><p class="m-0 p-0"><strong>Armazón:<div style="visibility:hidden">.</div></strong></p><input type="text" value="<?php echo '$' . $armazon_precio; ?>" class="form-control text-center" style="width:80px"> </div>
+                        <div class="mb-2 d-flex align-items-center justify-content-between"><p class="m-0 p-0 mr-2"><strong>Teléfono:</strong></p><input type="text" value="<?php echo $telefono; ?>" class="form-control text-center" style="width:170px"> </div>
                         <!-- Linea con input text -->
-                        <div class="mb-2 d-flex align-items-center justify-content-between"><p class="m-0 p-0"><strong>Otros:<div style="visibility:hidden">.zzz</div></strong></p><input type="text" value="<?php echo '$' . $otros_precio; ?>" class="form-control text-center" style="width:80px"> </div>
+                        <div class="mb-2 d-flex align-items-center justify-content-between"><p class="m-0 p-0 mr-2"><strong>Cristales:</strong></p><input type="text" value="<?php echo '$' . $cristales_precio; ?>" class="form-control text-center" style="width:170px"> </div>
+                        <!-- Linea con input text -->
+                        <div class="mb-2 d-flex align-items-center justify-content-between"><p class="m-0 p-0"><strong>Armazón:<div style="visibility:hidden">.</div></strong></p><input type="text" value="<?php echo '$' . $armazon_precio; ?>" class="form-control text-center" style="width:170px"> </div>
+                        <!-- Linea con input text -->
+                        <div class="mb-2 d-flex align-items-center justify-content-between"><p class="m-0 p-0"><strong>Otros:<div style="visibility:hidden">.zzz</div></strong></p><input type="text" value="<?php echo '$' . $otros_precio; ?>" class="form-control text-center" style="width:170px"> </div>
+                        <!-- Linea con input text -->
+                        <div class="mb-2 d-flex align-items-center justify-content-between"><p class="m-0 p-0"><strong>Subtotal:<div style="visibility:hidden">z</div></strong></p><input type="text" value="<?php echo '$' . "4000"; ?>" class="form-control text-center" style="width:170px"> </div>
+                        <!-- Linea con input text -->
+                        <div class="mb-2 d-flex align-items-center justify-content-between"><p class="m-0 p-0"><strong>Pago:<div style="visibility:hidden">zzzz</div></strong></p><input type="text" value="<?php echo "Efectivo"; ?>" class="form-control text-center" style="width:170px"> </div>
+                        <!-- Linea con input text -->
+                        <div class="mb-2 d-flex align-items-center justify-content-between"><p class="m-0 p-0"><strong>Seña:<div style="visibility:hidden">zzzz</div></strong></p><input type="text" value="<?php echo "$" . "500"; ?>" class="form-control text-center" style="width:170px"> </div>
+                        <!-- Linea con input text -->
+                        <div class="mb-2 d-flex align-items-center justify-content-between"><p class="m-0 p-0"><strong>TOTAL:<div style="visibility:hidden">.zz</div></strong></p><input type="text" value="<?php echo "$" . "4500"; ?>" class="form-control text-center" style="width:170px; border: 2px solid #929494"> </div>
                     </div>
-
-                    <div class="col-sm-6 ticket-cliente-1 mr-0 pl-4 pr-2">
-                        <!-- Linea con input text -->
-                        <div class="mb-2 d-flex align-items-center justify-content-between"><p class="m-0 p-0"><strong>Total:<div style="visibility:hidden">z</div></strong></p><input type="text" value="<?php echo '$' . "4000"; ?>" class="form-control text-center" style="width:80px"> </div>
-                        <!-- Linea con input text -->
-                        <div class="mb-2 d-flex align-items-center justify-content-between"><p class="m-0 p-0"><strong>Seña:<div style="visibility:hidden">zzzz</div></strong></p><input type="text" value="<?php echo "$" . "500"; ?>" class="form-control text-center" style="width:80px"> </div>
-                        <!-- Linea con input text -->
-                        <div class="mb-2 d-flex align-items-center justify-content-between"><p class="m-0 p-0"><strong>Saldo:<div style="visibility:hidden">zzzz</div></strong></p><input type="text" value="<?php echo "$" . "3500"; ?>" class="form-control text-center" style="width:80px"> </div>
-                    </div>
-                </div>
-                <hr class="divisor">
-
-                <!-- Comprobante local 2 -->
-                <div class="row">
-                    <div class="col-sm-4 pl-0"><p><strong>Fecha de entrega:</strong> 15/02/2020</p></div>
-                    <div class="col-sm-4"><p><strong>Sucursal:</strong> <?php echo $sucursal; ?></p></div>
-                    <div class="col-sm-4"><p><strong>Trabajo:</strong> <?php echo $trabajo; ?></p></div>
-                </div>
-                <div class="row">
-                        
+                    <!-- Comprobante local 2 -->
+                    <div class="col-xs-3 ticket-local-1">
+                        <div class="col-12"><p><strong>Fecha de entrega:</strong></p></div>
+                        <div class="col-12"><p><strong>Sucursal:</strong></p></div>
+                        <div class="col-12"><p><strong>Trabajo:</strong></p></div>
                         <div class="col-12"><p><strong>N° de trabajo:</strong></p></div>
                         <!-- Linea con input text -->
                         <div class="mb-2 d-flex align-items-center justify-content-between"><p class="m-0 p-0 mr-2"><strong>Cristales:</strong></p><input type="text" value="<?php echo '$' . $cristales_precio; ?>" class="form-control text-center" style="width:80px"> </div>
@@ -74,11 +70,8 @@
                         <div class="mb-2 d-flex align-items-center justify-content-between"><p class="m-0 p-0"><strong>Seña:<div style="visibility:hidden">zzzz</div></strong></p><input type="text" value="<?php echo "$" . "500"; ?>" class="form-control text-center" style="width:80px"> </div>
                         <!-- Linea con input text -->
                         <div class="mb-2 d-flex align-items-center justify-content-between"><p class="m-0 p-0"><strong>TOTAL:<div style="visibility:hidden">.zz</div></strong></p><input type="text" value="<?php echo "$" . "4500"; ?>" class="form-control text-center" style="width:80px; border: 2px solid #929494"> </div>
-                    
-                </div>
-
-                <!-- Comprobante local 2 -->
-                <div class="row">
+                    </div>
+                    <!-- Comprobante local 2 -->
                     <div class="col-xs-5 ticket-local-2">
                         <div class="mr-2"><p><strong>Cliente:</strong> <?php echo $nombre; ?></p></div>
                         <div class=""><p><strong>Entrega:</strong></p></div>
@@ -142,8 +135,6 @@
 
                     </div>
                 </div>
-                    
-                
                 
             </div>
         </div>
@@ -158,7 +149,7 @@
 </script>
 <style type="text/css">
     .header-comprobante {
-        border-bottom: 1px dotted #929494;
+        /*border-bottom: 2px solid #929494;*/
     }
     .logo-comprobante {
         width: 180px;
@@ -172,7 +163,7 @@
     }
     .info-comprobante p {
         margin-bottom: 0;
-        
+        font-size: 13px;
     }
 
     .img-fondo{
@@ -195,50 +186,11 @@
         font-size: 14px;
     }
 
-    .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
-        float: left;
-   }
-   .col-sm-12 {
-        width: 100%;
-   }
-   .col-sm-11 {
-        width: 91.66666667%;
-   }
-   .col-sm-10 {
-        width: 83.33333333%;
-   }
-   .col-sm-9 {
-        width: 75%;
-   }
-   .col-sm-8 {
-        width: 66.66666667%;
-   }
-   .col-sm-7 {
-        width: 58.33333333%;
-   }
-   .col-sm-6 {
-        width: 50%;
-   }
-   .col-sm-5 {
-        width: 41.66666667%;
-   }
-   .col-sm-4 {
-        width: 33.33333333%;
-   }
-   .col-sm-3 {
-        width: 25%;
-   }
-   .col-sm-2 {
-        width: 16.66666667%;
-   }
-   .col-sm-1 {
-        width: 8.33333333%;
-   }
+    .ticket-cliente-1,
+    .ticket-local-1 {
+        border-right: 1px dotted #999992;
+    }
 
-   .divisor {
-    width: 100%;
-    border-bottom: 1px solid #ccc;
-   }
     .footer {
         position: absolute;
         bottom: -15px;

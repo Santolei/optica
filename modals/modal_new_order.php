@@ -21,8 +21,18 @@
               <label for="vendedor">Seleccionar Vendedor:</label>
               <br>
               <div class="d-flex align-items-center">
-                <select class="form-control" name="vendedor" id="vendedor" selected="Seleccionar Vendedor" required>
+                <select class="form-control" name="add_vendedor" id="add_vendedor" selected="Seleccionar Vendedor" required>
                   <option value="NULL">Seleccionar Vendedor</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="vendedor">Seleccionar Sucursal:</label>
+              <br>
+              <div class="d-flex align-items-center">
+                <select class="form-control" name="add_sucursal" id="add_sucursal" selected="Seleccionar Vendedor" required>
+                  <option value="Plaza">Plaza</option>
+                  <option value="Av. del sol">Av. del sol</option>
                 </select>
               </div>
             </div>

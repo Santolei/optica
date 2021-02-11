@@ -45,6 +45,16 @@
             </div>
           </div>
           <div class="row">
+            <div class="form-group col-sm-6">
+                <label for="add_observaciones">Trabajo:</label>
+                <select name="add_trabajo" class="form-control" id="add_trabajo">
+                  <option value="Calib">Calib</option>
+                  <option value="Rep">Rep</option>
+                  <option value="Trat">Trat</option>
+                </select>
+            </div>
+          </div>
+          <div class="row">
             <div class="form-group col-sm-12">
                 <label for="add_observaciones">Observaciones:</label>
                 <textarea maxlength="200" rows="5" class="form-control" autocomplete="off" id="add_observaciones"></textarea>

@@ -6,21 +6,21 @@
     });
 
     // Agrego los option de las vendedores y de los pacientes
-    $("#vendedor").load('consultas/vendedores_ajax.php');
+    $("#add_vendedor").load('consultas/vendedores_ajax.php');
     $("#add_patologia").load('consultas/patologias_ajax.php');
 
     // Funcion para chequear que el vendedor haya sido seleccionado
 
     function checkVendedor(){
-        if ($('#vendedor').val() != 0) {
+        if ($('#add_vendedor').val() != 0) {
             $('#datos_paciente').removeClass('btn-outline-info').addClass('btn-success');
             $("#datos_paciente").attr("disabled", false);
             $("#buscar_paciente").attr("readonly", false);
         }
     }
 
-    $('#vendedor').on('change', function(){
-         if ($('#vendedor').val() != 0) {
+    $('#add_vendedor').on('change', function(){
+         if ($('#add_vendedor').val() != 0) {
             $("#buscar_paciente").attr("readonly", false);
         } 
     });
@@ -72,6 +72,8 @@
         tel_cel = $(this).attr('data-tel_cel');
         dni = $(this).attr('data-dni');
         obra_social = $(this).attr('data-obra_social');
+        vendedor = $('#add_vendedor').val();
+        sucursal = $('#add_sucursal').val();
 
         // Inserto datos en el form
 
@@ -81,6 +83,8 @@
         $('input[name="telefono"]').val(tel_cel);
         $('input[name="dni"]').val(dni);
         $('input[name="obra_social"]').val(obra_social);
+        $('input[name="vendedor"]').val(vendedor);
+        $('input[name="sucursal"]').val(sucursal);
 
         $('#mostrar').html("<div class='m-0 animated slower delay-2s fadeOut'>Paciente agregado</div>");
         
@@ -413,6 +417,7 @@
         tipo_armazon = $('#add_tipo_armazon').val();
         distancia = $('#add_distancia_interpupilar').val();
         altura = $('#add_altura').val();
+        trabajo = $('#add_trabajo').val();
         observaciones = $('#add_observaciones').val();
 
         $('input[name="marca_armazon"]').val(marca);
@@ -420,6 +425,7 @@
         $('input[name="tipo_armazon"]').val(tipo_armazon);
         $('input[name="distancia"]').val(distancia);
         $('input[name="altura"]').val(altura);
+        $('input[name="trabajo"]').val(trabajo);
         $('textarea#observaciones').html(observaciones);
 
         $('#modal_new_order4').modal('hide');

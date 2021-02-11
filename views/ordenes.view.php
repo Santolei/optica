@@ -57,6 +57,14 @@
                                                 <label for="obra_social">Obra Social:</label>
                                                 <input maxlength="100" class="form-control" type="text" name="obra_social" id="obra_social" autocomplete="off" required readonly="readonly">
                                             </div>
+                                            <!-- Vendedor y sucursal estan ocultos -->
+
+                                            <div class="form-group col-md-6 hidden">
+                                                <label for="obra_social">Obra Social:</label>
+                                                <input maxlength="100" class="form-control" type="hidden" name="vendedor" id="vendedor" autocomplete="off" required readonly="readonly">
+                                                <input maxlength="100" class="form-control" type="hidden" name="sucursal" id="sucursal" autocomplete="off" required readonly="readonly">
+                                            </div>
+
                                         </div>
                                     </div>
 
@@ -469,6 +477,8 @@
                                     </div>
 
                                     <div class="col-md-6 grey-background form-interno pull-left mt-4">
+                                        
+                                        <input maxlength="100" class="form-control" type="hidden" name="trabajo" id="trabajo"  readonly="readonly">
                                         <div class="d-flex justify-content-between align-items-center"><h5><strong>Observaciones:</strong></h5> <a href="#" class=" boton-editar-orden btn btn-primary d-flex justify-content-center align-items-center" data-toggle="modal" data-target="#modal_new_order4"><i class="fa fa-pencil"></i>Editar </a>
                                         </div>
                                         <div class="row">

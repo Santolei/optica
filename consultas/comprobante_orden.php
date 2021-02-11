@@ -14,6 +14,8 @@
 	} else {
 		// --- datos de la orden ---- //
 		$nombre = $ultima_orden[0]['nombre'];
+		$sucursal = $ultima_orden[0]['sucursal'];
+		$vendedor = $ultima_orden[0]['vendedor'];
 		$fecha = $ultima_orden[0]['fecha'];
 		$fecha_venta = time( "d-m-Y", strtotime($fecha));
 		$telefono = $ultima_orden[0]['telefono'];
@@ -28,6 +30,7 @@
 		$tratamiento = $ultima_orden[0]['tratamiento'];
 		$material_armazon = $ultima_orden[0]['material_armazon'];
 		$tipo_armazon = $ultima_orden[0]['tipo_armazon'];
+		$trabajo = $ultima_orden[0]['trabajo'];
 		$observaciones = $ultima_orden[0]['observaciones'];
 
 		// Graduaciones
