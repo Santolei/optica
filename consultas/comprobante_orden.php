@@ -31,6 +31,9 @@
 		$material_armazon = $ultima_orden[0]['material_armazon'];
 		$tipo_armazon = $ultima_orden[0]['tipo_armazon'];
 		$trabajo = $ultima_orden[0]['trabajo'];
+		$total = $ultima_orden[0]['total'];
+		$senia = $ultima_orden[0]['senia'];
+		$saldo = $ultima_orden[0]['saldo'];
 		$observaciones = $ultima_orden[0]['observaciones'];
 
 		// Graduaciones
