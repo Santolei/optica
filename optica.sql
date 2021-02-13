@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-02-2021 a las 20:42:43
--- Versión del servidor: 10.4.14-MariaDB
--- Versión de PHP: 7.2.34
+-- Tiempo de generación: 13-02-2021 a las 04:09:31
+-- Versión del servidor: 10.1.21-MariaDB
+-- Versión de PHP: 5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -29,8 +28,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `caja` (
   `id` int(11) NOT NULL,
-  `id_venta` int(11) NOT NULL DEFAULT 0,
-  `fecha` datetime NOT NULL DEFAULT current_timestamp(),
+  `id_venta` int(11) NOT NULL DEFAULT '0',
+  `fecha` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `dia` varchar(50) NOT NULL,
   `mes` varchar(50) NOT NULL,
   `anio` varchar(4) NOT NULL,
@@ -87,21 +86,21 @@ INSERT INTO `config` (`valor_dolar`, `descuento_efectivo`, `precio_dolares`) VAL
 CREATE TABLE `historial_ventas` (
   `id` int(11) NOT NULL,
   `id_venta` int(11) NOT NULL,
-  `fecha` timestamp NOT NULL DEFAULT current_timestamp(),
+  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `dia` varchar(50) NOT NULL,
   `mes` varchar(50) NOT NULL,
   `anio` varchar(4) NOT NULL,
   `nombre` varchar(100) NOT NULL,
   `id_producto` varchar(100) NOT NULL,
   `metodo_pago` varchar(50) NOT NULL DEFAULT '0',
-  `cantidad` int(11) NOT NULL DEFAULT 0,
-  `precio` float NOT NULL DEFAULT 0,
-  `costo_usd` float NOT NULL DEFAULT 0,
-  `costo_pesos` float NOT NULL DEFAULT 0,
-  `valor_dolar` float NOT NULL DEFAULT 0,
-  `consumo_sin_descuento` float NOT NULL DEFAULT 0,
-  `consumo` float NOT NULL DEFAULT 0,
-  `costo_consumo_total` float NOT NULL DEFAULT 0,
+  `cantidad` int(11) NOT NULL DEFAULT '0',
+  `precio` float NOT NULL DEFAULT '0',
+  `costo_usd` float NOT NULL DEFAULT '0',
+  `costo_pesos` float NOT NULL DEFAULT '0',
+  `valor_dolar` float NOT NULL DEFAULT '0',
+  `consumo_sin_descuento` float NOT NULL DEFAULT '0',
+  `consumo` float NOT NULL DEFAULT '0',
+  `costo_consumo_total` float NOT NULL DEFAULT '0',
   `prod_vendidos` varchar(1000) NOT NULL,
   `vendedor` varchar(100) NOT NULL DEFAULT '0',
   `cliente` varchar(100) NOT NULL DEFAULT 'Consumidor Final'
@@ -134,7 +133,7 @@ INSERT INTO `marcas` (`id_marca`, `nombre`) VALUES
 CREATE TABLE `ordenes` (
   `id` int(11) NOT NULL,
   `id_paciente` int(11) NOT NULL,
-  `fecha` timestamp NOT NULL DEFAULT current_timestamp(),
+  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `vendedor` varchar(50) NOT NULL DEFAULT 'current_timestamp()',
   `sucursal` varchar(50) NOT NULL DEFAULT 'current_timestamp()',
   `nombre` varchar(100) NOT NULL DEFAULT '',
@@ -150,20 +149,20 @@ CREATE TABLE `ordenes` (
   `material` varchar(100) NOT NULL DEFAULT '',
   `producto` varchar(100) NOT NULL DEFAULT '',
   `tratamiento` varchar(100) NOT NULL DEFAULT '',
-  `checkbox_lejos` float NOT NULL DEFAULT 0,
-  `checkbox_intermedia` float NOT NULL DEFAULT 0,
-  `checkbox_cerca` float NOT NULL DEFAULT 0,
+  `checkbox_lejos` float NOT NULL DEFAULT '0',
+  `checkbox_intermedia` float NOT NULL DEFAULT '0',
+  `checkbox_cerca` float NOT NULL DEFAULT '0',
   `marca_armazon` varchar(100) NOT NULL DEFAULT '',
   `material_armazon` varchar(100) NOT NULL DEFAULT '',
   `tipo_armazon` varchar(100) NOT NULL DEFAULT '',
   `dist_interpupilar` varchar(100) NOT NULL DEFAULT '',
   `altura` varchar(100) NOT NULL DEFAULT '',
-  `cristales_precio` float NOT NULL DEFAULT 0,
-  `armazon_precio` float NOT NULL DEFAULT 0,
-  `otros_precio` float NOT NULL DEFAULT 0,
-  `total` float NOT NULL DEFAULT 0,
-  `senia` float NOT NULL DEFAULT 0,
-  `saldo` float NOT NULL DEFAULT 0,
+  `cristales_precio` float NOT NULL DEFAULT '0',
+  `armazon_precio` float NOT NULL DEFAULT '0',
+  `otros_precio` float NOT NULL DEFAULT '0',
+  `total` float NOT NULL DEFAULT '0',
+  `senia` float NOT NULL DEFAULT '0',
+  `saldo` float NOT NULL DEFAULT '0',
   `monofocal_lejos_der_esf` varchar(50) DEFAULT NULL,
   `monofocal_lejos_der_cil` varchar(50) DEFAULT NULL,
   `monofocal_lejos_der_eje` varchar(50) DEFAULT NULL,
@@ -309,14 +308,14 @@ INSERT INTO `patologias` (`id_patologia`, `titulo`) VALUES
 
 CREATE TABLE `productos` (
   `id_producto` int(11) NOT NULL,
-  `codigo` int(11) NOT NULL DEFAULT 0,
+  `codigo` int(11) NOT NULL DEFAULT '0',
   `nombre` varchar(100) NOT NULL DEFAULT '0',
   `categoria` varchar(50) NOT NULL DEFAULT '0',
   `material` varchar(100) NOT NULL DEFAULT '0',
   `editar` varchar(100) DEFAULT NULL,
   `borrar` varchar(100) DEFAULT NULL,
-  `estado` int(11) DEFAULT 1,
-  `modificado` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `estado` int(11) DEFAULT '1',
+  `modificado` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -381,7 +380,7 @@ INSERT INTO `tratamientos` (`id_tratamiento`, `titulo`) VALUES
 CREATE TABLE `usuarios` (
   `id_usuario` int(11) NOT NULL,
   `nombre` varchar(50) NOT NULL DEFAULT '0',
-  `rol` int(11) NOT NULL DEFAULT 0,
+  `rol` int(11) NOT NULL DEFAULT '0',
   `password` varchar(300) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -423,15 +422,15 @@ INSERT INTO `vendedores` (`id_vendedor`, `nombre`, `password`) VALUES
 
 CREATE TABLE `venta_temporal` (
   `id_venta` int(11) NOT NULL,
-  `id_producto` int(11) NOT NULL DEFAULT 0,
-  `codigo` int(11) NOT NULL DEFAULT 0,
+  `id_producto` int(11) NOT NULL DEFAULT '0',
+  `codigo` int(11) NOT NULL DEFAULT '0',
   `nombre` varchar(100) NOT NULL DEFAULT '0',
-  `precio` float NOT NULL DEFAULT 0,
-  `costo_usd` float NOT NULL DEFAULT 0,
-  `costo_pesos` float NOT NULL DEFAULT 0,
-  `valor_dolar` float NOT NULL DEFAULT 0,
-  `descuento` float NOT NULL DEFAULT 0,
-  `cantidad` int(11) NOT NULL DEFAULT 0,
+  `precio` float NOT NULL DEFAULT '0',
+  `costo_usd` float NOT NULL DEFAULT '0',
+  `costo_pesos` float NOT NULL DEFAULT '0',
+  `valor_dolar` float NOT NULL DEFAULT '0',
+  `descuento` float NOT NULL DEFAULT '0',
+  `cantidad` int(11) NOT NULL DEFAULT '0',
   `vendedor` varchar(50) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -526,80 +525,66 @@ ALTER TABLE `venta_temporal`
 --
 ALTER TABLE `caja`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT de la tabla `categorias`
 --
 ALTER TABLE `categorias`
   MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT de la tabla `historial_ventas`
 --
 ALTER TABLE `historial_ventas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT de la tabla `marcas`
 --
 ALTER TABLE `marcas`
   MODIFY `id_marca` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT de la tabla `ordenes`
 --
 ALTER TABLE `ordenes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
-
 --
 -- AUTO_INCREMENT de la tabla `pacientes`
 --
 ALTER TABLE `pacientes`
   MODIFY `id_paciente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
 --
 -- AUTO_INCREMENT de la tabla `patologias`
 --
 ALTER TABLE `patologias`
   MODIFY `id_patologia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
 --
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
   MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
 --
 -- AUTO_INCREMENT de la tabla `roles`
 --
 ALTER TABLE `roles`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT de la tabla `tratamientos`
 --
 ALTER TABLE `tratamientos`
   MODIFY `id_tratamiento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
-
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
   MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
 --
 -- AUTO_INCREMENT de la tabla `vendedores`
 --
 ALTER TABLE `vendedores`
   MODIFY `id_vendedor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
 --
 -- AUTO_INCREMENT de la tabla `venta_temporal`
 --
 ALTER TABLE `venta_temporal`
   MODIFY `id_venta` int(11) NOT NULL AUTO_INCREMENT;
-COMMIT;
-
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
