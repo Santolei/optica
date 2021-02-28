@@ -34,6 +34,9 @@
 		$total = $ultima_orden[0]['total'];
 		$senia = $ultima_orden[0]['senia'];
 		$saldo = $ultima_orden[0]['saldo'];
+		$metodo_pago = $ultima_orden[0]['metodo_pago'];
+		$fecha_ent= $ultima_orden[0]['fecha_entrega'];
+		$fecha_entrega = time( "d-m-Y", strtotime($fecha_ent));
 		$observaciones = $ultima_orden[0]['observaciones'];
 
 		// Graduaciones

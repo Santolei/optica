@@ -42,7 +42,7 @@
             <div class="container-fluid">
                 <!-- Comprobante Cliente 1 -->
                 <div class="row mt-4 mb-4">
-                    <div class="col-sm-4 pl-0 text-center"><p><strong>Fecha de entrega:</strong> 15/02/2020</p></div>
+                    <div class="col-sm-4 pl-0 text-center"><p><strong>Fecha de entrega:</strong> <?php echo date('d/m/Y', $fecha_entrega); ?></p></div>
                     <div class="col-sm-4 text-center"><p><strong>Sucursal:</strong> <?php echo $sucursal; ?></p></div>
                     <div class="col-sm-4 text-center"><p><strong>Trabajo:</strong> <?php echo $trabajo; ?></p></div>
                 </div>

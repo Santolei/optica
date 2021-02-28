@@ -62,6 +62,16 @@
                 
           </div>  
 
+          <div class="row"> 
+            <div class="col-sm-12">  
+              <div class="form-group">  
+                <label for="add_fecha_entrega">Fecha de entrega:</label>
+              <input maxlength="100" class="form-control" type="date" id="add_fecha_entrega" autocomplete="off">
+              </div>
+            </div>
+                
+          </div> 
+
           <div class="modal-footer justify-content-center">
           <button class="btn info-color-dark" type="submit" id="total_saldo">Guardar <i class="fa fa-arrow-right"></i></button>
           <a class="btn btn-outline-info waves-effect" data-dismiss="modal">Salir</a>

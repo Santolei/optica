@@ -522,6 +522,15 @@
                                                 <label for="saldo">Saldo:</label>
                                                 <input maxlength="100" class="form-control" type="text" autocomplete="off" id="saldo" name="saldo" readonly="readonly">
                                             </div>
+
+                                            <div class="form-group col-sm-12 col-md-4 hidden">
+                                                <input maxlength="100" class="form-control" type="hidden" autocomplete="off" id="metodo_pago" name="metodo_pago">
+                                            </div>
+
+                                            <div class="form-group col-sm-12 col-md-4 hidden">
+                                                <input maxlength="100" class="form-control" type="hidden" autocomplete="off" id="fecha_entrega" name="fecha_entrega">
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
