@@ -69,7 +69,7 @@
                 </div>
 
                 <div class="row">
-                    <p class="mb-0"><strong>Aclaración:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p class="mb-0 hidden"><strong>Aclaración:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
                 
 
@@ -132,101 +132,258 @@
 
                     <div class="col-sm-6">
                         <!-- datos del lente, aca hay que poner un if por cada tipo de lente -->
-                       
-                       <div class="d-flex flex-column">
-                          <!-- OJO DERECHO -->
-                          <div class="form-group d-flex align-items-end mb-2">
-                            <label class=""><span class="mr-2 mb-4 pb-4">OD</span></label>
-                            <!-- ESF -->
-                            <div class="text-center mr-3">
-                              <label for="monofocal_lejos_der_esf">ESF</label>
-                              <input class="form-control" type="text" id="monofocal_lejos_der_esf">
-                            </div>
-                            <!-- CIL -->
-                            <div class="text-center mr-3">
-                              <label for="monofocal_lejos_der_cil">CIL</label>
-                              <input class="form-control" type="text" id="monofocal_lejos_der_cil">
-                            </div>
-                            <!-- EJE -->
-                            <div class="text-center mr-3">
-                              <label for="monofocal_lejos_der_eje">EJE</label>
-                              <input class="form-control" type="text" id="monofocal_lejos_der_eje">
-                            </div>
-                            <!-- ADICION -->
-                            <div class="text-center">
-                              <label for="monofocal_lejos_der_add">ADD</label>
-                              <input class="form-control" type="text" id="monofocal_lejos_der_add">
-                            </div>
-                          </div>
-
-                          <!-- OJO IZQUIERDO -->
-                          <div class="form-group d-flex align-items-end mb-3">
-                            <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
-                            <!-- ESF -->
-                            <div class="text-center mr-3">
-                              <input class="form-control" type="text" id="monofocal_lejos_izq_esf">
-                            </div>
-                            <!-- CIL -->
-                            <div class="text-center mr-3">
-                              <input class="form-control" type="text" id="monofocal_lejos_izq_cil">
-                            </div>
-                            <!-- EJE -->
-                            <div class="text-center mr-3">
-                              <input class="form-control" type="text" id="monofocal_lejos_izq_eje">
-                            </div>
-                            <!-- ADICION -->
-                            <div class="text-center">
-                              <input class="form-control" type="text" id="monofocal_lejos_izq_add">
-                            </div>
-                          </div>
-                        </div> 
                         <div class="d-flex flex-column">
-                          <!-- OJO DERECHO -->
-                          <div class="form-group d-flex align-items-end mb-2">
-                            <label class=""><span class="mr-2 mb-4 pb-4">OD</span></label>
-                            <!-- ESF -->
-                            <div class="text-center mr-3">
-                              <label for="monofocal_lejos_der_esf">ESF</label>
-                              <input class="form-control" type="text" id="monofocal_lejos_der_esf">
-                            </div>
-                            <!-- CIL -->
-                            <div class="text-center mr-3">
-                              <label for="monofocal_lejos_der_cil">CIL</label>
-                              <input class="form-control" type="text" id="monofocal_lejos_der_cil">
-                            </div>
-                            <!-- EJE -->
-                            <div class="text-center mr-3">
-                              <label for="monofocal_lejos_der_eje">EJE</label>
-                              <input class="form-control" type="text" id="monofocal_lejos_der_eje">
-                            </div>
-                            <!-- ADICION -->
-                            <div class="text-center">
-                              <label for="monofocal_lejos_der_add">ADD</label>
-                              <input class="form-control" type="text" id="monofocal_lejos_der_add">
-                            </div>
-                          </div>
+                        <?php if ($tipo_lente === "Monofocal"): ?>
+                            <?php if ($checkbox_lejos === "1"): ?>
+                                <p class="mt-0">Monofocal Lejos</p>
+                                <!-- Si tiene el checkbox de Lejos: -->  
+                                <!-- OJO DERECHO -->
+                                <div class="form-group d-flex align-items-end mb-2">
+                                    <label class=""><span class="mr-2 mb-4 pb-4">OD</span></label>
+                                    <!-- ESF -->
+                                    <div class="text-center mr-3">
+                                      <label for="monofocal_lejos_der_esf">ESF</label>
+                                      <input class="form-control" type="text" id="monofocal_lejos_der_esf" value="<?php echo $monofocal_lejos_der_esf ?>">
+                                    </div>
+                                    <!-- CIL -->
+                                    <div class="text-center mr-3">
+                                      <label for="monofocal_lejos_der_cil">CIL</label>
+                                      <input class="form-control" type="text" id="monofocal_lejos_der_cil" value="<?php echo $monofocal_lejos_der_cil ?>">
+                                    </div>
+                                    <!-- EJE -->
+                                    <div class="text-center mr-3">
+                                      <label for="monofocal_lejos_der_eje">EJE</label>
+                                      <input class="form-control" type="text" id="monofocal_lejos_der_eje" value="<?php echo $monofocal_lejos_der_eje ?>">
+                                    </div>
+                                    <!-- ADICION -->
+                                    <div class="text-center">
+                                      <label for="monofocal_lejos_der_add">ADD</label>
+                                      <input class="form-control" type="text" id="monofocal_lejos_der_add" value="<?php echo $monofocal_lejos_der_add ?>">
+                                    </div>
+                                </div> 
 
-                          <!-- OJO IZQUIERDO -->
-                          <div class="form-group d-flex align-items-end">
-                            <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
-                            <!-- ESF -->
-                            <div class="text-center mr-3">
-                              <input class="form-control" type="text" id="monofocal_lejos_izq_esf">
-                            </div>
-                            <!-- CIL -->
-                            <div class="text-center mr-3">
-                              <input class="form-control" type="text" id="monofocal_lejos_izq_cil">
-                            </div>
-                            <!-- EJE -->
-                            <div class="text-center mr-3">
-                              <input class="form-control" type="text" id="monofocal_lejos_izq_eje">
-                            </div>
-                            <!-- ADICION -->
-                            <div class="text-center">
-                              <input class="form-control" type="text" id="monofocal_lejos_izq_add">
-                            </div>
-                          </div>
+                                <!-- OJO IZQUIERDO -->
+                                 <div class="form-group d-flex align-items-end mb-3">
+                                    <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
+                                    <!-- ESF -->
+                                    <div class="text-center mr-3">
+                                      <input class="form-control" type="text" id="monofocal_lejos_izq_esf" value="<?php echo $monofocal_lejos_izq_add ?>">
+                                    </div>
+                                    <!-- CIL -->
+                                    <div class="text-center mr-3">
+                                      <input class="form-control" type="text" id="monofocal_lejos_izq_cil" value="<?php echo $monofocal_lejos_izq_add ?>">
+                                    </div>
+                                    <!-- EJE -->
+                                    <div class="text-center mr-3">
+                                      <input class="form-control" type="text" id="monofocal_lejos_izq_eje" value="<?php echo $monofocal_lejos_izq_add ?>">
+                                    </div>
+                                    <!-- ADICION -->
+                                    <div class="text-center">
+                                      <input class="form-control" type="text" id="monofocal_lejos_izq_add" value="<?php echo $monofocal_lejos_izq_add ?>">
+                                    </div>
+                                </div> 
+                            <?php endif ?>
+                            
+
+                            <!-- Si tiene el checkbox de Intermedia: -->
+
+                            <?php if ($checkbox_intermedia === "1" ): ?>
+                                <p class="mt-0">Monofocal intermedia</p>
+                                <!-- OJO DERECHO -->
+                                <div class="form-group d-flex align-items-end mb-2">
+                                    <label class=""><span class="mr-2 mb-4 pb-4">OD</span></label>
+                                    <!-- ESF -->
+                                    <div class="text-center mr-3">
+                                      <label for="monofocal_lejos_der_esf">ESF</label>
+                                      <input class="form-control" type="text" id="monofocal_intermedia_der_esf" value="<?php echo $monofocal_intermedia_der_esf ?>">
+                                    </div>
+                                    <!-- CIL -->
+                                    <div class="text-center mr-3">
+                                      <label for="monofocal_lejos_der_cil">CIL</label>
+                                      <input class="form-control" type="text" id="monofocal_intermedia_der_cil" value="<?php echo $monofocal_intermedia_der_cil ?>">
+                                    </div>
+                                    <!-- EJE -->
+                                    <div class="text-center mr-3">
+                                      <label for="monofocal_lejos_der_eje">EJE</label>
+                                      <input class="form-control" type="text" id="monofocal_intermedia_der_eje" value="<?php echo $monofocal_intermedia_der_eje ?>">
+                                    </div>
+                                    <!-- ADICION -->
+                                    <div class="text-center">
+                                      <label for="monofocal_lejos_der_add">ADD</label>
+                                      <input class="form-control" type="text" id="monofocal_intermedia_der_add" value="<?php echo $monofocal_intermedia_der_add ?>">
+                                    </div>
+                                </div> 
+
+                                <!-- OJO IZQUIERDO -->
+                                 <div class="form-group d-flex align-items-end mb-3">
+                                    <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
+                                    <!-- ESF -->
+                                    <div class="text-center mr-3">
+                                      <input class="form-control" type="text" id="monofocal_intermedia_izq_esf" value="<?php echo $monofocal_intermedia_izq_add ?>">
+                                    </div>
+                                    <!-- CIL -->
+                                    <div class="text-center mr-3">
+                                      <input class="form-control" type="text" id="monofocal_intermedia_izq_cil" value="<?php echo $monofocal_intermedia_izq_add ?>">
+                                    </div>
+                                    <!-- EJE -->
+                                    <div class="text-center mr-3">
+                                      <input class="form-control" type="text" id="monofocal_intermedia_izq_eje" value="<?php echo $monofocal_intermedia_izq_add ?>">
+                                    </div>
+                                    <!-- ADICION -->
+                                    <div class="text-center">
+                                      <input class="form-control" type="text" id="monofocal_intermedia_izq_add" value="<?php echo $monofocal_intermedia_izq_add ?>">
+                                    </div>
+                                </div>
+                            <?php endif ?>
+                            <!-- Si tiene el checkbox de cerca: -->
+                            <?php if ($checkbox_cerca === "1" ): ?>
+                                <p class="mt-0">Monofocal cerca</p>
+                                <!-- OJO DERECHO -->
+                                <div class="form-group d-flex align-items-end mb-2">
+                                    <label class=""><span class="mr-2 mb-4 pb-4">OD</span></label>
+                                    <!-- ESF -->
+                                    <div class="text-center mr-3">
+                                      <label for="monofocal_lejos_der_esf">ESF</label>
+                                      <input class="form-control" type="text" id="monofocal_cerca_der_esf" value="<?php echo $monofocal_cerca_der_esf ?>">
+                                    </div>
+                                    <!-- CIL -->
+                                    <div class="text-center mr-3">
+                                      <label for="monofocal_lejos_der_cil">CIL</label>
+                                      <input class="form-control" type="text" id="monofocal_cerca_der_cil" value="<?php echo $monofocal_cerca_der_cil ?>">
+                                    </div>
+                                    <!-- EJE -->
+                                    <div class="text-center mr-3">
+                                      <label for="monofocal_lejos_der_eje">EJE</label>
+                                      <input class="form-control" type="text" id="monofocal_cerca_der_eje" value="<?php echo $monofocal_cerca_der_eje ?>">
+                                    </div>
+                                    <!-- ADICION -->
+                                    <div class="text-center">
+                                      <label for="monofocal_lejos_der_add">ADD</label>
+                                      <input class="form-control" type="text" id="monofocal_cerca_der_add" value="<?php echo $monofocal_cerca_der_add ?>">
+                                    </div>
+                                </div> 
+
+                                <!-- OJO IZQUIERDO -->
+                                 <div class="form-group d-flex align-items-end mb-3">
+                                    <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
+                                    <!-- ESF -->
+                                    <div class="text-center mr-3">
+                                      <input class="form-control" type="text" id="monofocal_cerca_izq_esf" value="<?php echo $monofocal_cerca_izq_add ?>">
+                                    </div>
+                                    <!-- CIL -->
+                                    <div class="text-center mr-3">
+                                      <input class="form-control" type="text" id="monofocal_cerca_izq_cil" value="<?php echo $monofocal_cerca_izq_add ?>">
+                                    </div>
+                                    <!-- EJE -->
+                                    <div class="text-center mr-3">
+                                      <input class="form-control" type="text" id="monofocal_cerca_izq_eje" value="<?php echo $monofocal_cerca_izq_add ?>">
+                                    </div>
+                                    <!-- ADICION -->
+                                    <div class="text-center">
+                                      <input class="form-control" type="text" id="monofocal_cerca_izq_add" value="<?php echo $monofocal_cerca_izq_add ?>">
+                                    </div>
+                                </div>
+                            <?php endif ?>  
+                        <?php endif ?> <!-- FIN IF MONOFOCAL  -->
+                            
+                            <?php if ($tipo_lente === "Bifocal"): ?>
+                                <p>Bifocal</p>
+                                <!-- OJO DERECHO -->
+                                <div class="form-group d-flex align-items-end mb-2">
+                                    <label class=""><span class="mr-2 mb-4 pb-4">OD</span></label>
+                                    <!-- ESF -->
+                                    <div class="text-center mr-3">
+                                      <label for="monofocal_lejos_der_esf">ESF</label>
+                                      <input class="form-control" type="text" id="bifocal_der_esf" value="<?php echo $bifocal_der_esf ?>">
+                                    </div>
+                                    <!-- CIL -->
+                                    <div class="text-center mr-3">
+                                      <label for="monofocal_lejos_der_cil">CIL</label>
+                                      <input class="form-control" type="text" id="bifocal_der_cil" value="<?php echo $bifocal_der_cil ?>">
+                                    </div>
+                                    <!-- EJE -->
+                                    <div class="text-center mr-3">
+                                      <label for="monofocal_lejos_der_eje">EJE</label>
+                                      <input class="form-control" type="text" id="bifocal_der_eje" value="<?php echo $bifocal_der_eje ?>">
+                                    </div>
+                                    <!-- ADICION -->
+                                    <div class="text-center">
+                                      <label for="monofocal_lejos_der_add">ADD</label>
+                                      <input class="form-control" type="text" id="bifocal_add" value="<?php echo $bifocal_der_add ?>">
+                                    </div>
+                                </div> 
+
+                                <!-- OJO IZQUIERDO -->
+                                 <div class="form-group d-flex align-items-end mb-3">
+                                    <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
+                                    <!-- ESF -->
+                                    <div class="text-center mr-3">
+                                      <input class="form-control" type="text" id="bifocal_izq_esf" value="<?php echo $bifocal_izq_add ?>">
+                                    </div>
+                                    <!-- CIL -->
+                                    <div class="text-center mr-3">
+                                      <input class="form-control" type="text" id="bifocal_izq_cil" value="<?php echo $bifocal_izq_add ?>">
+                                    </div>
+                                    <!-- EJE -->
+                                    <div class="text-center mr-3">
+                                      <input class="form-control" type="text" id="bifocal_izq_eje" value="<?php echo $bifocal_izq_add ?>">
+                                    </div>
+                                    <!-- ADICION -->
+                                    <div class="text-center">
+                                      <input class="form-control" type="text" id="bifocal_izq_add" value="<?php echo $bifocal_izq_add ?>">
+                                    </div>
+                                </div>
+                            <?php endif ?>
+                            <?php if ($tipo_lente === "Multifocal"): ?>
+                                <p>Multifocal</p>
+                                <!-- OJO DERECHO -->
+                                <div class="form-group d-flex align-items-end mb-2">
+                                    <label class=""><span class="mr-2 mb-4 pb-4">OD</span></label>
+                                    <!-- ESF -->
+                                    <div class="text-center mr-3">
+                                      <label for="monofocal_lejos_der_esf">ESF</label>
+                                      <input class="form-control" type="text" id="multifocal_der_esf" value="<?php echo $multifocal_der_esf ?>">
+                                    </div>
+                                    <!-- CIL -->
+                                    <div class="text-center mr-3">
+                                      <label for="monofocal_lejos_der_cil">CIL</label>
+                                      <input class="form-control" type="text" id="multifocal_der_cil" value="<?php echo $multifocal_der_cil ?>">
+                                    </div>
+                                    <!-- EJE -->
+                                    <div class="text-center mr-3">
+                                      <label for="monofocal_lejos_der_eje">EJE</label>
+                                      <input class="form-control" type="text" id="multifocal_der_eje" value="<?php echo $multifocal_der_eje ?>">
+                                    </div>
+                                    <!-- ADICION -->
+                                    <div class="text-center">
+                                      <label for="monofocal_lejos_der_add">ADD</label>
+                                      <input class="form-control" type="text" id="multifocal_add" value="<?php echo $multifocal_der_add ?>">
+                                    </div>
+                                </div> 
+
+                                <!-- OJO IZQUIERDO -->
+                                 <div class="form-group d-flex align-items-end mb-3">
+                                    <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
+                                    <!-- ESF -->
+                                    <div class="text-center mr-3">
+                                      <input class="form-control" type="text" id="multifocal_izq_esf" value="<?php echo $multifocal_izq_add ?>">
+                                    </div>
+                                    <!-- CIL -->
+                                    <div class="text-center mr-3">
+                                      <input class="form-control" type="text" id="multifocal_izq_cil" value="<?php echo $multifocal_izq_add ?>">
+                                    </div>
+                                    <!-- EJE -->
+                                    <div class="text-center mr-3">
+                                      <input class="form-control" type="text" id="multifocal_izq_eje" value="<?php echo $multifocal_izq_add ?>">
+                                    </div>
+                                    <!-- ADICION -->
+                                    <div class="text-center">
+                                      <input class="form-control" type="text" id="multifocal_izq_add" value="<?php echo $multifocal_izq_add ?>">
+                                    </div>
+                                </div>
+                            <?php endif ?> 
                         </div> 
+                        
                     </div>
                 </div>
 

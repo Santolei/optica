@@ -21,6 +21,12 @@
 		$telefono = $ultima_orden[0]['telefono'];
 		$doctor = $ultima_orden[0]['doctor'];
 		$tipo_lente = $ultima_orden[0]['tipo_lente'];
+
+		// Checkbox
+		$checkbox_lejos = $ultima_orden[0]['checkbox_lejos'];
+		$checkbox_intermedia = $ultima_orden[0]['checkbox_intermedia'];
+		$checkbox_cerca = $ultima_orden[0]['checkbox_cerca'];
+
 		$material = $ultima_orden[0]['material'];
 		$producto = $ultima_orden[0]['producto'];
 		$armazon = $ultima_orden[0]['marca_armazon'];
