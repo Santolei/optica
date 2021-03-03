@@ -16,7 +16,7 @@
 
                 			<div>
                 				<!-- <a href="devolucion" class="mr-2 text-white pt-1 pb-1 pr-2 pl-2" style="background: #ef5350; border-radius: 6px; font-size: 12px; font-weight: bold;">Devolución de producto</a> -->
-                				<a href="historialventas" class="mr-2 text-white pt-1 pb-1 pr-2 pl-2" style="background: #3F729B; border-radius: 6px; font-size: 12px; font-weight: bold;">Historial de órdenes</a>
+                				<a href="historial_ordenes.php" class="mr-2 text-white boton-historial">Historial de órdenes</a>
                 			</div>
 
                 		</div>

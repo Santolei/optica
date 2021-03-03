@@ -190,7 +190,8 @@
 #tabla_productos thead,
 #tabla_ventas thead,
 #tabla_ingresos thead,
-#tabla_pacientes thead{
+#tabla_pacientes thead,
+#tabla_ordenes thead{
   background: linear-gradient(to right, #262f3e 0%, #131b6a 100%);
 }
 #tabla_productos thead .sorting,
@@ -204,7 +205,11 @@
 #tabla_ingresos thead,
 #tabla_ingresos thead .sorting,
 #tabla_ingresos thead .sorting_asc,
-#tabla_ingresos thead .sorting_desc{
+#tabla_ingresos thead .sorting_desc,
+#tabla_ordenes thead,
+#tabla_ordenes thead .sorting,
+#tabla_ordenes thead .sorting_asc,
+#tabla_ordenes thead .sorting_desc{
   font-weight: bold;
   color: #fff;
   font-size: 1.1em;
@@ -216,7 +221,9 @@
 #tabla_ingresos_filter label,
 #tabla_ingresos_length label,
 #tabla_pacientes_filter label,
-#tabla_pacientes_length label{
+#tabla_pacientes_length label,
+#tabla_ordenes_filter label,
+#tabla_ordenes_length label{
   display: block;
   font-weight: bold;
   color: #212121;
@@ -224,7 +231,9 @@
 #tabla_productos_filter label input[type=search],
 #tabla_productos_length select,
 #tabla_pacientes_filter label input[type=search],
-#tabla_pacientes_length select{
+#tabla_pacientes_length select,
+#tabla_ordenes_filter label input[type=search],
+#tabla_ordenes_length select{
   height: 45px;
   font-size: 1.3em;
 }
@@ -497,4 +506,17 @@
   font-size: .9em;
   padding: .25em .5em;
   border: none;
+}
+
+.boton-historial {
+  background: linear-gradient(90deg,#00a598,rgba(0,213,196,.7));
+  border-radius: 6px; 
+  font-size: 12px; 
+  font-weight: bold;
+  color: #fff;
+  padding: .25em .5em;
+  transition: .25s all ease;
+}
+.boton-historial:hover{
+  background: linear-gradient(90deg,#05364f,rgba(0,213,196,.7));
 }
