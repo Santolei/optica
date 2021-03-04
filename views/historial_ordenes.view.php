@@ -18,7 +18,7 @@
                                 <div class="table-responsive">
                                     <table style="width: 100%; border-radius: 6px" class="display table table-striped table-sm" id="tabla_ordenes">
                                         <thead class="tabla-thead white-text">
-                                            <th>Código</th>
+                                            <th>Orden</th>
                                             <th>Nombre</th>
                                             <th>Sucursal</th>
                                             <th>Fecha</th>
@@ -38,6 +38,7 @@
                                     <div class="stats">
                                         <i class="fa fa-clock-o"></i> Ultima actualización: <?php echo $last_update ?>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
