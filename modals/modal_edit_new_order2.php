@@ -19,7 +19,7 @@
           <div class="row">
             <div class="form-group col-sm-12 col-md-6">
                 <label for="nombre_doctor">Doctor:</label>
-                <input maxlength="100" class="form-control" type="text" id="nombre_doctor" required>
+                <input maxlength="100" class="form-control" type="text" id="nombre_doctor" required value="<?php echo $orden['doctor'] ?>">
             </div>
 
             <div class="form-group col-md-6">
@@ -32,26 +32,26 @@
           <div class="form-group col-md-6">
             <label for="add_patologias">Patología</label>
             <div class="d-flex align-items-center">
-              <select class="form-control select2" name="add_patologia" id="add_patologia" selected="Seleccionar Patología">
-                <option value="">Seleccionar Patología</option>
+              <select class="form-control" name="add_patologia" id="add_patologia" val="<?php echo $orden['patologia'] ?>" selected="<?php echo $orden['patologia'] ?>">
+                <option value="<?php echo $orden['patologia'] ?>"><?php echo $orden['patologia'] ?></option>
               </select>
             </div>
           </div>
 
           <div class="form-group col-sm-12 col-md-3">
               <label for="add_graduacion_od">Graduación OD:</label>
-              <input maxlength="100" class="form-control" type="number" id="add_graduacion_od" step="any" autocomplete="off" required>
+              <input maxlength="100" class="form-control" type="number" id="add_graduacion_od" step="any" autocomplete="off" required value="<?php echo $orden['graduacion_od'] ?>">
           </div>
           <div class="form-group col-sm-12 col-md-3">
               <label for="add_graduacion_oi">Graduación OI:</label>
-              <input maxlength="100" class="form-control" type="number" id="add_graduacion_oi" step="any" autocomplete="off" required>
+              <input maxlength="100" class="form-control" type="number" id="add_graduacion_oi" step="any" autocomplete="off" required value="<?php echo $orden['graduacion_oi'] ?>">
           </div>
         </div>
         
         </form>
           <!--Footer-->
         <div class="modal-footer justify-content-center">
-          <button class="btn info-color-dark" type="submit" id="datos_receta">Siguiente <i class="fa fa-arrow-right"></i></button>
+          <button class="btn info-color-dark" type="submit" id="datos_receta">Guardar</button>
           <a class="btn btn-outline-info waves-effect" data-dismiss="modal">Salir</a>
         </div>
         

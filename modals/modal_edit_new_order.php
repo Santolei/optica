@@ -56,7 +56,7 @@
         </form>
           <!--Footer-->
         <div class="modal-footer justify-content-center">
-          <button class="btn info-color-dark" type="submit" id="datos_paciente" disabled >Siguiente <i class="fa fa-arrow-right"></i></button>
+          <button class="btn info-color-dark" type="submit" id="datos_paciente" disabled >Guardar></i></button>
           <a class="btn btn-outline-info waves-effect" data-dismiss="modal">Salir</a>
         </div>
         

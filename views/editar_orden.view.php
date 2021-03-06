@@ -443,40 +443,40 @@
                                         <div class="row">
                                             <div class="form-group col-sm-12 col-md-6">
                                                 <label for="marca_armazon">Marca:</label>
-                                                <input maxlength="100" class="form-control" type="text" name="marca_armazon" id="marca_armazon"  readonly="readonly">
+                                                <input maxlength="100" class="form-control" type="text" name="marca_armazon" id="marca_armazon"  readonly="readonly" value="<?php echo $orden['marca_armazon'] ?>">
                                             </div>
                                 
                                             <div class="form-group col-md-6">
                                                 <label for="material_armazon">Material:</label>
-                                                <input maxlength="100" class="form-control" type="text" name="material_armazon" id="material_armazon" readonly="readonly">
+                                                <input maxlength="100" class="form-control" type="text" name="material_armazon" id="material_armazon" readonly="readonly" value="<?php echo $orden['material_armazon'] ?>">
                                             </div>
                                         </div>
 
                                         <div class="row">
                                             <div class="form-group col-sm-12 col-md-6">
                                                 <label for="tipo_armazon">Tipo de armazón:</label>
-                                                <input maxlength="100" class="form-control" type="text" name="tipo_armazon" id="tipo_armazon"  readonly="readonly">
+                                                <input maxlength="100" class="form-control" type="text" name="tipo_armazon" id="tipo_armazon"  readonly="readonly" value="<?php echo $orden['tipo_armazon'] ?>">
                                             </div>
                                 
                                             <div class="form-group col-sm-12 col-md-3">
                                                 <label for="distancia">Dist. interpupilar:</label>
-                                                <input maxlength="100" class="form-control" type="text" name="distancia" id="distancia"  readonly="readonly">
+                                                <input maxlength="100" class="form-control" type="text" name="distancia" id="distancia"  readonly="readonly" value="<?php echo $orden['dist_interpupilar'] ?>">
                                             </div>
                                             <div class="form-group col-sm-12 col-md-3">
                                                 <label for="altura">Altura:</label>
-                                                <input maxlength="100" class="form-control" type="text" name="altura" id="altura"  readonly="readonly">
+                                                <input maxlength="100" class="form-control" type="text" name="altura" id="altura"  readonly="readonly" value="<?php echo $orden['altura'] ?>">
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="col-md-6 grey-background form-interno pull-left mt-4">
                                         
-                                        <input maxlength="100" class="form-control" type="hidden" name="trabajo" id="trabajo"  readonly="readonly">
-                                        <div class="d-flex justify-content-between align-items-center"><h5><strong>Observaciones:</strong></h5> <a href="#" class=" boton-editar-orden btn btn-primary d-flex justify-content-center align-items-center" data-toggle="modal" data-target="#modal_new_order4"><i class="fa fa-pencil"></i>Editar </a>
+                                        <input maxlength="100" class="form-control" type="hidden" name="trabajo" id="trabajo"  readonly="readonly" value="<?php echo $orden['trabajo'] ?>">
+                                        <div class="d-flex justify-content-between align-items-center"><h5><strong>Observaciones:</strong></h5> <a href="#" class=" boton-editar-orden btn btn-primary d-flex justify-content-center align-items-center" data-toggle="modal" data-target="#modal_edit_new_order4"><i class="fa fa-pencil"></i>Editar </a>
                                         </div>
                                         <div class="row">
                                             <div class="form-group col-sm-12 col-md-4" style="width: 100% !important">
-                                                <textarea maxlength="200" rows="6" style="min-width: 100% !important" class="form-control" autocomplete="off" name="observaciones" id="observaciones" readonly="readonly"></textarea>
+                                                <textarea maxlength="200" rows="6" style="min-width: 100% !important" class="form-control" autocomplete="off" name="observaciones" id="observaciones" readonly="readonly"> <?php echo $orden['observaciones'] ?></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -487,41 +487,41 @@
                                         <div class="row">
                                             <div class="form-group col-sm-12 col-md-4">
                                                 <label for="cristales_precio">Cristales:</label>
-                                                <input maxlength="100" class="form-control" type="number" autocomplete="off" id="cristales_precio" name="cristales_precio" readonly="readonly">
+                                                <input maxlength="100" class="form-control" type="number" autocomplete="off" id="cristales_precio" name="cristales_precio" readonly="readonly" value="<?php echo $orden['cristales_precio'] ?>">
                                             </div>
 
                                             <div class="form-group col-sm-12 col-md-4">
                                                 <label for="armazon_precio">Armazón:</label>
-                                                <input maxlength="100" class="form-control" type="text" autocomplete="off" id="armazon_precio" name="armazon_precio" readonly="readonly">
+                                                <input maxlength="100" class="form-control" type="text" autocomplete="off" id="armazon_precio" name="armazon_precio" readonly="readonly" value="<?php echo $orden['armazon_precio'] ?>">
                                             </div>
 
                                             <div class="form-group col-sm-12 col-md-4">
                                                 <label for="otros_precio">Otros:</label>
-                                                <input maxlength="100" class="form-control" type="text" autocomplete="off" id="otros_precio" name="otros_precio" readonly="readonly">
+                                                <input maxlength="100" class="form-control" type="text" autocomplete="off" id="otros_precio" name="otros_precio" readonly="readonly" value="<?php echo $orden['otros_precio'] ?>">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="form-group col-sm-12 col-md-4">
                                                 <label for="total">Total:</label>
-                                                <input maxlength="100" class="form-control" type="number" autocomplete="off" id="total" name="total" readonly="readonly">
+                                                <input maxlength="100" class="form-control" type="number" autocomplete="off" id="total" name="total" readonly="readonly" value="<?php echo $orden['total'] ?>">
                                             </div>
 
                                             <div class="form-group col-sm-12 col-md-4">
                                                 <label for="senia">Seña:</label>
-                                                <input maxlength="100" class="form-control" type="text" autocomplete="off" id="senia" name="senia" readonly="readonly">
+                                                <input maxlength="100" class="form-control" type="text" autocomplete="off" id="senia" name="senia" readonly="readonly" value="<?php echo $orden['senia'] ?>">
                                             </div>
 
                                             <div class="form-group col-sm-12 col-md-4">
                                                 <label for="saldo">Saldo:</label>
-                                                <input maxlength="100" class="form-control" type="text" autocomplete="off" id="saldo" name="saldo" readonly="readonly">
+                                                <input maxlength="100" class="form-control" type="text" autocomplete="off" id="saldo" name="saldo" readonly="readonly" value="<?php echo $orden['saldo'] ?>">
                                             </div>
 
                                             <div class="form-group col-sm-12 col-md-4 hidden">
-                                                <input maxlength="100" class="form-control" type="hidden" autocomplete="off" id="metodo_pago" name="metodo_pago">
+                                                <input maxlength="100" class="form-control" type="hidden" autocomplete="off" id="metodo_pago" name="metodo_pago" value="<?php echo $orden['metodo_pago'] ?>">
                                             </div>
 
                                             <div class="form-group col-sm-12 col-md-4 hidden">
-                                                <input maxlength="100" class="form-control" type="hidden" autocomplete="off" id="fecha_entrega" name="fecha_entrega">
+                                                <input maxlength="100" class="form-control" type="hidden" autocomplete="off" id="fecha_entrega" name="fecha_entrega" value="<?php echo $orden['fecha_entrega'] ?>">
                                             </div>
 
                                         </div>
@@ -563,6 +563,6 @@
 <?php include 'modals/modal_error.php' ?>
 
 <!-- Scripts Ordenes -->
-<?php include 'scripts/ordenes.php' ?>
+<?php include 'scripts/editar_orden.php' ?>
 
 

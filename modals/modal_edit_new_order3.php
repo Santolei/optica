@@ -64,22 +64,22 @@
                     <!-- ESF -->
                     <div class="text-center mr-3">
                       <label for="add_monofocal_lejos_der_esf">ESF</label>
-                      <input class="form-control" type="text" name="add_monofocal_lejos_der_esf" id="add_monofocal_lejos_der_esf">
+                      <input class="form-control" type="text" name="add_monofocal_lejos_der_esf" id="add_monofocal_lejos_der_esf" value="<?php echo $orden['monofocal_lejos_der_esf'] ?>">
                     </div>
                     <!-- CIL -->
                     <div class="text-center mr-3">
                       <label for="add_monofocal_lejos_der_cil">CIL</label>
-                      <input class="form-control" type="text" name="add_monofocal_lejos_der_cil" id="add_monofocal_lejos_der_cil">
+                      <input class="form-control" type="text" name="add_monofocal_lejos_der_cil" id="add_monofocal_lejos_der_cil" value="<?php echo $orden['monofocal_lejos_der_cil'] ?>">
                     </div>
                     <!-- EJE -->
                     <div class="text-center mr-3">
                       <label for="add_monofocal_lejos_der_eje">EJE</label>
-                      <input class="form-control" type="text" name="add_monofocal_lejos_der_eje" id="add_monofocal_lejos_der_eje">
+                      <input class="form-control" type="text" name="add_monofocal_lejos_der_eje" id="add_monofocal_lejos_der_eje" value="<?php echo $orden['monofocal_lejos_der_eje'] ?>">
                     </div>
                     <!-- ADICION -->
                     <div class="text-center">
                       <label for="add_monofocal_lejos_der_add">ADD</label>
-                      <input class="form-control" type="text" name="add_monofocal_lejos_der_add" id="add_monofocal_lejos_der_add">
+                      <input class="form-control" type="text" name="add_monofocal_lejos_der_add" id="add_monofocal_lejos_der_add" value="<?php echo $orden['monofocal_lejos_der_add'] ?>">
                     </div>
                   </div>
 
@@ -88,19 +88,19 @@
                     <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
                     <!-- ESF -->
                     <div class="text-center mr-3">
-                      <input class="form-control" type="text" name="add_monofocal_lejos_izq_esf" id="add_monofocal_lejos_izq_esf">
+                      <input class="form-control" type="text" name="add_monofocal_lejos_izq_esf" id="add_monofocal_lejos_izq_esf" value="<?php echo $orden['monofocal_lejos_izq_esf'] ?>">
                     </div>
                     <!-- CIL -->
                     <div class="text-center mr-3">
-                      <input class="form-control" type="text" name="add_monofocal_lejos_izq_cil" id="add_monofocal_lejos_izq_cil">
+                      <input class="form-control" type="text" name="add_monofocal_lejos_izq_cil" id="add_monofocal_lejos_izq_cil" value="<?php echo $orden['monofocal_lejos_izq_zil'] ?>">
                     </div>
                     <!-- EJE -->
                     <div class="text-center mr-3">
-                      <input class="form-control" type="text" name="add_monofocal_lejos_izq_eje" id="add_monofocal_lejos_izq_eje">
+                      <input class="form-control" type="text" name="add_monofocal_lejos_izq_eje" id="add_monofocal_lejos_izq_eje" value="<?php echo $orden['monofocal_lejos_izq_eje'] ?>">
                     </div>
                     <!-- ADICION -->
                     <div class="text-center">
-                      <input class="form-control" type="text" name="add_monofocal_lejos_izq_add" id="add_monofocal_lejos_izq_add">
+                      <input class="form-control" type="text" name="add_monofocal_lejos_izq_add" id="add_monofocal_lejos_izq_add" value="<?php echo $orden['monofocal_lejos_izq_add'] ?>">
                     </div>
                   </div>
                 </div>
@@ -118,22 +118,22 @@
                     <!-- ESF -->
                     <div class="text-center mr-3">
                       <label for="add_monofocal_intermedia_der_esf">ESF</label>
-                      <input class="form-control" type="text" name="add_monofocal_intermedia_der_esf" id="add_monofocal_intermedia_der_esf">
+                      <input class="form-control" type="text" name="add_monofocal_intermedia_der_esf" id="add_monofocal_intermedia_der_esf" value="<?php echo $orden['monofocal_intermedia_der_esf'] ?>">
                     </div>
                     <!-- CIL -->
                     <div class="text-center mr-3">
                       <label for="add_monofocal_intermedia_der_cil">CIL</label>
-                      <input class="form-control" type="text" name="add_monofocal_intermedia_der_cil" id="add_monofocal_intermedia_der_cil">
+                      <input class="form-control" type="text" name="add_monofocal_intermedia_der_cil" id="add_monofocal_intermedia_der_cil" value="<?php echo $orden['monofocal_intermedia_der_cil'] ?>">
                     </div>
                     <!-- EJE -->
                     <div class="text-center mr-3">
                       <label for="add_monofocal_intermedia_der_eje">EJE</label>
-                      <input class="form-control" type="text" name="add_monofocal_intermedia_der_eje" id="add_monofocal_intermedia_der_eje">
+                      <input class="form-control" type="text" name="add_monofocal_intermedia_der_eje" id="add_monofocal_intermedia_der_eje" value="<?php echo $orden['monofocal_intermedia_der_eje'] ?>">
                     </div>
                     <!-- ADICION -->
                     <div class="text-center">
                       <label for="add_monofocal_intermedia_der_add">ADD</label>
-                      <input class="form-control" type="text" name="add_monofocal_intermedia_der_add" id="add_monofocal_intermedia_der_add">
+                      <input class="form-control" type="text" name="add_monofocal_intermedia_der_add" id="add_monofocal_intermedia_der_add" value="<?php echo $orden['monofocal_intermedia_der_add'] ?>">
                     </div>
                   </div>
 
@@ -142,19 +142,19 @@
                     <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
                     <!-- ESF -->
                     <div class="text-center mr-3">
-                      <input class="form-control" type="text" name="add_monofocal_intermedia_izq_esf" id="add_monofocal_intermedia_izq_esf">
+                      <input class="form-control" type="text" name="add_monofocal_intermedia_izq_esf" id="add_monofocal_intermedia_izq_esf" value="<?php echo $orden['monofocal_intermedia_izq_esf'] ?>">
                     </div>
                     <!-- CIL -->
                     <div class="text-center mr-3">
-                      <input class="form-control" type="text" name="add_monofocal_intermedia_izq_cil" id="add_monofocal_intermedia_izq_cil">
+                      <input class="form-control" type="text" name="add_monofocal_intermedia_izq_cil" id="add_monofocal_intermedia_izq_cil" value="<?php echo $orden['monofocal_intermedia_izq_cil'] ?>">
                     </div>
                     <!-- EJE -->
                     <div class="text-center mr-3">
-                      <input class="form-control" type="text" name="add_monofocal_intermedia_izq_eje" id="add_monofocal_intermedia_izq_eje">
+                      <input class="form-control" type="text" name="add_monofocal_intermedia_izq_eje" id="add_monofocal_intermedia_izq_eje" value="<?php echo $orden['monofocal_intermedia_izq_eje'] ?>">
                     </div>
                     <!-- ADICION -->
                     <div class="text-center">
-                      <input class="form-control" type="text" name="add_monofocal_intermedia_izq_add" id="add_monofocal_intermedia_izq_add">
+                      <input class="form-control" type="text" name="add_monofocal_intermedia_izq_add" id="add_monofocal_intermedia_izq_add" value="<?php echo $orden['monofocal_intermedia_izq_add'] ?>">
                     </div>
                   </div>
                 </div>
@@ -171,22 +171,22 @@
                     <!-- ESF -->
                     <div class="text-center mr-3">
                       <label for="add_monofocal_cerca_der_esf">ESF</label>
-                      <input class="form-control" type="text" name="add_monofocal_cerca_der_esf" id="add_monofocal_cerca_der_esf">
+                      <input class="form-control" type="text" name="add_monofocal_cerca_der_esf" id="add_monofocal_cerca_der_esf" value="<?php echo $orden['monofocal_cerca_der_esf'] ?>">
                     </div>
                     <!-- CIL -->
                     <div class="text-center mr-3">
                       <label for="add_monofocal_cerca_der_cil">CIL</label>
-                      <input class="form-control" type="text" name="add_monofocal_cerca_der_cil" id="add_monofocal_cerca_der_cil">
+                      <input class="form-control" type="text" name="add_monofocal_cerca_der_cil" id="add_monofocal_cerca_der_cil" value="<?php echo $orden['monofocal_cerca_der_cil'] ?>">
                     </div>
                     <!-- EJE -->
                     <div class="text-center mr-3">
                       <label for="add_monofocal_cerca_der_eje">EJE</label>
-                      <input class="form-control" type="text" name="add_monofocal_cerca_der_eje" id="add_monofocal_cerca_der_eje">
+                      <input class="form-control" type="text" name="add_monofocal_cerca_der_eje" id="add_monofocal_cerca_der_eje" value="<?php echo $orden['monofocal_cerca_der_eje'] ?>">
                     </div>
                     <!-- ADICION -->
                     <div class="text-center">
                       <label for="add_monofocal_cerca_der_add">ADD</label>
-                      <input class="form-control" type="text" name="add_monofocal_cerca_der_add" id="add_monofocal_cerca_der_add">
+                      <input class="form-control" type="text" name="add_monofocal_cerca_der_add" id="add_monofocal_cerca_der_add" value="<?php echo $orden['monofocal_cerca_der_add'] ?>">
                     </div>
                   </div>
 
@@ -195,19 +195,19 @@
                     <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
                     <!-- ESF -->
                     <div class="text-center mr-3">
-                      <input class="form-control" type="text" name="add_monofocal_cerca_izq_esf" id="add_monofocal_cerca_izq_esf">
+                      <input class="form-control" type="text" name="add_monofocal_cerca_izq_esf" id="add_monofocal_cerca_izq_esf" value="<?php echo $orden['monofocal_cerca_izq_esf'] ?>">
                     </div>
                     <!-- CIL -->
                     <div class="text-center mr-3">
-                      <input class="form-control" type="text" name="add_monofocal_cerca_izq_cil" id="add_monofocal_cerca_izq_cil">
+                      <input class="form-control" type="text" name="add_monofocal_cerca_izq_cil" id="add_monofocal_cerca_izq_cil" value="<?php echo $orden['monofocal_cerca_izq_cil'] ?>">
                     </div>
                     <!-- EJE -->
                     <div class="text-center mr-3">
-                      <input class="form-control" type="text" name="add_monofocal_cerca_izq_eje" id="add_monofocal_cerca_izq_eje">
+                      <input class="form-control" type="text" name="add_monofocal_cerca_izq_eje" id="add_monofocal_cerca_izq_eje" value="<?php echo $orden['monofocal_cerca_izq_eje'] ?>">
                     </div>
                     <!-- ADICION -->
                     <div class="text-center">
-                      <input class="form-control" type="text" name="add_monofocal_cerca_izq_add" id="add_monofocal_cerca_izq_add">
+                      <input class="form-control" type="text" name="add_monofocal_cerca_izq_add" id="add_monofocal_cerca_izq_add" value="<?php echo $orden['monofocal_cerca_izq_add'] ?>">
                     </div>
                   </div>
                 </div>
@@ -224,22 +224,22 @@
                     <!-- ESF -->
                     <div class="text-center mr-3">
                       <label for="add_bifocal_der_esf">ESF</label>
-                      <input class="form-control" type="text" name="add_bifocal_der_esf" id="add_bifocal_der_esf">
+                      <input class="form-control" type="text" name="add_bifocal_der_esf" id="add_bifocal_der_esf" value="<?php echo $orden['bifocal_der_esf'] ?>">
                     </div>
                     <!-- CIL -->
                     <div class="text-center mr-3">
                       <label for="add_bifocal_der_cil">CIL</label>
-                      <input class="form-control" type="text" name="add_bifocal_der_cil" id="add_bifocal_der_cil">
+                      <input class="form-control" type="text" name="add_bifocal_der_cil" id="add_bifocal_der_cil" value="<?php echo $orden['bifocal_der_cil'] ?>">
                     </div>
                     <!-- EJE -->
                     <div class="text-center mr-3">
                       <label for="add_bifocal_der_eje">EJE</label>
-                      <input class="form-control" type="text" name="add_bifocal_der_eje" id="add_bifocal_der_eje">
+                      <input class="form-control" type="text" name="add_bifocal_der_eje" id="add_bifocal_der_eje" value="<?php echo $orden['bifocal_der_eje'] ?>">
                     </div>
                     <!-- ADICION -->
                     <div class="text-center">
                       <label for="add_bifocal_der_add">ADD</label>
-                      <input class="form-control" type="text" name="add_bifocal_der_add" id="add_bifocal_der_add">
+                      <input class="form-control" type="text" name="add_bifocal_der_add" id="add_bifocal_der_add" value="<?php echo $orden['bifocal_der_add'] ?>">
                     </div>
                   </div>
 
@@ -248,19 +248,19 @@
                     <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
                     <!-- ESF -->
                     <div class="text-center mr-3">
-                      <input class="form-control" type="text" name="add_bifocal_izq_esf" id="add_bifocal_izq_esf">
+                      <input class="form-control" type="text" name="add_bifocal_izq_esf" id="add_bifocal_izq_esf" value="<?php echo $orden['bifocal_izq_esf'] ?>">
                     </div>
                     <!-- CIL -->
                     <div class="text-center mr-3">
-                      <input class="form-control" type="text" name="add_bifocal_izq_cil" id="add_bifocal_izq_cil">
+                      <input class="form-control" type="text" name="add_bifocal_izq_cil" id="add_bifocal_izq_cil" value="<?php echo $orden['bifocal_izq_cil'] ?>">
                     </div>
                     <!-- EJE -->
                     <div class="text-center mr-3">
-                      <input class="form-control" type="text" name="add_bifocal_izq_eje" id="add_bifocal_izq_eje">
+                      <input class="form-control" type="text" name="add_bifocal_izq_eje" id="add_bifocal_izq_eje" value="<?php echo $orden['bifocal_izq_eje'] ?>">
                     </div>
                     <!-- ADICION -->
                     <div class="text-center">
-                      <input class="form-control" type="text" name="add_bifocal_izq_add" id="add_bifocal_izq_add">
+                      <input class="form-control" type="text" name="add_bifocal_izq_add" id="add_bifocal_izq_add" value="<?php echo $orden['bifocal_izq_add'] ?>">
                     </div>
                   </div>
                 </div>
@@ -276,22 +276,22 @@
                     <!-- ESF -->
                     <div class="text-center mr-3">
                       <label for="add_multifocal_der_esf">ESF</label>
-                      <input class="form-control" type="text" name="add_multifocal_der_esf" id="add_multifocal_der_esf">
+                      <input class="form-control" type="text" name="add_multifocal_der_esf" id="add_multifocal_der_esf" value="<?php echo $orden['multifocal_der_esf'] ?>">
                     </div>
                     <!-- CIL -->
                     <div class="text-center mr-3">
                       <label for="add_multifocal_der_cil">CIL</label>
-                      <input class="form-control" type="text" name="add_multifocal_der_cil" id="add_multifocal_der_cil">
+                      <input class="form-control" type="text" name="add_multifocal_der_cil" id="add_multifocal_der_cil" value="<?php echo $orden['multifocal_der_cil'] ?>">
                     </div>
                     <!-- EJE -->
                     <div class="text-center mr-3">
                       <label for="add_multifocal_der_eje">EJE</label>
-                      <input class="form-control" type="text" name="add_multifocal_der_eje" id="add_multifocal_der_eje">
+                      <input class="form-control" type="text" name="add_multifocal_der_eje" id="add_multifocal_der_eje" value="<?php echo $orden['multifocal_der_eje'] ?>">
                     </div>
                     <!-- ADICION -->
                     <div class="text-center">
                       <label for="add_multifocal_der_add">ADD</label>
-                      <input class="form-control" type="text" name="add_multifocal_der_add" id="add_multifocal_der_add">
+                      <input class="form-control" type="text" name="add_multifocal_der_add" id="add_multifocal_der_add" value="<?php echo $orden['multifocal_der_add'] ?>">
                     </div>
                   </div>
 
@@ -300,19 +300,19 @@
                     <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
                     <!-- ESF -->
                     <div class="text-center mr-3">
-                      <input class="form-control" type="text" name="add_multifocal_izq_esf" id="add_multifocal_izq_esf">
+                      <input class="form-control" type="text" name="add_multifocal_izq_esf" id="add_multifocal_izq_esf" value="<?php echo $orden['multifocal_izq_esf'] ?>">
                     </div>
                     <!-- CIL -->
                     <div class="text-center mr-3">
-                      <input class="form-control" type="text" name="add_multifocal_izq_cil" id="add_multifocal_izq_cil">
+                      <input class="form-control" type="text" name="add_multifocal_izq_cil" id="add_multifocal_izq_cil" value="<?php echo $orden['multifocal_izq_cil'] ?>">
                     </div>
                     <!-- EJE -->
                     <div class="text-center mr-3">
-                      <input class="form-control" type="text" name="add_multifocal_izq_eje" id="add_multifocal_izq_eje">
+                      <input class="form-control" type="text" name="add_multifocal_izq_eje" id="add_multifocal_izq_eje" value="<?php echo $orden['multifocal_izq_eje'] ?>">
                     </div>
                     <!-- ADICION -->
                     <div class="text-center">
-                      <input class="form-control" type="text" name="add_multifocal_izq_add" id="add_multifocal_izq_add">
+                      <input class="form-control" type="text" name="add_multifocal_izq_add" id="add_multifocal_izq_add" value="<?php echo $orden['multifocal_izq_add'] ?>">
                     </div>
                   </div>
                 </div>
@@ -362,7 +362,7 @@
         </form>
           <!--Footer-->
         <div class="modal-footer justify-content-center">
-          <button class="btn info-color-dark" type="submit" id="datos_cristales">Siguiente <i class="fa fa-arrow-right"></i></button>
+          <button class="btn info-color-dark" type="submit" id="datos_cristales">Guardar</button>
           <a class="btn btn-outline-info waves-effect" data-dismiss="modal">Salir</a>
         </div>
         
