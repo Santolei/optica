@@ -526,6 +526,9 @@
                                             <div class="form-group col-sm-12 col-md-4 hidden">
                                                 <input maxlength="100" class="form-control" type="hidden" autocomplete="off" id="metodo_pago" name="metodo_pago">
                                             </div>
+                                            <div class="form-group col-sm-12 col-md-4 hidden">
+                                                <input maxlength="100" class="form-control" type="hidden" autocomplete="off" id="estado_trabajo" name="estado_trabajo">
+                                            </div>
 
                                             <div class="form-group col-sm-12 col-md-4 hidden">
                                                 <input maxlength="100" class="form-control" type="hidden" autocomplete="off" id="fecha_entrega" name="fecha_entrega">

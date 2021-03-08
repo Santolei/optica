@@ -83,7 +83,7 @@
                     <div class="col-sm-4"><p><strong>Trabajo:</strong> <?php echo $trabajo; ?></p></div>
                 </div>
                 <div class="row mb-3">
-                    <div class="col-sm-4 pl-0"><p><strong>Fecha de entrega:</strong> 15/02/2020</p></div>
+                    <div class="col-sm-4 pl-0"><p><strong>Fecha de entrega:</strong> <?php echo date('d/m/Y', $fecha_entrega); ?></p></div>
 
                     <div class="col-sm-4"><p><strong>Nombre:</strong> <?php echo $nombre; ?></p></div>
 
@@ -122,12 +122,19 @@
                     <div class="col-sm-6 ticket-local-2">
                         <div class=""><p><strong>N° de trabajo:</strong> <?php echo $id_orden; ?></p></div>
                         <div class=""><p><strong>Cliente:</strong> <?php echo $nombre; ?></p></div>
-                        <div class=""><p><strong>Fecha de entrega:</strong></p></div>
+                        <div class=""><p><strong>Fecha de entrega:</strong> <?php echo date('d/m/Y', $fecha_entrega); ?></p></div>
                         
                         <div class=""><p><strong>Sucursal:</strong> <?php echo $sucursal ?></p></div>
                         <div class=""><p><strong>Artículo:</strong> <?php echo $producto; ?> </p></div>
                         <div class=""><p><strong>Tratamientos:</strong> <?php echo $tratamiento; ?> </p></div>
-                        <div class=""><p><strong>Armazón:</strong> <?php echo ($armazon . " - " . $tipo_armazon . " - " . $material_armazon)  ?> </p></div>
+                        <div class=""><p><strong><u>Armazón</u>:</strong></p></div>
+                        <div class="armazon-wrapper pl-4" style="border-left: 2px solid #333;">
+                            <div class=""><p><strong>Marca:</strong> <?php echo $armazon; ?></p></div>
+                            <div class=""><p><strong>Tipo:</strong> <?php echo $tipo_armazon; ?></p></div>
+                            <div class=""><p><strong>Material:</strong> <?php echo $material_armazon; ?></p></div>
+                        </div>
+
+                        <!--<div class=""><p><strong>Armazón:</strong> <?php echo ($armazon . " - " . $tipo_armazon . " - " . $material_armazon)  ?> </p></div> -->
                     </div>
 
                     <div class="col-sm-6">

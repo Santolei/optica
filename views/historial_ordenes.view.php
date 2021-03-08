@@ -28,18 +28,6 @@
                                         <tbody></tbody>
                                     </table>
                                 </div>
-
-                                <div class="row mb-4 d-flex">
-                                    <a class="btn btn-primary m-2" data-toggle="modal" data-target="#modal_add_producto">Agregar producto</a>
-                                </div>
-
-                                <div class="footer">
-                                    <hr>
-                                    <div class="stats">
-                                        <i class="fa fa-clock-o"></i> Ultima actualización: <?php echo $last_update ?>
-                                    </div>
-
-                                </div>
                             </div>
                         </div>
                     </div>

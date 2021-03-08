@@ -440,6 +440,7 @@
         senia = $('#add_senia').val();
         saldo = $('#add_saldo').val();
         metodo_pago = $('#add_metodo_pago').val();
+        estado_trabajo = $('#add_estado_trabajo').val();
         fecha_entrega = $('#add_fecha_entrega').val();
 
         $('input[name="cristales_precio"]').val(cristales_precio);
@@ -449,6 +450,7 @@
         $('input[name="senia"]').val(senia);
         $('input[name="saldo"]').val(saldo);
         $('input[name="metodo_pago"]').val(metodo_pago);
+        $('input[name="estado_trabajo"]').val(estado_trabajo);
         $('input[name="fecha_entrega"]').val(fecha_entrega);
         $('#modal_new_order5').modal('hide');
         // Prevents default submission of the form after clicking on the submit button. 

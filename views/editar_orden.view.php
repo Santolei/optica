@@ -11,8 +11,9 @@
             <div class="container-fluid">
                 <div class="row">
                 	<div class="col-md-12 p-0">
-                		<div class="card p-4 mb-4 d-flex justify-content-between align-items-center">
-                      <h2 class="text-center">Orden <?php echo $id_orden; ?></h2>
+                		<div class="card p-4 mb-4 d-flex flex-column">
+                      <h3 class="m-0 mb-2"><strong>Orden N°: <?php echo $id_orden; ?></strong> </h3>
+                      <h5 class="m-0"><strong>Atendido por:</strong> <?php echo $vendedor['nombre']; ?></h5>
                 		</div>
                 	</div>	
                 </div>

@@ -520,3 +520,26 @@
 .boton-historial:hover{
   background: linear-gradient(90deg,#05364f,rgba(0,213,196,.7));
 }
+
+/* Estado de las ordenes. Index*/
+.estado a{
+  color: #333;
+}
+
+.reservado{
+  background: linear-gradient(90deg,#1DE9B6,rgba(0,213,196,.7));
+}
+
+.en_taller{
+  background: linear-gradient(90deg,#E53935,rgba(236,64,122,.7));
+}
+.esperando_cristales {
+  background: linear-gradient(90deg,#7986CB,rgba(130,177,255,.7));
+}
+.esperando_armazon {
+  background: linear-gradient(90deg,rgba(130,177,255,.7),#B2EBF2);
+}
+.para_entregar {
+  background: linear-gradient(90deg,#FFF59D,rgba(255,171,64,.7));
+}
+

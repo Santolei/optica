@@ -59,8 +59,23 @@
                   </select>
               </div>
             </div>
-                
           </div>  
+
+          <div class="row"> 
+            <div class="col-sm-12">  
+                <div class="form-group">  
+                  <label for="add_estado_trabajo">Estado del trabajo</label>
+                  <select name="add_estado_trabajo" class="form-control" id="add_estado_trabajo">
+                    <option value="Reservado">Reservado</option>
+                    <option value="Esperando seña">Esperando seña</option>
+                    <option value="Esperando cristales">Esperando cristales</option>
+                    <option value="Esperando armazón">Esperando armazón</option>
+                    <option value="En taller">En taller</option>
+                    <option value="Para entregar">Para entregar</option>
+                  </select>
+              </div>
+            </div>
+          </div>
 
           <div class="row"> 
             <div class="col-sm-12">  

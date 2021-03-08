@@ -14,5 +14,14 @@ $result = $con->PREPARE("
 $result->execute();
 $orden = $result->fetch();
 
+// Traigo los vendedores de la base de datos
+
+$vendedor = $orden['vendedor'];
+$result = $con->PREPARE("
+	SELECT nombre FROM vendedores
+	WHERE id_vendedor = '$vendedor'");
+$result->execute();
+$vendedor = $result->fetch();
+
 require 'views/editar_orden.view.php';
 ?>
