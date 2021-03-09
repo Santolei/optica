@@ -14,7 +14,7 @@
       </div>
 
       <div class="pl-4">
-        <p class="mb-0">Orden N°: 53</p>
+        <p class="mb-0">Orden N°: <span id="nroorden"></span></p>
       </div>
 
       <!--Body-->
@@ -25,17 +25,18 @@
             <label for="estado">Estado:</label>
             <div class="row">
               <div class="col-md-6">
-                <select name="estado" class="form-control mb-4" id="estado">
+                <select name="estado" onchange="checkEstado()" class="form-control mb-4" id="estado">
                   <option value="Reservado">Reservado</option>
                   <option value="Esperando seña">Esperando seña</option>
                   <option value="Esperando cristales">Esperando cristales</option>
                   <option value="Esperando armazón">Esperando armazón</option>
                   <option value="En taller">En taller</option>
-                  <option value="Para entregar">Para entregar</option>
+                  <option value="Para entregar (Avisar)">Para entregar (Avisar)</option>
+                  <option value="Para entregar (Avisado)">Para entregar (Avisado)</option>
                   <option value="Entregado">Entregado</option>
                 </select>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6 hidden entregar_container">
                 <select name="entregar" class="form-control" id="entregar">
                   <option value="Avisar">Avisar</option>
                   <option value="Avisado">Avisado</option>
@@ -43,7 +44,7 @@
               </div>
             
             </div>
-            <input type="hidden" name="id_orden" id="id_orden" value="53">
+            <input type="hidden" name="id_orden" id="id_orden">
           </div>
           <!--Footer-->
         <div class="modal-footer justify-content-center">

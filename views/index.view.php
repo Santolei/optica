@@ -8,11 +8,14 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                	<div class="col-md-8">
+                	<div class="col-md-12">
                 		<div class="card">
 
                             <div class="header">
-                                <h4 class="title">Órdenes pendientes</h4>
+                                <div class="d-flex justify-content-between">
+                                	<h4 class="title">Órdenes pendientes</h4>
+                                	<a href="historial_ordenes.php" class="mr-2 text-white boton-historial" style="font-size: 15px;">Historial de órdenes</a>
+                                </div>
                             </div>
                             <div class="content">
                                 <div class="table-responsive">

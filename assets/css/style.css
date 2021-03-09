@@ -543,3 +543,6 @@
   background: linear-gradient(90deg,#FFF59D,rgba(255,171,64,.7));
 }
 
+.para_entregar_avisado {
+  background: linear-gradient(90deg,rgb(167 24 214 / 70%),#ff9ddc);
+}

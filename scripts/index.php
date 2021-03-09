@@ -31,7 +31,8 @@ $(document).ready(function()
             m += 1;  // JavaScript months are 0-11
             var y = formattedDate.getFullYear();
         $('td:eq(2)', nRow).html(d + "-" + m + "-" + y);
-        $('td:eq(3)', nRow).addClass('text-center estado').html('<a data-toggle="modal" data-target="#modal_edit_estado" href="#"' + aData[0] + '">' +
+
+        $('td:eq(3)', nRow).addClass('text-center estado').html("<a class='estado_orden' onclick='cambiaIdModal(" + aData[0] + ',' + '"' + aData[3] + '"' + ")'  href='#'" + aData[0] + '">' +
             aData[3] + '</a>');
             
         return nRow;
@@ -67,14 +68,41 @@ $(document).ready(function()
                 $(row).removeClass('even');
                 $(row).addClass("esperando_armazon");
             };
-            if ( aData[3] == "Para entregar" || aData[3] == "Avisar" || aData[3] == "Avisado") {   
+            if ( aData[3] == "Para entregar (Avisar)") {   
                 $(row).removeClass('odd');  
                 $(row).removeClass('even');
                 $(row).addClass("para_entregar");
             };
+
+            if ( aData[3] == "Para entregar (Avisado)") {   
+                $(row).removeClass('odd');  
+                $(row).removeClass('even');
+                $(row).addClass("para_entregar_avisado");
+            };
         },
       });
-      $('.dataTables_length').addClass('bs-select');
-           
-        });
+         
+    });
+
+    // Al clickear el estado voy a colocar los datos en el modal de editar estado
+    // y mostrar el modal
+
+    function cambiaIdModal(id,estado){
+
+        // 
+        $('#nroorden').text(id);
+        $('input[name="id_orden"]').val(id);
+        $('#modal_edit_estado').modal('show');
+        $('#estado').val(estado);
+    }
+
+    // Si está seleccionamos el select de "para entregar" voy a poner visible el segundo select
+
+    function checkEstado(){
+        if ($('#estado').val() === "Para entregar") {
+            $('.entregar_container').removeClass('hidden');
+            console.log('funciona');
+        }
+    }
+   
 </script>
