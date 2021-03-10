@@ -20,6 +20,7 @@ $(document).ready(function()
         "serverSide": true,
         "pageLength": 350,
         autoFill: true,
+        "order": [[ 0, "desc" ]],
         "ajax": "consultas/ordenesjson.php",
         "fnRowCallback": function( nRow, aData, iDisplayIndex ) {
         // Genero el boton de editar producto

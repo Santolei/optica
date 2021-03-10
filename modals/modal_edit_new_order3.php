@@ -64,7 +64,7 @@
                     <!-- ESF -->
                     <div class="text-center mr-3">
                       <label for="add_monofocal_lejos_der_esf">ESF</label>
-                      <input class="form-control" type="text" name="add_monofocal_lejos_der_esf" id="add_monofocal_lejos_der_esf" value="<?php echo $orden['monofocal_lejos_der_esf'] ?>">
+                      <input class="form-control" type="text" name="add_monofocal_lejos_der_esf" id="add_monofocal_lejos_der_esf">
                     </div>
                     <!-- CIL -->
                     <div class="text-center mr-3">

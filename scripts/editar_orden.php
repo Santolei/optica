@@ -201,6 +201,92 @@
         tipoLente();
     });
 
+    //Coloco los valores traidos de la consulta para mostrar o ocultar los campos dependiendo si es mono,bi o multifocal
+
+    $(document).ready(function(){
+
+        tipo_lente = "<?php echo $orden['tipo_lente'];  ?>";
+        checkbox_lejos = "<?php echo $orden['checkbox_lejos'];  ?>";
+        checkbox_intermedia = "<?php echo $orden['checkbox_intermedia'];  ?>";
+        checkbox_cerca = "<?php echo $orden['checkbox_cerca'];  ?>";
+
+         $('#add_tipo_lente').val(tipo_lente);
+
+         tipoLente();
+         $('#add_checkbox_lejos').val(checkbox_lejos);
+         $('#add_checkbox_intermedia').val(checkbox_intermedia);
+         $('#add_checkbox_cerca').val(checkbox_cerca);
+
+        if ($('#add_checkbox_lejos').val() == 1){
+                $('#add_checkbox_lejos').prop( "checked", true );
+                $('#lejos').fadeIn("slow", "linear").addClass('d-flex').removeClass('hidden');
+                $('.monofocal_lejos').fadeIn("slow", "linear").addClass('d-flex').removeClass('hidden');
+
+                $('#add_monofocal_lejos_der_esf').val(<?php echo ($orden['monofocal_lejos_der_esf']) ?>);
+                $('#add_monofocal_lejos_der_cil').val(<?php echo ($orden['monofocal_lejos_der_cil']) ?>);
+                $('#add_monofocal_lejos_der_eje').val(<?php echo ($orden['monofocal_lejos_der_eje']) ?>);
+                $('#add_monofocal_lejos_der_add').val(<?php echo ($orden['monofocal_lejos_der_add']) ?>);
+                $('#add_monofocal_lejos_izq_esf').val(<?php echo ($orden['monofocal_lejos_izq_esf']) ?>);
+                $('#add_monofocal_lejos_izq_cil').val(<?php echo ($orden['monofocal_lejos_izq_cil']) ?>);
+                $('#add_monofocal_lejos_izq_eje').val(<?php echo ($orden['monofocal_lejos_izq_eje']) ?>);
+                $('#add_monofocal_lejos_izq_add').val(<?php echo ($orden['monofocal_lejos_izq_add']) ?>);
+            } 
+
+        if ($('#add_checkbox_intermedia').val() == 1){
+                $('#add_checkbox_intermedia').prop( "checked", true );
+                $('#intermedia').fadeIn("slow", "linear").addClass('d-flex').removeClass('hidden');
+                $('.monofocal_intermedia').fadeIn("slow", "linear").addClass('d-flex').removeClass('hidden');
+
+                $('#add_monofocal_intermedia_der_esf').val(<?php echo ($orden['monofocal_intermedia_der_esf']) ?>);
+                $('#add_monofocal_intermedia_der_cil').val(<?php echo ($orden['monofocal_intermedia_der_cil']) ?>);
+                $('#add_monofocal_intermedia_der_eje').val(<?php echo ($orden['monofocal_intermedia_der_eje']) ?>);
+                $('#add_monofocal_intermedia_der_add').val(<?php echo ($orden['monofocal_intermedia_der_add']) ?>);
+                $('#add_monofocal_intermedia_izq_esf').val(<?php echo ($orden['monofocal_intermedia_izq_esf']) ?>);
+                $('#add_monofocal_intermedia_izq_cil').val(<?php echo ($orden['monofocal_intermedia_izq_cil']) ?>);
+                $('#add_monofocal_intermedia_izq_eje').val(<?php echo ($orden['monofocal_intermedia_izq_eje']) ?>);
+                $('#add_monofocal_intermedia_izq_add').val(<?php echo ($orden['monofocal_intermedia_izq_add']) ?>);
+            } 
+
+        if ($('#add_checkbox_cerca').val() == 1){
+                $('#add_checkbox_cerca').prop( "checked", true );
+                $('#cerca').fadeIn("slow", "linear").addClass('d-flex').removeClass('hidden');
+                $('.monofocal_cerca').fadeIn("slow", "linear").addClass('d-flex').removeClass('hidden');
+
+                $('#add_monofocal_cerca_der_esf').val(<?php echo ($orden['monofocal_cerca_der_esf']) ?>);
+                $('#add_monofocal_cerca_der_cil').val(<?php echo ($orden['monofocal_cerca_der_cil']) ?>);
+                $('#add_monofocal_cerca_der_eje').val(<?php echo ($orden['monofocal_cerca_der_eje']) ?>);
+                $('#add_monofocal_cerca_der_add').val(<?php echo ($orden['monofocal_cerca_der_add']) ?>);
+                $('#add_monofocal_cerca_izq_esf').val(<?php echo ($orden['monofocal_cerca_izq_esf']) ?>);
+                $('#add_monofocal_cerca_izq_cil').val(<?php echo ($orden['monofocal_cerca_izq_cil']) ?>);
+                $('#add_monofocal_cerca_izq_eje').val(<?php echo ($orden['monofocal_cerca_izq_eje']) ?>);
+                $('#add_monofocal_cerca_izq_add').val(<?php echo ($orden['monofocal_cerca_izq_add']) ?>);
+            } 
+
+        if (tipo_lente === 'Bifocal') {
+            $('#add_bifocal_der_esf').val(<?php echo ($orden['bifocal_der_esf']) ?>);
+            $('#add_bifocal_der_cil').val(<?php echo ($orden['bifocal_der_cil']) ?>);
+            $('#add_bifocal_der_eje').val(<?php echo ($orden['bifocal_der_eje']) ?>);
+            $('#add_bifocal_der_add').val(<?php echo ($orden['bifocal_der_add']) ?>);
+            $('#add_bifocal_izq_esf').val(<?php echo ($orden['bifocal_izq_esf']) ?>);
+            $('#add_bifocal_izq_cil').val(<?php echo ($orden['bifocal_izq_cil']) ?>);
+            $('#add_bifocal_izq_eje').val(<?php echo ($orden['bifocal_izq_eje']) ?>);
+            $('#add_bifocal_izq_add').val(<?php echo ($orden['bifocal_izq_add']) ?>);
+        }
+
+        if (tipo_lente === 'Multifocal') {
+            $('#add_multifocal_der_esf').val(<?php echo ($orden['multifocal_der_esf']) ?>);
+            $('#add_multifocal_der_cil').val(<?php echo ($orden['multifocal_der_cil']) ?>);
+            $('#add_multifocal_der_eje').val(<?php echo ($orden['multifocal_der_eje']) ?>);
+            $('#add_multifocal_der_add').val(<?php echo ($orden['multifocal_der_add']) ?>);
+            $('#add_multifocal_izq_esf').val(<?php echo ($orden['multifocal_izq_esf']) ?>);
+            $('#add_multifocal_izq_cil').val(<?php echo ($orden['multifocal_izq_cil']) ?>);
+            $('#add_multifocal_izq_eje').val(<?php echo ($orden['multifocal_izq_eje']) ?>);
+            $('#add_multifocal_izq_add').val(<?php echo ($orden['multifocal_izq_add']) ?>);
+        }
+
+    });
+   
+
     // Muestro u oculto dependiendo de los checkbox 
     // de lejos cerca o intermedia " SOLO PARA MONOFOCAL "
 
