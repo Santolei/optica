@@ -24,7 +24,7 @@
           <div class="form-group p-2">
             <label for="estado">Estado:</label>
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-12">
                 <select name="estado" onchange="checkEstado()" class="form-control mb-4" id="estado">
                   <option value="Reservado">Reservado</option>
                   <option value="Esperando seña">Esperando seña</option>
