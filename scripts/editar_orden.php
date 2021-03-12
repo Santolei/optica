@@ -206,11 +206,19 @@
     $(document).ready(function(){
 
         tipo_lente = "<?php echo $orden['tipo_lente'];  ?>";
+        material = "<?php echo $orden['material'];  ?>";
+        producto = "<?php echo $orden['producto'];  ?>";
+        tratamiento = "<?php echo $orden['tratamiento'];  ?>";
         checkbox_lejos = "<?php echo $orden['checkbox_lejos'];  ?>";
         checkbox_intermedia = "<?php echo $orden['checkbox_intermedia'];  ?>";
         checkbox_cerca = "<?php echo $orden['checkbox_cerca'];  ?>";
 
          $('#add_tipo_lente').val(tipo_lente);
+         $('#add_material').val(material);
+         
+        if ($('#add_tratamiento').find("option[value='" + tratamiento + "']").length) {
+            $('#add_tratamiento').val(tratamiento).trigger('change');
+        } 
 
          tipoLente();
          $('#add_checkbox_lejos').val(checkbox_lejos);
@@ -350,22 +358,27 @@
     // Cargo los productos dependiendo del material 
 
     function checkMaterial(){
-       var material = $('#add_material').val();
+       var material2 = $('#add_material').val();
        // $("#add_producto").select2("open");
-       if (material === 'Mineral') {
+       if (material2 === 'Mineral') {
             $("#add_producto").load('consultas/productos_minerales.php');  
 
-       }else if(material === 'Organico'){
+       }else if(material2 === 'Organico'){
             $("#add_producto").load('consultas/productos_organicos.php');
-       }else if(material === 'Policarbonato'){
+       }else if(material2 === 'Policarbonato'){
             $("#add_producto").load('consultas/productos_policarbonato.php');
-       }else if(material === 'Otros'){
+       }else if(material2 === 'Otros'){
             $("#add_producto").load('consultas/productos_otros.php');
        }
 
     }
 
+    checkMaterial();
     $('#add_material').on('change', checkMaterial);
+
+    if ($('#add_producto').find("option[value='" + producto + "']").length) {
+            $('#add_producto').val(producto).trigger('change');
+        } 
 
     // Guardo tercer form
 
