@@ -214,8 +214,10 @@
         checkbox_cerca = "<?php echo $orden['checkbox_cerca'];  ?>";
 
          $('#add_tipo_lente').val(tipo_lente);
-         $('#add_material').val(material);
-         
+        
+        if ($('#add_material').find("option[value='" + material + "']").length) {
+            $('#add_material').val(material).trigger('change');
+        } 
         if ($('#add_tratamiento').find("option[value='" + tratamiento + "']").length) {
             $('#add_tratamiento').val(tratamiento).trigger('change');
         } 
@@ -373,12 +375,17 @@
 
     }
 
-    checkMaterial();
+    
     $('#add_material').on('change', checkMaterial);
 
     if ($('#add_producto').find("option[value='" + producto + "']").length) {
-            $('#add_producto').val(producto).trigger('change');
-        } 
+        $('#add_producto').val(producto).trigger('change');
+    }  else { 
+    // Create a DOM Option and pre-select by default
+    var newOption = new Option(producto, producto, true, true);
+    // Append it to the select
+    $('#add_producto').append(newOption).trigger('change');
+} 
 
     // Guardo tercer form
 
