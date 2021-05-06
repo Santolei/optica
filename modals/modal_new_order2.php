@@ -38,13 +38,13 @@
             </div>
           </div>
 
-          <div class="form-group col-sm-12 col-md-3">
+          <div class="form-group col-sm-12 col-md-3 quantity" id="graduaciones1">
               <label for="add_graduacion_od">Graduación OD:</label>
-              <input maxlength="100" class="form-control" type="number" id="add_graduacion_od" step="any" autocomplete="off" required>
+              <input maxlength="100" class="form-control" type="number" value="0" id="add_graduacion_od"  min="-30" max="30" step="0.25" autocomplete="off" required>
           </div>
-          <div class="form-group col-sm-12 col-md-3">
+          <div class="form-group col-sm-12 col-md-3 quantity" id="graduaciones2">
               <label for="add_graduacion_oi">Graduación OI:</label>
-              <input maxlength="100" class="form-control" type="number" id="add_graduacion_oi" step="any" autocomplete="off" required>
+              <input maxlength="100" class="form-control" type="number" value="0" id="add_graduacion_oi"  min="-30" max="30" step="0.25" autocomplete="off" required>
           </div>
         </div>
         

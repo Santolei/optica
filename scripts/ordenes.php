@@ -96,7 +96,8 @@
     $('#datos_paciente').on('click', function(){
         $('#modal_new_order').modal('hide');
         $('#modal_new_order2').modal('show');
-        
+        $("#graduaciones1 :input").val(0);
+        $("#graduaciones2 :input").val(0);
     });
 
     // Select 2 para agregar buscador a los input select
@@ -156,6 +157,7 @@
         }
         else if ($('#add_tipo_lente').val() === "Bifocal") {
             $('#monofocal').addClass('hidden').fadeOut("slow", "linear");
+            $("#bifocal :input").val('0');
             $('#bifocal').fadeIn("slow", "linear").removeClass('hidden');
             $('#multifocal').addClass('hidden').fadeOut("slow", "linear");
 
@@ -163,7 +165,7 @@
             $('#add_bifocal').fadeIn("slow", "linear").removeClass('hidden');
             $('#add_multifocal').addClass('hidden').fadeOut("slow", "linear");
 
-            $("#add_bifocal :input").val('');
+            $("#add_bifocal :input").val(0);
         }
         else if ($('#add_tipo_lente').val() === "Multifocal") {
             $('#monofocal').addClass('hidden').fadeOut("slow", "linear");
@@ -174,7 +176,7 @@
             $('#add_bifocal').addClass('hidden').fadeOut("slow", "linear");
             $('#add_multifocal').fadeIn("slow", "linear").removeClass('hidden');
 
-            $("#add_multifocal :input").val('');
+            $("#add_multifocal :input").val(0);
         }
     }
 
@@ -188,6 +190,7 @@
     $('#add_checkbox_lejos').on('change',function(){
         if($('#add_checkbox_lejos').is(":checked")){
             $('#checkbox_lejos').val(1).prop( "checked", true );
+            $("#lejos :input").val('0');
             $('#lejos').fadeIn("slow", "linear").addClass('d-flex').removeClass('hidden');
             $('.monofocal_lejos').fadeIn("slow", "linear").addClass('d-flex').removeClass('hidden');
         }  
@@ -200,6 +203,7 @@
 
     $('#add_checkbox_intermedia').on('change',function(){
         if($('#add_checkbox_intermedia').is(":checked")){
+            $("#intermedia :input").val('0');
             $('#intermedia').fadeIn("slow", "linear").addClass('d-flex').removeClass('hidden');
             $('.monofocal_intermedia').fadeIn("slow", "linear").addClass('d-flex').removeClass('hidden');
             $('#checkbox_intermedia').val(1).prop( "checked", true );
@@ -214,6 +218,7 @@
     $('#add_checkbox_cerca').on('change',function(){
         if($('#add_checkbox_cerca').is(":checked")){
             $('#checkbox_cerca').val(1).prop( "checked", true );
+            $("#cerca :input").val('0');
             $('#cerca').fadeIn("slow", "linear").addClass('d-flex').removeClass('hidden');
             $('.monofocal_cerca').fadeIn("slow", "linear").addClass('d-flex').removeClass('hidden');
         }  
@@ -531,7 +536,39 @@
         return false; 
     });
 
-    
+    // Cambio de las flechitas de los input type number
+
+    jQuery('<div class="quantity-nav"><div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">-</div></div>').insertAfter('.quantity input');
+    jQuery('.quantity').each(function() {
+      var spinner = jQuery(this),
+        input = spinner.find('input[type="number"]'),
+        btnUp = spinner.find('.quantity-up'),
+        btnDown = spinner.find('.quantity-down'),
+        min = input.attr('min'),
+        max = input.attr('max');
+
+      btnUp.click(function() {
+        var oldValue = parseFloat(input.val());
+        
+          var newVal = oldValue + 0.25;
+        spinner.find("input").val(newVal);
+        //SelectorSlide.val(newVal);.    /*aquí pone el selector del slide*/
+        spinner.find("input").trigger("change");
+      });
+
+      btnDown.click(function() {
+        var oldValue = parseFloat(input.val());
+        if (oldValue <= min) {
+          var newVal = oldValue;
+        } else {
+          var newVal = oldValue - 0.25;
+        }
+        spinner.find("input").val(newVal);
+       //SelectorSlide.val(newVal);        /*aquí pone el selector del slide*/
+       spinner.find("input").trigger("change");
+      });
+
+    });
     
 
 

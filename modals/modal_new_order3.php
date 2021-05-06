@@ -25,6 +25,7 @@
                     <option value="Monofocal">Monofocal</option>
                     <option value="Bifocal">Bifocal</option>
                     <option value="Multifocal">Multifocal</option>
+                    <option value="Multifocal">Contacto</option>
                   </select>
                 </div>
 
@@ -62,24 +63,24 @@
                   <div class="form-group d-flex align-items-end mb-2">
                     <label class=""><span class="mr-2 mb-4 pb-4">OD</span></label>
                     <!-- ESF -->
-                    <div class="text-center mr-3">
+                    <div class="text-center mr-3 quantity">
                       <label for="add_monofocal_lejos_der_esf">ESF</label>
-                      <input class="form-control" type="text" name="add_monofocal_lejos_der_esf" id="add_monofocal_lejos_der_esf">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_lejos_der_esf" id="add_monofocal_lejos_der_esf">
                     </div>
                     <!-- CIL -->
-                    <div class="text-center mr-3">
+                    <div class="text-center mr-3 quantity">
                       <label for="add_monofocal_lejos_der_cil">CIL</label>
-                      <input class="form-control" type="text" name="add_monofocal_lejos_der_cil" id="add_monofocal_lejos_der_cil">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_lejos_der_cil" id="add_monofocal_lejos_der_cil">
                     </div>
                     <!-- EJE -->
-                    <div class="text-center mr-3">
+                    <div class="text-center mr-3 quantity">
                       <label for="add_monofocal_lejos_der_eje">EJE</label>
-                      <input class="form-control" type="text" name="add_monofocal_lejos_der_eje" id="add_monofocal_lejos_der_eje">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_lejos_der_eje" id="add_monofocal_lejos_der_eje">
                     </div>
                     <!-- ADICION -->
-                    <div class="text-center">
+                    <div class="text-center quantity">
                       <label for="add_monofocal_lejos_der_add">ADD</label>
-                      <input class="form-control" type="text" name="add_monofocal_lejos_der_add" id="add_monofocal_lejos_der_add">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_lejos_der_add" id="add_monofocal_lejos_der_add">
                     </div>
                   </div>
 
@@ -87,20 +88,20 @@
                   <div class="form-group d-flex align-items-end mb-0">
                     <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
                     <!-- ESF -->
-                    <div class="text-center mr-3">
-                      <input class="form-control" type="text" name="add_monofocal_lejos_izq_esf" id="add_monofocal_lejos_izq_esf">
+                    <div class="text-center mr-3 quantity">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_lejos_izq_esf" id="add_monofocal_lejos_izq_esf">
                     </div>
                     <!-- CIL -->
-                    <div class="text-center mr-3">
-                      <input class="form-control" type="text" name="add_monofocal_lejos_izq_cil" id="add_monofocal_lejos_izq_cil">
+                    <div class="text-center mr-3 quantity">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_lejos_izq_cil" id="add_monofocal_lejos_izq_cil">
                     </div>
                     <!-- EJE -->
-                    <div class="text-center mr-3">
-                      <input class="form-control" type="text" name="add_monofocal_lejos_izq_eje" id="add_monofocal_lejos_izq_eje">
+                    <div class="text-center mr-3 quantity">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_lejos_izq_eje" id="add_monofocal_lejos_izq_eje">
                     </div>
                     <!-- ADICION -->
-                    <div class="text-center">
-                      <input class="form-control" type="text" name="add_monofocal_lejos_izq_add" id="add_monofocal_lejos_izq_add">
+                    <div class="text-center quantity">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_lejos_izq_add" id="add_monofocal_lejos_izq_add">
                     </div>
                   </div>
                 </div>
@@ -116,24 +117,24 @@
                   <div class="form-group d-flex align-items-end mb-2">
                     <label class=""><span class="mr-2 mb-4 pb-4">OD</span></label>
                     <!-- ESF -->
-                    <div class="text-center mr-3">
+                    <div class="text-center mr-3 quantity">
                       <label for="add_monofocal_intermedia_der_esf">ESF</label>
-                      <input class="form-control" type="text" name="add_monofocal_intermedia_der_esf" id="add_monofocal_intermedia_der_esf">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_intermedia_der_esf" id="add_monofocal_intermedia_der_esf">
                     </div>
                     <!-- CIL -->
-                    <div class="text-center mr-3">
+                    <div class="text-center mr-3 quantity">
                       <label for="add_monofocal_intermedia_der_cil">CIL</label>
-                      <input class="form-control" type="text" name="add_monofocal_intermedia_der_cil" id="add_monofocal_intermedia_der_cil">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_intermedia_der_cil" id="add_monofocal_intermedia_der_cil">
                     </div>
                     <!-- EJE -->
-                    <div class="text-center mr-3">
+                    <div class="text-center mr-3 quantity">
                       <label for="add_monofocal_intermedia_der_eje">EJE</label>
-                      <input class="form-control" type="text" name="add_monofocal_intermedia_der_eje" id="add_monofocal_intermedia_der_eje">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_intermedia_der_eje" id="add_monofocal_intermedia_der_eje">
                     </div>
                     <!-- ADICION -->
-                    <div class="text-center">
+                    <div class="text-center quantity">
                       <label for="add_monofocal_intermedia_der_add">ADD</label>
-                      <input class="form-control" type="text" name="add_monofocal_intermedia_der_add" id="add_monofocal_intermedia_der_add">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_intermedia_der_add" id="add_monofocal_intermedia_der_add">
                     </div>
                   </div>
 
@@ -141,20 +142,20 @@
                   <div class="form-group d-flex align-items-end mb-0">
                     <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
                     <!-- ESF -->
-                    <div class="text-center mr-3">
-                      <input class="form-control" type="text" name="add_monofocal_intermedia_izq_esf" id="add_monofocal_intermedia_izq_esf">
+                    <div class="text-center mr-3 quantity">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_intermedia_izq_esf" id="add_monofocal_intermedia_izq_esf">
                     </div>
                     <!-- CIL -->
-                    <div class="text-center mr-3">
-                      <input class="form-control" type="text" name="add_monofocal_intermedia_izq_cil" id="add_monofocal_intermedia_izq_cil">
+                    <div class="text-center mr-3 quantity">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_intermedia_izq_cil" id="add_monofocal_intermedia_izq_cil">
                     </div>
                     <!-- EJE -->
-                    <div class="text-center mr-3">
-                      <input class="form-control" type="text" name="add_monofocal_intermedia_izq_eje" id="add_monofocal_intermedia_izq_eje">
+                    <div class="text-center mr-3 quantity">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_intermedia_izq_eje" id="add_monofocal_intermedia_izq_eje">
                     </div>
                     <!-- ADICION -->
-                    <div class="text-center">
-                      <input class="form-control" type="text" name="add_monofocal_intermedia_izq_add" id="add_monofocal_intermedia_izq_add">
+                    <div class="text-center quantity">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_intermedia_izq_add" id="add_monofocal_intermedia_izq_add">
                     </div>
                   </div>
                 </div>
@@ -169,24 +170,24 @@
                   <div class="form-group d-flex align-items-end mb-2">
                     <label class=""><span class="mr-2 mb-4 pb-4">OD</span></label>
                     <!-- ESF -->
-                    <div class="text-center mr-3">
+                    <div class="text-center mr-3 quantity">
                       <label for="add_monofocal_cerca_der_esf">ESF</label>
-                      <input class="form-control" type="text" name="add_monofocal_cerca_der_esf" id="add_monofocal_cerca_der_esf">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_cerca_der_esf" id="add_monofocal_cerca_der_esf">
                     </div>
                     <!-- CIL -->
-                    <div class="text-center mr-3">
+                    <div class="text-center mr-3 quantity">
                       <label for="add_monofocal_cerca_der_cil">CIL</label>
-                      <input class="form-control" type="text" name="add_monofocal_cerca_der_cil" id="add_monofocal_cerca_der_cil">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_cerca_der_cil" id="add_monofocal_cerca_der_cil">
                     </div>
                     <!-- EJE -->
-                    <div class="text-center mr-3">
+                    <div class="text-center mr-3 quantity">
                       <label for="add_monofocal_cerca_der_eje">EJE</label>
-                      <input class="form-control" type="text" name="add_monofocal_cerca_der_eje" id="add_monofocal_cerca_der_eje">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_cerca_der_eje" id="add_monofocal_cerca_der_eje">
                     </div>
                     <!-- ADICION -->
-                    <div class="text-center">
+                    <div class="text-center quantity">
                       <label for="add_monofocal_cerca_der_add">ADD</label>
-                      <input class="form-control" type="text" name="add_monofocal_cerca_der_add" id="add_monofocal_cerca_der_add">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_cerca_der_add" id="add_monofocal_cerca_der_add">
                     </div>
                   </div>
 
@@ -194,20 +195,20 @@
                   <div class="form-group d-flex align-items-end mb-0">
                     <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
                     <!-- ESF -->
-                    <div class="text-center mr-3">
-                      <input class="form-control" type="text" name="add_monofocal_cerca_izq_esf" id="add_monofocal_cerca_izq_esf">
+                    <div class="text-center mr-3 quantity">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_cerca_izq_esf" id="add_monofocal_cerca_izq_esf">
                     </div>
                     <!-- CIL -->
-                    <div class="text-center mr-3">
-                      <input class="form-control" type="text" name="add_monofocal_cerca_izq_cil" id="add_monofocal_cerca_izq_cil">
+                    <div class="text-center mr-3 quantity">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_cerca_izq_cil" id="add_monofocal_cerca_izq_cil">
                     </div>
                     <!-- EJE -->
-                    <div class="text-center mr-3">
-                      <input class="form-control" type="text" name="add_monofocal_cerca_izq_eje" id="add_monofocal_cerca_izq_eje">
+                    <div class="text-center mr-3 quantity">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_cerca_izq_eje" id="add_monofocal_cerca_izq_eje">
                     </div>
                     <!-- ADICION -->
-                    <div class="text-center">
-                      <input class="form-control" type="text" name="add_monofocal_cerca_izq_add" id="add_monofocal_cerca_izq_add">
+                    <div class="text-center quantity">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_cerca_izq_add" id="add_monofocal_cerca_izq_add">
                     </div>
                   </div>
                 </div>
@@ -222,24 +223,24 @@
                   <div class="form-group d-flex align-items-end mb-2">
                     <label class=""><span class="mr-2 mb-4 pb-4">OD</span></label>
                     <!-- ESF -->
-                    <div class="text-center mr-3">
+                    <div class="text-center mr-3 quantity">
                       <label for="add_bifocal_der_esf">ESF</label>
-                      <input class="form-control" type="text" name="add_bifocal_der_esf" id="add_bifocal_der_esf">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_bifocal_der_esf" id="add_bifocal_der_esf">
                     </div>
                     <!-- CIL -->
-                    <div class="text-center mr-3">
+                    <div class="text-center mr-3 quantity">
                       <label for="add_bifocal_der_cil">CIL</label>
-                      <input class="form-control" type="text" name="add_bifocal_der_cil" id="add_bifocal_der_cil">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_bifocal_der_cil" id="add_bifocal_der_cil">
                     </div>
                     <!-- EJE -->
-                    <div class="text-center mr-3">
+                    <div class="text-center mr-3 quantity">
                       <label for="add_bifocal_der_eje">EJE</label>
-                      <input class="form-control" type="text" name="add_bifocal_der_eje" id="add_bifocal_der_eje">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_bifocal_der_eje" id="add_bifocal_der_eje">
                     </div>
                     <!-- ADICION -->
-                    <div class="text-center">
+                    <div class="text-center quantity">
                       <label for="add_bifocal_der_add">ADD</label>
-                      <input class="form-control" type="text" name="add_bifocal_der_add" id="add_bifocal_der_add">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_bifocal_der_add" id="add_bifocal_der_add">
                     </div>
                   </div>
 
@@ -247,20 +248,20 @@
                   <div class="form-group d-flex align-items-end mb-0">
                     <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
                     <!-- ESF -->
-                    <div class="text-center mr-3">
-                      <input class="form-control" type="text" name="add_bifocal_izq_esf" id="add_bifocal_izq_esf">
+                    <div class="text-center mr-3 quantity">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_bifocal_izq_esf" id="add_bifocal_izq_esf">
                     </div>
                     <!-- CIL -->
-                    <div class="text-center mr-3">
-                      <input class="form-control" type="text" name="add_bifocal_izq_cil" id="add_bifocal_izq_cil">
+                    <div class="text-center mr-3 quantity">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_bifocal_izq_cil" id="add_bifocal_izq_cil">
                     </div>
                     <!-- EJE -->
-                    <div class="text-center mr-3">
-                      <input class="form-control" type="text" name="add_bifocal_izq_eje" id="add_bifocal_izq_eje">
+                    <div class="text-center mr-3 quantity">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_bifocal_izq_eje" id="add_bifocal_izq_eje">
                     </div>
                     <!-- ADICION -->
-                    <div class="text-center">
-                      <input class="form-control" type="text" name="add_bifocal_izq_add" id="add_bifocal_izq_add">
+                    <div class="text-center quantity">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_bifocal_izq_add" id="add_bifocal_izq_add">
                     </div>
                   </div>
                 </div>
@@ -274,24 +275,24 @@
                   <div class="form-group d-flex align-items-end mb-2">
                     <label class=""><span class="mr-2 mb-4 pb-4">OD</span></label>
                     <!-- ESF -->
-                    <div class="text-center mr-3">
+                    <div class="text-center mr-3 quantity">
                       <label for="add_multifocal_der_esf">ESF</label>
-                      <input class="form-control" type="text" name="add_multifocal_der_esf" id="add_multifocal_der_esf">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_multifocal_der_esf" id="add_multifocal_der_esf">
                     </div>
                     <!-- CIL -->
-                    <div class="text-center mr-3">
+                    <div class="text-center mr-3 quantity">
                       <label for="add_multifocal_der_cil">CIL</label>
-                      <input class="form-control" type="text" name="add_multifocal_der_cil" id="add_multifocal_der_cil">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_multifocal_der_cil" id="add_multifocal_der_cil">
                     </div>
                     <!-- EJE -->
-                    <div class="text-center mr-3">
+                    <div class="text-center mr-3 quantity">
                       <label for="add_multifocal_der_eje">EJE</label>
-                      <input class="form-control" type="text" name="add_multifocal_der_eje" id="add_multifocal_der_eje">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_multifocal_der_eje" id="add_multifocal_der_eje">
                     </div>
                     <!-- ADICION -->
-                    <div class="text-center">
+                    <div class="text-center quantity">
                       <label for="add_multifocal_der_add">ADD</label>
-                      <input class="form-control" type="text" name="add_multifocal_der_add" id="add_multifocal_der_add">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_multifocal_der_add" id="add_multifocal_der_add">
                     </div>
                   </div>
 
@@ -299,20 +300,20 @@
                   <div class="form-group d-flex align-items-end mb-0">
                     <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
                     <!-- ESF -->
-                    <div class="text-center mr-3">
-                      <input class="form-control" type="text" name="add_multifocal_izq_esf" id="add_multifocal_izq_esf">
+                    <div class="text-center mr-3 quantity">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_multifocal_izq_esf" id="add_multifocal_izq_esf">
                     </div>
                     <!-- CIL -->
-                    <div class="text-center mr-3">
-                      <input class="form-control" type="text" name="add_multifocal_izq_cil" id="add_multifocal_izq_cil">
+                    <div class="text-center mr-3 quantity">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_multifocal_izq_cil" id="add_multifocal_izq_cil">
                     </div>
                     <!-- EJE -->
-                    <div class="text-center mr-3">
-                      <input class="form-control" type="text" name="add_multifocal_izq_eje" id="add_multifocal_izq_eje">
+                    <div class="text-center mr-3 quantity">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_multifocal_izq_eje" id="add_multifocal_izq_eje">
                     </div>
                     <!-- ADICION -->
-                    <div class="text-center">
-                      <input class="form-control" type="text" name="add_multifocal_izq_add" id="add_multifocal_izq_add">
+                    <div class="text-center quantity">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_multifocal_izq_add" id="add_multifocal_izq_add">
                     </div>
                   </div>
                 </div>
