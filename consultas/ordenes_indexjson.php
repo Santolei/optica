@@ -34,7 +34,8 @@ $columns = array(
     array( 'db' => 'id', 'dt' => 0 ),
     array( 'db' => 'nombre', 'dt' => 1 ),
     array( 'db' => 'fecha_entrega', 'dt' => 2 ),
-    array( 'db' => 'estado', 'dt' => 3 )
+    array( 'db' => 'estado', 'dt' => 3 ),
+    array( 'db' => 'id', 'dt' => 4 )
 
 );
  

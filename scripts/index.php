@@ -19,7 +19,7 @@ $(document).ready(function()
         "processing": true,
         "serverSide": true,
         "pageLength": 350,
-        "bFilter": false,
+        "bFilter": true,
         "bLengthChange": false,
         "order": [[ 2, "asc" ]],
         autoFill: true,
@@ -32,8 +32,14 @@ $(document).ready(function()
             var y = formattedDate.getFullYear();
         $('td:eq(2)', nRow).html(d + "-" + m + "-" + y);
 
-        $('td:eq(3)', nRow).addClass('text-center estado').html("<a class='estado_orden' onclick='cambiaIdModal(" + aData[0] + ',' + '"' + aData[3] + '"' + ")'  href='#'" + aData[0] + '">' +
-            aData[3] + '</a>');
+        $('td:eq(3)', nRow).addClass('text-center estado').html(
+            aData[3]);
+
+        //$('td:eq(4)', nRow).addClass('text-center estado').html("<a class='estado_orden' onclick='cambiaIdModal(" + aData[0] + ',' + '"' + aData[3] + '"' + ")'  href='#'" + aData[0] + '">' +
+            //'<span class="boton-ver text-center"> Ver Orden' + '</a>');
+
+        $('td:eq(4)', nRow).addClass('text-center estado').html("<a class='estado_orden' onclick='cambiaIdModal(" + aData[0] + ',' + '"' + aData[3] + '"' + ")' data-toggle='modal' data-target='" + '#modal_edit_estado' + aData[0] + "'" + "href='#'" + '>' +
+            '<span class="boton-ver text-center"> Ver Orden' + '</a>');    
             
         return nRow;
         },
@@ -88,12 +94,10 @@ $(document).ready(function()
     // y mostrar el modal
 
     function cambiaIdModal(id,estado){
-
-        // 
-        $('#nroorden').text(id);
+        
         $('input[name="id_orden"]').val(id);
-        $('#modal_edit_estado').modal('show');
-        $('#estado').val(estado);
+        idfinal= '#estado' + id;
+        $(idfinal).val(estado);
     }
 
     // Si está seleccionamos el select de "para entregar" voy a poner visible el segundo select

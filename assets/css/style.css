@@ -521,6 +521,19 @@
   background: linear-gradient(90deg,#05364f,rgba(0,213,196,.7));
 }
 
+.boton-ver {
+  background: #222;
+  border-radius: 6px; 
+  font-size: 12px; 
+  font-weight: bold;
+  color: #fff;
+  padding: .25em .5em;
+  transition: .25s all ease;
+}
+.boton-ver:hover{
+  background: linear-gradient(90deg,#000,rgba(1,1,1,.7));
+}
+
 /* Estado de las ordenes. Index*/
 .estado a{
   color: #333;

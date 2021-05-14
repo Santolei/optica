@@ -5,6 +5,15 @@ include 'inc/sessions.php';
 
 require 'config/conexion.php';
 
+// --- Traigo las órdenes de la Base de datos que no estén en entregado---- //
+
+$result = $con->PREPARE("
+	SELECT * FROM ordenes
+	WHERE NOT estado = 'Entregado'
+	");
+$result->execute();
+$ordenes = $result->fetchAll();
+
 $active_home="active";
 require 'views/index.view.php';
 

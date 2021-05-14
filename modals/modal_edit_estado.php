@@ -22,6 +22,9 @@
 
         <form action="consultas/editar_estado.php" id="form-add-producto" method="POST">
           <div class="form-group p-2">
+            <label for="nombre_modal">Nombre:</label>
+            <input type="text" class="form-control" id="nombre_modal" name="nombre_modal">
+
             <label for="estado">Estado:</label>
             <div class="row">
               <div class="col-md-12">
