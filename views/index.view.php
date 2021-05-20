@@ -55,10 +55,10 @@
       <!--Header-->
       <div class="p-4 info-color d-flex justify-content-between align-items-center" style="background: #f2f2f2;">
         
-        <p class="heading lead mb-0">Orden N°: <span id="nroorden"><?php echo $orden['id'] ?></span></p>
+        <p class="heading lead mb-0"><strong>Orden N°: <span id="nroorden"><?php echo $orden['id'] ?></span></strong></p>
              
         <div class="d-flex align-items-center justify-content-between">
-            <h4 class="m-0"><strong>Nombre:</strong> <?php echo $orden['nombre'] ?> </h4>
+            <h4 class="m-0"><strong>Nombre:</strong> <strong style="color: #ff4a55"><?php echo $orden['nombre'] ?></strong> </h4>
             <button type="button" class="close ml-4" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true" class="white-text">&times;</span>
             </button>
@@ -72,9 +72,17 @@
 
         <form action="consultas/editar_estado.php" id="form-add-producto<?php echo $orden['id'] ?>" method="POST">
           <div class="form-group p-0">
-              <div class="d-flex"><p class="mb-2"><strong>Total a pagar:</strong> $<?php echo $orden['total'] ?> </p></div>
-              <div class="d-flex"><p class="mb-0"><strong>Seña:</strong> $<?php echo $orden['senia'] ?></div></p> 
-              <div class="d-flex"><p class="mb-2"><strong>Saldo:</strong> $<?php echo $orden['saldo'] ?></div></p> 
+              <div class="w-50 d-flex justify-content-between">
+                <p class="mb-0"><strong>Total a pagar:</strong></p> <p class="mb-0"><strong>$<?php echo $orden['total'] ?></strong></p> 
+              </div>
+
+              <div class="w-50 d-flex justify-content-between" style="border-bottom: 2px solid #444">
+                <p class="mb-1"><strong>Seña:</strong></p> <p class="mb-1"><strong>$<?php echo $orden['senia'] ?></strong></p>
+              </div> 
+
+              <div class="w-50 d-flex justify-content-between mt-2">
+                <p class="mb-2"><strong>Saldo:</strong></p> <p><strong style="color: #00a598">$<?php echo $orden['saldo'] ?></strong></p>
+              </div> 
 
             <label for="estado">Estado:</label>
             <div class="row">
