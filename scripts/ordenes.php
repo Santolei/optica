@@ -569,6 +569,39 @@
       });
 
     });
+
+    // Creo un script para los eje que solo se muevan de 1 en 1
+    jQuery('<div class="quantity-nav1"><div class="quantity-button1 quantity-up1">+</div><div class="quantity-button1 quantity-down1">-</div></div>').insertAfter('.quantity1 input');
+    jQuery('.quantity1').each(function() {
+      var spinner = jQuery(this),
+        input = spinner.find('input[type="number"]'),
+        btnUp = spinner.find('.quantity-up1'),
+        btnDown = spinner.find('.quantity-down1'),
+        min = input.attr('min'),
+        max = input.attr('max');
+
+      btnUp.click(function() {
+        var oldValue = parseFloat(input.val());
+        
+          var newVal = oldValue + 1;
+        spinner.find("input").val(newVal);
+        //SelectorSlide.val(newVal);.    /*aquí pone el selector del slide*/
+        spinner.find("input").trigger("change");
+      });
+
+      btnDown.click(function() {
+        var oldValue = parseFloat(input.val());
+        if (oldValue <= min) {
+          var newVal = oldValue;
+        } else {
+          var newVal = oldValue - 1;
+        }
+        spinner.find("input").val(newVal);
+       //SelectorSlide.val(newVal);        /*aquí pone el selector del slide*/
+       spinner.find("input").trigger("change");
+      });
+
+    });
     
 
 

@@ -563,7 +563,8 @@
 
 /* Cambio de estilos de las flechitas de los input number */
 
-.quantity {
+.quantity,
+.quantity1 {
   position: relative;
 }
 
@@ -579,7 +580,8 @@ input[type=number]
   -moz-appearance: textfield;
 }
 
-.quantity input {
+.quantity input,
+.quantity1 input {
   height: 42px;
   line-height: 1.65;
   float: left;
@@ -590,17 +592,20 @@ input[type=number]
   border: 1px solid #eee;
 }
 
-.quantity input:focus {
+.quantity input:focus,
+.quantity1 input:focus {
   outline: 0;
 }
 
-.quantity-nav {
+.quantity-nav,
+.quantity-nav1 {
   float: left;
   position: relative;
   height: 42px;
 }
 
-.quantity-button {
+.quantity-button,
+.quantity-button1 {
   position: relative;
   cursor: pointer;
   border-left: 1px solid #eee;
@@ -619,14 +624,16 @@ input[type=number]
   user-select: none;
 }
 
-.quantity-button.quantity-up {
+.quantity-button.quantity-up,
+.quantity-button1.quantity-up1 {
   position: absolute;
   height: 50%;
   top: 0;
   border-bottom: 1px solid #eee;
 }
 
-.quantity-button.quantity-down {
+.quantity-button.quantity-down,
+.quantity-button1.quantity-down1 {
   position: absolute;
   bottom: -1px;
   height: 50%;
