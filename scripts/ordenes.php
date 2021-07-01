@@ -112,6 +112,100 @@
         dropdownParent: $('#modal_new_order3')
     });
 
+    // MODIFICACION -------------------------------------------------
+
+        // Función para mostrar y ocultar datos de los cristales dependiendo
+        // si es monofocal, bifocal o multifocal
+
+        function tipoLenteReceta(){
+            if ($('#add_tipo_lente_receta').val() === "Monofocal") {
+                $('#monofocal_receta').fadeIn("slow", "linear").removeClass('hidden');
+                $('#bifocal_receta').addClass('hidden').fadeOut("slow", "linear");
+                $('#multifocal_receta').addClass('hidden').fadeOut("slow", "linear"); 
+
+                $('#add_monofocal_receta').fadeIn("slow", "linear").removeClass('hidden');
+                $('#add_bifocal_receta').addClass('hidden').fadeOut("slow", "linear");
+                $('#add_multifocal_receta').addClass('hidden').fadeOut("slow", "linear");
+
+                $("#add_monofocal_receta :input").val('');
+            }
+            else if ($('#add_tipo_lente_receta').val() === "Bifocal") {
+                $('#monofocal_receta').addClass('hidden').fadeOut("slow", "linear");
+                $("#bifocal_receta :input").val('0');
+                $('#bifocal_receta').fadeIn("slow", "linear").removeClass('hidden');
+                $('#multifocal_receta').addClass('hidden').fadeOut("slow", "linear");
+
+                $('#add_monofocal_receta').addClass('hidden').fadeOut("slow", "linear");
+                $('#add_bifocal_receta').fadeIn("slow", "linear").removeClass('hidden');
+                $('#add_multifocal_receta').addClass('hidden').fadeOut("slow", "linear");
+
+                $("#add_bifocal_receta :input").val(0);
+            }
+            else if ($('#add_tipo_lente_receta').val() === "Multifocal") {
+                $('#monofocal_receta').addClass('hidden').fadeOut("slow", "linear");
+                $('#bifocal_receta').addClass('hidden').fadeOut("slow", "linear");
+                $('#multifocal_receta').fadeIn("slow", "linear").removeClass('hidden');
+
+                $('#add_monofocal_receta').addClass('hidden').fadeOut("slow", "linear");
+                $('#add_bifocal_receta').addClass('hidden').fadeOut("slow", "linear");
+                $('#add_multifocal_receta').fadeIn("slow", "linear").removeClass('hidden');
+
+                $("#add_multifocal_receta :input").val(0);
+            }
+        }
+
+        
+        $('#add_tipo_lente_receta').on('change',function(){
+            tipoLenteReceta();
+        });
+
+        // Muestro u oculto dependiendo de los checkbox 
+        // de lejos cerca o intermedia " SOLO PARA MONOFOCAL "
+
+        $('#add_checkbox_lejos_receta').on('change',function(){
+            if($('#add_checkbox_lejos_receta').is(":checked")){
+                $('#checkbox_lejos_receta').val(1).prop( "checked", true );
+                $("#lejos_receta :input").val('0');
+                $('#lejos_receta').fadeIn("slow", "linear").addClass('d-flex').removeClass('hidden');
+                $('.monofocal_lejos_receta').fadeIn("slow", "linear").addClass('d-flex').removeClass('hidden');
+            }  
+            else {
+               $('#lejos_receta').removeClass('d-flex').addClass('hidden').fadeOut("slow", "linear");
+               $('.monofocal_lejos_receta').removeClass('d-flex').addClass('hidden').fadeOut("slow", "linear");
+               $('#checkbox_lejos_receta').val(0).prop( "checked", false );
+            }
+        });
+
+        $('#add_checkbox_intermedia_receta').on('change',function(){
+            if($('#add_checkbox_intermedia_receta').is(":checked")){
+                $("#intermedia_receta :input").val('0');
+                $('#intermedia_receta').fadeIn("slow", "linear").addClass('d-flex').removeClass('hidden');
+                $('.monofocal_intermedia_receta').fadeIn("slow", "linear").addClass('d-flex').removeClass('hidden');
+                $('#checkbox_intermedia_receta').val(1).prop( "checked", true );
+            }  
+            else {
+               $('#intermedia_receta').removeClass('d-flex').addClass('hidden').fadeOut("slow", "linear");
+               $('.monofocal_intermedia_receta').removeClass('d-flex').addClass('hidden').fadeOut("slow", "linear");
+               $('#checkbox_intermedia_receta').val(0).prop( "checked", false );
+            }
+        });
+
+        $('#add_checkbox_cerca_receta').on('change',function(){
+            if($('#add_checkbox_cerca_receta').is(":checked")){
+                $('#checkbox_cerca_receta').val(1).prop( "checked", true );
+                $("#cerca_receta :input").val('0');
+                $('#cerca_receta').fadeIn("slow", "linear").addClass('d-flex').removeClass('hidden');
+                $('.monofocal_cerca_receta').fadeIn("slow", "linear").addClass('d-flex').removeClass('hidden');
+            }  
+            else {
+               $('#cerca_receta').removeClass('d-flex').addClass('hidden').fadeOut("slow", "linear");
+               $('.monofocal_cerca_receta').removeClass('d-flex').addClass('hidden').fadeOut("slow", "linear");
+               $('#checkbox_cerca_receta').val(0).prop( "checked", false );
+            }
+        });
+
+        // FIN MODIFICACION ---------------------------------------------
+
     $('#datos_receta').on('click', function(){
         // Inserto datos en el form
 
@@ -229,7 +323,7 @@
         }
     });
 
-   
+   // COPIADO HASTA ACA
             
     // Funcion para copiar adición derecha a izquierda
   

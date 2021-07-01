@@ -299,7 +299,7 @@
                       <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_multifocal_der_cil_receta" id="add_multifocal_der_cil_receta">
                     </div>
                     <!-- EJE -->
-                    <div class="text-center mr-3 quantity111111111">
+                    <div class="text-center mr-3 quantity1">
                       <label for="add_multifocal_der_eje_receta">EJE</label>
                       <input class="form-control" type="number" min="-30" max="30" step="1" name="add_multifocal_der_eje_receta" id="add_multifocal_der_eje_receta">
                     </div>
