@@ -333,6 +333,58 @@
                 </div>
             </div>
 
+            <!-- // ---------------------------- -->
+            <!-- // CONTACTO ----------------- -->
+            <div class="col-md-8 hidden" id="add_contacto_receta">
+              <div class="d-flex flex-column">
+                  <!-- OJO DERECHO -->
+                  <div class="form-group d-flex align-items-end mb-2">
+                    <label class=""><span class="mr-2 mb-4 pb-4">OD</span></label>
+                    <!-- ESF -->
+                    <div class="text-center mr-3 quantity">
+                      <label for="add_contacto_der_esf_receta">ESF</label>
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_contacto_der_esf_receta" id="add_contacto_der_esf_receta">
+                    </div>
+                    <!-- CIL -->
+                    <div class="text-center mr-3 quantity">
+                      <label for="add_contacto_der_cil_receta">CIL</label>
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_contacto_der_cil_receta" id="add_contacto_der_cil_receta">
+                    </div>
+                    <!-- EJE -->
+                    <div class="text-center mr-3 quantity1">
+                      <label for="add_contacto_der_eje_receta">EJE</label>
+                      <input class="form-control" type="number" min="-30" max="30" step="1" name="add_contacto_der_eje_receta" id="add_contacto_der_eje_receta">
+                    </div>
+                    <!-- ADICION -->
+                    <div class="text-center quantity">
+                      <label for="add_contacto_der_add_receta">ADD</label>
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_contacto_der_add_receta" id="add_contacto_der_add_receta">
+                    </div>
+                  </div>
+
+                  <!-- OJO IZQUIERDO -->
+                  <div class="form-group d-flex align-items-end mb-0">
+                    <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
+                    <!-- ESF -->
+                    <div class="text-center mr-3 quantity">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_contacto_izq_esf_receta" id="add_contacto_izq_esf_receta">
+                    </div>
+                    <!-- CIL -->
+                    <div class="text-center mr-3 quantity">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_contacto_izq_cil_receta" id="add_contacto_izq_cil_receta">
+                    </div>
+                    <!-- EJE -->
+                    <div class="text-center mr-3 quantity1">
+                      <input class="form-control" type="number" min="-30" max="30" step="1" name="add_contacto_izq_eje_receta" id="add_contacto_izq_eje_receta">
+                    </div>
+                    <!-- ADICION -->
+                    <div class="text-center quantity">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_contacto_izq_add_receta" id="add_contacto_izq_add_receta">
+                    </div>
+                  </div>
+                </div>
+            </div>
+
         </div>
 
         <!-- Fin Modificacion graduaciones --------------------------------------------------------------------------- -->
