@@ -19,7 +19,7 @@
           <div class="row">
             <div class="form-group col-sm-12 col-md-6">
                 <label for="nombre_doctor">Doctor:</label>
-                <input maxlength="100" class="form-control" type="text" id="nombre_doctor" required>
+                <input maxlength="100" class="form-control" type="text" id="nombre_doctor" autocomplete="on" required>
             </div>
 
             <div class="form-group col-md-6">
@@ -31,28 +31,20 @@
         <!-- Modificacion graduaciones ------------------------------------------------------------------------------- -->
 
         <div class="row">
-            <div class="form-group col-sm-12 col-md-4">
-                <label for="add_tipo_lente_receta">Tipo de lente:</label>
-                <div class="d-flex align-items-center">
-                  <select class="form-control" name="add_tipo_lente_receta" id="add_tipo_lente_receta" selected="Seleccionar tipo de lente" required>
-                    <option value="">Seleccionar Tipo</option>
-                    <option value="Monofocal">Monofocal</option>
-                    <option value="Bifocal">Bifocal</option>
-                    <option value="Multifocal">Multifocal</option>
-                    <option value="Contacto">Contacto</option>
-                  </select>
-                </div>
-
+            <div class="form-group col-sm-12 col-md-1">
+              <label class="m-0"><strong>Distancias:</strong></label>
             </div>
 
             <!-- // ---------------------------- -->
             <!-- // MONOFOCAL ------------------ -->
-            <div class="col-md-8 hidden" id="add_monofocal_receta">
+            <div class="col-md-9" id="add_monofocal_receta">
               <!-- // ---------------------------- -->
               <!-- Contenedor de los checckbox con los que vamos a
                    Ocultar o mostrar las distintas graduaciones -->
               <!-- // ---------------------------- -->
-              <div class="d-flex justify-content-end align-items-center">
+
+              <div class="d-flex justify-content-center align-items-center">
+
                 <div class="checkbox mt-0">
                   <input type="checkbox" id="add_checkbox_lejos_receta" name="add_checkbox_lejos_receta" value="0">
                   <label for="add_checkbox_lejos_receta" class="checkbox-label">Lejos</label>
@@ -229,163 +221,9 @@
               </div>
             </div>
 
-            <!-- // ---------------------------- -->
-            <!-- // BIFOCAL ------------------ -->
-            <div class="col-md-8 hidden" id="add_bifocal_receta">
-              <div class="d-flex flex-column">
-                  <!-- OJO DERECHO -->
-                  <div class="form-group d-flex align-items-end mb-2">
-                    <label class=""><span class="mr-2 mb-4 pb-4">OD</span></label>
-                    <!-- ESF -->
-                    <div class="text-center mr-3 quantity">
-                      <label for="add_bifocal_der_esf_receta">ESF</label>
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_bifocal_der_esf_receta" id="add_bifocal_der_esf_receta">
-                    </div>
-                    <!-- CIL -->
-                    <div class="text-center mr-3 quantity">
-                      <label for="add_bifocal_der_cil_receta">CIL</label>
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_bifocal_der_cil_receta" id="add_bifocal_der_cil_receta">
-                    </div>
-                    <!-- EJE -->
-                    <div class="text-center mr-3 quantity1">
-                      <label for="add_bifocal_der_eje_receta">EJE</label>
-                      <input class="form-control" type="number" min="-30" max="30" step="1" name="add_bifocal_der_eje_receta" id="add_bifocal_der_eje_receta">
-                    </div>
-                    <!-- ADICION -->
-                    <div class="text-center quantity">
-                      <label for="add_bifocal_der_add_receta">ADD</label>
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_bifocal_der_add_receta" id="add_bifocal_der_add_receta">
-                    </div>
-                  </div>
-
-                  <!-- OJO IZQUIERDO -->
-                  <div class="form-group d-flex align-items-end mb-0">
-                    <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
-                    <!-- ESF -->
-                    <div class="text-center mr-3 quantity">
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_bifocal_izq_esf_receta" id="add_bifocal_izq_esf_receta">
-                    </div>
-                    <!-- CIL -->
-                    <div class="text-center mr-3 quantity">
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_bifocal_izq_cil_receta" id="add_bifocal_izq_cil_receta">
-                    </div>
-                    <!-- EJE -->
-                    <div class="text-center mr-3 quantity1">
-                      <input class="form-control" type="number" min="-30" max="30" step="1" name="add_bifocal_izq_eje_receta" id="add_bifocal_izq_eje_receta">
-                    </div>
-                    <!-- ADICION -->
-                    <div class="text-center quantity">
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_bifocal_izq_add_receta" id="add_bifocal_izq_add_receta">
-                    </div>
-                  </div>
-                </div>
-            </div>
-
-            <!-- // ---------------------------- -->
-            <!-- // MULTIFOCAL ----------------- -->
-            <div class="col-md-8 hidden" id="add_multifocal_receta">
-              <div class="d-flex flex-column">
-                  <!-- OJO DERECHO -->
-                  <div class="form-group d-flex align-items-end mb-2">
-                    <label class=""><span class="mr-2 mb-4 pb-4">OD</span></label>
-                    <!-- ESF -->
-                    <div class="text-center mr-3 quantity">
-                      <label for="add_multifocal_der_esf_receta">ESF</label>
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_multifocal_der_esf_receta" id="add_multifocal_der_esf_receta">
-                    </div>
-                    <!-- CIL -->
-                    <div class="text-center mr-3 quantity">
-                      <label for="add_multifocal_der_cil_receta">CIL</label>
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_multifocal_der_cil_receta" id="add_multifocal_der_cil_receta">
-                    </div>
-                    <!-- EJE -->
-                    <div class="text-center mr-3 quantity1">
-                      <label for="add_multifocal_der_eje_receta">EJE</label>
-                      <input class="form-control" type="number" min="-30" max="30" step="1" name="add_multifocal_der_eje_receta" id="add_multifocal_der_eje_receta">
-                    </div>
-                    <!-- ADICION -->
-                    <div class="text-center quantity">
-                      <label for="add_multifocal_der_add_receta">ADD</label>
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_multifocal_der_add_receta" id="add_multifocal_der_add_receta">
-                    </div>
-                  </div>
-
-                  <!-- OJO IZQUIERDO -->
-                  <div class="form-group d-flex align-items-end mb-0">
-                    <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
-                    <!-- ESF -->
-                    <div class="text-center mr-3 quantity">
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_multifocal_izq_esf_receta" id="add_multifocal_izq_esf_receta">
-                    </div>
-                    <!-- CIL -->
-                    <div class="text-center mr-3 quantity">
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_multifocal_izq_cil_receta" id="add_multifocal_izq_cil_receta">
-                    </div>
-                    <!-- EJE -->
-                    <div class="text-center mr-3 quantity1">
-                      <input class="form-control" type="number" min="-30" max="30" step="1" name="add_multifocal_izq_eje_receta" id="add_multifocal_izq_eje_receta">
-                    </div>
-                    <!-- ADICION -->
-                    <div class="text-center quantity">
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_multifocal_izq_add_receta" id="add_multifocal_izq_add_receta">
-                    </div>
-                  </div>
-                </div>
-            </div>
-
-            <!-- // ---------------------------- -->
-            <!-- // CONTACTO ----------------- -->
-            <div class="col-md-8 hidden" id="add_contacto_receta">
-              <div class="d-flex flex-column">
-                  <!-- OJO DERECHO -->
-                  <div class="form-group d-flex align-items-end mb-2">
-                    <label class=""><span class="mr-2 mb-4 pb-4">OD</span></label>
-                    <!-- ESF -->
-                    <div class="text-center mr-3 quantity">
-                      <label for="add_contacto_der_esf_receta">ESF</label>
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_contacto_der_esf_receta" id="add_contacto_der_esf_receta">
-                    </div>
-                    <!-- CIL -->
-                    <div class="text-center mr-3 quantity">
-                      <label for="add_contacto_der_cil_receta">CIL</label>
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_contacto_der_cil_receta" id="add_contacto_der_cil_receta">
-                    </div>
-                    <!-- EJE -->
-                    <div class="text-center mr-3 quantity1">
-                      <label for="add_contacto_der_eje_receta">EJE</label>
-                      <input class="form-control" type="number" min="-30" max="30" step="1" name="add_contacto_der_eje_receta" id="add_contacto_der_eje_receta">
-                    </div>
-                    <!-- ADICION -->
-                    <div class="text-center quantity">
-                      <label for="add_contacto_der_add_receta">ADD</label>
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_contacto_der_add_receta" id="add_contacto_der_add_receta">
-                    </div>
-                  </div>
-
-                  <!-- OJO IZQUIERDO -->
-                  <div class="form-group d-flex align-items-end mb-0">
-                    <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
-                    <!-- ESF -->
-                    <div class="text-center mr-3 quantity">
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_contacto_izq_esf_receta" id="add_contacto_izq_esf_receta">
-                    </div>
-                    <!-- CIL -->
-                    <div class="text-center mr-3 quantity">
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_contacto_izq_cil_receta" id="add_contacto_izq_cil_receta">
-                    </div>
-                    <!-- EJE -->
-                    <div class="text-center mr-3 quantity1">
-                      <input class="form-control" type="number" min="-30" max="30" step="1" name="add_contacto_izq_eje_receta" id="add_contacto_izq_eje_receta">
-                    </div>
-                    <!-- ADICION -->
-                    <div class="text-center quantity">
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_contacto_izq_add_receta" id="add_contacto_izq_add_receta">
-                    </div>
-                  </div>
-                </div>
-            </div>
-
         </div>
+
+        <hr class="mt-0 pt-0">
 
         <!-- Fin Modificacion graduaciones --------------------------------------------------------------------------- -->
 
