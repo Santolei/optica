@@ -70,23 +70,23 @@
                     <label class=""><span class="mr-2 mb-4 pb-4">OD</span></label>
                     <!-- ESF -->
                     <div class="text-center mr-3 quantity">
-                      <label for="add_monofocal_lejos_der_esf_receta">ESF</label>
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_lejos_der_esf_receta" id="add_monofocal_lejos_der_esf_receta">
+                      <label for="add_lejos_der_esf_receta">ESF</label>
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_lejos_der_esf_receta" id="add_lejos_der_esf_receta">
                     </div>
                     <!-- CIL -->
                     <div class="text-center mr-3 quantity">
-                      <label for="add_monofocal_lejos_der_cil_receta">CIL</label>
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_lejos_der_cil_receta" id="add_monofocal_lejos_der_cil_receta">
+                      <label for="add_lejos_der_cil_receta">CIL</label>
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_lejos_der_cil_receta" id="add_lejos_der_cil_receta">
                     </div>
                     <!-- EJE -->
                     <div class="text-center mr-3 quantity1">
-                      <label for="add_monofocal_lejos_der_eje_receta">EJE</label>
-                      <input class="form-control" type="number" min="-30" max="30" step="1" name="add_monofocal_lejos_der_eje_receta" id="add_monofocal_lejos_der_eje_receta">
+                      <label for="add_lejos_der_eje_receta">EJE</label>
+                      <input class="form-control" type="number" min="-30" max="30" step="1" name="add_lejos_der_eje_receta" id="add_lejos_der_eje_receta">
                     </div>
                     <!-- ADICION -->
                     <div class="text-center quantity">
-                      <label for="add_monofocal_lejos_der_add_receta">ADD</label>
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_lejos_der_add_receta" id="add_monofocal_lejos_der_add_receta">
+                      <label for="add_lejos_der_add_receta">ADD</label>
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_lejos_der_add_receta" id="add_lejos_der_add_receta">
                     </div>
                   </div>
 
@@ -95,19 +95,19 @@
                     <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
                     <!-- ESF -->
                     <div class="text-center mr-3 quantity">
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_lejos_izq_esf_receta" id="add_monofocal_lejos_izq_esf_receta">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_lejos_izq_esf_receta" id="add_lejos_izq_esf_receta">
                     </div>
                     <!-- CIL -->
                     <div class="text-center mr-3 quantity">
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_lejos_izq_cil_receta" id="add_monofocal_lejos_izq_cil_receta">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_lejos_izq_cil_receta" id="add_lejos_izq_cil_receta">
                     </div>
                     <!-- EJE -->
                     <div class="text-center mr-3 quantity1">
-                      <input class="form-control" type="number" min="-30" max="30" step="1" name="add_monofocal_lejos_izq_eje_receta" id="add_monofocal_lejos_izq_eje_receta">
+                      <input class="form-control" type="number" min="-30" max="30" step="1" name="add_lejos_izq_eje_receta" id="add_lejos_izq_eje_receta">
                     </div>
                     <!-- ADICION -->
                     <div class="text-center quantity">
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_lejos_izq_add_receta" id="add_monofocal_lejos_izq_add_receta">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_lejos_izq_add_receta" id="add_lejos_izq_add_receta">
                     </div>
                   </div>
                 </div>
@@ -124,23 +124,23 @@
                     <label class=""><span class="mr-2 mb-4 pb-4">OD</span></label>
                     <!-- ESF -->
                     <div class="text-center mr-3 quantity">
-                      <label for="add_monofocal_intermedia_der_esf_receta">ESF</label>
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_intermedia_der_esf_receta" id="add_monofocal_intermedia_der_esf_receta">
+                      <label for="add_intermedia_der_esf_receta">ESF</label>
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_intermedia_der_esf_receta" id="add_intermedia_der_esf_receta">
                     </div>
                     <!-- CIL -->
                     <div class="text-center mr-3 quantity">
-                      <label for="add_monofocal_intermedia_der_cil_receta">CIL</label>
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_intermedia_der_cil_receta" id="add_monofocal_intermedia_der_cil_receta">
+                      <label for="add_intermedia_der_cil_receta">CIL</label>
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_intermedia_der_cil_receta" id="add_intermedia_der_cil_receta">
                     </div>
                     <!-- EJE -->
                     <div class="text-center mr-3 quantity1">
-                      <label for="add_monofocal_intermedia_der_eje_receta">EJE</label>
-                      <input class="form-control" type="number" min="-30" max="30" step="1" name="add_monofocal_intermedia_der_eje_receta" id="add_monofocal_intermedia_der_eje_receta">
+                      <label for="add_intermedia_der_eje_receta">EJE</label>
+                      <input class="form-control" type="number" min="-30" max="30" step="1" name="add_intermedia_der_eje_receta" id="add_intermedia_der_eje_receta">
                     </div>
                     <!-- ADICION -->
                     <div class="text-center quantity">
-                      <label for="add_monofocal_intermedia_der_add_receta">ADD</label>
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_intermedia_der_add_receta" id="add_monofocal_intermedia_der_add_receta">
+                      <label for="add_intermedia_der_add_receta">ADD</label>
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_intermedia_der_add_receta" id="add_intermedia_der_add_receta">
                     </div>
                   </div>
 
@@ -149,19 +149,19 @@
                     <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
                     <!-- ESF -->
                     <div class="text-center mr-3 quantity">
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_intermedia_izq_esf_receta" id="add_monofocal_intermedia_izq_esf_receta">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_intermedia_izq_esf_receta" id="add_intermedia_izq_esf_receta">
                     </div>
                     <!-- CIL -->
                     <div class="text-center mr-3 quantity">
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_intermedia_izq_cil_receta" id="add_monofocal_intermedia_izq_cil_receta">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_intermedia_izq_cil_receta" id="add_intermedia_izq_cil_receta">
                     </div>
                     <!-- EJE -->
                     <div class="text-center mr-3 quantity1">
-                      <input class="form-control" type="number" min="-30" max="30" step="1" name="add_monofocal_intermedia_izq_eje_receta" id="add_monofocal_intermedia_izq_eje_receta">
+                      <input class="form-control" type="number" min="-30" max="30" step="1" name="add_intermedia_izq_eje_receta" id="add_intermedia_izq_eje_receta">
                     </div>
                     <!-- ADICION -->
                     <div class="text-center quantity">
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_intermedia_izq_add_receta" id="add_monofocal_intermedia_izq_add_receta">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_intermedia_izq_add_receta" id="add_intermedia_izq_add_receta">
                     </div>
                   </div>
                 </div>
@@ -177,23 +177,23 @@
                     <label class=""><span class="mr-2 mb-4 pb-4">OD</span></label>
                     <!-- ESF -->
                     <div class="text-center mr-3 quantity">
-                      <label for="add_monofocal_cerca_der_esf_receta">ESF</label>
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_cerca_der_esf_receta" id="add_monofocal_cerca_der_esf_receta">
+                      <label for="add_cerca_der_esf_receta">ESF</label>
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_cerca_der_esf_receta" id="add_cerca_der_esf_receta">
                     </div>
                     <!-- CIL -->
                     <div class="text-center mr-3 quantity">
-                      <label for="add_monofocal_cerca_der_cil_receta">CIL</label>
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_cerca_der_cil_receta" id="add_monofocal_cerca_der_cil_receta">
+                      <label for="add_cerca_der_cil_receta">CIL</label>
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_cerca_der_cil_receta" id="add_cerca_der_cil_receta">
                     </div>
                     <!-- EJE -->
                     <div class="text-center mr-3 quantity1">
-                      <label for="add_monofocal_cerca_der_eje_receta">EJE</label>
-                      <input class="form-control" type="number" min="-30" max="30" step="1" name="add_monofocal_cerca_der_eje_receta" id="add_monofocal_cerca_der_eje_receta">
+                      <label for="add_cerca_der_eje_receta">EJE</label>
+                      <input class="form-control" type="number" min="-30" max="30" step="1" name="add_cerca_der_eje_receta" id="add_cerca_der_eje_receta">
                     </div>
                     <!-- ADICION -->
                     <div class="text-center quantity">
-                      <label for="add_monofocal_cerca_der_add_receta">ADD</label>
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_cerca_der_add_receta" id="add_monofocal_cerca_der_add_receta">
+                      <label for="add_cerca_der_add_receta">ADD</label>
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_cerca_der_add_receta" id="add_cerca_der_add_receta">
                     </div>
                   </div>
 
@@ -202,19 +202,19 @@
                     <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
                     <!-- ESF -->
                     <div class="text-center mr-3 quantity">
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_cerca_izq_esf_receta" id="add_monofocal_cerca_izq_esf_receta">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_cerca_izq_esf_receta" id="add_cerca_izq_esf_receta">
                     </div>
                     <!-- CIL -->
                     <div class="text-center mr-3 quantity">
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_cerca_izq_cil_receta" id="add_monofocal_cerca_izq_cil_receta">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_cerca_izq_cil_receta" id="add_cerca_izq_cil_receta">
                     </div>
                     <!-- EJE -->
                     <div class="text-center mr-3 quantity1">
-                      <input class="form-control" type="number" min="-30" max="30" step="1" name="add_monofocal_cerca_izq_eje_receta" id="add_monofocal_cerca_izq_eje_receta">
+                      <input class="form-control" type="number" min="-30" max="30" step="1" name="add_cerca_izq_eje_receta" id="add_cerca_izq_eje_receta">
                     </div>
                     <!-- ADICION -->
                     <div class="text-center quantity">
-                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_monofocal_cerca_izq_add_receta" id="add_monofocal_cerca_izq_add_receta">
+                      <input class="form-control" type="number" min="-30" max="30" step="0.25" name="add_cerca_izq_add_receta" id="add_cerca_izq_add_receta">
                     </div>
                   </div>
                 </div>
