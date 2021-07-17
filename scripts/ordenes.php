@@ -119,59 +119,41 @@
 
         function tipoLenteReceta(){
             if ($('#add_tipo_lente_receta').val() === "Monofocal") {
-                $('#monofocal_receta').fadeIn("slow", "linear").removeClass('hidden');
-                $('#bifocal_receta').addClass('hidden').fadeOut("slow", "linear");
-                $('#multifocal_receta').addClass('hidden').fadeOut("slow", "linear"); 
-                $('#contacto_receta').addClass('hidden').fadeOut("slow", "linear");
+                $('.monofocal_lejos_receta').fadeIn("slow", "linear").removeClass('hidden');
+                $('.monofocal_intermedia_receta').addClass('hidden').fadeOut("slow", "linear");
+                $('.monofocal_cerca_receta').addClass('hidden').fadeOut("slow", "linear"); 
 
                 $('#add_monofocal_receta').fadeIn("slow", "linear").removeClass('hidden');
                 $('#add_bifocal_receta').addClass('hidden').fadeOut("slow", "linear");
                 $('#add_multifocal_receta').addClass('hidden').fadeOut("slow", "linear");
-                $('#add_contacto_receta').addClass('hidden').fadeOut("slow", "linear");
 
                 $("#add_monofocal_receta :input").val('');
             }
             else if ($('#add_tipo_lente_receta').val() === "Bifocal") {
-                $('#monofocal_receta').addClass('hidden').fadeOut("slow", "linear");
-                $("#bifocal_receta :input").val('0');
-                $('#bifocal_receta').fadeIn("slow", "linear").removeClass('hidden');
-                $('#multifocal_receta').addClass('hidden').fadeOut("slow", "linear");
-                $('#contacto_receta').addClass('hidden').fadeOut("slow", "linear");
+                $('.monofocal_lejos_receta').addClass('hidden').fadeOut("slow", "linear");
+                $(".monofocal_intermedia_receta :input").val('0');
+                $('.monofocal_intermedia_receta').fadeIn("slow", "linear").removeClass('hidden');
+                $('.monofocal_cerca_receta').addClass('hidden').fadeOut("slow", "linear");
 
                 $('#add_monofocal_receta').addClass('hidden').fadeOut("slow", "linear");
                 $('#add_bifocal_receta').fadeIn("slow", "linear").removeClass('hidden');
                 $('#add_multifocal_receta').addClass('hidden').fadeOut("slow", "linear");
-                $('#add_contacto_receta').addClass('hidden').fadeOut("slow", "linear");
 
                 $("#add_bifocal_receta :input").val(0);
             }
             else if ($('#add_tipo_lente_receta').val() === "Multifocal") {
-                $('#monofocal_receta').addClass('hidden').fadeOut("slow", "linear");
-                $('#bifocal_receta').addClass('hidden').fadeOut("slow", "linear");
-                $('#multifocal_receta').fadeIn("slow", "linear").removeClass('hidden');
-                $('#contacto_receta').addClass('hidden').fadeOut("slow", "linear");
+                $('.monofocal_lejos_receta').addClass('hidden').fadeOut("slow", "linear");
+                $('.monofocal_intermedia_receta').addClass('hidden').fadeOut("slow", "linear");
+                $('.monofocal_cerca_receta').fadeIn("slow", "linear").removeClass('hidden');
 
                 $('#add_monofocal_receta').addClass('hidden').fadeOut("slow", "linear");
                 $('#add_bifocal_receta').addClass('hidden').fadeOut("slow", "linear");
                 $('#add_multifocal_receta').fadeIn("slow", "linear").removeClass('hidden');
-                $('#add_contacto_receta').addClass('hidden').fadeOut("slow", "linear");
 
                 $("#add_multifocal_receta :input").val(0);
             }
 
-            else if ($('#add_tipo_lente_receta').val() === "Contacto") {
-                $('#monofocal_receta').addClass('hidden').fadeOut("slow", "linear");
-                $('#bifocal_receta').addClass('hidden').fadeOut("slow", "linear");
-                $('#multifocal_receta').addClass('hidden').fadeOut("slow", "linear");
-                $('#contacto_receta').fadeIn("slow", "linear").removeClass('hidden');
-
-                $('#add_monofocal_receta').addClass('hidden').fadeOut("slow", "linear");
-                $('#add_bifocal_receta').addClass('hidden').fadeOut("slow", "linear");
-                $('#add_multifocal_receta').addClass('hidden').fadeOut("slow", "linear");
-                $('#add_contacto_receta').fadeIn("slow", "linear").removeClass('hidden');
-
-                $("#add_contacto_receta :input").val(0);
-            }
+            
         }
 
         
@@ -238,13 +220,90 @@
         var fecha_receta = day + "-" + month + "-" + year;
         nombre_doctor = $('#nombre_doctor').val();
         patologia = $('#add_patologia').val();
-        graduacion_od = $('#add_graduacion_od').val();
-        graduacion_oi = $('#add_graduacion_oi').val();
+
+        // Graduaciones LEJOS
+
+        // Ojo derecho
+        lejos_der_esf_receta = $('#add_lejos_der_esf_receta').val();
+        lejos_der_cil_receta = $('#add_lejos_der_cil_receta').val();
+        lejos_der_eje_receta = $('#add_lejos_der_eje_receta').val();
+        lejos_der_add_receta = $('#add_lejos_der_add_receta').val();
+        // Ojo izquierdo
+        lejos_izq_esf_receta = $('#add_lejos_izq_esf_receta').val();
+        lejos_izq_cil_receta = $('#add_lejos_izq_cil_receta').val();
+        lejos_izq_eje_receta = $('#add_lejos_izq_eje_receta').val();
+        lejos_izq_add_receta = $('#add_lejos_izq_add_receta').val();
+
+        // Graduaciones Intermedia 
+
+        // Ojo derecho
+        intermedia_der_esf_receta = $('#add_intermedia_der_esf_receta').val();
+        intermedia_der_cil_receta = $('#add_intermedia_der_cil_receta').val();
+        intermedia_der_eje_receta = $('#add_intermedia_der_eje_receta').val();
+        intermedia_der_add_receta = $('#add_intermedia_der_add_receta').val();
+        // Ojo izquierdo
+        intermedia_izq_esf_receta = $('#add_intermedia_izq_esf_receta').val();
+        intermedia_izq_cil_receta = $('#add_intermedia_izq_cil_receta').val();
+        intermedia_izq_eje_receta = $('#add_intermedia_izq_eje_receta').val();
+        intermedia_izq_add_receta = $('#add_intermedia_izq_add_receta').val();
+
+        // Graduaciones cerca 
+
+        // Ojo derecho
+        cerca_der_esf_receta = $('#add_cerca_der_esf_receta').val();
+        cerca_der_cil_receta = $('#add_cerca_der_cil_receta').val();
+        cerca_der_eje_receta = $('#add_cerca_der_eje_receta').val();
+        cerca_der_add_receta = $('#add_cerca_der_add_receta').val();
+        // Ojo izquierdo
+        cerca_izq_esf_receta = $('#add_cerca_izq_esf_receta').val();
+        cerca_izq_cil_receta = $('#add_cerca_izq_cil_receta').val();
+        cerca_izq_eje_receta = $('#add_cerca_izq_eje_receta').val();
+        cerca_izq_add_receta = $('#add_cerca_izq_add_receta').val();
+
         $('input[name="doctor"]').val(nombre_doctor);
         $('input[name="fecha_receta"]').val(fecha_receta);
         $('input[name="patologia"]').val(patologia);
-        $('input[name="graduacion_od"]').val(graduacion_od);
-        $('input[name="graduacion_oi"]').val(graduacion_oi);
+
+        //$('input[name="graduacion_od"]').val(graduacion_od);
+        //$('input[name="graduacion_oi"]').val(graduacion_oi);
+
+        // COPIANDO DATOS DE LENTES ------------------------------------------------------------
+
+        // LEJOS RECETA ---------------------------------------------------
+        // Ojo derecho
+        $('input[name="lejos_der_esf_receta"]').val(lejos_der_esf_receta); 
+        $('input[name="lejos_der_cil_receta"]').val(lejos_der_cil_receta);
+        $('input[name="lejos_der_eje_receta"]').val(lejos_der_eje_receta);
+        $('input[name="lejos_der_add_receta"]').val(lejos_der_add_receta);
+        // Ojo izquierda
+        $('input[name="lejos_izq_esf_receta"]').val(lejos_izq_esf_receta); 
+        $('input[name="lejos_izq_cil_receta"]').val(lejos_izq_cil_receta);
+        $('input[name="lejos_izq_eje_receta"]').val(lejos_izq_eje_receta);
+        $('input[name="lejos_izq_add_receta"]').val(lejos_izq_add_receta);
+
+        // INTERMEDIA RECETA ----------------------------------------------
+        // Ojo derecho
+        $('input[name="intermedia_der_esf_receta"]').val(intermedia_der_esf_receta); 
+        $('input[name="intermedia_der_cil_receta"]').val(intermedia_der_cil_receta);
+        $('input[name="intermedia_der_eje_receta"]').val(intermedia_der_eje_receta);
+        $('input[name="intermedia_der_add_receta"]').val(intermedia_der_add_receta);
+        // Ojo izquierda
+        $('input[name="intermedia_izq_esf_receta"]').val(intermedia_izq_esf_receta); 
+        $('input[name="intermedia_izq_cil_receta"]').val(intermedia_izq_cil_receta);
+        $('input[name="intermedia_izq_eje_receta"]').val(intermedia_izq_eje_receta);
+        $('input[name="intermedia_izq_add_receta"]').val(intermedia_izq_add_receta);
+
+        // CERCA RECETA ---------------------------------------------------
+        // Ojo derecho
+        $('input[name="cerca_der_esf_receta"]').val(cerca_der_esf_receta); 
+        $('input[name="cerca_der_cil_receta"]').val(cerca_der_cil_receta);
+        $('input[name="cerca_der_eje_receta"]').val(cerca_der_eje_receta);
+        $('input[name="cerca_der_add_receta"]').val(cerca_der_add_receta);
+        // Ojo izquierda
+        $('input[name="cerca_izq_esf_receta"]').val(cerca_izq_esf_receta); 
+        $('input[name="cerca_izq_cil_receta"]').val(cerca_izq_cil_receta);
+        $('input[name="cerca_izq_eje_receta"]').val(cerca_izq_eje_receta);
+        $('input[name="cerca_izq_add_receta"]').val(cerca_izq_add_receta);
 
         $('#modal_new_order2').modal('hide');
         $('#modal_new_order3').modal('show');

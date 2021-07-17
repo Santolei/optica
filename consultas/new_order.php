@@ -46,8 +46,13 @@ if (!$con) {
 	$doctor = $_POST['doctor'];
 	$fecha_receta = $_POST['fecha_receta'];
 	$patologia = $_POST['patologia'];
-	$graduacion_od = $_POST['graduacion_od'];
-	$graduacion_oi = $_POST['graduacion_oi'];
+	
+	// RECETA LEJOS ---------------------------------------------------
+    // Ojo derecho
+    $monofocal_lejos_der_esf = $_POST['monofocal_lejos_der_esf'];
+    $monofocal_lejos_der_cil = $_POST['monofocal_lejos_der_cil'];
+    $monofocal_lejos_der_eje = $_POST['monofocal_lejos_der_eje'];
+    $monofocal_lejos_der_add = $_POST['monofocal_lejos_der_add'];
 
 	// Datos cristales
 	$tipo_lente = $_POST['tipo_lente'];
