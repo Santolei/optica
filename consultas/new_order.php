@@ -49,10 +49,43 @@ if (!$con) {
 	
 	// RECETA LEJOS ---------------------------------------------------
     // Ojo derecho
-    $monofocal_lejos_der_esf = $_POST['monofocal_lejos_der_esf'];
-    $monofocal_lejos_der_cil = $_POST['monofocal_lejos_der_cil'];
-    $monofocal_lejos_der_eje = $_POST['monofocal_lejos_der_eje'];
-    $monofocal_lejos_der_add = $_POST['monofocal_lejos_der_add'];
+    $lejos_der_esf_receta = $_POST['lejos_der_esf_receta'];
+    $lejos_der_cil_receta = $_POST['lejos_der_cil_receta'];
+    $lejos_der_eje_receta = $_POST['lejos_der_eje_receta'];
+    $lejos_der_add_receta = $_POST['lejos_der_add_receta'];
+
+	// Ojo izquierdo
+    $lejos_izq_esf_receta = $_POST['lejos_izq_esf_receta'];
+    $lejos_izq_cil_receta = $_POST['lejos_izq_cil_receta'];
+    $lejos_izq_eje_receta = $_POST['lejos_izq_eje_receta'];
+    $lejos_izq_add_receta = $_POST['lejos_izq_add_receta'];
+
+    // RECETA INTERMEDIA -----------------------------------------------
+    // Ojo derecho
+    $intermedia_der_esf_receta = $_POST['intermedia_der_esf_receta'];
+    $intermedia_der_cil_receta = $_POST['intermedia_der_cil_receta'];
+    $intermedia_der_eje_receta = $_POST['intermedia_der_eje_receta'];
+    $intermedia_der_add_receta = $_POST['intermedia_der_add_receta'];
+
+	// Ojo izquierdo
+    $intermedia_izq_esf_receta = $_POST['intermedia_izq_esf_receta'];
+    $intermedia_izq_cil_receta = $_POST['intermedia_izq_cil_receta'];
+    $intermedia_izq_eje_receta = $_POST['intermedia_izq_eje_receta'];
+    $intermedia_izq_add_receta = $_POST['intermedia_izq_add_receta'];
+
+    // RECETA CERCA ---------------------------------------------------
+    // Ojo derecho
+    $cerca_der_esf_receta = $_POST['cerca_der_esf_receta'];
+    $cerca_der_cil_receta = $_POST['cerca_der_cil_receta'];
+    $cerca_der_eje_receta = $_POST['cerca_der_eje_receta'];
+    $cerca_der_add_receta = $_POST['cerca_der_add_receta'];
+
+	// Ojo izquierdo
+    $cerca_izq_esf_receta = $_POST['cerca_izq_esf_receta'];
+    $cerca_izq_cil_receta = $_POST['cerca_izq_cil_receta'];
+    $cerca_izq_eje_receta = $_POST['cerca_izq_eje_receta'];
+    $cerca_izq_add_receta = $_POST['cerca_izq_add_receta'];
+
 
 	// Datos cristales
 	$tipo_lente = $_POST['tipo_lente'];
@@ -149,10 +182,10 @@ if (!$con) {
 
 
 		$statement = $con->prepare('
-			INSERT INTO ordenes (id_paciente, vendedor, sucursal, nombre, telefono, dni, obra_social, doctor, fecha_receta, patologia, graduacion_od, graduacion_oi, tipo_lente, material, producto, tratamiento, checkbox_lejos, checkbox_intermedia, checkbox_cerca, marca_armazon, material_armazon, tipo_armazon, dist_interpupilar, altura, cristales_precio, armazon_precio, otros_precio, total, senia, saldo, metodo_pago, fecha_entrega, monofocal_lejos_der_esf, monofocal_lejos_der_cil, monofocal_lejos_der_eje, monofocal_lejos_der_add, monofocal_lejos_izq_esf, monofocal_lejos_izq_cil, monofocal_lejos_izq_eje, monofocal_lejos_izq_add, monofocal_intermedia_der_esf, monofocal_intermedia_der_cil, monofocal_intermedia_der_eje, monofocal_intermedia_der_add, monofocal_intermedia_izq_esf, monofocal_intermedia_izq_cil, monofocal_intermedia_izq_eje, monofocal_intermedia_izq_add, monofocal_cerca_der_esf,
+			INSERT INTO ordenes (id_paciente, vendedor, sucursal, nombre, telefono, dni, obra_social, doctor, fecha_receta, patologia, lejos_der_esf_receta, lejos_der_cil_receta, lejos_der_eje_receta, lejos_der_add_receta, lejos_izq_esf_receta, lejos_izq_cil_receta, lejos_izq_eje_receta, lejos_izq_add_receta, intermedia_der_esf_receta, intermedia_der_cil_receta, intermedia_der_eje_receta, intermedia_der_add_receta, intermedia_izq_esf_receta, intermedia_izq_cil_receta, intermedia_izq_eje_receta, intermedia_izq_add_receta, cerca_der_esf_receta, cerca_der_cil_receta, cerca_der_eje_receta, cerca_der_add_receta, cerca_izq_esf_receta, cerca_izq_cil_receta, cerca_izq_eje_receta, cerca_izq_add_receta, tipo_lente, material, producto, tratamiento, checkbox_lejos, checkbox_intermedia, checkbox_cerca, marca_armazon, material_armazon, tipo_armazon, dist_interpupilar, altura, cristales_precio, armazon_precio, otros_precio, total, senia, saldo, metodo_pago, fecha_entrega, monofocal_lejos_der_esf, monofocal_lejos_der_cil, monofocal_lejos_der_eje, monofocal_lejos_der_add, monofocal_lejos_izq_esf, monofocal_lejos_izq_cil, monofocal_lejos_izq_eje, monofocal_lejos_izq_add, monofocal_intermedia_der_esf, monofocal_intermedia_der_cil, monofocal_intermedia_der_eje, monofocal_intermedia_der_add, monofocal_intermedia_izq_esf, monofocal_intermedia_izq_cil, monofocal_intermedia_izq_eje, monofocal_intermedia_izq_add, monofocal_cerca_der_esf,
 				monofocal_cerca_der_cil, monofocal_cerca_der_eje, monofocal_cerca_der_add, monofocal_cerca_izq_esf, monofocal_cerca_izq_cil, monofocal_cerca_izq_eje, monofocal_cerca_izq_add, trabajo, observaciones, estado
 			) 
-			VALUES(:id_paciente, :vendedor, :sucursal, :nombre, :telefono, :dni, :obra_social, :doctor, :fecha_receta, :patologia, :graduacion_od, :graduacion_oi, :tipo_lente, :material, :producto, :tratamiento, :checkbox_lejos, :checkbox_intermedia, :checkbox_cerca, :marca_armazon, :material_armazon, :tipo_armazon, :dist_interpupilar, :altura, :cristales_precio, :armazon_precio, :otros_precio, :total, :senia, :saldo, :metodo_pago, :fecha_entrega, :monofocal_lejos_der_esf, :monofocal_lejos_der_cil, :monofocal_lejos_der_eje, :monofocal_lejos_der_add, :monofocal_lejos_izq_esf, :monofocal_lejos_izq_cil, :monofocal_lejos_izq_eje, :monofocal_lejos_izq_add, :monofocal_intermedia_der_esf, :monofocal_intermedia_der_cil, :monofocal_intermedia_der_eje, :monofocal_intermedia_der_add, :monofocal_intermedia_izq_esf, :monofocal_intermedia_izq_cil, :monofocal_intermedia_izq_eje, :monofocal_intermedia_izq_add, :monofocal_cerca_der_esf,
+			VALUES(:id_paciente, :vendedor, :sucursal, :nombre, :telefono, :dni, :obra_social, :doctor, :fecha_receta, :patologia, :lejos_der_esf_receta, :lejos_der_cil_receta, :lejos_der_eje_receta, :lejos_der_add_receta, :lejos_izq_esf_receta, :lejos_izq_cil_receta, :lejos_izq_eje_receta, :lejos_izq_add_receta, :intermedia_der_esf_receta, :intermedia_der_cil_receta, :intermedia_der_eje_receta, :intermedia_der_add_receta, :intermedia_izq_esf_receta, :intermedia_izq_cil_receta, :intermedia_izq_eje_receta, :intermedia_izq_add_receta, :cerca_der_esf_receta, :cerca_der_cil_receta, :cerca_der_eje_receta, :cerca_der_add_receta, :cerca_izq_esf_receta, :cerca_izq_cil_receta, :cerca_izq_eje_receta, :cerca_izq_add_receta, :tipo_lente, :material, :producto, :tratamiento, :checkbox_lejos, :checkbox_intermedia, :checkbox_cerca, :marca_armazon, :material_armazon, :tipo_armazon, :dist_interpupilar, :altura, :cristales_precio, :armazon_precio, :otros_precio, :total, :senia, :saldo, :metodo_pago, :fecha_entrega, :monofocal_lejos_der_esf, :monofocal_lejos_der_cil, :monofocal_lejos_der_eje, :monofocal_lejos_der_add, :monofocal_lejos_izq_esf, :monofocal_lejos_izq_cil, :monofocal_lejos_izq_eje, :monofocal_lejos_izq_add, :monofocal_intermedia_der_esf, :monofocal_intermedia_der_cil, :monofocal_intermedia_der_eje, :monofocal_intermedia_der_add, :monofocal_intermedia_izq_esf, :monofocal_intermedia_izq_cil, :monofocal_intermedia_izq_eje, :monofocal_intermedia_izq_add, :monofocal_cerca_der_esf,
 				:monofocal_cerca_der_cil, :monofocal_cerca_der_eje, :monofocal_cerca_der_add, :monofocal_cerca_izq_esf, :monofocal_cerca_izq_cil, :monofocal_cerca_izq_eje, :monofocal_cerca_izq_add, :trabajo, :observaciones, :estado
 			)
 		');
@@ -168,8 +201,30 @@ if (!$con) {
 			':doctor' => $doctor,
 			':fecha_receta' => $fecha_receta,
 			':patologia' => $patologia,
-			':graduacion_od' => $graduacion_od,
-			':graduacion_oi' => $graduacion_oi,
+			':lejos_der_esf_receta' => $lejos_der_esf_receta,
+			':lejos_der_cil_receta' => $lejos_der_cil_receta,
+			':lejos_der_eje_receta' => $lejos_der_eje_receta,
+			':lejos_der_add_receta' => $lejos_der_add_receta,
+			':lejos_izq_esf_receta' => $lejos_izq_esf_receta,
+			':lejos_izq_cil_receta' => $lejos_izq_cil_receta,
+			':lejos_izq_eje_receta' => $lejos_izq_eje_receta,
+			':lejos_izq_add_receta' => $lejos_izq_add_receta,
+			':intermedia_der_esf_receta' => $intermedia_der_esf_receta,
+			':intermedia_der_cil_receta' => $intermedia_der_cil_receta,
+			':intermedia_der_eje_receta' => $intermedia_der_eje_receta,
+			':intermedia_der_add_receta' => $intermedia_der_add_receta,
+			':intermedia_izq_esf_receta' => $intermedia_izq_esf_receta,
+			':intermedia_izq_cil_receta' => $intermedia_izq_cil_receta,
+			':intermedia_izq_eje_receta' => $intermedia_izq_eje_receta,
+			':intermedia_izq_add_receta' => $intermedia_izq_add_receta,
+			':cerca_der_esf_receta' => $cerca_der_esf_receta,
+			':cerca_der_cil_receta' => $cerca_der_cil_receta,
+			':cerca_der_eje_receta' => $cerca_der_eje_receta,
+			':cerca_der_add_receta' => $cerca_der_add_receta,
+			':cerca_izq_esf_receta' => $cerca_izq_esf_receta,
+			':cerca_izq_cil_receta' => $cerca_izq_cil_receta,
+			':cerca_izq_eje_receta' => $cerca_izq_eje_receta,
+			':cerca_izq_add_receta' => $cerca_izq_add_receta,
 			':tipo_lente' => $tipo_lente,
 			':material' => $material,
 			':producto' => $producto,
@@ -235,9 +290,9 @@ if (!$con) {
 	    $bifocal_izq_add = $_POST['bifocal_izq_add'];
 
 		$statement2 = $con->prepare('
-			INSERT INTO ordenes (id_paciente, vendedor, sucursal, nombre, telefono, dni, obra_social, doctor, fecha_receta, patologia, graduacion_od, graduacion_oi, tipo_lente, material, producto, tratamiento, marca_armazon, material_armazon, tipo_armazon, dist_interpupilar, altura, cristales_precio, armazon_precio, otros_precio, total, senia, saldo, metodo_pago, fecha_entrega, bifocal_der_esf, bifocal_der_cil, bifocal_der_eje, bifocal_der_add, bifocal_izq_esf, bifocal_izq_cil, bifocal_izq_eje, bifocal_izq_add, trabajo, observaciones, estado
+			INSERT INTO ordenes (id_paciente, vendedor, sucursal, nombre, telefono, dni, obra_social, doctor, fecha_receta, patologia, lejos_der_esf_receta, lejos_der_cil_receta, lejos_der_eje_receta, lejos_der_add_receta, lejos_izq_esf_receta, lejos_izq_cil_receta, lejos_izq_eje_receta, lejos_izq_add_receta, intermedia_der_esf_receta, intermedia_der_cil_receta, intermedia_der_eje_receta, intermedia_der_add_receta, intermedia_izq_esf_receta, intermedia_izq_cil_receta, intermedia_izq_eje_receta, intermedia_izq_add_receta, cerca_der_esf_receta, cerca_der_cil_receta, cerca_der_eje_receta, cerca_der_add_receta, cerca_izq_esf_receta, cerca_izq_cil_receta, cerca_izq_eje_receta, cerca_izq_add_receta, tipo_lente, material, producto, tratamiento, marca_armazon, material_armazon, tipo_armazon, dist_interpupilar, altura, cristales_precio, armazon_precio, otros_precio, total, senia, saldo, metodo_pago, fecha_entrega, bifocal_der_esf, bifocal_der_cil, bifocal_der_eje, bifocal_der_add, bifocal_izq_esf, bifocal_izq_cil, bifocal_izq_eje, bifocal_izq_add, trabajo, observaciones, estado
 			) 
-			VALUES(:id_paciente, :vendedor, :sucursal, :nombre, :telefono, :dni, :obra_social, :doctor, :fecha_receta, :patologia, :graduacion_od, :graduacion_oi, :tipo_lente, :material, :producto, :tratamiento, :marca_armazon, :material_armazon, :tipo_armazon, :dist_interpupilar, :altura, :cristales_precio, :armazon_precio, :otros_precio, :total, :senia, :saldo, :metodo_pago, :fecha_entrega, :bifocal_der_esf, :bifocal_der_cil, :bifocal_der_eje, :bifocal_der_add, :bifocal_izq_esf, :bifocal_izq_cil, :bifocal_izq_eje, :bifocal_izq_add, :trabajo, :observaciones, :estado
+			VALUES(:id_paciente, :vendedor, :sucursal, :nombre, :telefono, :dni, :obra_social, :doctor, :fecha_receta, :patologia, :lejos_der_esf_receta, :lejos_der_cil_receta, :lejos_der_eje_receta, :lejos_der_add_receta, :lejos_izq_esf_receta, :lejos_izq_cil_receta, :lejos_izq_eje_receta, :lejos_izq_add_receta, :intermedia_der_esf_receta, :intermedia_der_cil_receta, :intermedia_der_eje_receta, :intermedia_der_add_receta, :intermedia_izq_esf_receta, :intermedia_izq_cil_receta, :intermedia_izq_eje_receta, :intermedia_izq_add_receta, :cerca_der_esf_receta, :cerca_der_cil_receta, :cerca_der_eje_receta, :cerca_der_add_receta, :cerca_izq_esf_receta, :cerca_izq_cil_receta, :cerca_izq_eje_receta, :cerca_izq_add_receta, :tipo_lente, :material, :producto, :tratamiento, :marca_armazon, :material_armazon, :tipo_armazon, :dist_interpupilar, :altura, :cristales_precio, :armazon_precio, :otros_precio, :total, :senia, :saldo, :metodo_pago, :fecha_entrega, :bifocal_der_esf, :bifocal_der_cil, :bifocal_der_eje, :bifocal_der_add, :bifocal_izq_esf, :bifocal_izq_cil, :bifocal_izq_eje, :bifocal_izq_add, :trabajo, :observaciones, :estado
 			)
 		');
 
@@ -252,8 +307,30 @@ if (!$con) {
 			':doctor' => $doctor,
 			':fecha_receta' => $fecha_receta,
 			':patologia' => $patologia,
-			':graduacion_od' => $graduacion_od,
-			':graduacion_oi' => $graduacion_oi,
+			':lejos_der_esf_receta' => $lejos_der_esf_receta,
+			':lejos_der_cil_receta' => $lejos_der_cil_receta,
+			':lejos_der_eje_receta' => $lejos_der_eje_receta,
+			':lejos_der_add_receta' => $lejos_der_add_receta,
+			':lejos_izq_esf_receta' => $lejos_izq_esf_receta,
+			':lejos_izq_cil_receta' => $lejos_izq_cil_receta,
+			':lejos_izq_eje_receta' => $lejos_izq_eje_receta,
+			':lejos_izq_add_receta' => $lejos_izq_add_receta,
+			':intermedia_der_esf_receta' => $intermedia_der_esf_receta,
+			':intermedia_der_cil_receta' => $intermedia_der_cil_receta,
+			':intermedia_der_eje_receta' => $intermedia_der_eje_receta,
+			':intermedia_der_add_receta' => $intermedia_der_add_receta,
+			':intermedia_izq_esf_receta' => $intermedia_izq_esf_receta,
+			':intermedia_izq_cil_receta' => $intermedia_izq_cil_receta,
+			':intermedia_izq_eje_receta' => $intermedia_izq_eje_receta,
+			':intermedia_izq_add_receta' => $intermedia_izq_add_receta,
+			':cerca_der_esf_receta' => $cerca_der_esf_receta,
+			':cerca_der_cil_receta' => $cerca_der_cil_receta,
+			':cerca_der_eje_receta' => $cerca_der_eje_receta,
+			':cerca_der_add_receta' => $cerca_der_add_receta,
+			':cerca_izq_esf_receta' => $cerca_izq_esf_receta,
+			':cerca_izq_cil_receta' => $cerca_izq_cil_receta,
+			':cerca_izq_eje_receta' => $cerca_izq_eje_receta,
+			':cerca_izq_add_receta' => $cerca_izq_add_receta,
 			':tipo_lente' => $tipo_lente,
 			':material' => $material,
 			':producto' => $producto,
@@ -300,9 +377,9 @@ if (!$con) {
 	    $multifocal_izq_add = $_POST['multifocal_izq_add'];
 
 		$statement3 = $con->prepare('
-			INSERT INTO ordenes (id_paciente, vendedor, sucursal, nombre, telefono, dni, obra_social, doctor, fecha_receta, patologia, graduacion_od, graduacion_oi, tipo_lente, material, producto, tratamiento, marca_armazon, material_armazon, tipo_armazon, dist_interpupilar, altura, cristales_precio, armazon_precio, otros_precio, total, senia, saldo, metodo_pago, fecha_entrega, multifocal_der_esf, multifocal_der_cil, multifocal_der_eje, multifocal_der_add, multifocal_izq_esf, multifocal_izq_cil, multifocal_izq_eje, multifocal_izq_add, trabajo, observaciones, estado 
+			INSERT INTO ordenes (id_paciente, vendedor, sucursal, nombre, telefono, dni, obra_social, doctor, fecha_receta, patologia, lejos_der_esf_receta, lejos_der_cil_receta, lejos_der_eje_receta, lejos_der_add_receta, lejos_izq_esf_receta, lejos_izq_cil_receta, lejos_izq_eje_receta, lejos_izq_add_receta, intermedia_der_esf_receta, intermedia_der_cil_receta, intermedia_der_eje_receta, intermedia_der_add_receta, intermedia_izq_esf_receta, intermedia_izq_cil_receta, intermedia_izq_eje_receta, intermedia_izq_add_receta, cerca_der_esf_receta, cerca_der_cil_receta, cerca_der_eje_receta, cerca_der_add_receta, cerca_izq_esf_receta, cerca_izq_cil_receta, cerca_izq_eje_receta, cerca_izq_add_receta, tipo_lente, material, producto, tratamiento, marca_armazon, material_armazon, tipo_armazon, dist_interpupilar, altura, cristales_precio, armazon_precio, otros_precio, total, senia, saldo, metodo_pago, fecha_entrega, multifocal_der_esf, multifocal_der_cil, multifocal_der_eje, multifocal_der_add, multifocal_izq_esf, multifocal_izq_cil, multifocal_izq_eje, multifocal_izq_add, trabajo, observaciones, estado 
 			) 
-			VALUES(:id_paciente, :vendedor, :sucursal, :nombre, :telefono, :dni, :obra_social, :doctor, :fecha_receta, :patologia, :graduacion_od, :graduacion_oi, :tipo_lente, :material, :producto, :tratamiento, :marca_armazon, :material_armazon, :tipo_armazon, :dist_interpupilar, :altura, :cristales_precio, :armazon_precio, :otros_precio, :total, :senia, :saldo, :metodo_pago, :fecha_entrega, :multifocal_der_esf, :multifocal_der_cil, :multifocal_der_eje, :multifocal_der_add, :multifocal_izq_esf, :multifocal_izq_cil, :multifocal_izq_eje, :multifocal_izq_add, :trabajo, :observaciones, :estado 
+			VALUES(:id_paciente, :vendedor, :sucursal, :nombre, :telefono, :dni, :obra_social, :doctor, :fecha_receta, :patologia, :lejos_der_esf_receta, :lejos_der_cil_receta, :lejos_der_eje_receta, :lejos_der_add_receta, :lejos_izq_esf_receta, :lejos_izq_cil_receta, :lejos_izq_eje_receta, :lejos_izq_add_receta, :intermedia_der_esf_receta, :intermedia_der_cil_receta, :intermedia_der_eje_receta, :intermedia_der_add_receta, :intermedia_izq_esf_receta, :intermedia_izq_cil_receta, :intermedia_izq_eje_receta, :intermedia_izq_add_receta, :cerca_der_esf_receta, :cerca_der_cil_receta, :cerca_der_eje_receta, :cerca_der_add_receta, :cerca_izq_esf_receta, :cerca_izq_cil_receta, :cerca_izq_eje_receta, :cerca_izq_add_receta, :tipo_lente, :material, :producto, :tratamiento, :marca_armazon, :material_armazon, :tipo_armazon, :dist_interpupilar, :altura, :cristales_precio, :armazon_precio, :otros_precio, :total, :senia, :saldo, :metodo_pago, :fecha_entrega, :multifocal_der_esf, :multifocal_der_cil, :multifocal_der_eje, :multifocal_der_add, :multifocal_izq_esf, :multifocal_izq_cil, :multifocal_izq_eje, :multifocal_izq_add, :trabajo, :observaciones, :estado 
 			)
 		');
 
@@ -317,8 +394,30 @@ if (!$con) {
 			':doctor' => $doctor,
 			':fecha_receta' => $fecha_receta,
 			':patologia' => $patologia,
-			':graduacion_od' => $graduacion_od,
-			':graduacion_oi' => $graduacion_oi,
+			':lejos_der_esf_receta' => $lejos_der_esf_receta,
+			':lejos_der_cil_receta' => $lejos_der_cil_receta,
+			':lejos_der_eje_receta' => $lejos_der_eje_receta,
+			':lejos_der_add_receta' => $lejos_der_add_receta,
+			':lejos_izq_esf_receta' => $lejos_izq_esf_receta,
+			':lejos_izq_cil_receta' => $lejos_izq_cil_receta,
+			':lejos_izq_eje_receta' => $lejos_izq_eje_receta,
+			':lejos_izq_add_receta' => $lejos_izq_add_receta,
+			':intermedia_der_esf_receta' => $intermedia_der_esf_receta,
+			':intermedia_der_cil_receta' => $intermedia_der_cil_receta,
+			':intermedia_der_eje_receta' => $intermedia_der_eje_receta,
+			':intermedia_der_add_receta' => $intermedia_der_add_receta,
+			':intermedia_izq_esf_receta' => $intermedia_izq_esf_receta,
+			':intermedia_izq_cil_receta' => $intermedia_izq_cil_receta,
+			':intermedia_izq_eje_receta' => $intermedia_izq_eje_receta,
+			':intermedia_izq_add_receta' => $intermedia_izq_add_receta,
+			':cerca_der_esf_receta' => $cerca_der_esf_receta,
+			':cerca_der_cil_receta' => $cerca_der_cil_receta,
+			':cerca_der_eje_receta' => $cerca_der_eje_receta,
+			':cerca_der_add_receta' => $cerca_der_add_receta,
+			':cerca_izq_esf_receta' => $cerca_izq_esf_receta,
+			':cerca_izq_cil_receta' => $cerca_izq_cil_receta,
+			':cerca_izq_eje_receta' => $cerca_izq_eje_receta,
+			':cerca_izq_add_receta' => $cerca_izq_add_receta,
 			':tipo_lente' => $tipo_lente,
 			':material' => $material,
 			':producto' => $producto,
