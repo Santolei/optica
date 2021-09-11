@@ -16,8 +16,96 @@
       <div class="modal-body">
         <form id="form-total-senia">
           <!-- row -->
+
           <div class="row">
-            <div class="col-sm-12 col-md-6">
+            <div class="col-sm-12 col-md-3">
+              <div class="form-group">
+                  <label for="add_cristales_precio">Cristales:</label>
+                  <input maxlength="100" class="form-control" type="number" step="any" autocomplete="off" id="add_cristales_precio" required>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-3">
+              <div class="form-group">
+                  <label for="add_cristales_precio">Descuento %:</label>
+                  <input maxlength="100" class="form-control" type="number" step="any" autocomplete="off" id="add_cristales_descuento_porcentaje" required>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-3">
+              <div class="form-group">
+                  <label for="add_cristales_precio">Descuento monto:</label>
+                  <input maxlength="100" class="form-control" type="number" step="any" autocomplete="off" id="add_cristales_descuento_monto" required>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-3">
+              <div class="form-group">
+                  <label for="add_cristales_total">Total:</label>
+                  <input maxlength="100" class="form-control monto" type="number" step="any" autocomplete="off" id="add_cristales_total" required>
+              </div>
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-3">
+              
+              <div class="form-group">
+                  <label for="add_armazon_precio">Armazón:</label>
+                  <input maxlength="100" class="form-control" type="text" step="any" autocomplete="off" id="add_armazon_precio" required>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-3">
+              <div class="form-group">
+                  <label for="add_armazon_precio">Descuento %:</label>
+                  <input maxlength="100" class="form-control" type="text" step="any" autocomplete="off" id="add_armazon_descuento_porcentaje" required>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-3">
+              <div class="form-group">
+                  <label for="add_armazon_precio">Descuento monto:</label>
+                  <input maxlength="100" class="form-control" type="text" step="any" autocomplete="off" id="add_armazon_descuento_monto" required>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-3">
+              <div class="form-group">
+                  <label for="add_armazon_total">Total:</label>
+                  <input maxlength="100" class="form-control monto" type="number" step="any" autocomplete="off" id="add_armazon_total" required>
+              </div>
+            </div>
+
+          </div>
+
+          <hr class="mt-0 mb-3">
+
+          <div class="row">
+            <div class="col-sm-12 col-md-3">
+              <div class="form-group">
+                  <label for="add_otros_precio">Otros:</label>
+                  <input maxlength="100" class="form-control monto" type="text" step="any" autocomplete="off" id="add_otros_precio">
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-3">
+              <div class="form-group">
+                  <label for="add_total">Total:</label>
+                  <input maxlength="100" class="form-control" type="number" step="any" autocomplete="off" id="add_total" required>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-3">
+              <div class="form-group">
+                  <label for="add_senia">Seña:</label>
+                  <input maxlength="100" class="form-control" type="text" step="any" autocomplete="off" id="add_senia" required>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-3">
+              <div class="form-group">
+                  <label for="add_saldo">Saldo:</label>
+                  <input maxlength="100" class="form-control" type="text" autocomplete="off" id="add_saldo" required>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
+          <!--<div class="row">
+            <div class="col-sm-12 col-md-3">
               <div class="form-group">
                   <label for="add_cristales_precio">Cristales:</label>
                   <input maxlength="100" class="form-control monto" type="number" autocomplete="off" id="add_cristales_precio" required>
@@ -32,7 +120,30 @@
               </div>
             </div>
 
-            <div class="col-sm-12 col-md-6">
+            <div class="col-sm-12 col-md-3">
+              <div class="form-group">
+                  <label for="add_cristales_precio">Descuento %:</label>
+                  <input maxlength="100" class="form-control monto" type="number" autocomplete="off" id="add_cristales_descuento_porcentaje" required>
+              </div>
+              <div class="form-group">
+                  <label for="add_armazon_precio">Descuento %:</label>
+                  <input maxlength="100" class="form-control monto" type="text" autocomplete="off" id="add_armazon_descuento_porcentaje" required>
+              </div>
+              
+            </div>
+            <div class="col-sm-12 col-md-3">
+              <div class="form-group">
+                  <label for="add_cristales_precio">Descuento monto:</label>
+                  <input maxlength="100" class="form-control monto" type="number" autocomplete="off" id="add_cristales_descuento_monto" required>
+              </div>
+              <div class="form-group">
+                  <label for="add_armazon_precio">Descuento monto:</label>
+                  <input maxlength="100" class="form-control monto" type="text" autocomplete="off" id="add_armazon_descuento_monto" required>
+              </div>
+              
+            </div>
+
+            <div class="col-sm-12 col-md-3">
               <div class="form-group">
                   <label for="add_total">Total:</label>
                   <input maxlength="100" class="form-control" type="number" autocomplete="off" id="add_total" required>
@@ -46,7 +157,7 @@
                   <input maxlength="100" class="form-control" type="text" autocomplete="off" id="add_saldo" required>
               </div>
             </div>
-          </div>
+          </div> -->
           <div class="row"> 
             <div class="col-sm-12">  
                 <div class="form-group">  

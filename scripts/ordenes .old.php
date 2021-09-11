@@ -610,145 +610,6 @@
         $('#modal_new_order5').modal('show');
     });
 
-    // Función para sumar el total de la orden
-
-    function sumar() {
-      var total = 0;
-      $(".monto").each(function() {
-        if (isNaN(parseFloat($(this).val()))) {
-          total += 0;
-        } else {
-          total += parseFloat($(this).val());
-        }
-      });
-      $('#add_total').val(total);
-    }
-
-    /* --------------------------------------------------------- */
-    /* --------------------------------------------------------- */
-    // PRECIO CRISTALES 
-
-    $('#add_cristales_precio').on('keyup', function(){
-        preciocristal = $('#add_cristales_precio').val();
-        descuento_porcentaje = $('#add_cristales_descuento_porcentaje').val();
-        descuento_monto = $('#add_cristales_descuento_monto').val();
-
-        if(!isNaN(descuento_porcentaje) && !isNaN(descuento_monto)){
-            $('#add_cristales_total').val(preciocristal);
-            sumar();
-        } 
-
-        if(!isNaN(descuento_porcentaje) && (descuento_monto)){
-            total = preciocristal - descuento_monto;
-            $('#add_cristales_total').val(total);
-            sumar();
-        }
-    });
-
-    /* DESCUENTO POR PORCENTAJE */
-    
-    $('#add_cristales_descuento_porcentaje').on('keyup', function(){
-        preciocristal = $('#add_cristales_precio').val();
-        descuento_porcentaje = $('#add_cristales_descuento_porcentaje').val();
-        descuento_monto = $('#add_cristales_descuento_monto').val();
-        
-        monto = parseFloat(preciocristal);
-        descuento = parseFloat(descuento_porcentaje)/100;
-        descuento_monto = monto*descuento
-        total = monto - descuento_monto;
-        $('#add_cristales_descuento_monto').val(Math.round(descuento_monto));
-        $('#add_cristales_total').val(total);
-        sumar();
-    });
-
-    /* DESCUENTO POR MONTO */
-
-    $('#add_cristales_descuento_monto').on('keyup', function(){
-        preciocristal = $('#add_cristales_precio').val();
-        descuento_monto = $('#add_cristales_descuento_monto').val();
-        
-        monto = parseFloat(preciocristal);
-        descuento = parseFloat(descuento_monto);
-        total = monto - descuento;
-        descuento_porcentaje = (descuento*100)/monto;
-        $('#add_cristales_descuento_porcentaje').val(Math.round(descuento_porcentaje, 2));
-        $('#add_cristales_total').val(total);
-        sumar();
-    });
-
-    /* --------------------------------------------------------- */
-    /* --------------------------------------------------------- */
-    // PRECIO ARMAZON
-
-    $('#add_armazon_precio').on('keyup', function(){
-        precioarmazon = $('#add_armazon_precio').val();
-        descuento_porcentaje = $('#add_armazon_descuento_porcentaje').val();
-        descuento_monto = $('#add_armazon_descuento_monto').val();
-
-        if(!isNaN(descuento_porcentaje) && !isNaN(descuento_monto)){
-            $('#add_armazon_total').val(precioarmazon);
-            sumar();
-        } 
-
-        if(!isNaN(descuento_porcentaje) && (descuento_monto)){
-            total = precioarmazon - descuento_monto;
-            $('#add_armazon_total').val(total);
-            sumar();
-        }
-    });
-
-    /* DESCUENTO POR PORCENTAJE */
-    
-    $('#add_armazon_descuento_porcentaje').on('keyup', function(){
-        precioarmazon = $('#add_armazon_precio').val();
-        descuento_porcentaje = $('#add_armazon_descuento_porcentaje').val();
-        descuento_monto = $('#add_armazon_descuento_monto').val();
-        
-        monto = parseFloat(precioarmazon);
-        descuento = parseFloat(descuento_porcentaje)/100;
-        descuento_monto = monto*descuento
-        total = monto - descuento_monto;
-        $('#add_armazon_descuento_monto').val(Math.round(descuento_monto));
-        $('#add_armazon_total').val(total);
-        sumar();
-    });
-
-    /* DESCUENTO POR MONTO */
-
-    $('#add_armazon_descuento_monto').on('keyup', function(){
-        precioarmazon = $('#add_armazon_precio').val();
-        descuento_monto = $('#add_armazon_descuento_monto').val();
-        
-        monto = parseFloat(precioarmazon);
-        descuento = parseFloat(descuento_monto);
-        total = monto - descuento;
-        descuento_porcentaje = (descuento*100)/monto;
-        $('#add_armazon_descuento_porcentaje').val(Math.round(descuento_porcentaje, 2));
-        $('#add_armazon_total').val(total);
-        sumar();
-    });
-
-    /* --------------------------------------------------------- */
-    /* --------------------------------------------------------- */
-
-    $('#add_otros_precio').on('keyup',sumar);
-    
-    // Función para restar la seña y mostrar el saldo
-
-    function restar(){
-        var total = $('#add_total').val();
-        total = parseFloat(total);
-        var senia = $('#add_senia').val();
-        senia = parseFloat(senia);
-        var saldo = total - senia;
-        saldo = parseFloat(saldo);
-       $('#add_saldo').val(saldo);
-    }
-    $('#add_total').on('keyup',restar);
-    $('#add_senia').on('keyup',restar);
-
-    /* Cierro modal */
-
     $('#form-total-senia').on('submit',function(){
         cristales_precio = $('#add_cristales_precio').val();
         armazon_precio = $('#add_armazon_precio').val();
@@ -773,10 +634,57 @@
         // Prevents default submission of the form after clicking on the submit button. 
         return false;  
 
+
     });
 
+    // Función para sumar el total de la orden
 
-    // Guardando
+    function sumar() {
+      var total = 0;
+      $(".monto").each(function() {
+        if (isNaN(parseFloat($(this).val()))) {
+          total += 0;
+        } else {
+          total += parseFloat($(this).val());
+        }
+      });
+      $('#add_total').val(total);
+    }
+    
+    $('#add_cristales_precio').on('keyup',sumar);
+    $('#add_armazon_precio').on('keyup',sumar);
+    $('#add_otros_precio').on('keyup',sumar);
+    
+    // Función para restar la seña y mostrar el saldo
+
+    function restar(){
+        var total = $('#add_total').val();
+        total = parseFloat(total);
+        var senia = $('#add_senia').val();
+        senia = parseFloat(senia);
+        var saldo = total - senia;
+        saldo = parseFloat(saldo);
+       $('#add_saldo').val(saldo);
+    }
+    $('#add_total').on('keyup',restar);
+    $('#add_senia').on('keyup',restar);
+
+//     $('#signupform').submit(function() {
+//     var errors = 0;
+//     $("#signupform :input").map(function(){
+//          if( !$(this).val() ) {
+//               $(this).parents('td').addClass('warning');
+//               errors++;
+//         } else if ($(this).val()) {
+//               $(this).parents('td').removeClass('warning');
+//         }   
+//     });
+//     if(errors > 0){
+//         $('#errorwarn').text("All fields are required");
+//         return false;
+//     }
+//     // do the ajax..    
+// });
 
     $('#new_order').on('submit', function(){
         form = $(this);
