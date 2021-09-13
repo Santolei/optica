@@ -30,12 +30,15 @@ $primaryKey = 'id';
 // The `db` parameter represents the column name in the database, while the `dt`
 // parameter represents the DataTables column identifier. In this case simple
 // indexes
+
 $columns = array(
     array( 'db' => 'id', 'dt' => 0 ),
     array( 'db' => 'nombre', 'dt' => 1 ),
-    array( 'db' => 'fecha_entrega', 'dt' => 2 ),
-    array( 'db' => 'estado', 'dt' => 3 ),
-    array( 'db' => 'id', 'dt' => 4 )
+    array( 'db' => 'dni', 'dt' => 2 ),
+    array( 'db' => 'fecha', 'dt' => 3 ),
+    array( 'db' => 'fecha_entrega', 'dt' => 4 ),
+    array( 'db' => 'estado', 'dt' => 5 ),
+    array( 'db' => 'id', 'dt' => 6 )
 
 );
  

@@ -25,21 +25,33 @@ $(document).ready(function()
         autoFill: true,
         "ajax": "consultas/ordenes_indexjson.php",
         "fnRowCallback": function( nRow, aData, iDisplayIndex ) {
-            var formattedDate = new Date(aData[2]);
+            //fecha
+            var formattedDate = new Date(aData[3]);
             var d = formattedDate.getDate();
             var m =  formattedDate.getMonth();
             m += 1;  // JavaScript months are 0-11
             var y = formattedDate.getFullYear();
-        $('td:eq(2)', nRow).html(d + "-" + m + "-" + y);
+            //fecha entrega
+            var formattedDate2 = new Date(aData[4]);
+            var d2 = formattedDate2.getDate();
+            var m2 =  formattedDate2.getMonth();
+            m2 += 1;  // JavaScript months are 0-11
+            var y2 = formattedDate2.getFullYear();
 
-        $('td:eq(3)', nRow).addClass('text-center estado').html(
-            aData[3]);
+        $('td:eq(3)', nRow).html(d + "/" + m + "/" + y);
+
+
+       
+        $('td:eq(4)', nRow).html(d2 + "/" + m2 + "/" + y2);
 
         //$('td:eq(4)', nRow).addClass('text-center estado').html("<a class='estado_orden' onclick='cambiaIdModal(" + aData[0] + ',' + '"' + aData[3] + '"' + ")'  href='#'" + aData[0] + '">' +
             //'<span class="boton-ver text-center"> Ver Orden' + '</a>');
 
-        $('td:eq(4)', nRow).addClass('text-center estado').html("<a class='estado_orden' onclick='cambiaIdModal(" + aData[0] + ',' + '"' + aData[3] + '"' + ")' data-toggle='modal' data-target='" + '#modal_edit_estado' + aData[0] + "'" + "href='#'" + '>' +
-            '<span class="boton-ver text-center"> Ver Orden' + '</a>');    
+        $('td:eq(6)', nRow).addClass('text-center estado').html("<a class='estado_orden' onclick='cambiaIdModal(" + aData[0] + ',' + '"' + aData[5] + '"' + ")' data-toggle='modal' data-target='" + '#modal_edit_estado' + aData[0] + "'" + "href='#'" + '>' +
+            '<span class="boton-ver text-center"> Ver Orden' + '</a>');
+        // Oculto la columna DNI para que no se vea pero sea funcional
+        $('td:eq(2)', nRow).addClass('hidden');  
+        // Fin ocultamiento 
             
         return nRow;
         },
@@ -50,37 +62,37 @@ $(document).ready(function()
         // aData[5] es el stock y aData[10] es el alerta de stock mínimo
         "createdRow": function( row, aData, dataIndex ) {
             
-            if ( aData[3] == "Entregado" ) {   
+            if ( aData[5] == "Entregado" ) {   
                 $(row).hide();  
                 
             };
-            if ( aData[3] == "Reservado" ) {   
+            if ( aData[5] == "Reservado" ) {   
                 $(row).removeClass('odd');  
                 $(row).removeClass('even');    
                 $(row).addClass('reservado');
             };
-            if ( aData[3] == "En taller" ) {   
+            if ( aData[5] == "En taller" ) {   
                 $(row).removeClass('odd');  
                 $(row).removeClass('even');
                 $(row).addClass("en_taller");
             };
-            if ( aData[3] == "Esperando cristales" ) {   
+            if ( aData[5] == "Esperando cristales" ) {   
                 $(row).removeClass('odd');  
                 $(row).removeClass('even');
                 $(row).addClass("esperando_cristales");
             };
-            if ( aData[3] == "Esperando armazon" ) {   
+            if ( aData[5] == "Esperando armazon" ) {   
                 $(row).removeClass('odd');  
                 $(row).removeClass('even');
                 $(row).addClass("esperando_armazon");
             };
-            if ( aData[3] == "Para entregar (Avisar)") {   
+            if ( aData[5] == "Para entregar (Avisar)") {   
                 $(row).removeClass('odd');  
                 $(row).removeClass('even');
                 $(row).addClass("para_entregar");
             };
 
-            if ( aData[3] == "Para entregar (Avisado)") {   
+            if ( aData[5] == "Para entregar (Avisado)") {   
                 $(row).removeClass('odd');  
                 $(row).removeClass('even');
                 $(row).addClass("para_entregar_avisado");
