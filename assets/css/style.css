@@ -582,6 +582,7 @@ input[type=number]
 
 .quantity input,
 .quantity1 input {
+  width: 74px;
   height: 42px;
   line-height: 1.65;
   float: left;

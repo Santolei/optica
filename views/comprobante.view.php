@@ -42,7 +42,7 @@
             <div class="container-fluid">
                 <!-- Comprobante Cliente 1 -->
                 <div class="row mt-4 mb-4">
-                    <div class="col-sm-4 pl-0 text-center"><p><strong>Fecha de entrega:</strong> <?php echo date('d/m/Y', $fecha_entrega); ?></p></div>
+                    <div class="col-sm-4 pl-0 text-center"><p><strong>Fecha de entrega:</strong> <?php echo $fecha_entrega; ?></p></div>
                     <div class="col-sm-4 text-center"><p><strong>Sucursal:</strong> <?php echo $sucursal; ?></p></div>
                     <div class="col-sm-4 text-center"><p><strong>Trabajo:</strong> <?php echo $trabajo; ?></p></div>
                 </div>
@@ -83,7 +83,7 @@
                     <div class="col-sm-4"><p><strong>Trabajo:</strong> <?php echo $trabajo; ?></p></div>
                 </div>
                 <div class="row mb-3">
-                    <div class="col-sm-4 pl-0"><p><strong>Fecha de entrega:</strong> <?php echo date('d/m/Y', $fecha_entrega); ?></p></div>
+                    <div class="col-sm-4 pl-0"><p><strong>Fecha de entrega:</strong> <?php echo $fecha_entrega; ?></p></div>
 
                     <div class="col-sm-4"><p><strong>Nombre:</strong> <?php echo $nombre; ?></p></div>
 
@@ -122,7 +122,7 @@
                     <div class="col-sm-6 ticket-local-2">
                         <div class=""><p><strong>N° de trabajo:</strong> <?php echo $id_orden; ?></p></div>
                         <div class=""><p><strong>Cliente:</strong> <?php echo $nombre; ?></p></div>
-                        <div class=""><p><strong>Fecha de entrega:</strong> <?php echo date('d/m/Y', $fecha_entrega); ?></p></div>
+                        <div class=""><p><strong>Fecha de entrega:</strong> <?php echo $fecha_entrega; ?></p></div>
                         
                         <div class=""><p><strong>Sucursal:</strong> <?php echo $sucursal ?></p></div>
                         <div class=""><p><strong>Artículo:</strong> <?php echo $producto; ?> </p></div>
@@ -178,11 +178,11 @@
                                     </div>
                                     <!-- CIL -->
                                     <div class="text-center mr-3">
-                                      <input class="form-control" type="text" id="monofocal_lejos_izq_cil" value="<?php echo $monofocal_lejos_izq_add ?>">
+                                      <input class="form-control" type="text" id="monofocal_lejos_izq_cil" value="<?php echo $monofocal_lejos_izq_cil ?>">
                                     </div>
                                     <!-- EJE -->
                                     <div class="text-center mr-3">
-                                      <input class="form-control" type="text" id="monofocal_lejos_izq_eje" value="<?php echo $monofocal_lejos_izq_add ?>">
+                                      <input class="form-control" type="text" id="monofocal_lejos_izq_eje" value="<?php echo $monofocal_lejos_izq_eje ?>">
                                     </div>
                                     <!-- ADICION -->
                                     <div class="text-center">
@@ -226,15 +226,15 @@
                                     <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
                                     <!-- ESF -->
                                     <div class="text-center mr-3">
-                                      <input class="form-control" type="text" id="monofocal_intermedia_izq_esf" value="<?php echo $monofocal_intermedia_izq_add ?>">
+                                      <input class="form-control" type="text" id="monofocal_intermedia_izq_esf" value="<?php echo $monofocal_intermedia_izq_esf ?>">
                                     </div>
                                     <!-- CIL -->
                                     <div class="text-center mr-3">
-                                      <input class="form-control" type="text" id="monofocal_intermedia_izq_cil" value="<?php echo $monofocal_intermedia_izq_add ?>">
+                                      <input class="form-control" type="text" id="monofocal_intermedia_izq_cil" value="<?php echo $monofocal_intermedia_izq_cil ?>">
                                     </div>
                                     <!-- EJE -->
                                     <div class="text-center mr-3">
-                                      <input class="form-control" type="text" id="monofocal_intermedia_izq_eje" value="<?php echo $monofocal_intermedia_izq_add ?>">
+                                      <input class="form-control" type="text" id="monofocal_intermedia_izq_eje" value="<?php echo $monofocal_intermedia_izq_eje ?>">
                                     </div>
                                     <!-- ADICION -->
                                     <div class="text-center">
@@ -275,15 +275,15 @@
                                     <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
                                     <!-- ESF -->
                                     <div class="text-center mr-3">
-                                      <input class="form-control" type="text" id="monofocal_cerca_izq_esf" value="<?php echo $monofocal_cerca_izq_add ?>">
+                                      <input class="form-control" type="text" id="monofocal_cerca_izq_esf" value="<?php echo $monofocal_cerca_izq_esf ?>">
                                     </div>
                                     <!-- CIL -->
                                     <div class="text-center mr-3">
-                                      <input class="form-control" type="text" id="monofocal_cerca_izq_cil" value="<?php echo $monofocal_cerca_izq_add ?>">
+                                      <input class="form-control" type="text" id="monofocal_cerca_izq_cil" value="<?php echo $monofocal_cerca_izq_cil ?>">
                                     </div>
                                     <!-- EJE -->
                                     <div class="text-center mr-3">
-                                      <input class="form-control" type="text" id="monofocal_cerca_izq_eje" value="<?php echo $monofocal_cerca_izq_add ?>">
+                                      <input class="form-control" type="text" id="monofocal_cerca_izq_eje" value="<?php echo $monofocal_cerca_izq_eje ?>">
                                     </div>
                                     <!-- ADICION -->
                                     <div class="text-center">
@@ -325,15 +325,15 @@
                                     <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
                                     <!-- ESF -->
                                     <div class="text-center mr-3">
-                                      <input class="form-control" type="text" id="bifocal_izq_esf" value="<?php echo $bifocal_izq_add ?>">
+                                      <input class="form-control" type="text" id="bifocal_izq_esf" value="<?php echo $bifocal_izq_esf ?>">
                                     </div>
                                     <!-- CIL -->
                                     <div class="text-center mr-3">
-                                      <input class="form-control" type="text" id="bifocal_izq_cil" value="<?php echo $bifocal_izq_add ?>">
+                                      <input class="form-control" type="text" id="bifocal_izq_cil" value="<?php echo $bifocal_izq_cil ?>">
                                     </div>
                                     <!-- EJE -->
                                     <div class="text-center mr-3">
-                                      <input class="form-control" type="text" id="bifocal_izq_eje" value="<?php echo $bifocal_izq_add ?>">
+                                      <input class="form-control" type="text" id="bifocal_izq_eje" value="<?php echo $bifocal_izq_eje ?>">
                                     </div>
                                     <!-- ADICION -->
                                     <div class="text-center">
@@ -373,15 +373,15 @@
                                     <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
                                     <!-- ESF -->
                                     <div class="text-center mr-3">
-                                      <input class="form-control" type="text" id="multifocal_izq_esf" value="<?php echo $multifocal_izq_add ?>">
+                                      <input class="form-control" type="text" id="multifocal_izq_esf" value="<?php echo $multifocal_izq_esf ?>">
                                     </div>
                                     <!-- CIL -->
                                     <div class="text-center mr-3">
-                                      <input class="form-control" type="text" id="multifocal_izq_cil" value="<?php echo $multifocal_izq_add ?>">
+                                      <input class="form-control" type="text" id="multifocal_izq_cil" value="<?php echo $multifocal_izq_cil ?>">
                                     </div>
                                     <!-- EJE -->
                                     <div class="text-center mr-3">
-                                      <input class="form-control" type="text" id="multifocal_izq_eje" value="<?php echo $multifocal_izq_add ?>">
+                                      <input class="form-control" type="text" id="multifocal_izq_eje" value="<?php echo $multifocal_izq_eje ?>">
                                     </div>
                                     <!-- ADICION -->
                                     <div class="text-center">

@@ -17,7 +17,7 @@
 		$sucursal = $ultima_orden[0]['sucursal'];
 		$vendedor = $ultima_orden[0]['vendedor'];
 		$fecha = $ultima_orden[0]['fecha'];
-		$fecha_venta = time( "d-m-Y", strtotime($fecha));
+		$fecha_venta = date( "d-m-Y", strtotime($fecha));
 		$telefono = $ultima_orden[0]['telefono'];
 		$doctor = $ultima_orden[0]['doctor'];
 		$tipo_lente = $ultima_orden[0]['tipo_lente'];
@@ -42,7 +42,7 @@
 		$saldo = $ultima_orden[0]['saldo'];
 		$metodo_pago = $ultima_orden[0]['metodo_pago'];
 		$fecha_ent= $ultima_orden[0]['fecha_entrega'];
-		$fecha_entrega = time( "d-m-Y", strtotime($fecha_ent));
+		$fecha_entrega = date( "d/m/Y", strtotime($fecha_ent));
 		$observaciones = $ultima_orden[0]['observaciones'];
 
 		// Graduaciones

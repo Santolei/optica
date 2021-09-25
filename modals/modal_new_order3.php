@@ -17,7 +17,7 @@
         <form method="POST">
           <!-- row -->
           <div class="row">
-            <div class="form-group col-sm-12 col-md-4">
+            <div class="form-group col-sm-12 col-md-3">
                 <label for="add_tipo_lente">Tipo de lente:</label>
                 <div class="d-flex align-items-center">
                   <select class="form-control" name="add_tipo_lente" id="add_tipo_lente" selected="Seleccionar tipo de lente" required>
@@ -25,7 +25,7 @@
                     <option value="Monofocal">Monofocal</option>
                     <option value="Bifocal">Bifocal</option>
                     <option value="Multifocal">Multifocal</option>
-                    <option value="Multifocal">Contacto</option>
+                    <!--<option value="Contacto">Contacto</option> -->
                   </select>
                 </div>
 
@@ -33,7 +33,7 @@
 
             <!-- // ---------------------------- -->
             <!-- // MONOFOCAL ------------------ -->
-            <div class="col-md-8 hidden" id="add_monofocal">
+            <div class="col-md-9 hidden" id="add_monofocal">
               <!-- // ---------------------------- -->
               <!-- Contenedor de los checckbox con los que vamos a
                    Ocultar o mostrar las distintas graduaciones -->
@@ -217,7 +217,7 @@
 
             <!-- // ---------------------------- -->
             <!-- // BIFOCAL ------------------ -->
-            <div class="col-md-8 hidden" id="add_bifocal">
+            <div class="col-md-7 hidden" id="add_bifocal">
               <div class="d-flex flex-column">
                   <!-- OJO DERECHO -->
                   <div class="form-group d-flex align-items-end mb-2">
@@ -269,7 +269,7 @@
 
             <!-- // ---------------------------- -->
             <!-- // MULTIFOCAL ----------------- -->
-            <div class="col-md-8 hidden" id="add_multifocal">
+            <div class="col-md-7 hidden" id="add_multifocal">
               <div class="d-flex flex-column">
                   <!-- OJO DERECHO -->
                   <div class="form-group d-flex align-items-end mb-2">

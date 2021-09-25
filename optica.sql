@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-09-2021 a las 21:41:43
+-- Tiempo de generación: 24-09-2021 a las 23:24:07
 -- Versión del servidor: 10.4.17-MariaDB
 -- Versión de PHP: 7.3.27
 
@@ -238,21 +238,24 @@ CREATE TABLE `ordenes` (
 --
 
 INSERT INTO `ordenes` (`id`, `id_paciente`, `fecha`, `vendedor`, `sucursal`, `nombre`, `telefono`, `dni`, `obra_social`, `doctor`, `fecha_receta`, `patologia`, `lejos_der_esf_receta`, `lejos_der_cil_receta`, `lejos_der_eje_receta`, `lejos_der_add_receta`, `lejos_izq_esf_receta`, `lejos_izq_cil_receta`, `lejos_izq_eje_receta`, `lejos_izq_add_receta`, `intermedia_der_esf_receta`, `intermedia_der_cil_receta`, `intermedia_der_eje_receta`, `intermedia_der_add_receta`, `intermedia_izq_esf_receta`, `intermedia_izq_cil_receta`, `intermedia_izq_eje_receta`, `intermedia_izq_add_receta`, `cerca_der_esf_receta`, `cerca_der_cil_receta`, `cerca_der_eje_receta`, `cerca_der_add_receta`, `cerca_izq_esf_receta`, `cerca_izq_cil_receta`, `cerca_izq_eje_receta`, `cerca_izq_add_receta`, `tipo_lente`, `material`, `producto`, `tratamiento`, `checkbox_lejos`, `checkbox_intermedia`, `checkbox_cerca`, `marca_armazon`, `material_armazon`, `tipo_armazon`, `dist_interpupilar`, `altura`, `cristales_precio`, `armazon_precio`, `otros_precio`, `total`, `senia`, `saldo`, `metodo_pago`, `fecha_entrega`, `monofocal_lejos_der_esf`, `monofocal_lejos_der_cil`, `monofocal_lejos_der_eje`, `monofocal_lejos_der_add`, `monofocal_lejos_izq_esf`, `monofocal_lejos_izq_cil`, `monofocal_lejos_izq_eje`, `monofocal_lejos_izq_add`, `monofocal_intermedia_der_esf`, `monofocal_intermedia_der_cil`, `monofocal_intermedia_der_eje`, `monofocal_intermedia_der_add`, `monofocal_intermedia_izq_esf`, `monofocal_intermedia_izq_cil`, `monofocal_intermedia_izq_eje`, `monofocal_intermedia_izq_add`, `monofocal_cerca_der_esf`, `monofocal_cerca_der_cil`, `monofocal_cerca_der_eje`, `monofocal_cerca_der_add`, `monofocal_cerca_izq_esf`, `monofocal_cerca_izq_cil`, `monofocal_cerca_izq_eje`, `monofocal_cerca_izq_add`, `bifocal_der_esf`, `bifocal_der_cil`, `bifocal_der_eje`, `bifocal_der_add`, `bifocal_izq_esf`, `bifocal_izq_cil`, `bifocal_izq_eje`, `bifocal_izq_add`, `multifocal_der_esf`, `multifocal_der_cil`, `multifocal_der_eje`, `multifocal_der_add`, `multifocal_izq_esf`, `multifocal_izq_cil`, `multifocal_izq_eje`, `multifocal_izq_add`, `trabajo`, `observaciones`, `estado`) VALUES
-(53, 1, '2021-02-09 20:36:27', '8', 'Plaza', 'Santiago Tolosa', '2664713206 /476453', '34304468', 'Sancor Salud', 'Alvaro Rodriguez', '3-2-2021', 'Astigmatismo', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Monofocal', 'Organico', 'Producto 2', 'Tratamiento 2', 1, 0, 0, 'Marca', 'Material', 'Armazon', '2', '2', 1500, 2500, 300, 4300, 2000, 2300, '0', '2021-02-16 03:00:00', '1', '2', '1', '1', '1', '1', '1', '2', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Calib', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'En taller'),
-(54, 8, '2021-02-09 20:51:43', '10', 'Av. del sol', 'Jose Luis Pereyra', '123123123', '20345333', 'Prueba obra', 'Alvaro Rodriguez', '12-5-2020', 'Astigmatismo', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Bifocal', 'Mineral', 'Prueba producto', 'Tratamiento 2', 0, 0, 0, 'asdad', 'asdasd', 'asdasd', '2', '2', 5000, 2222, 150, 7372, 5000, 2372, '0', '2021-02-16 03:00:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', '1', '1', '1', '1', '1', '1', '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Rep', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'En taller'),
+(53, 1, '2021-02-09 20:36:27', '8', 'Plaza', 'Santiago Tolosa', '2664713206 /476453', '34304468', 'Sancor Salud', 'Alvaro Rodriguez', '3-2-2021', 'Astigmatismo', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Monofocal', 'Organico', 'Producto 2', 'Tratamiento 2', 1, 0, 0, 'Marca', 'Material', 'Armazon', '2', '2', 1500, 2500, 300, 4300, 2000, 2300, '0', '2021-02-16 03:00:00', '1', '2', '1', '1', '1', '1', '1', '2', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Calib', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'Entregado'),
+(54, 8, '2021-02-09 20:51:43', '10', 'Av. del sol', 'Jose Luis Pereyra', '123123123', '20345333', 'Prueba obra', 'Alvaro Rodriguez', '12-5-2020', 'Astigmatismo', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Bifocal', 'Mineral', 'Prueba producto', 'Tratamiento 2', 0, 0, 0, 'asdad', 'asdasd', 'asdasd', '2', '2', 5000, 2222, 150, 7372, 5000, 2372, '0', '2021-02-16 03:00:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', '1', '1', '1', '1', '1', '1', '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Rep', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'Entregado'),
 (55, 9, '2021-02-27 22:58:21', '9', 'Plaza', 'Santiago Tolosa 2', '266475487', '33225544', 'Sancor', 'asdasd', '32-1-2021', 'Astigmatismo', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Bifocal', 'Mineral', 'Producto 3', 'Tratamiento 3', 0, 0, 0, 'asdasd', 'asdasdhg', 'asdasasd', '77', '7', 234234, 234, 234, 234702, 234, 234468, 'Tarj Debito', '2021-02-16 03:00:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', '1', '1', '1', '1', '1', '1', '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Calib', '', 'Entregado'),
 (57, 3, '2021-02-27 23:06:55', '9', 'Plaza', 'Juancito Perez', '123123123', '4545254', 'Sancor', 'asdasdasd', '32-1-2021', 'Astigmatismo', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Monofocal', 'Otros', 'Producto 4', 'Tratamiento 2', 1, 1, 0, 'asdasd', 'asdasd', 'asdasd', '2asd', 'asdd', 123, 33, 60, 216, 200, 16, 'Tarj Credito', '2021-02-16 03:00:00', '1', '1', '1', '1', '1', '1', '1', '1', '2', '2', '2', '2', '2', '2', '2', '2', '', '', '', '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Calib', 'asdasdasdasds', 'Reservado'),
-(58, 1, '2021-02-27 23:09:08', '9', 'Plaza', 'Santiago Tolosa', '2664713206 /476453', '34304468', 'Sancor Salud', '123', '10-2-2021', 'Astigmatismo', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Monofocal', 'Mineral', 'Producto 3', 'Tratamiento 2', 1, 0, 0, 'sdadasd', 'asdasda', 'asdasd', '22', '22', 123, 22, 2, 147, 50, 97, 'Efectivo', '2021-02-22 03:00:00', '1', '1', '1', '1', '1', '1', '1', '1', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Rep', 'asdadsadadasdad', 'Reservado'),
+(58, 1, '2021-02-27 23:09:08', '9', 'Plaza', 'Santiago Tolosa', '2664713206 /476453', '34304468', 'Sancor Salud', '123', '10-2-2021', 'Astigmatismo', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Monofocal', 'Mineral', 'Producto 3', 'Tratamiento 2', 1, 0, 0, 'sdadasd', 'asdasda', 'asdasd', '22', '22', 123, 22, 2, 147, 50, 97, 'Efectivo', '2021-02-22 03:00:00', '1', '1', '1', '1', '1', '1', '1', '1', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Rep', 'asdadsadadasdad', 'Entregado'),
 (59, 8, '2021-02-27 23:19:43', '9', 'Plaza', 'Jose Luis Pereyra', '123123123', '20345333', 'Prueba obra', 'asdasdasd', '32-1-2021', 'Astigmatismo', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Monofocal', 'Mineral', 'Prueba producto', 'Tratamiento 2', 1, 0, 0, 'asdads', 'asdasd', 'asdasd', '2', '2', 123, 23, 33, 179, 79, 100, 'Tarj Debito', '2021-02-21 03:00:00', '1', '11', '1', '1', '1', '1', '1', '1', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Calib', 'asdasdasdasd', 'En taller'),
-(60, 1, '2021-03-03 21:23:04', '8', 'Av. del sol', 'Santiago Tolosa', '2664713206 /476453', '34304468', 'Sancor Salud', 'Alvaro Rodriguez', '12-12-1289', 'Miopia', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Monofocal', 'Mineral', 'Prueba producto', 'Tratamiento 1', 1, 1, 1, 'casdasda', 'asdasd', 'asdasd', '2', '2', 500, 700, 1500, 2700, 1500, 1200, 'Tarj Debito', '2021-03-12 03:00:00', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '12', '2', '2', '2', '2', '2', '3', '3', '3', '3', '3', '3', '3', '3', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Rep', 'Cosas varias por hacer, bla bla bla bla', 'Esperando seña'),
-(61, 10, '2021-03-08 18:15:03', '10', 'Av. del sol', 'Pedro Perez Fernandez', '475445', '12555666', 'Osde', 'Juan perez', '12-12-2020', 'Miopia', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Monofocal', 'Mineral', 'Prueba producto', 'Tratamiento 3', 1, 0, 0, 'Marca', 'Material', 'Armazon', '5', '5', 900, 1500, 500, 2900, 500, 2400, 'Tarj Debito', '2021-03-15 03:00:00', '1', '1', '2', '1', '2', '2', '1', '1', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Trat', 'Lorem ipsum dolor sit Amet Lorem ipsum dolor sit Amet Lorem ipsum dolor sit AmetLorem ipsum dolor sit Amet', 'Esperando cristales'),
+(60, 1, '2021-03-03 21:23:04', '8', 'Av. del sol', 'Santiago Tolosa', '2664713206 /476453', '34304468', 'Sancor Salud', 'Alvaro Rodriguez', '12-12-1289', 'Miopia', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Monofocal', 'Mineral', 'Prueba producto', 'Tratamiento 1', 1, 1, 1, 'casdasda', 'asdasd', 'asdasd', '2', '2', 500, 700, 1500, 2700, 1500, 1200, 'Tarj Debito', '2021-03-12 03:00:00', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '12', '2', '2', '2', '2', '2', '3', '3', '3', '3', '3', '3', '3', '3', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Rep', 'Cosas varias por hacer, bla bla bla bla', 'Entregado'),
+(61, 10, '2021-03-08 18:15:03', '10', 'Av. del sol', 'Pedro Perez Fernandez', '475445', '12555666', 'Osde', 'Juan perez', '12-12-2020', 'Miopia', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Monofocal', 'Mineral', 'Prueba producto', 'Tratamiento 3', 1, 0, 0, 'Marca', 'Material', 'Armazon', '5', '5', 900, 1500, 500, 2900, 500, 2400, 'Tarj Debito', '2021-03-15 03:00:00', '1', '1', '2', '1', '2', '2', '1', '1', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Trat', 'Lorem ipsum dolor sit Amet Lorem ipsum dolor sit Amet Lorem ipsum dolor sit AmetLorem ipsum dolor sit Amet', 'En taller'),
 (62, 8, '2021-03-08 19:17:39', '8', 'Plaza', 'Jose Luis Pereyra', '123123123', '20345333', 'Prueba obra', '12asdasd', '9-3-2021', 'Astigmatismo', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Monofocal', 'Organico', 'Producto 2', 'Tratamiento 2', 1, 0, 0, 'Marca', 'Material', 'Armazon', '5', '5', 500, 1200, 800, 2500, 1000, 1500, 'Efectivo', '2021-03-09 03:00:00', '1', '1', '1', '1', '1', '1', '1', '1', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Calib', 'Prueba de comentarios', 'Para entregar (Avisado)'),
 (63, 1, '2021-03-10 20:20:30', '9', 'Plaza', 'Santiago Tolosa', '2664713206 /476453', '34304468', 'Sancor Salud', 'Nombre Doc', '10-3-2021', 'Miopia', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Multifocal', 'Mineral', 'Producto 3', 'Tratamiento 1', 0, 0, 0, 'marca', 'Material', 'Armazon', '5', '5', 500, 500, 2500, 3500, 1500, 2000, 'Efectivo', '2021-03-17 03:00:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', '1', '-5', '-1', '-1', '1', '1', '1', 'Trat', 'Prueba de comentarios', 'Entregado'),
 (64, 1, '2021-07-07 20:34:22', '9', 'Av. del sol', 'Santiago Tolosa', '2664713206 /476453', '34304468', 'Sancor Salud', 'Alvaro Rodriguez', '28-7-2021', 'Miopia', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Monofocal', 'Organico', 'Producto 2', 'Tratamiento 1', 1, 0, 0, 'Caballo', 'Madera', 'Maderudo', '12', '12', 1200, 500, 250, 1950, 1000, 950, 'Tarj Debito', '2021-07-14 03:00:00', '0.25', '0.75', '1', '0.5', '1', '0.75', '1', '0.25', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Trat', 'El cliente no tiene nariz por lo que se le caen los anteojos', 'Esperando cristales'),
 (65, 4, '2021-07-27 19:12:32', '8', 'Av. del sol', 'Carloncho Tiza', '244658746', '34304456', 'Sancor', 'Alvaro rodriguez', '29-6-2021', 'Astigmatismo', '0.25', '0.25', '1', '0.25', '0.25', '0.25', '1', '0.25', '0.25', '0.25', '1', '0.25', '0.25', '0.25', '1', '0.25', '0.25', '0.25', '1', '0.25', '0.25', '0.25', '0', '0.25', 'Bifocal', 'Organico', 'Producto 2', 'Tratamiento 1', 0, 0, 0, 'asdasdasd', 'asdasd', 'asdasd', '1', '1', 123, 123, 123, 369, 22, 347, 'Tarj Debito', '2021-07-12 03:00:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0.25', '0.25', '1', '0.25', '0.25', '0.25', '1', '0.25', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Trat', 'asdadasdasdas', 'Entregado'),
 (66, 4, '2021-07-27 19:12:32', '8', 'Av. del sol', 'Carloncho Tiza', '244658746', '34304456', 'Sancor', 'Alvaro rodriguez', '29-6-2021', 'Astigmatismo', '0.25', '0.25', '1', '0.25', '0.25', '0.25', '1', '0.25', '0.25', '0.25', '1', '0.25', '0.25', '0.25', '1', '0.25', '0.25', '0.25', '1', '0.25', '0.25', '0.25', '0', '0.25', 'Bifocal', 'Organico', 'Producto 2', 'Tratamiento 1', 0, 0, 0, 'asdasdasd', 'asdasd', 'asdasd', '1', '1', 123, 123, 123, 369, 22, 347, 'Tarj Debito', '2021-07-12 03:00:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0.25', '0.25', '1', '0.25', '0.25', '0.25', '1', '0.25', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Trat', 'asdadasdasdas', 'Entregado'),
 (67, 4, '2021-07-27 19:29:47', '9', 'Plaza', 'Carloncho Tiza', '244658746', '34304456', 'Sancor', 'asdasdasd', '27-7-2021', 'Astigmatismo', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0.25', '0.25', '1', '0.25', '0.25', '0.5', '1', '0.25', 'Monofocal', 'Organico', 'Producto 2', 'Tratamiento 2', 0, 0, 1, 'Cagasd', 'asdasd', 'asdad', '22', '22', 500, 688, 56, 1244, 55, 1189, 'Efectivo', '2021-08-04 03:00:00', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '0.25', '-0.25', '-1', '0.25', '0.25', '0.25', '1', '0.25', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Calib', 'asdasdasdasd', 'Entregado'),
-(68, 4, '2021-07-27 19:32:20', '9', 'Plaza', 'Carloncho Tiza', '244658746', '34304456', 'Sancor', 'Alvaro', '26-7-2021', 'Astigmatismo', '0.25', '0.25', '1', '0.25', '0.25', '0.25', '1', '0.25', '0.25', '0.25', '1', '0.25', '0.25', '0.25', '1', '0.25', '', '', '', '', '', '', '', '', 'Monofocal', 'Organico', 'Producto 2', 'Tratamiento 1', 1, 1, 0, 'asdasd', 'asdasd', 'asdasd', '23', '23', 5000, 3000, 2344, 10344, 5000, 5344, 'Efectivo', '2021-08-04 03:00:00', '0.25', '0.25', '1', '0.25', '0.25', '0.25', '1', '0.25', '0.25', '0.25', '0', '0', '0.25', '0.25', '1', '0.25', '', '', '', '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Calib', 'asdadasdasdasdsa', 'Reservado');
+(68, 4, '2021-07-27 19:32:20', '9', 'Plaza', 'Carloncho Tiza', '244658746', '34304456', 'Sancor', 'Alvaro', '26-7-2021', 'Astigmatismo', '0.25', '0.25', '1', '0.25', '0.25', '0.25', '1', '0.25', '0.25', '0.25', '1', '0.25', '0.25', '0.25', '1', '0.25', '', '', '', '', '', '', '', '', 'Monofocal', 'Organico', 'Producto 2', 'Tratamiento 1', 1, 1, 0, 'asdasd', 'asdasd', 'asdasd', '23', '23', 5000, 3000, 2344, 10344, 5000, 5344, 'Efectivo', '2021-08-04 03:00:00', '0.25', '0.25', '1', '0.25', '0.25', '0.25', '1', '0.25', '0.25', '0.25', '0', '0', '0.25', '0.25', '1', '0.25', '', '', '', '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Calib', 'asdadasdasdasdsa', 'Entregado'),
+(69, 13, '2021-09-24 20:38:15', '7', 'Plaza', 'VERONICA BARALDI', '2664036140', '33115845', 'OSECAC', 'Carlos perez', '22-9-2021', 'Hipermetropia', '2', '2', '1', '0', '1', '', '1', '0', '0', '4', '4', '4', '4', '5', '1', '1', '', '', '', '', '', '', '', '', 'Monofocal', 'Policarbonato', 'Prueba de producto con nombre largo', 'Tratamiento 2', 1, 1, 0, 'Carbon', 'Plastico', 'Prueba armazón', '2mm', '2mm', 500, 1500, 5500, 7250, 2000, 5250, 'Efectivo', '2021-09-30 03:00:00', '0.75', '0.75', '2', '0.75', '0.5', '0.75', '3', '0.75', '0.5', '0.5', '2', '0.5', '0.5', '-0.5', '1', '0.25', '', '', '', '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Calib', 'Prueba de comentario, esto es para testear como funciona todo.', 'Entregado'),
+(72, 9, '2021-09-24 21:13:33', '10', 'Plaza', 'Santiago Tolosa 2', '266475487', '33225544', 'Sancor', 'Pulcini', '28-9-2021', 'Hipermetropia', '0.5', '0.25', '1', '0.25', '0.5', '0.5', '2', '0.5', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Bifocal', 'Policarbonato', 'Prueba de producto con nombre largo', 'BLUE LIGHT', 0, 0, 0, 'Prueba de marca', 'material', 'armazon', '12', '12', 5000, 2500, 455, 7455, 1100, 6355, 'Efectivo', '2021-10-08 03:00:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0.25', '0.25', '1', '0.25', '0.25', '0.25', '1', '-0.25', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Rep', 'Prueba de comentario', 'Esperando cristales'),
+(73, 10, '2021-09-24 21:15:56', '7', 'Av. del sol', 'Pedro Perez Fernandez', '475445', '12555666', 'Osde', 'Pulcini', '21-9-2021', 'Astigmatismo', '0.25', '0.25', '1', '0.5', '0.5', '0.25', '1', '0.25', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Monofocal', 'Organico', 'CRIZAL PREVENCIA', 'TINTE 1', 1, 0, 0, 'Prueba de marca', 'Material', 'Armazon', '12|', '12', 2500, 3500, 500, 6375, 3000, 3375, 'Efectivo', '2021-10-01 03:00:00', '0.25', '0.25', '2', '0.25', '0.25', '0.25', '1', '0.25', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Calib', 'Prueba de comentario y observaciones', 'Reservado');
 
 -- --------------------------------------------------------
 
@@ -279,7 +282,10 @@ INSERT INTO `pacientes` (`id_paciente`, `nombre`, `tel_cel`, `dni`, `obra_social
 (7, 'Cacaroto', '2366451554', '323212312', 'Osde'),
 (8, 'Jose Luis Pereyra', '123123123', '20345333', 'Prueba obra'),
 (9, 'Santiago Tolosa 2', '266475487', '33225544', 'Sancor'),
-(10, 'Pedro Perez Fernandez', '475445', '12555666', 'Osde');
+(10, 'Pedro Perez Fernandez', '475445', '12555666', 'Osde'),
+(13, 'VERONICA BARALDI', '2664036140', '33115845', 'OSECAC'),
+(14, 'MARISA GUZMAN', '2664863307', '11111111', ''),
+(15, 'Paula Baraldi', '2664036207', '29077884', 'Osecac');
 
 -- --------------------------------------------------------
 
@@ -298,7 +304,9 @@ CREATE TABLE `patologias` (
 
 INSERT INTO `patologias` (`id_patologia`, `titulo`) VALUES
 (4, 'Astigmatismo'),
-(7, 'Miopia');
+(7, 'Miopia'),
+(8, 'Hipermetropia'),
+(9, 'Cataratas');
 
 -- --------------------------------------------------------
 
@@ -323,8 +331,8 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id_producto`, `codigo`, `nombre`, `categoria`, `material`, `editar`, `borrar`, `estado`, `modificado`) VALUES
-(1, 1, 'Producto', 'Anteojos', 'Policarbonato', '1', '1', 1, '2020-09-20 21:53:23'),
-(2, 2, 'Producto 2', 'Anteojos', 'Organico', '2', '2', 1, '2020-09-20 21:27:18'),
+(1, 1, 'STOCK', 'Anteojos', 'Mineral', '1', '1', 1, '2021-09-24 17:28:20'),
+(2, 2, 'CRIZAL PREVENCIA', 'Anteojos', 'Organico', '2', '2', 1, '2021-09-24 17:28:36'),
 (5, 3, 'Producto 3', 'Lentes de contacto', 'Mineral', '5', '5', 1, '2020-09-20 21:39:55'),
 (6, 4, 'Producto 4', 'Anteojos', 'Otros', '6', '6', 1, '2020-09-20 21:54:11'),
 (7, 5, 'Prueba producto', 'Anteojos', 'Mineral', '7', '7', 1, '2020-09-20 22:12:27'),
@@ -367,9 +375,9 @@ CREATE TABLE `tratamientos` (
 --
 
 INSERT INTO `tratamientos` (`id_tratamiento`, `titulo`) VALUES
-(11, 'Tratamiento 1'),
-(12, 'Tratamiento 2'),
-(13, 'Tratamiento 3');
+(11, 'AR'),
+(12, 'BLUE LIGHT'),
+(13, 'TINTE 1');
 
 -- --------------------------------------------------------
 
@@ -409,7 +417,7 @@ CREATE TABLE `vendedores` (
 --
 
 INSERT INTO `vendedores` (`id_vendedor`, `nombre`, `password`) VALUES
-(7, 'Vendedor 1', 'ba3253876aed6bc22d4a6ff53d8406c6ad864195ed144ab5c87621b6c233b548baeae6956df346ec8c17f5ea10f35ee3cbc514797ed7ddd3145464e2a0bab413'),
+(7, 'VICTOR', 'ba3253876aed6bc22d4a6ff53d8406c6ad864195ed144ab5c87621b6c233b548baeae6956df346ec8c17f5ea10f35ee3cbc514797ed7ddd3145464e2a0bab413'),
 (8, 'Vendedor 2', 'ba3253876aed6bc22d4a6ff53d8406c6ad864195ed144ab5c87621b6c233b548baeae6956df346ec8c17f5ea10f35ee3cbc514797ed7ddd3145464e2a0bab413'),
 (9, 'Vendedor 3', 'ba3253876aed6bc22d4a6ff53d8406c6ad864195ed144ab5c87621b6c233b548baeae6956df346ec8c17f5ea10f35ee3cbc514797ed7ddd3145464e2a0bab413'),
 (10, 'Vendedor 4', 'ba3253876aed6bc22d4a6ff53d8406c6ad864195ed144ab5c87621b6c233b548baeae6956df346ec8c17f5ea10f35ee3cbc514797ed7ddd3145464e2a0bab413');
@@ -548,19 +556,19 @@ ALTER TABLE `marcas`
 -- AUTO_INCREMENT de la tabla `ordenes`
 --
 ALTER TABLE `ordenes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 
 --
 -- AUTO_INCREMENT de la tabla `pacientes`
 --
 ALTER TABLE `pacientes`
-  MODIFY `id_paciente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_paciente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `patologias`
 --
 ALTER TABLE `patologias`
-  MODIFY `id_patologia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_patologia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
@@ -578,7 +586,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `tratamientos`
 --
 ALTER TABLE `tratamientos`
-  MODIFY `id_tratamiento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_tratamiento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`

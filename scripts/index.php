@@ -62,9 +62,12 @@ $(document).ready(function()
         // aData[5] es el stock y aData[10] es el alerta de stock mínimo
         "createdRow": function( row, aData, dataIndex ) {
             
-            if ( aData[5] == "Entregado" ) {   
+            if ( aData[5] == "Entregado" || aData[5] === "NULL") {   
                 $(row).hide();  
-                
+            };
+
+            if ( aData[5] == "NULL") {   
+                $(row).hide();  
             };
             if ( aData[5] == "Reservado" ) {   
                 $(row).removeClass('odd');  

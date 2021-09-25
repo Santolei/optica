@@ -47,7 +47,7 @@
 <?php include 'views/footer.php' ?>
 
 <?php foreach ($ordenes as $orden): ?>
-      <?php include 'modals/modal_edit_estado_index.php' ?>
+    <?php include 'modals/modal_edit_estado_index.php' ?>
 <?php endforeach ?>
 <!-- SCRIPTS DE INDEX.PHP -->
 <?php include 'scripts/index.php' ?>
