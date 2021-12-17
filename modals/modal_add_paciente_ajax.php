@@ -10,6 +10,10 @@
         <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true" class="white-text fa-2x">&times;</span>
         </button>
+        <br>
+        <div class="col-md-12">
+          <div id="mostrar_dni" class="d-flex flex-column justify-content-center"></div>
+        </div>
       </div>
 
       <!--Body-->

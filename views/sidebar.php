@@ -35,39 +35,27 @@
                         <p>Órdenes</p>
                     </a>
                 </li>
-                
-                <li class="<?php if (isset($active_inventario)){echo $active_inventario;}?>">
-                    <a href="inventario">
-                        <i class="pe-7s-note2"></i>
-                        <p>Lista Productos</p>
+
+                <li class="<?php if (isset($active_pacientes)){echo $active_pacientes;}?>">
+                    <a href="pacientes">
+                        <i class="pe-7s-user-female"></i>
+                        <p>Pacientes</p>
                     </a>
                 </li>
-
                 
 
-                <li class="dropdown 
-                <?php if ((isset($active_pacientes) or isset($active_patologias) or isset($active_tratamientos))): ?>
-                    active
-                <?php endif ?>
-                " >
+                <li class="dropdown" >
                     <a role="button" data-toggle="collapse" href="#dd" aria-expanded="false">
-                        <i class="pe-7s-ribbon"></i>
-                        <p>Bases de datos <span class="caret"></span></p>
+                        <i class="pe-7s-config"></i>
+                        <p>Configuración <span class="caret"></span></p>
                     </a>
-                    <ul id="dd" style="list-style: none;" class="
-                        <?php if (isset($active_pacientes) or isset($active_patologias) or isset($active_tratamientos)): ?>
-                            collapse in
-                        <?php else: ?>
-                            collapse 
-                        <?php endif ?>
-                    ">
-                        <li class="<?php if (isset($active_pacientes)){echo $active_pacientes;}?>">
-                            <a href="pacientes">
-                                <i class="pe-7s-user-female"></i>
-                                <p>Pacientes</p>
+                    <ul id="dd" style="list-style: none;" class="collapse">
+                        <li class="<?php if (isset($active_inventario)){echo $active_inventario;}?>">
+                            <a href="inventario">
+                                <i class="pe-7s-note2"></i>
+                                <p>Lista Productos</p>
                             </a>
                         </li>
-
                         <li class="<?php if (isset($active_patologias)){echo $active_patologias;}?>">
                             <a href="patologias">
                                 <i class="pe-7s-ribbon"></i>
@@ -81,37 +69,30 @@
                                 <p>tratamientos</p>
                             </a>
                         </li>
+
+                        <!-- Muestro esta parte del menu al administrador  -->
+                        <?php if ($usuario_logueado['rol'] != 1): ?>
+                        <?php else: ?>
+                            <li class="<?php if (isset($active_usuarios)){echo $active_usuarios;}?>">
+                                <a href="usuarios">
+                                    <i class="pe-7s-users"></i>
+                                    <p>Usuarios</p>
+                                </a>
+                            </li>    
+                        <?php endif ?>
+
+                        <!-- Muestro esta parte del menu al administrador  -->
+                        <?php if ($usuario_logueado['rol'] != 1): ?>
+                        <?php else: ?>
+                            <li class="<?php if (isset($active_config)){echo $active_config;}?>">
+                                <a href="configuracion">
+                                    <i class="pe-7s-config"></i>
+                                    <p>Backup BD</p>
+                                </a>
+                            </li>  
+                        <?php endif ?>
                     </ul>
                 </li>
-
-
-                
-
-
-                <!-- Muestro esta parte del menu al administrador  -->
-                <?php if ($usuario_logueado['rol'] != 1): ?>
-                <?php else: ?>
-                    <li class="<?php if (isset($active_usuarios)){echo $active_usuarios;}?>">
-                        <a href="usuarios">
-                            <i class="pe-7s-users"></i>
-                            <p>Usuarios</p>
-                        </a>
-                    </li>    
-                <?php endif ?>
-                
-                
-
-                <!-- Muestro esta parte del menu al administrador  -->
-                <?php if ($usuario_logueado['rol'] != 1): ?>
-                <?php else: ?>
-                    <li class="<?php if (isset($active_config)){echo $active_config;}?>">
-                        <a href="configuracion">
-                            <i class="pe-7s-config"></i>
-                            <p>Configuración</p>
-                        </a>
-                    </li>  
-                <?php endif ?>
-
                 
             </ul>
     	</div>

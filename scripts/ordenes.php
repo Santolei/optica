@@ -25,6 +25,33 @@
         } 
     });
 
+    // ---------------------------------------
+    // Busco que no haya ningún DNI similar
+    $('#add_dni').on('keyup', function(){
+        cadena = $('#add_dni').val();
+
+        $.ajax({
+        type: 'POST',
+        url: 'consultas/search_dni.php',
+        data: 'cadena=' + cadena,
+        success: function(respuesta) {
+            // Retraso 1,5s la ejecución de ajax
+            setTimeout(function(){ 
+                //Copiamos el resultado en #mostrar
+                $('#codigo').html(respuesta);
+                if($('#mostrar_dni').html("")) {
+                    $('#mostrar_dni').html(respuesta);
+                }
+            }, 500);
+            // Fin setTimeOut
+           }
+        });
+    });
+
+   
+    // ---------------------------------------
+    // Fin busqueda de DNI
+
     // Agregando paciente por ajax desde el modal de agregar Orden
 
         $('#add_paciente_form').on('submit',function(){

@@ -23,4 +23,31 @@
       });
       $('.dataTables_length').addClass('bs-select');  
     });
+
+    // ---------------------------------------
+    // Busco que no haya ningún DNI similar
+    $('#dni').on('keyup', function(){
+        cadena = $('#dni').val();
+
+        $.ajax({
+        type: 'POST',
+        url: 'consultas/search_dni.php',
+        data: 'cadena=' + cadena,
+        success: function(respuesta) {
+            // Retraso 1,5s la ejecución de ajax
+            setTimeout(function(){ 
+                //Copiamos el resultado en #mostrar
+                $('#codigo').html(respuesta);
+                if($('#mostrar_dni').html("")) {
+                    $('#mostrar_dni').html(respuesta);
+                } 
+            }, 500);
+            // Fin setTimeOut
+           }
+        });
+    });
+
+   
+    // ---------------------------------------
+    // Fin busqueda de DNI
 </script>
