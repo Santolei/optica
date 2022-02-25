@@ -24,10 +24,13 @@ $(document).ready(function()
         "ajax": "consultas/ordenesjson.php",
         "fnRowCallback": function( nRow, aData, iDisplayIndex ) {
         // Genero el boton de editar producto
-        $('td:eq(4)', nRow).addClass('text-center').html('<a href="editar_orden.php?id=' + aData[4] + '">' +
-            '<i class="fa fa-pencil text-center"></i>' + '</a>');
-            $('td:eq(5)', nRow).addClass('text-center').html('<a href="comprobante.php?id_orden=' + aData[5] + '">' +
+        $('td:eq(5)', nRow).addClass('text-center').html('<a href="ver_orden.php?id=' + aData[5] + '">' +
+            '<span class="boton-ver text-center">Ver orden</span>' + '</a>');
+            $('td:eq(6)', nRow).addClass('text-center').html('<a href="comprobante.php?id_orden=' + aData[6] + '">' +
             '<span class="boton-historial text-center">Imprimir <i class="fa fa-print"></i></span>' + '</a>');
+        // Oculto la columna DNI para que no se vea pero sea funcional
+        $('td:eq(2)', nRow).addClass('hidden');  
+        // Fin ocultamiento
         return nRow;
         },
         "language": {

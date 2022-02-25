@@ -11,9 +11,15 @@
             <div class="container-fluid">
                 <div class="row">
                 	<div class="col-md-12 p-0">
-                		<div class="card p-4 mb-4 d-flex flex-column">
-                      <h3 class="m-0 mb-2"><strong>Orden N°: <?php echo $id_orden; ?></strong> </h3>
-                      <h5 class="m-0"><strong>Atendido por:</strong> <?php echo $vendedor['nombre']; ?></h5>
+                		<div class="card p-4 mb-4 d-flex justify-content-between align-items-center">
+                            <div class="d-flex flex-column">
+                                <h3 class="m-0 mb-2"><strong>Orden N°: <?php echo $id_orden; ?></strong> </h3>
+                                <h5 class="m-0"><strong>Atendido por:</strong> <?php echo $vendedor['nombre']; ?></h5>
+                            </div>
+                            
+                            <div>
+                                <a class=" btn btn-primary d-flex align-items-center" href="historial_ordenes.php">Volver <i class="pe-7s-back ml-1" style="font-size:20px; font-weight: bold;"></i></a>
+                            </div>
                 		</div>
                 	</div>	
                 </div>
@@ -27,7 +33,7 @@
                                     <!-- Datos Paciente  -->
 
                                     <div class="col-md-6 grey-background pull-left form-interno">
-                                        <div class="d-flex justify-content-between align-items-center"><h5><strong>Datos Paciente:</strong></h5> <a href="#" class=" boton-editar-orden btn btn-primary d-flex justify-content-center align-items-center" data-toggle="modal" data-target="#modal_edit_new_order">Editar <i class="fa fa-pencil"></i></a>
+                                        <div class="d-flex justify-content-between align-items-center"><h5><strong>Datos Paciente:</strong></h5> <a href="#" class="invisible boton-editar-orden btn btn-primary d-flex justify-content-center align-items-center" data-toggle="modal" data-target="#modal_edit_new_order">Editar <i class="fa fa-pencil"></i></a>
                                         </div>
                                         <div class="row">
                                             <div class="form-group col-md-6">
@@ -67,7 +73,7 @@
                                     <!-- Datos receta  -->
 
                                     <div class="col-md-6 grey-background pull-right form-interno">
-                                        <div class="d-flex justify-content-between align-items-center"><h5><strong>Datos Receta:</strong></h5> <a href="#" class=" boton-editar-orden btn btn-primary d-flex justify-content-center align-items-center" data-toggle="modal" data-target="#modal_edit_new_order2">Editar <i class="fa fa-pencil"></i></a>
+                                        <div class="d-flex justify-content-between align-items-center"><h5><strong>Datos Receta:</strong></h5> <a href="#" class="invisible boton-editar-orden btn btn-primary d-flex justify-content-center align-items-center" data-toggle="modal" data-target="#modal_edit_new_order2">Editar <i class="fa fa-pencil"></i></a>
                                         </div>
                                         <div class="row">
                                             <div class="form-group col-sm-12 col-md-6">
@@ -103,7 +109,7 @@
                                     <!-- Datos cristales -->
 
                                     <div class="col-md-6 grey-background form-interno mt-4">
-                                        <div class="d-flex justify-content-between align-items-center"><h5><strong>Datos Cristales:</strong></h5> <a href="#" class=" boton-editar-orden btn btn-primary d-flex justify-content-center align-items-center" data-toggle="modal" data-target="#modal_edit_new_order3"><i class="fa fa-pencil"></i>Editar </a>
+                                        <div class="d-flex justify-content-between align-items-center"><h5><strong>Datos Cristales:</strong></h5> <a href="#" class="invisible boton-editar-orden btn btn-primary d-flex justify-content-center align-items-center" data-toggle="modal" data-target="#modal_edit_new_order3"><i class="fa fa-pencil"></i>Editar </a>
                                         </div>
 
                                         <div class="row">
@@ -438,7 +444,7 @@
                                     <!-- Datos de Armazon -->
 
                                     <div class="col-md-6 grey-background form-interno pull-right mt-4">
-                                        <div class="d-flex justify-content-between align-items-center"><h5><strong>Datos de armazón:</strong></h5> <a href="#" class=" boton-editar-orden btn btn-primary d-flex justify-content-center align-items-center" data-toggle="modal" data-target="#modal_edit_new_order4"><i class="fa fa-pencil"></i>Editar </a>
+                                        <div class="d-flex justify-content-between align-items-center"><h5><strong>Datos de armazón:</strong></h5> <a href="#" class="invisible boton-editar-orden btn btn-primary d-flex justify-content-center align-items-center" data-toggle="modal" data-target="#modal_edit_new_order4"><i class="fa fa-pencil"></i>Editar </a>
                                         </div>
 
                                         <div class="row">
@@ -470,10 +476,10 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-md-6 grey-background form-interno pull-left mt-4">
+                                    <div class="col-md-6 grey-background form-interno float-right mt-4">
                                         
                                         <input maxlength="100" class="form-control" type="hidden" name="trabajo" id="trabajo"  readonly="readonly" value="<?php echo $orden['trabajo'] ?>">
-                                        <div class="d-flex justify-content-between align-items-center"><h5><strong>Observaciones:</strong></h5> <a href="#" class=" boton-editar-orden btn btn-primary d-flex justify-content-center align-items-center" data-toggle="modal" data-target="#modal_edit_new_order4"><i class="fa fa-pencil"></i>Editar </a>
+                                        <div class="d-flex justify-content-between align-items-center"><h5><strong>Observaciones:</strong></h5> <a href="#" class="invisible boton-editar-orden btn btn-primary d-flex justify-content-center align-items-center" data-toggle="modal" data-target="#modal_edit_new_order4"><i class="fa fa-pencil"></i>Editar </a>
                                         </div>
                                         <div class="row">
                                             <div class="form-group col-sm-12 col-md-4" style="width: 100% !important">
@@ -482,8 +488,8 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-md-6 grey-background form-interno pull-right mt-4">
-                                        <div class="d-flex justify-content-between align-items-center"><h5><strong>Total, seña y saldo:</strong></h5> <a href="#" class=" boton-editar-orden btn btn-primary d-flex justify-content-center align-items-center" data-toggle="modal" data-target="#modal_edit_new_order5"><i class="fa fa-pencil"></i>Editar </a>
+                                    <div class="col-md-6 grey-background form-interno float-rigth mt-4">
+                                        <div class="d-flex justify-content-between align-items-center"><h5><strong>Total, seña y saldo:</strong></h5> <a href="#" class="invisible boton-editar-orden btn btn-primary d-flex justify-content-center align-items-center" data-toggle="modal" data-target="#modal_edit_new_order5"><i class="fa fa-pencil"></i>Editar </a>
                                         </div>
                                         <div class="row">
                                             <div class="form-group col-sm-12 col-md-4">
@@ -528,15 +534,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="mt-4 col-12 d-flex justify-content-center">
-                                            <input value="Guardar" type="submit" class="btn btn-primary btn-2x" id="#btn-submit">
-                                            <!-- <a href="#" class="btn btn-primary btn-2x" id="btn-submit">Guardar</a> -->
-                                        </div>
-                                    </div>
-                                    
-                                </div>
+                                
                             </div>
 
                         </form>

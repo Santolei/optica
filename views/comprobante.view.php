@@ -8,20 +8,6 @@
 
         <div class="content printable" style="padding-top: 15px;">
             <div class="header-comprobante d-flex justify-content-between align-items-center pb-4 mb-4">
-                <!-- <div class="info-comprobante">
-                    <p><strong>Paciente:</strong> <?php echo $nombre; ?></p> 
-                    <p><strong>N° de trabajo:</strong> <?php echo $id_orden; ?></p>
-                    
-                </div>
-                <div class="info-comprobante">
-                    <img src="assets/img/Logo1chico.png" alt="" style="float: left;">
-                    <div style="float: right;" class="ml-3">
-                        <p><strong>Óptica-Foto El Poeta</strong></p>
-                        <p>Juan de Videla 79 - Merlo, San Luis</p>
-                        <p>Tel: (02656) 475710 / 475728</p>
-                    </div>
-                </div> -->
-
                 <div class="logo-comprobante">
                     <img src="assets/img/Logo2.png" alt="logo">
                 </div>
@@ -34,19 +20,30 @@
                 <div class="info-comprobante">
                     <div style="float: right;" class="ml-3">
                         <p><strong>Óptica-Foto El Poeta</strong></p>
-                        <p>Juan de Videla 79 - Merlo, San Luis</p>
-                        <p>Tel: (02656) 475710 / 475728</p>
+                        <!-- Cambio datos dependiendo de la sucursal -->
+                        <?php if ($sucursal === "Av. del sol"): ?>
+                            <p>Av. del Sol 314 - Merlo, San Luis</p>
+                            <p>Tel: (02656) 474888</p>
+                        <?php else: ?>
+                            <p>Juan de Videla 79 - Merlo, San Luis</p>
+                            <p>Tel: (02656) 475710 / 475728</p>
+                        <?php endif ?>
+                        
                     </div>
                 </div>
             </div>
             <div class="container-fluid">
                 <!-- Comprobante Cliente 1 -->
-                <div class="row mt-4 mb-4">
-                    <div class="col-sm-4 pl-0 text-center"><p><strong>Fecha de entrega:</strong> <?php echo $fecha_entrega; ?></p></div>
-                    <div class="col-sm-4 text-center"><p><strong>Sucursal:</strong> <?php echo $sucursal; ?></p></div>
+                <div class="row mb-1">
+                    <div class="pl-0 col-sm-4"><p class="mb-1"><strong>Nombre:</strong> <?php echo $nombre; ?></p></div>
+                    <div class="col-sm-4"><p class="mb-1"><strong>Fecha recepción:</strong> <?php echo $fecha_venta; ?></p></div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-sm-4 pl-0"><p><strong>Fecha de entrega:</strong> <?php echo $fecha_entrega; ?></p></div>
+                    <div class="col-sm-4"><p><strong>Sucursal:</strong> <?php echo $sucursal; ?></p></div>
                     <div class="col-sm-4 text-center"><p><strong>Trabajo:</strong> <?php echo $trabajo; ?></p></div>
                 </div>
-                <div class="row bordeada p-4 mb-3">
+                <div class="row bordeada p-4 mb-2">
                     
                     <div class="col-sm-6 ticket-cliente-1 mr-0 pl-0 pr-2">
                         <!-- Linea con input text -->
@@ -77,10 +74,11 @@
 
                 <!-- Comprobante local 2 -->
                 <div class="row">
-                    <div class="col-sm-4 pl-0"><p><strong>N° de trabajo:</strong> <?php echo $id_orden; ?>
+                    <div class="col-sm-3 pl-0"><p><strong>Recepción:</strong> <?php echo $fecha_venta; ?></p></div>
+                    <div class="col-sm-3"><p><strong>N° de trabajo:</strong> <?php echo $id_orden; ?>
                 </p></div>
-                    <div class="col-sm-4"><p><strong>Sucursal:</strong> <?php echo $sucursal; ?></p></div>
-                    <div class="col-sm-4"><p><strong>Trabajo:</strong> <?php echo $trabajo; ?></p></div>
+                    <div class="col-sm-3"><p><strong>Sucursal:</strong> <?php echo $sucursal; ?></p></div>
+                    <div class="col-sm-3"><p><strong>Trabajo:</strong> <?php echo $trabajo; ?></p></div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-sm-4 pl-0"><p><strong>Fecha de entrega:</strong> <?php echo $fecha_entrega; ?></p></div>
@@ -120,21 +118,24 @@
                 <!-- Comprobante local 2 -->
                 <div class="row">
                     <div class="col-sm-6 ticket-local-2">
-                        <div class=""><p><strong>N° de trabajo:</strong> <?php echo $id_orden; ?></p></div>
-                        <div class=""><p><strong>Cliente:</strong> <?php echo $nombre; ?></p></div>
-                        <div class=""><p><strong>Fecha de entrega:</strong> <?php echo $fecha_entrega; ?></p></div>
-                        
-                        <div class=""><p><strong>Sucursal:</strong> <?php echo $sucursal ?></p></div>
-                        <div class=""><p><strong>Artículo:</strong> <?php echo $producto; ?> </p></div>
-                        <div class=""><p><strong>Tratamientos:</strong> <?php echo $tratamiento; ?> </p></div>
-                        <div class=""><p><strong><u>Armazón</u>:</strong></p></div>
-                        <div class="armazon-wrapper pl-4" style="border-left: 2px solid #333;">
-                            <div class=""><p><strong>Marca:</strong> <?php echo $armazon; ?></p></div>
-                            <div class=""><p><strong>Tipo:</strong> <?php echo $tipo_armazon; ?></p></div>
-                            <div class=""><p><strong>Material:</strong> <?php echo $material_armazon; ?></p></div>
+                        <div class="d-flex justify-content-between">
+                            <p class="mb-1"><strong>N° de trabajo:</strong> <?php echo $id_orden; ?></p>
+                            <p class="mb-1"><strong>Fecha recepción:</strong> <?php echo $fecha_venta; ?></p>
                         </div>
-
-                        <!--<div class=""><p><strong>Armazón:</strong> <?php echo ($armazon . " - " . $tipo_armazon . " - " . $material_armazon)  ?> </p></div> -->
+                        <div><p class="mb-1"><strong>Cliente:</strong> <?php echo $nombre; ?></p></div>
+                        <div><p class="mb-1"><strong>Fecha de entrega:</strong> <?php echo $fecha_entrega; ?></p></div>
+                        
+                        <div><p class="mb-1"><strong>Sucursal:</strong> <?php echo $sucursal ?></p></div>
+                        <div><p class="mb-1"><strong>Artículo:</strong> <?php echo $producto; ?> </p></div>
+                        <div><p class="mb-1"><strong>Tratamientos:</strong> <?php echo $tratamiento; ?> </p></div>
+                        <div><p class="mb-1"><strong><u>Armazón</u>:</strong></p></div>
+                        <div class="armazon-wrapper pl-4" style="border-left: 2px solid #333;">
+                            <div><p class="mb-1"><strong>Marca:</strong> <?php echo $armazon; ?></p></div>
+                            <div><p class="mb-1"><strong>Tipo:</strong> <?php echo $tipo_armazon; ?></p></div>
+                            <div><p class="mb-1"><strong>Material:</strong> <?php echo $material_armazon; ?></p></div>
+                            <div><p class="mb-1"><strong>Distancia:</strong> <?php echo $distancia; ?></p></div>
+                            <div><p class="mb-1"><strong>Altura:</strong> <?php echo $altura; ?></p></div>
+                        </div>
                     </div>
 
                     <div class="col-sm-6">
@@ -142,7 +143,7 @@
                         <div class="d-flex flex-column">
                         <?php if ($tipo_lente === "Monofocal"): ?>
                             <?php if ($checkbox_lejos === "1"): ?>
-                                <p class="mt-0">Monofocal Lejos</p>
+                                <p class="mt-0 text-center">Monofocal Lejos</p>
                                 <!-- Si tiene el checkbox de Lejos: -->  
                                 <!-- OJO DERECHO -->
                                 <div class="form-group d-flex align-items-end mb-2">

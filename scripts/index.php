@@ -21,7 +21,7 @@ $(document).ready(function()
         "pageLength": 350,
         "bFilter": true,
         "bLengthChange": false,
-        "order": [[ 2, "asc" ]],
+        "order": [[ 0, "desc" ]],
         autoFill: true,
         "ajax": "consultas/ordenes_indexjson.php",
         "fnRowCallback": function( nRow, aData, iDisplayIndex ) {
@@ -51,7 +51,7 @@ $(document).ready(function()
             '<span class="boton-ver text-center"> Ver Orden' + '</a>');
         // Oculto la columna DNI para que no se vea pero sea funcional
         $('td:eq(2)', nRow).addClass('hidden');  
-        // Fin ocultamiento 
+        // Fin ocultamiento
             
         return nRow;
         },

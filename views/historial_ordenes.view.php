@@ -20,6 +20,7 @@
                                         <thead class="tabla-thead white-text">
                                             <th>Orden</th>
                                             <th>Nombre</th>
+                                            <th class="hidden">DNI</th>
                                             <th>Sucursal</th>
                                             <th>Fecha</th>
                                             <th class="text-center">Editar</th>

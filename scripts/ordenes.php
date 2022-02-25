@@ -616,7 +616,9 @@
         $('#modal_new_order4').modal('show');
     });
 
-    $('#datos_armazon').on('click', function(){
+    $('#datos_armazon_form').on('submit', function(){
+
+
         marca = $('#add_marca').val();
         material_armazon = $('#add_material_armazon').val();
         tipo_armazon = $('#add_tipo_armazon').val();
@@ -635,6 +637,7 @@
 
         $('#modal_new_order4').modal('hide');
         $('#modal_new_order5').modal('show');
+        return false;
     });
 
     // Función para sumar el total de la orden

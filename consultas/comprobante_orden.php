@@ -17,7 +17,7 @@
 		$sucursal = $ultima_orden[0]['sucursal'];
 		$vendedor = $ultima_orden[0]['vendedor'];
 		$fecha = $ultima_orden[0]['fecha'];
-		$fecha_venta = date( "d-m-Y", strtotime($fecha));
+		$fecha_venta = date( "d/m/Y", strtotime($fecha));
 		$telefono = $ultima_orden[0]['telefono'];
 		$doctor = $ultima_orden[0]['doctor'];
 		$tipo_lente = $ultima_orden[0]['tipo_lente'];
@@ -36,6 +36,8 @@
 		$tratamiento = $ultima_orden[0]['tratamiento'];
 		$material_armazon = $ultima_orden[0]['material_armazon'];
 		$tipo_armazon = $ultima_orden[0]['tipo_armazon'];
+		$altura = $ultima_orden[0]['altura'];
+		$distancia = $ultima_orden[0]['dist_interpupilar'];
 		$trabajo = $ultima_orden[0]['trabajo'];
 		$total = $ultima_orden[0]['total'];
 		$senia = $ultima_orden[0]['senia'];

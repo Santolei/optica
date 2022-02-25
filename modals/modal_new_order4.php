@@ -14,7 +14,7 @@
 
       <!--Body-->
       <div class="modal-body">
-        <form method="POST">
+        <form id="datos_armazon_form">
           <!-- row -->
           <div class="row">
             <div class="form-group col-sm-12 col-md-6">
@@ -36,12 +36,12 @@
             </div>
             <div class="form-group col-sm-6 col-md-3">
                 <label for="add_distancia_interpupilar">Dist Interpupilar:</label>
-                <input maxlength="100" class="form-control" type="text" autocomplete="off" id="add_distancia_interpupilar">
+                <input maxlength="100" class="form-control" type="text" autocomplete="off" id="add_distancia_interpupilar" required>
             </div>
 
             <div class="form-group col-sm-6 col-md-3">
                 <label for="add_altura">Altura:</label>
-                <input maxlength="100" class="form-control" type="text" autocomplete="off" id="add_altura">
+                <input maxlength="100" class="form-control" type="text" autocomplete="off" id="add_altura" required>
             </div>
           </div>
           <div class="row">
@@ -60,12 +60,14 @@
                 <textarea maxlength="200" rows="5" class="form-control" autocomplete="off" id="add_observaciones"></textarea>
             </div>
           </div>
+
+          <div class="modal-footer justify-content-center">
+            <button class="btn info-color-dark" type="submit" id="datos_armazon">Siguiente <i class="fa fa-arrow-right"></i></button>
+            <a class="btn btn-outline-info waves-effect" data-dismiss="modal">Salir</a>
+          </div>
         </form>
           <!--Footer-->
-        <div class="modal-footer justify-content-center">
-          <button class="btn info-color-dark" type="submit" id="datos_armazon">Siguiente <i class="fa fa-arrow-right"></i></button>
-          <a class="btn btn-outline-info waves-effect" data-dismiss="modal">Salir</a>
-        </div>
+        
         
       </div>
 

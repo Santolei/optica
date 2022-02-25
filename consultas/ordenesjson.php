@@ -33,10 +33,11 @@ $primaryKey = 'id';
 $columns = array(
     array( 'db' => 'id', 'dt' => 0 ),
     array( 'db' => 'nombre', 'dt' => 1 ),
-    array( 'db' => 'sucursal', 'dt' => 2 ),
-    array( 'db' => 'fecha', 'dt' => 3 ),
-    array( 'db' => 'id', 'dt' => 4 ),
-    array( 'db' => 'id', 'dt' => 5 )
+    array( 'db' => 'dni', 'dt' => 2 ),
+    array( 'db' => 'sucursal', 'dt' => 3 ),
+    array( 'db' => 'fecha', 'dt' => 4 ),
+    array( 'db' => 'id', 'dt' => 5 ),
+    array( 'db' => 'id', 'dt' => 6 )
 );
  
 

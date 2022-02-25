@@ -23,5 +23,5 @@ $result = $con->PREPARE("
 $result->execute();
 $vendedor = $result->fetch();
 
-require 'views/editar_orden.view.php';
+require 'views/ver_orden.view.php';
 ?>
