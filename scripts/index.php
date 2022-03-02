@@ -123,5 +123,30 @@ $(document).ready(function()
             console.log('funciona');
         }
     }
+
+    // CAMBIO DE SEÑA
+    // cuando de click en el botón de guardar cambiaré los datos del modal
+
+    $('.form-senia').on('submit', function(){
+        var senia = $(this).find('#senia').val();
+        var total = $(this).find('#total').val();
+        var saldo = total - senia;
+        var form = $(this);
+        console.log(form);
+            $.ajax({
+                url: form.attr('action'),
+                method: form.attr('method'),
+                data: form.serialize(),
+                success: function(){
+
+                }
+            });
+             $(this).parents().modal('hide');
+             $(this).parents().find('.senia').text('$' + senia);
+             $(this).parents().find('.saldo').text('$' + saldo);
+
+            // Prevents default submission of the form after clicking on the submit button. 
+             return false; 
+    });
    
 </script>

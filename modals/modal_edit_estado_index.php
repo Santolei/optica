@@ -45,14 +45,17 @@
                 </div>
 
                 <div class="d-flex justify-content-between" style="border-bottom: 2px solid #444">
-                  <p class="mb-1"><strong>Seña:</strong></p> <p class="mb-1"><strong>$<?php echo $orden['senia'] ?></strong></p>
+                  <p class="mb-1"><strong>Seña:</strong></p>  <p class="mb-1"><strong class="senia">$<?php echo $orden['senia'] ?></strong></p>
                 </div> 
 
                 <div class="d-flex justify-content-between mt-2">
-                  <p class="mb-2"><strong>Saldo:</strong></p> <p><strong style="color: #00a598">$<?php echo $orden['saldo'] ?></strong></p>
+                  <p class="mb-2"><strong>Saldo:</strong></p> <p><strong class="saldo" style="color: #00a598">$<?php echo $orden['saldo'] ?></strong></p>
                 </div> 
+
               </div>
             </div>
+            <div class="row text-center"><a data-toggle="modal" data-target="#modal_edit_senia_index<?php echo $orden['id'] ?>" class="boton-ver" href="#"> Modificar seña</a></div>
+              
 
             <hr>
 
