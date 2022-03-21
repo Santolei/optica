@@ -92,15 +92,185 @@
                                                 <label for="patologia">Patología:</label>
                                                 <input maxlength="100" class="form-control" type="text" name="patologia" id="patologia" autocomplete="off" required readonly="readonly" value="<?php echo $orden['patologia'] ?>">
                                             </div>
-                                
-                                            <div class="form-group col-sm-12 col-md-3">
-                                                <label for="graduacion">Graduación OD:</label>
-                                                <input maxlength="100" class="form-control" type="number" name="graduacion_od" id="graduacion_od" autocomplete="off" required readonly="readonly" value="<?php echo $orden['graduacion_od'] ?>">
-                                            </div>
-                                            <div class="form-group col-sm-12 col-md-3">
-                                                <label for="graduacion">Graduación OI:</label>
-                                                <input maxlength="100" class="form-control" type="number" name="graduacion_oi" id="graduacion_oi" autocomplete="off" required readonly="readonly" value="<?php echo $orden['graduacion_oi'] ?>">
-                                            </div>
+                                            <!-- ---------------- -->
+                                            <!-- Comienzo cambios -->
+
+                                            <!-- Lejos -->
+
+                                            <?php if ($orden['lejos_der_esf_receta'] or $orden['lejos_izq_esf_receta'])  : ?>
+                                               <div class="align-items-end col-md-12 monofocal_lejos mb-3">
+                                                <div class="form-group col-md-2 mb-0">
+                                                  <h5 class="mb-3"><strong>Lejos:</strong></h5>
+                                                </div>
+                                                <div class="form-group col-md-7 d-flex align-items-end mb-0">
+                                                  <label class=""><span class="mr-2 mb-4 pb-4">OD</span></label>
+                                                  <!-- ESF -->
+                                                  <div class="text-center mr-3">
+                                                    <label for="lejos_der_esf">ESF</label>
+                                                    <input class="form-control" type="text" name="lejos_der_esf_receta" id="lejos_der_esf_receta" readonly="readonly" value="<?php echo $orden['lejos_der_esf_receta'] ?>">
+                                                  </div>
+                                                  <!-- CIL -->
+                                                  <div class="text-center mr-3">
+                                                    <label for="lejos_der_cil_receta">CIL</label>
+                                                    <input class="form-control" type="text" name="lejos_der_cil_receta" id="lejos_der_cil_receta" readonly="readonly" value="<?php echo $orden['lejos_der_cil_receta'] ?>">
+                                                  </div>
+                                                  <!-- EJE -->
+                                                  <div class="text-center mr-3">
+                                                    <label for="monofocal_lejos_der_eje">EJE</label>
+                                                    <input class="form-control" type="text" name="lejos_der_eje_receta" id="lejos_der_eje_receta" readonly="readonly" value="<?php echo $orden['lejos_der_eje_receta'] ?>">
+                                                  </div>
+                                                  <!-- ADICION -->
+                                                  <div class="text-center">
+                                                    <label for="monofocal_lejos_der_add_receta">ADD</label>
+                                                    <input class="form-control" type="text" name="lejos_der_add_receta" id="lejos_der_add_receta" readonly="readonly" value="<?php echo $orden['lejos_der_add_receta'] ?>">
+                                                  </div>
+                                                </div>
+                                              </div>
+
+                                            <div class="align-items-end col-md-12 monofocal_lejos mb-3">
+                                                <div class="form-group col-md-2 mb-0">
+                                                  <h5 class="mb-3 hidden"><strong>Lejos:</strong></h5>
+                                                </div>
+                                                <div class="form-group col-md-7 d-flex align-items-end mb-0">
+                                                  <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
+                                                  <!-- ESF -->
+                                                  <div class="text-center mr-3">
+                                                    <input class="form-control" type="text" name="lejos_izq_esf_receta" id="lejos_izq_esf_receta" readonly="readonly" value="<?php echo $orden['lejos_izq_esf_receta'] ?>">
+                                                  </div>
+                                                  <!-- CIL -->
+                                                  <div class="text-center mr-3">
+                                                    <input class="form-control" type="text" name="lejos_izq_cil_receta" id="lejos_izq_cil_receta" readonly="readonly" value="<?php echo $orden['lejos_izq_cil_receta'] ?>">
+                                                  </div>
+                                                  <!-- EJE -->
+                                                  <div class="text-center mr-3">
+                                                    <input class="form-control" type="text" name="lejos_izq_eje_receta" id="lejos_izq_eje_receta" readonly="readonly"  value="<?php echo $orden['lejos_izq_eje_receta'] ?>">
+                                                  </div>
+                                                  <!-- ADICION -->
+                                                  <div class="text-center">
+                                                    <input class="form-control" type="text" name="lejos_izq_add_receta" id="lejos_izq_add_receta" readonly="readonly"  value="<?php echo $orden['lejos_izq_add_receta'] ?>">
+                                                  </div>
+                                                </div>
+                                              </div> 
+                                            <?php endif ?>
+                                              
+
+                                              <hr>
+                                            <?php if ($orden['intermedia_der_esf_receta'] or $orden['intermedia_izq_esf_receta']): ?>
+                                                <!-- InterMedia -->
+                                              <div class="align-items-end col-md-12 monofocal_intermedia mb-3">
+                                                <div class="form-group col-md-2 mb-0">
+                                                  <h5 class="mb-3"><strong>Intermedia:</strong></h5>
+                                                </div>
+                                                <div class="form-group col-md-7 d-flex align-items-end mb-0">
+                                                  <label class=""><span class="mr-2 mb-4 pb-4">OD</span></label>
+                                                  <!-- ESF -->
+                                                  <div class="text-center mr-3">
+                                                    <label for="intermedia_der_esf">ESF</label>
+                                                    <input class="form-control" type="text" name="intermedia_der_esf_receta" id="intermedia_der_esf_receta" readonly="readonly" value="<?php echo $orden['intermedia_der_esf_receta'] ?>">
+                                                  </div>
+                                                  <!-- CIL -->
+                                                  <div class="text-center mr-3">
+                                                    <label for="intermedia_der_cil_receta">CIL</label>
+                                                    <input class="form-control" type="text" name="intermedia_der_cil_receta" id="intermedia_der_cil_receta" readonly="readonly" value="<?php echo $orden['intermedia_der_cil_receta'] ?>">
+                                                  </div>
+                                                  <!-- EJE -->
+                                                  <div class="text-center mr-3">
+                                                    <label for="intermedia_der_eje_receta">EJE</label>
+                                                    <input class="form-control" type="text" name="intermedia_der_eje_receta" id="intermedia_der_eje_receta" readonly="readonly" value="<?php echo $orden['intermedia_der_eje_receta'] ?>">
+                                                  </div>
+                                                  <!-- ADICION -->
+                                                  <div class="text-center">
+                                                    <label for="monofocal_intermedia_der_add">ADD</label>
+                                                    <input class="form-control" type="text" name="intermedia_der_add_receta" id="intermedia_der_add_receta" readonly="readonly" value="<?php echo $orden['intermedia_der_add_receta'] ?>">
+                                                  </div>
+                                                </div>
+                                              </div>
+
+                                              <div class="align-items-end col-md-12 monofocal_intermedia mb-3">
+                                                <div class="form-group col-md-2 mb-0">
+                                                  <h5 class="mb-3 hidden"><strong>Intermedia:</strong></h5>
+                                                </div>
+                                                <div class="form-group col-md-7 d-flex align-items-end mb-0">
+                                                  <label class=""><span class="mr-3 mb-4 pb-4">OI</span></label>
+                                                  <!-- ESF -->
+                                                  <div class="text-center mr-3">
+                                                    <input class="form-control" type="text" name="intermedia_izq_esf_receta" id="intermedia_izq_esf_receta" readonly="readonly"  value="<?php echo $orden['intermedia_izq_esf_receta'] ?>">
+                                                  </div>
+                                                  <!-- CIL -->
+                                                  <div class="text-center mr-3">
+                                                    <input class="form-control" type="text" name="intermedia_izq_cil_receta" id="intermedia_izq_cil_receta" readonly="readonly"  value="<?php echo $orden['intermedia_izq_cil_receta'] ?>">
+                                                  </div>
+                                                  <!-- EJE -->
+                                                  <div class="text-center mr-3">
+                                                    <input class="form-control" type="text" name="intermedia_izq_eje_receta" id="intermedia_izq_eje_receta" readonly="readonly"  value="<?php echo $orden['intermedia_izq_eje_receta'] ?>">
+                                                  </div>
+                                                  <!-- ADICION -->
+                                                  <div class="text-center">
+                                                    <input class="form-control" type="text" name="intermedia_izq_add_receta" id="intermedia_izq_add_receta" readonly="readonly"  value="<?php echo $orden['intermedia_izq_add_receta'] ?>">
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            <?php endif ?>
+                                            
+                                            <?php if ($orden['cerca_der_esf_receta'] or $orden['cerca_izq_esf_receta']): ?>
+                                                <!-- Cerca -->
+                                              <div class="align-items-end col-md-12 monofocal_cerca mb-3">
+                                                <div class="form-group col-md-2 mb-0">
+                                                  <h5 class="mb-3"><strong>Cerca:</strong></h5>
+                                                </div>
+                                                <div class="form-group col-md-7 d-flex align-items-end mb-0">
+                                                  <label class=""><span class="mr-2 mb-4 pb-4">OD</span></label>
+                                                  <!-- ESF -->
+                                                  <div class="text-center mr-3">
+                                                    <label for="cerca_der_esf_receta">ESF</label>
+                                                    <input class="form-control" type="text" name="cerca_der_esf_receta" id="cerca_der_esf_receta" readonly="readonly" value="<?php echo $orden['cerca_der_esf_receta'] ?>">
+                                                  </div>
+                                                  <!-- CIL -->
+                                                  <div class="text-center mr-3">
+                                                    <label for="cerca_der_cil_receta">CIL</label>
+                                                    <input class="form-control" type="text" name="cerca_der_cil_receta" id="cerca_der_cil_receta" readonly="readonly" value="<?php echo $orden['cerca_der_cil_receta'] ?>">
+                                                  </div>
+                                                  <!-- EJE -->
+                                                  <div class="text-center mr-3">
+                                                    <label for="cerca_der_eje_receta">EJE</label>
+                                                    <input class="form-control" type="text" name="cerca_der_eje_receta" id="cerca_der_eje_receta" readonly="readonly" value="<?php echo $orden['cerca_der_eje_receta'] ?>">
+                                                  </div>
+                                                  <!-- ADICION -->
+                                                  <div class="text-center">
+                                                    <label for="cerca_der_add_receta">ADD</label>
+                                                    <input class="form-control" type="text" name="cerca_der_add_receta" id="cerca_der_add_receta" readonly="readonly" value="<?php echo $orden['cerca_der_add_receta'] ?>">
+                                                  </div>
+                                                </div>
+                                              </div>
+
+                                              <div class="align-items-end col-md-12 monofocal_cerca mb-3">
+                                                <div class="form-group col-md-2 mb-0">
+                                                  <h5 class="mb-3 hidden"><strong>Cerca:</strong></h5>
+                                                </div>
+                                                <div class="form-group col-md-7 d-flex align-items-end mb-0">
+                                                  <label class=""><span class="mr-2 mb-4 pb-4">OD</span></label>
+                                                  <!-- ESF -->
+                                                  <div class="text-center mr-3">
+                                                    <input class="form-control" type="text" name="cerca_der_esf_receta" id="cerca_der_esf_receta" readonly="readonly" value="<?php echo $orden['cerca_der_esf_receta'] ?>">
+                                                  </div>
+                                                  <!-- CIL -->
+                                                  <div class="text-center mr-3">
+                                                    <input class="form-control" type="text" name="cerca_der_cil_receta" id="cerca_der_cil_receta" readonly="readonly" value="<?php echo $orden['cerca_der_cil_receta'] ?>">
+                                                  </div>
+                                                  <!-- EJE -->
+                                                  <div class="text-center mr-3">
+                                                    <input class="form-control" type="text" name="cerca_der_eje_receta" id="cerca_der_eje_receta" readonly="readonly" value="<?php echo $orden['cerca_der_eje_receta'] ?>">
+                                                  </div>
+                                                  <!-- ADICION -->
+                                                  <div class="text-center">
+                                                    <input class="form-control" type="text" name="cerca_der_add_receta" id="cerca_der_add_receta" readonly="readonly" value="<?php echo $orden['cerca_der_add_receta'] ?>">
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            <?php endif ?>
+                                            <!-- ----------- -->
+                                            <!-- Fin cambios -->
+                                           
                                         </div>
                                     </div>
 
